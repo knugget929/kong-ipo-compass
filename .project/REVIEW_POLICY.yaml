@@ -1,0 +1,28 @@
+schema_version: 2
+project: Kong IPO Compass
+max_parallel_product_tracks: 3
+production_url: https://vita-learning-atlas.viet591697.chatgpt.site
+candidate_url: local-validated-build
+candidate_branch: main
+site_retention:
+  permanent: [production]
+  max_active_exact_pr_previews: 3
+  retire_after: [merged, closed, superseded]
+review_verdicts: [VERIFIED, CHANGES_REQUESTED, DECISION_REQUIRED]
+gates:
+  G0: {merge: auto, independent_review: false, destination: integration}
+  G1: {merge: auto_after_review, independent_review: true, destination: integration}
+  G2: {merge: candidate_after_review, independent_review: true, destination: candidate}
+  G3: {merge: blocked_until_direction, independent_review: true, destination: candidate}
+priorities:
+  P0: production_or_security_incident
+  P1: core_regression
+  P2: current_release_commitment
+  P3: product_improvement
+  P4: strategic_or_architectural_proposal
+enforcement:
+  mode: release_steward_guard
+  branch_protection: actions_free_direct_checks
+review_evidence:
+  builder_and_reviewer_must_differ: true
+  reviewed_head_must_equal_pr_head: true

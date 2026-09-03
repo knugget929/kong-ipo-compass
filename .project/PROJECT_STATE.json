@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "project": "Kong IPO Compass",
+  "stop_launching_new_work": false,
+  "current_wave": "v0.2-live-release",
+  "production_url": "https://vita-learning-atlas.viet591697.chatgpt.site",
+  "candidate_url": "none",
+  "active_tracks": [],
+  "blocked_tasks": [
+    {"id": "KIPO-003", "reason": "PUBLIC_GITHUB_REPOSITORY_NOT_CREATED"}
+  ],
+  "next_eligible_tasks": [],
+  "site_retention": {
+    "permanent_sites": ["production"],
+    "max_active_exact_pr_previews": 3,
+    "active_exact_pr_previews": [],
+    "pending_deletions": [],
+    "cleanup_status": "RECONCILED"
+  },
+  "enforcement": {
+    "mode": "RELEASE_STEWARD_GUARD",
+    "branch_protection": "ACTIONS_FREE_RELEASE_STEWARD_GUARD"
+  },
+  "last_reconciled_at": "2026-09-03T06:00:00Z"
+}

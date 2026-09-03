@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "lastCheckedAt": "2026-09-03T21:00:00+03:00",
+  "status": "NO_MATERIAL_CHANGE",
+  "thesisDecision": "MAINTAIN",
+  "summary": "No confirmed IPO filing is in the current evidence set. The latest material developments support Kong's platform story but do not resolve the financial disclosure gap.",
+  "items": [
+    {
+      "id": "2026-01-ai-connectivity-strategy",
+      "publishedAt": "2026-01-05",
+      "title": "Kong centers its 2026 strategy on AI connectivity",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0,
+      "summary": "The strategy reinforces Kong's position as a control layer for APIs and AI traffic, but it does not supply the audited growth, margin, retention, or share-count evidence needed for a valuation upgrade.",
+      "confirmed": [
+        "Kong described AI connectivity, large-enterprise adoption, organizational expansion, and regional investment as strategic priorities."
+      ],
+      "uncertain": [
+        "Revenue contribution, adoption rates, growth, and margin effects were not disclosed."
+      ],
+      "sources": [
+        {
+          "label": "Kong Japan — 2026 strategy",
+          "url": "https://jp.konghq.com/news/2026_greetings_and_strategy_ai_connectivity"
+        }
+      ]
+    },
+    {
+      "id": "2025-09-openmeter-acquisition",
+      "publishedAt": "2025-09-03",
+      "title": "OpenMeter adds usage metering and billing to Kong's platform",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0,
+      "summary": "The acquisition broadens Kong's monetization layer for API and AI workloads. It improves strategic breadth, while integration quality and financial contribution remain unproven.",
+      "confirmed": [
+        "Kong acquired OpenMeter and described native usage metering and billing as part of the expanded platform."
+      ],
+      "uncertain": [
+        "Purchase terms, integration economics, customer uptake, and incremental ARR were not disclosed."
+      ],
+      "sources": [
+        {
+          "label": "Kong — OpenMeter acquisition",
+          "url": "https://konghq.com/blog/news/kong-acquires-openmeter"
+        }
+      ]
+    }
+  ]
+}

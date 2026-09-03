@@ -1,0 +1,55 @@
+schema_version: 2
+project: Kong IPO Compass
+tasks:
+  - id: KIPO-001
+    title: Ship interactive IPO cockpit
+    work_type: FEATURE
+    priority: P2
+    risk: MEDIUM
+    review_gate: G2
+    status: VERIFIED
+    target_release: V0.1
+    source_feedback: owner direction 2026-09-03
+    depends_on: []
+    owns: [dist/index.html, dist/styles.css, dist/app.js, dist/data/thesis.json]
+    parallel_safe: false
+    definition_of_done: [all requested variables update the price model, personal holdings calculate correctly, assumptions persist locally, thesis and evidence remain distinct, phone and tablet layouts avoid horizontal scrolling, direct validation passes, independent reviewer verifies the result]
+  - id: KIPO-002
+    title: Publish the dashboard
+    work_type: RELEASE
+    priority: P2
+    risk: HIGH
+    review_gate: G3
+    status: DONE
+    target_release: V0.1
+    source_feedback: owner selected Vita Learning Atlas for replacement 2026-09-03
+    depends_on: [KIPO-001]
+    owns: [.openai/hosting.json]
+    parallel_safe: false
+    definition_of_done: [validated source replaces the selected Site, live URL resolves, exact production URL is recorded]
+  - id: KIPO-003
+    title: Connect nightly thesis steward
+    work_type: AUTOMATION
+    priority: P2
+    risk: MEDIUM
+    review_gate: G2
+    status: BLOCKED
+    target_release: V0.1
+    source_feedback: owner direction 2026-09-03
+    depends_on: [KIPO-001]
+    owns: [Kong Inc News Watch automation]
+    parallel_safe: false
+    definition_of_done: [public repository exists and is populated, nightly task issues upgrade maintain or downgrade decisions with cited evidence, commits validated canonical JSON to GitHub, material changes include score and valuation-input implications, routine non-events remain brief, Site reads changes without a rebuild]
+  - id: KIPO-004
+    title: Add runtime thesis and major-news data layer
+    work_type: ARCHITECTURE
+    priority: P2
+    risk: MEDIUM
+    review_gate: G2
+    status: VERIFIED
+    target_release: V0.2
+    source_feedback: owner direction 2026-09-03
+    depends_on: [KIPO-001]
+    owns: [data/thesis.json, data/news.json, dist/data/thesis.json, dist/data/news.json, dist/app.js, dist/index.html, dist/styles.css, docs/DATA_ARCHITECTURE.md, docs/AUTOMATION_RUNBOOK.md]
+    parallel_safe: false
+    definition_of_done: [Site fetches validated public GitHub JSON at runtime, independent fallbacks keep the Site usable, major news renders with sources and thesis impact, personal inputs remain device-local, direct validation passes, independent reviewer verifies the result]
