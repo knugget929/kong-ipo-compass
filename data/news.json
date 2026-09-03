@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 3,
-  "lastCheckedAt": "2026-09-03T16:18:00+03:00",
-  "status": "MATERIAL_CHANGE",
-  "thesisDecision": "UPGRADE",
-  "summary": "The full late-2025 through September-2026 review found additional material positives: 72% year-over-year EMEA customer growth with named wins, an IPO-experienced CFO, broader agentic-AI products, and stronger ecosystem integrations. The thesis rises four points to 72, while valuation inputs remain unchanged because company-wide ARR and public-company financials are still unavailable.",
+  "revision": 4,
+  "lastCheckedAt": "2026-09-03T21:00:00+03:00",
+  "status": "NO_MATERIAL_CHANGE",
+  "thesisDecision": "MAINTAIN",
+  "summary": "No additional Kong-specific filing, financing, secondary transaction, acquisition, executive change, commercial disclosure, or material product release was found after the earlier September 3 review. A strong AI-driven Snowflake result supported software-sector sentiment, but it does not establish Kong revenue quality or justify changing the 72-point thesis, model defaults, or valuation references.",
   "items": [
     {
       "id": "2026-09-01-ai-gateway-2-0-ga",
