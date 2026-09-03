@@ -20,7 +20,7 @@ Turn an uncertain private-company outcome into a legible, adjustable decision mo
 - [x] Deliver V0.1: interactive valuation model, personal holdings calculator, scenario presets, sensitivity table, thesis scorecard, signals, risks, sources, and device-local persistence.
 - [x] Add a runtime GitHub data layer so thesis and major-news changes do not require a Site rebuild.
 - [x] Republish the owner-selected Vita Learning Atlas Site as Kong IPO Compass.
-- [ ] Initialize and populate `knugget929/kong-ipo-compass` after the owner creates the public repository.
+- [x] Initialize and populate the public `knugget929/kong-ipo-compass` repository.
 - [x] Connect the nightly Kong watch to upgrade, maintain, or downgrade the canonical thesis only when evidence warrants it.
 
 ## Direction log
@@ -32,3 +32,4 @@ Turn an uncertain private-company outcome into a legible, adjustable decision mo
 - 2026-09-03 — V0.1 independently VERIFIED after correcting iPad portrait geometry, the user-reported secondary-price label, and the post-discount equity label.
 - 2026-09-03 — Owner selected Vita Learning Atlas for replacement and directed that future Kong task results update the dashboard without a manual Site rebuild.
 - 2026-09-03 — Architecture changed to a stable Site shell plus public, versioned GitHub JSON with local fallback snapshots; personal holdings remain device-local.
+- 2026-09-03 — Public repository activated; the deployed Site now reads canonical thesis and major-news JSON without a rebuild.
