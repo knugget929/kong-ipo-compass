@@ -23,6 +23,7 @@ Turn an uncertain private-company outcome into a legible, adjustable decision mo
 - [x] Initialize and populate the public `knugget929/kong-ipo-compass` repository.
 - [x] Connect the nightly Kong watch to upgrade, maintain, or downgrade the canonical thesis only when evidence warrants it.
 - [x] Prove the live-data path with an AI Gateway 2.0 thesis update and no Site rebuild.
+- [x] Review late-2025 through September-2026 evidence and reconcile its thesis impact without changing unsupported valuation inputs.
 
 ## Direction log
 
@@ -35,3 +36,4 @@ Turn an uncertain private-company outcome into a legible, adjustable decision mo
 - 2026-09-03 — Architecture changed to a stable Site shell plus public, versioned GitHub JSON with local fallback snapshots; personal holdings remain device-local.
 - 2026-09-03 — Public repository activated; the deployed Site now reads canonical thesis and major-news JSON without a rebuild.
 - 2026-09-03 — AI Gateway 2.0 GA raised Product & position by one point; valuation assumptions stayed unchanged because no commercial or financial metrics were disclosed. Canonical data advanced while deployed fallback snapshots intentionally remained untouched.
+- 2026-09-03 — A full late-2025 through September-2026 review found 72% year-over-year EMEA customer growth, named enterprise wins, an IPO-experienced CFO, and broader AI-agent infrastructure evidence. The thesis score increased from 68 to 72, while the $20.46 modeled price and its inputs remained unchanged because Kong still has not disclosed company-wide ARR, growth, retention, margins, cash, diluted shares, or IPO terms. The canonical data was updated without rebuilding the Site.

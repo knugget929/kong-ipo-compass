@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 2,
-  "lastCheckedAt": "2026-09-03T15:56:00+03:00",
+  "revision": 3,
+  "lastCheckedAt": "2026-09-03T16:18:00+03:00",
   "status": "MATERIAL_CHANGE",
   "thesisDecision": "UPGRADE",
-  "summary": "AI Gateway 2.0 reaching general availability is a meaningful product-execution milestone and raises the thesis score by one point. It does not change the valuation model because Kong disclosed no adoption, bookings, revenue, margin, or IPO information.",
+  "summary": "The full late-2025 through September-2026 review found additional material positives: 72% year-over-year EMEA customer growth with named wins, an IPO-experienced CFO, broader agentic-AI products, and stronger ecosystem integrations. The thesis rises four points to 72, while valuation inputs remain unchanged because company-wide ARR and public-company financials are still unavailable.",
   "items": [
     {
       "id": "2026-09-01-ai-gateway-2-0-ga",
@@ -31,6 +31,223 @@
         {
           "label": "Kong Docs — AI Gateway 2.0",
           "url": "https://developer.konghq.com/ai-gateway/get-started/"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-11-nvidia-switchyard-routing",
+      "publishedAt": "2026-08-11",
+      "title": "Kong adds native NVIDIA NeMo Switchyard routing",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0,
+      "summary": "The integration lets Kong preserve credentials, policy, metering, and audit controls while an external decision service selects models. It strengthens ecosystem relevance and AI cost optimization, but commercial contribution was not disclosed.",
+      "confirmed": [
+        "Kong described a native pattern in which NVIDIA NeMo Switchyard selects a model and Kong AI Gateway retains connectivity, governance, and traffic management.",
+        "NVIDIA separately listed Kong as delivering NeMo Switchyard routing natively through Kong AI Gateway."
+      ],
+      "uncertain": [
+        "Kong and NVIDIA did not disclose joint customers, contractual economics, usage, or incremental revenue."
+      ],
+      "sources": [
+        {
+          "label": "Kong — NVIDIA NeMo Switchyard routing",
+          "url": "https://konghq.com/blog/engineering/llm-routing-kong-ai-gateway-nvidia-nemo-switchyard"
+        },
+        {
+          "label": "NVIDIA — NeMo Switchyard ecosystem",
+          "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-23-harness-ai-security-partnership",
+      "publishedAt": "2026-07-23",
+      "title": "Harness partnership expands from API Gateway to AI Gateway",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0,
+      "summary": "The generally available integration adds AI asset discovery and behavioral protection around Kong-routed LLM, MCP, and agent traffic. It supports ecosystem breadth but does not establish material revenue.",
+      "confirmed": [
+        "Harness and Kong expanded their existing API security integration to Kong AI Gateway.",
+        "Harness says AI Discovery and AI Protection are generally available to joint customers."
+      ],
+      "uncertain": [
+        "Joint-customer count, attach rate, pricing, bookings, and revenue contribution were not disclosed."
+      ],
+      "sources": [
+        {
+          "label": "Harness — expanded Kong partnership",
+          "url": "https://www.harness.io/press-and-news/harness-kong-expand-strategic-partnership"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-22-emea-customer-growth",
+      "publishedAt": "2026-07-22",
+      "title": "Kong reports 72% year-over-year EMEA customer growth",
+      "impact": "positive",
+      "significance": "high",
+      "thesisDecision": "UPGRADE",
+      "scoreDelta": 2,
+      "summary": "This is the strongest new commercial signal in the review window. Rapid regional customer growth and named enterprise and AI-native wins improve confidence in demand, although the regional figure cannot be treated as company-wide ARR growth.",
+      "confirmed": [
+        "Kong reported a 72% year-over-year increase in EMEA customers and 71% headcount growth in the region over two years.",
+        "Kong named ING Bank, First Abu Dhabi Bank, Mistral, and PolyAI as notable new customers and opened offices in Paris and Milan."
+      ],
+      "uncertain": [
+        "Kong did not disclose the starting customer count, regional revenue, company-wide growth, ARR, churn, retention, or sales efficiency.",
+        "The 71% headcount expansion may support growth but also increases operating expense."
+      ],
+      "sources": [
+        {
+          "label": "Kong — EMEA customer growth",
+          "url": "https://www.prnewswire.com/news-releases/kong-opens-new-offices-in-paris-and-milan-driven-by-emea-customer-growth-302831577.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-04-14-agent-gateway-ga",
+      "publishedAt": "2026-04-14",
+      "title": "Kong Agent Gateway reaches production-ready GA",
+      "impact": "positive",
+      "significance": "high",
+      "thesisDecision": "UPGRADE",
+      "scoreDelta": 1,
+      "summary": "Agent Gateway extended Kong from LLM and MCP traffic into governed agent-to-agent communication. Together with Context Mesh and later AI Gateway 2.0, it supports a broader platform-position score.",
+      "confirmed": [
+        "Kong made Agent Gateway generally available and production-ready in AI Gateway 3.14.",
+        "Kong says the product governs LLM, MCP, and A2A traffic and is available to all Kong Konnect customers as part of AI Gateway."
+      ],
+      "uncertain": [
+        "The A2A market remains early, and Kong did not disclose Agent Gateway adoption, pricing, bookings, or revenue."
+      ],
+      "sources": [
+        {
+          "label": "Kong — Agent Gateway",
+          "url": "https://konghq.com/blog/product-releases/kong-agent-gateway"
+        }
+      ]
+    },
+    {
+      "id": "2026-03-31-stepstone-preferred-fair-value",
+      "publishedAt": "2026-03-31",
+      "title": "StepStone fund marks Kong preferred shares near $10.24",
+      "impact": "neutral",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0,
+      "summary": "An audited fund filing provides an external private-market reference close to the user's later roughly $10 secondary marker. Because it is a Level 3 preferred-share valuation rather than a liquid common-share trade, it does not change the model.",
+      "confirmed": [
+        "StepStone Private Venture and Growth Fund reported 1,211,663 Kong preferred shares at a $12,412,033 fair value as of March 31, 2026, implying approximately $10.24 per preferred share.",
+        "The same position had a reported cost of $12,123,382, or approximately $10.01 per preferred share."
+      ],
+      "uncertain": [
+        "The share series, liquidation preference, conversion terms, fully diluted capitalization, and valuation methodology for the specific Kong position were not disclosed in the schedule.",
+        "The fund mark is not evidence of a current liquid secondary price or an IPO price."
+      ],
+      "sources": [
+        {
+          "label": "SEC — StepStone March 2026 holdings",
+          "url": "https://www.sec.gov/Archives/edgar/data/1918642/000121390026066820/ea0293641-01_ncsr.htm"
+        }
+      ]
+    },
+    {
+      "id": "2026-02-19-bruce-felt-cfo",
+      "publishedAt": "2026-02-19",
+      "title": "Kong appoints IPO-experienced CFO Bruce Felt",
+      "impact": "positive",
+      "significance": "high",
+      "thesisDecision": "UPGRADE",
+      "scoreDelta": 1,
+      "summary": "Hiring a CFO who has led three software companies through public offerings improves Kong's organizational readiness. It is a preparation signal, not confirmation of an IPO filing or timetable.",
+      "confirmed": [
+        "Kong appointed Bruce Felt as CFO to help scale the business through its next growth stage.",
+        "Kong says Felt took FullTime Software, SuccessFactors, and Domo public as CFO and has experience with acquisitions and global expansion."
+      ],
+      "uncertain": [
+        "Kong did not say that Felt was hired specifically to execute an IPO and did not announce a filing, exchange, underwriters, or timetable."
+      ],
+      "sources": [
+        {
+          "label": "Kong — Bruce Felt appointed CFO",
+          "url": "https://konghq.com/company/press-room/press-release/kong-names-bruce-felt-as-chief-financial-officer"
+        }
+      ]
+    },
+    {
+      "id": "2026-02-18-solace-partnership",
+      "publishedAt": "2026-02-18",
+      "title": "Kong and Solace connect APIs, events, and AI traffic",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0,
+      "summary": "The technology partnership expands Kong's governed data-path story into real-time event streams. It is strategically relevant, while its adoption and economics remain unknown.",
+      "confirmed": [
+        "Solace joined Kong's Premium Technology Partner Program.",
+        "The companies described a combined control plane for APIs, events, LLMs, and MCP servers with shared governance and observability."
+      ],
+      "uncertain": [
+        "The announcement did not disclose customer deployments, commercial terms, bookings, or revenue contribution."
+      ],
+      "sources": [
+        {
+          "label": "Kong and Solace partnership",
+          "url": "https://www.prnewswire.com/news-releases/kong-and-solace-announce-partnership-to-unify-api-and-real-time-data-and-event-streaming-302691193.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-02-10-context-mesh",
+      "publishedAt": "2026-02-10",
+      "title": "Context Mesh turns enterprise APIs into governed agent tools",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0,
+      "summary": "Context Mesh and MCP Registry broaden Kong's addressable workflow from managing traffic to discovering, generating, deploying, and governing tools for AI agents. The product case improves, but monetization is not yet quantified.",
+      "confirmed": [
+        "Kong launched Context Mesh to discover enterprise APIs, transform them into agent-consumable tools, and deploy them with runtime governance.",
+        "Kong positioned Context Mesh alongside MCP Registry, AI Gateway, and Event Gateway across the AI data path."
+      ],
+      "uncertain": [
+        "Customer adoption, pricing, incremental ARR, and competitive differentiation at scale were not disclosed."
+      ],
+      "sources": [
+        {
+          "label": "Kong — Context Mesh",
+          "url": "https://konghq.com/company/press-room/press-release/kong-launches-context-mesh-to-connect-enterprise-data-to-ai-agents"
+        },
+        {
+          "label": "Kong — MCP Registry",
+          "url": "https://konghq.com/company/press-room/press-release/kong-introduces-mcp-registry"
+        }
+      ]
+    },
+    {
+      "id": "2026-01-06-konnect-metering-billing",
+      "publishedAt": "2026-01-06",
+      "title": "OpenMeter technology reaches Kong Konnect",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0,
+      "summary": "Kong moved the OpenMeter acquisition into a Konnect product for AI cost control, chargeback, and monetization. This reduces integration risk, but uptake and financial impact remain undisclosed.",
+      "confirmed": [
+        "Kong launched Konnect Metering & Billing following the OpenMeter acquisition.",
+        "The product targets AI cost controls, showback, chargeback, and usage-based monetization."
+      ],
+      "uncertain": [
+        "Kong did not disclose product adoption, attach rates, pricing, bookings, revenue, or margin contribution."
+      ],
+      "sources": [
+        {
+          "label": "Kong — Konnect Metering & Billing",
+          "url": "https://konghq.com/blog/product-releases/ai-cost-control"
         }
       ]
     },

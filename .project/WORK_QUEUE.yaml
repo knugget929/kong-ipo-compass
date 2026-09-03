@@ -66,3 +66,16 @@ tasks:
     owns: [data/thesis.json, data/news.json, scripts/validate-data.mjs, docs/DATA_ARCHITECTURE.md]
     parallel_safe: false
     definition_of_done: [official AI Gateway 2.0 evidence is captured, thesis impact is explicit, valuation inputs change only with financial evidence, canonical revisions advance, deployed fallback snapshots remain untouched, direct validation passes, independent reviewer verifies the result, no Site build or deployment occurs]
+  - id: KIPO-006
+    title: Review late-2025 through September-2026 evidence
+    work_type: DATA
+    priority: P2
+    risk: MEDIUM
+    review_gate: G1
+    status: VERIFIED
+    target_release: V0.2
+    source_feedback: owner requested full-window news review 2026-09-03
+    depends_on: [KIPO-005]
+    owns: [data/thesis.json, data/news.json, docs/BUILD_PLAN.md]
+    parallel_safe: false
+    definition_of_done: [late-2025 through September-2026 evidence is searched, material facts are cited from primary sources, thesis scoring reconciles with news impacts, valuation inputs remain unchanged absent company-wide financial evidence, deployed fallback snapshots remain untouched, direct validation passes, independent reviewer verifies the result, no Site build or deployment occurs]
