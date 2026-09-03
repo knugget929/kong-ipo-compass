@@ -29,6 +29,8 @@ Canonical files are public. They must never contain personal holdings, cost basi
 - Never infer an IPO filing, ARR, share count, secondary price, or financial metric from narrative signals.
 - Run `node scripts/validate-data.mjs` before committing.
 
+Canonical records and deployed fallback snapshots are validated independently. The snapshots are allowed to lag after a data-only update; they are refreshed only when the Site shell itself is released. Their schema version must remain compatible with the canonical records, and a snapshot revision may never be newer than its canonical counterpart.
+
 ## Failure behavior
 
 A failed research run leaves the last valid canonical record untouched and reports the blocker. A temporary GitHub read failure does not break the dashboard because the deployed snapshot remains available. A schema validation failure must not be committed.

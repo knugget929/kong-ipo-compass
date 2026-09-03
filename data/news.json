@@ -1,11 +1,39 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
-  "lastCheckedAt": "2026-09-03T21:00:00+03:00",
-  "status": "NO_MATERIAL_CHANGE",
-  "thesisDecision": "MAINTAIN",
-  "summary": "No confirmed IPO filing is in the current evidence set. The latest material developments support Kong's platform story but do not resolve the financial disclosure gap.",
+  "revision": 2,
+  "lastCheckedAt": "2026-09-03T15:56:00+03:00",
+  "status": "MATERIAL_CHANGE",
+  "thesisDecision": "UPGRADE",
+  "summary": "AI Gateway 2.0 reaching general availability is a meaningful product-execution milestone and raises the thesis score by one point. It does not change the valuation model because Kong disclosed no adoption, bookings, revenue, margin, or IPO information.",
   "items": [
+    {
+      "id": "2026-09-01-ai-gateway-2-0-ga",
+      "publishedAt": "2026-09-01",
+      "title": "Kong AI Gateway 2.0 reaches general availability",
+      "impact": "positive",
+      "significance": "high",
+      "thesisDecision": "UPGRADE",
+      "scoreDelta": 1,
+      "summary": "The production-supported release reduces product-execution risk around Kong's AI-control-plane strategy. It strengthens the product-position score, while valuation inputs remain unchanged until commercial traction or financial contribution is disclosed.",
+      "confirmed": [
+        "Kong says AI Gateway 2.0 is generally available and production-supported in Konnect with its own runtime and control plane.",
+        "The release adds MCP Server Bundling with per-caller tool visibility, modality-aware cost governance, Kong Identity principals, expanded model-provider support, and native AWS IAM authentication for Amazon Bedrock AgentCore."
+      ],
+      "uncertain": [
+        "Kong did not disclose customer adoption, bookings, incremental ARR, pricing, margins, or financial contribution.",
+        "The pace of customer migration from existing Gateway AI plugins to the standalone product is unknown."
+      ],
+      "sources": [
+        {
+          "label": "Kong — AI Gateway 2.0 GA",
+          "url": "https://konghq.com/blog/product-releases/kong-ai-gateway-2-0-ga"
+        },
+        {
+          "label": "Kong Docs — AI Gateway 2.0",
+          "url": "https://developer.konghq.com/ai-gateway/get-started/"
+        }
+      ]
+    },
     {
       "id": "2026-01-ai-connectivity-strategy",
       "publishedAt": "2026-01-05",

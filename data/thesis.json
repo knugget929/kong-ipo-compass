@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
-  "updatedAt": "2026-09-03T21:00:00+03:00",
+  "revision": 2,
+  "updatedAt": "2026-09-03T15:56:00+03:00",
   "asOf": "2026-09-03",
   "company": "Kong Inc.",
   "productName": "Kong IPO Compass",
   "verdict": {
     "direction": "Constructive",
     "confidence": "Low–medium",
-    "score": 67,
-    "change": 0,
-    "summary": "Kong has a credible path to public-market scale and a strong AI-connectivity story, but the investable thesis still depends on unconfirmed ARR, financial quality, dilution, and an IPO that has not been announced.",
+    "score": 68,
+    "change": 1,
+    "summary": "AI Gateway 2.0 reaching production-supported general availability strengthens Kong's position as an enterprise control layer for AI traffic. The investable thesis still depends on unconfirmed ARR, financial quality, dilution, and an IPO that has not been announced.",
     "ipoStatus": "No confirmed filing",
-    "updatedBy": "Initial thesis baseline"
+    "updatedBy": "AI Gateway 2.0 GA review"
   },
   "model": {
     "formulaVersion": "1.0",
@@ -68,13 +68,13 @@
   "scorecard": [
     {"label": "Growth & scale", "score": 16, "max": 20, "state": "positive", "note": "The working ARR estimate suggests public-company scale, but Kong has not publicly confirmed the current figure."},
     {"label": "Market & AI tailwind", "score": 17, "max": 20, "state": "positive", "note": "APIs are control points for AI traffic, governance, security, and monetization."},
-    {"label": "Product & position", "score": 15, "max": 20, "state": "positive", "note": "Gateway strength, Konnect, AI Gateway, and metering broaden the platform story."},
+    {"label": "Product & position", "score": 16, "max": 20, "state": "positive", "note": "AI Gateway 2.0 is now production-supported, with first-class AI and MCP governance that broadens Kong's platform position."},
     {"label": "Financial quality", "score": 11, "max": 20, "state": "watch", "note": "Gross margin, net retention, growth rate, free cash flow, and concentration remain undisclosed."},
     {"label": "IPO readiness", "score": 8, "max": 20, "state": "watch", "note": "Late-stage funding and scale help; no public filing or announced timetable is confirmed."}
   ],
   "catalysts": [
-    {"name": "AI connectivity becomes a budget line", "state": "positive", "weight": "High", "why": "AI agents create more machine-to-machine traffic and a larger governance surface for Kong."},
-    {"name": "Konnect platform expansion", "state": "positive", "weight": "High", "why": "A broader cloud platform can improve wallet share and support a stronger recurring-revenue multiple."},
+    {"name": "AI connectivity becomes a budget line", "state": "positive", "weight": "High", "why": "AI Gateway 2.0 gives Kong a production-supported control layer for model, agent, and MCP traffic; adoption and monetization remain to be proven."},
+    {"name": "Konnect platform expansion", "state": "positive", "weight": "High", "why": "The standalone AI Gateway adds dedicated runtime, control-plane, cost, identity, and analytics capabilities that can broaden wallet share."},
     {"name": "OpenMeter integration", "state": "positive", "weight": "Medium", "why": "Native usage metering and billing could add a monetization layer for API and AI workloads."},
     {"name": "Enterprise validation", "state": "positive", "weight": "Medium", "why": "Six consecutive Gartner Leader placements and named enterprise adoption support credibility."},
     {"name": "Current ARR and growth", "state": "watch", "weight": "Very high", "why": "The $300M ARR figure is a user-supplied estimate; the IPO model is highly sensitive to confirmation and growth durability."},
@@ -89,6 +89,7 @@
     {"date": "2025-10", "title": "Sixth Gartner Leader year", "kind": "confirmed", "detail": "Kong said Gartner again named it a Leader in API Management and placed it furthest for vision."},
     {"date": "2026-01", "title": "AI Connectivity strategy", "kind": "confirmed", "detail": "Kong emphasized agentic AI, large-enterprise adoption, organizational expansion, and deeper regional investment."},
     {"date": "2026-06", "title": "~$10 secondary reference", "kind": "estimate", "detail": "User-reported insider secondary pricing, used only as a comparison marker rather than verified market value."},
+    {"date": "2026-09", "title": "AI Gateway 2.0 reaches GA", "kind": "confirmed", "detail": "Kong made its standalone AI Gateway production-supported, adding MCP server bundling, identity-aware controls, modality-aware cost governance, expanded model support, and AWS IAM authentication."},
     {"date": "2026-09", "title": "IPO still unconfirmed", "kind": "watch", "detail": "No public IPO filing or company-endorsed timetable was found in the current evidence set."}
   ],
   "upgradeRules": [
@@ -116,9 +117,12 @@
     {"label": "Kong — OpenMeter acquisition", "date": "2025-09-03", "url": "https://konghq.com/blog/news/kong-acquires-openmeter", "supports": "Usage metering and billing expansion"},
     {"label": "Kong — 2025 Gartner result", "date": "2025-10-10", "url": "https://konghq.com/blog/news/gartner-magic-quadrant-lifecycle-api-management-leader", "supports": "Sixth consecutive Leader placement"},
     {"label": "Kong Japan — 2026 strategy", "date": "2026-01-05", "url": "https://jp.konghq.com/news/2026_greetings_and_strategy_ai_connectivity", "supports": "AI connectivity and enterprise strategy"},
+    {"label": "Kong — AI Gateway 2.0 GA", "date": "2026-09-01", "url": "https://konghq.com/blog/product-releases/kong-ai-gateway-2-0-ga", "supports": "Production readiness, MCP governance, identity, cost controls, provider support, and AgentCore IAM"},
+    {"label": "Kong Docs — AI Gateway 2.0", "date": "Accessed 2026-09-03", "url": "https://developer.konghq.com/ai-gateway/get-started/", "supports": "AI Gateway 2.0 product model and minimum version"},
     {"label": "Forge — Kong IPO profile", "date": "Accessed 2026-09-03", "url": "https://forgeglobal.com/kong_ipo/", "supports": "No company-confirmed IPO plan"}
   ],
   "changeLog": [
+    {"date": "2026-09-03", "verdict": "UPGRADE", "score": 68, "headline": "AI Gateway 2.0 reaches GA", "detail": "Raised Product & position by one point because Kong moved its standalone AI Gateway from beta to production-supported GA. ARR, multiple, cash, dilution, and IPO-discount assumptions are unchanged because the release disclosed no adoption, bookings, revenue, or margin evidence."},
     {"date": "2026-09-03", "verdict": "MAINTAIN", "score": 67, "headline": "Initial thesis baseline", "detail": "Constructive on scale, AI/API demand, and platform breadth; confidence capped by private-company disclosure and no confirmed filing."}
   ]
 }
