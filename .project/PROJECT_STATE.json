@@ -6,9 +6,7 @@
   "production_url": "https://vita-learning-atlas.viet591697.chatgpt.site",
   "candidate_url": "none",
   "active_tracks": [],
-  "blocked_tasks": [
-    {"id": "KIPO-003", "reason": "PUBLIC_GITHUB_REPOSITORY_NOT_CREATED"}
-  ],
+  "blocked_tasks": [],
   "next_eligible_tasks": [],
   "site_retention": {
     "permanent_sites": ["production"],
