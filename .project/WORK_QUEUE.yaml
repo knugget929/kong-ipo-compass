@@ -33,7 +33,7 @@ tasks:
     priority: P2
     risk: MEDIUM
     review_gate: G2
-    status: BLOCKED
+    status: DONE
     target_release: V0.1
     source_feedback: owner direction 2026-09-03
     depends_on: [KIPO-001]
