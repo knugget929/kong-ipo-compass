@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 4,
-  "lastCheckedAt": "2026-09-03T21:00:00+03:00",
+  "revision": 5,
+  "lastCheckedAt": "2026-09-05T21:00:00+03:00",
   "status": "NO_MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "No additional Kong-specific filing, financing, secondary transaction, acquisition, executive change, commercial disclosure, or material product release was found after the earlier September 3 review. A strong AI-driven Snowflake result supported software-sector sentiment, but it does not establish Kong revenue quality or justify changing the 72-point thesis, model defaults, or valuation references.",
+  "summary": "No material Kong-specific filing, financing, acquisition, executive change, financial disclosure, customer win, or product release was found since the September 3 review. Notice's September 5 algorithmic $9.06 indication and Nasdaq Private Market's August 19 $9.86 estimate remain close to the existing roughly $10 secondary reference, but neither establishes an executable transaction, so the 72-point thesis, model defaults, and valuation references remain unchanged.",
   "items": [
     {
       "id": "2026-09-01-ai-gateway-2-0-ga",
