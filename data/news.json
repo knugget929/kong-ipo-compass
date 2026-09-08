@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 7,
-  "lastCheckedAt": "2026-09-07T21:00:00+03:00",
+  "revision": 8,
+  "lastCheckedAt": "2026-09-08T21:00:00+03:00",
   "status": "NO_MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "No material Kong-specific development was found in the September 7 review: no IPO filing, financing, verified secondary transaction, acquisition, executive change, financial disclosure, customer win, or product release. Competitive evidence continues to support the existing high-risk flag, including MuleSoft's federated agent-control-plane positioning, but no new evidence warrants changing the 72-point thesis, model defaults, or valuation references.",
+  "summary": "No material Kong-specific development was found in the September 8 review: no IPO filing, financing, verified secondary transaction, acquisition, executive change, financial disclosure, customer win, or product release. AI Gateway 2.0 remains the latest material company update; no new evidence warrants changing the 72-point thesis, model defaults, or valuation references.",
   "items": [
     {
       "id": "2026-09-01-ai-gateway-2-0-ga",
