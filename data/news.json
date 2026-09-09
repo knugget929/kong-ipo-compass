@@ -1,11 +1,39 @@
 {
   "schemaVersion": 1,
-  "revision": 8,
-  "lastCheckedAt": "2026-09-08T21:00:00+03:00",
-  "status": "NO_MATERIAL_CHANGE",
+  "revision": 9,
+  "lastCheckedAt": "2026-09-09T21:00:00+03:00",
+  "status": "MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "No material Kong-specific development was found in the September 8 review: no IPO filing, financing, verified secondary transaction, acquisition, executive change, financial disclosure, customer win, or product release. AI Gateway 2.0 remains the latest material company update; no new evidence warrants changing the 72-point thesis, model defaults, or valuation references.",
+  "summary": "Forrester named Kong a Leader in its Q3 2026 API Management Software evaluation and highlighted AI-governance breadth, implementation demand, support, and gateway performance. This is additive competitive validation but overlaps existing Gartner and AI Gateway evidence; with no new IPO filing, financing, transaction, or financial disclosure, the 72-point thesis and valuation assumptions remain unchanged.",
   "items": [
+    {
+      "id": "2026-09-09-forrester-api-management-leader",
+      "publishedAt": "2026-09-09",
+      "title": "Forrester names Kong a Leader in API management software",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0,
+      "summary": "The Q3 2026 Forrester Wave recognition provides independent competitive validation for Kong's API-management position and AI-governance strategy. It supports the existing product thesis, but does not justify another score increase because it overlaps prior Gartner recognition and discloses no commercial or financial contribution.",
+      "confirmed": [
+        "Forrester named Kong a Leader in The Forrester Wave: API Management Software, Q3 2026, an evaluation based on current offering, strategy, and customer feedback.",
+        "Kong's release quotes the report as highlighting its AI-control-plane vision and AI-governance breadth, while also citing GSI demand for implementations and positive customer feedback on support and gateway performance."
+      ],
+      "uncertain": [
+        "The announcement does not disclose Kong's full scoring relative to every competitor or whether the recognition has changed win rates, pricing, bookings, ARR, retention, or revenue growth.",
+        "No IPO filing, financing, verified secondary transaction, margin disclosure, cash-flow metric, customer concentration, or fully diluted share count accompanied the recognition."
+      ],
+      "sources": [
+        {
+          "label": "Forrester — API Management Software, Q3 2026",
+          "url": "https://www.forrester.com/report/the-forrester-wave-api-management-software-q3-2026/RES198007"
+        },
+        {
+          "label": "Kong — Forrester Leader announcement",
+          "url": "https://www.prnewswire.com/news-releases/kong-named-a-leader-in-api-management-software-q3-2026-report-by-independent-research-firm-302873344.html"
+        }
+      ]
+    },
     {
       "id": "2026-09-01-ai-gateway-2-0-ga",
       "publishedAt": "2026-09-01",
