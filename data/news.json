@@ -1,11 +1,40 @@
 {
   "schemaVersion": 1,
-  "revision": 9,
-  "lastCheckedAt": "2026-09-09T21:00:00+03:00",
+  "revision": 10,
+  "lastCheckedAt": "2026-09-10T21:00:00+03:00",
   "status": "MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "Forrester named Kong a Leader in its Q3 2026 API Management Software evaluation and highlighted AI-governance breadth, implementation demand, support, and gateway performance. This is additive competitive validation but overlaps existing Gartner and AI Gateway evidence; with no new IPO filing, financing, transaction, or financial disclosure, the 72-point thesis and valuation assumptions remain unchanged.",
+  "summary": "Kong and Straiker announced a runtime-security integration for AI agents across LLM, MCP/tool, and agent-to-agent traffic, with Kong enforcing Straiker verdicts and Straiker adding discovery, testing, runtime defense, and agent-level containment. The partnership strengthens regulated-enterprise positioning but discloses no customers, pricing, bookings, ARR, or revenue impact; the 72-point thesis and valuation assumptions remain unchanged.",
   "items": [
+    {
+      "id": "2026-09-10-straiker-agent-security-partnership",
+      "publishedAt": "2026-09-10",
+      "title": "Kong and Straiker add runtime protection and containment for AI agents",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0,
+      "summary": "The integration extends Kong AI Gateway from traffic governance into a complementary security loop spanning agent discovery, adversarial testing, runtime verdicts, inline enforcement, and agent-level containment. It strengthens Kong's regulated-enterprise positioning, but does not change the thesis score because no adoption, bookings, pricing, or revenue contribution was disclosed.",
+      "confirmed": [
+        "Kong and Straiker announced an integration in which Straiker evaluates configured LLM, MCP/tool, and agent-to-agent traffic and returns security decisions for Kong AI Gateway to enforce.",
+        "The companies describe escalation beyond blocking one request to agent-level containment, including revoking tools, suspending sessions, freezing memory, or taking an agent or agent fleet offline.",
+        "Both companies say the integration is designed for existing Kong-routed production workflows and cite customer deployments or active proofs of value in regulated industries."
+      ],
+      "uncertain": [
+        "No joint-customer count, named deployment, product availability tier, pricing, attach rate, contractual economics, bookings, ARR, or revenue contribution was disclosed.",
+        "Straiker's detection-performance figures are vendor-reported and were not independently validated in the announcement."
+      ],
+      "sources": [
+        {
+          "label": "Kong — Straiker AI-agent security integration",
+          "url": "https://konghq.com/blog/engineering/kong-and-straiker-ai-agent-security"
+        },
+        {
+          "label": "Straiker — Kong integration guide",
+          "url": "https://www.straiker.ai/blog/kong-straiker-agentic-ai-security"
+        }
+      ]
+    },
     {
       "id": "2026-09-09-forrester-api-management-leader",
       "publishedAt": "2026-09-09",
