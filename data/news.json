@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 10,
-  "lastCheckedAt": "2026-09-10T21:00:00+03:00",
-  "status": "MATERIAL_CHANGE",
+  "revision": 11,
+  "lastCheckedAt": "2026-09-12T21:00:00+03:00",
+  "status": "NO_MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "Kong and Straiker announced a runtime-security integration for AI agents across LLM, MCP/tool, and agent-to-agent traffic, with Kong enforcing Straiker verdicts and Straiker adding discovery, testing, runtime defense, and agent-level containment. The partnership strengthens regulated-enterprise positioning but discloses no customers, pricing, bookings, ARR, or revenue impact; the 72-point thesis and valuation assumptions remain unchanged.",
+  "summary": "No new Kong-specific IPO filing, financing, verified secondary transaction, acquisition, executive change, product release, or financial disclosure was found after the September 10 Straiker integration. Software-market and rate conditions remain a valuation risk but do not supply new Kong-specific evidence; the 72-point thesis and valuation assumptions remain unchanged.",
   "items": [
     {
       "id": "2026-09-10-straiker-agent-security-partnership",
