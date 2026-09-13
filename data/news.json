@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 11,
-  "lastCheckedAt": "2026-09-12T21:00:00+03:00",
+  "revision": 12,
+  "lastCheckedAt": "2026-09-13T21:00:00+03:00",
   "status": "NO_MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "No new Kong-specific IPO filing, financing, verified secondary transaction, acquisition, executive change, product release, or financial disclosure was found after the September 10 Straiker integration. Software-market and rate conditions remain a valuation risk but do not supply new Kong-specific evidence; the 72-point thesis and valuation assumptions remain unchanged.",
+  "summary": "No new Kong-specific IPO filing, financing, verified secondary transaction, acquisition, executive change, product release, customer disclosure, or financial metric was found after the September 12 check. Kong's press room still lists the September 9 Forrester announcement as its latest release, its blog still lists the September 10 Straiker integration as its latest post, and private-market pages show no newer verified transaction; the 72-point thesis and valuation assumptions remain unchanged.",
   "items": [
     {
       "id": "2026-09-10-straiker-agent-security-partnership",
