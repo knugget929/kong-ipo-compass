@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "revision": 3,
-  "updatedAt": "2026-09-03T16:18:00+03:00",
-  "asOf": "2026-09-03",
+  "revision": 4,
+  "updatedAt": "2026-09-14T21:00:00+03:00",
+  "asOf": "2026-09-14",
   "company": "Kong Inc.",
   "productName": "Kong IPO Compass",
   "verdict": {
     "direction": "Constructive",
     "confidence": "Low–medium",
-    "score": 72,
-    "change": 4,
-    "summary": "Kong's reported 72% year-over-year EMEA customer growth, named enterprise and AI-native wins, expanding agentic-AI platform, and appointment of an IPO-experienced CFO strengthen the growth, product, and readiness case. Confidence remains limited by unconfirmed company-wide ARR, financial quality, dilution, and the absence of a public filing.",
+    "score": 69,
+    "change": -3,
+    "summary": "Kong's reported EMEA customer growth, named enterprise and AI-native wins, expanding agentic-AI platform, and IPO-experienced CFO still support a constructive operating thesis. The U.S. 10-year Treasury yield crossing 5% raises the discount rate and multiple-compression risk for a future software IPO, while company-wide ARR, financial quality, dilution, and filing timing remain unconfirmed.",
     "ipoStatus": "No confirmed filing",
-    "updatedBy": "Late-2025 to September-2026 evidence review"
+    "updatedBy": "September 14, 2026 rates review"
   },
   "model": {
     "formulaVersion": "1.0",
@@ -67,7 +67,7 @@
   },
   "scorecard": [
     {"label": "Growth & scale", "score": 18, "max": 20, "state": "positive", "note": "Kong reported 72% year-over-year EMEA customer growth and named ING, First Abu Dhabi Bank, Mistral, and PolyAI as new customers; company-wide ARR and growth remain unconfirmed."},
-    {"label": "Market & AI tailwind", "score": 17, "max": 20, "state": "positive", "note": "APIs are control points for AI traffic, governance, security, and monetization."},
+    {"label": "Market & AI tailwind", "score": 14, "max": 20, "state": "watch", "note": "APIs remain control points for AI traffic, governance, security, and monetization, but the U.S. 10-year Treasury yield crossing 5% raises the discount rate and compresses the supportable multiple for a future software IPO if it persists."},
     {"label": "Product & position", "score": 17, "max": 20, "state": "positive", "note": "Context Mesh, MCP Registry, Agent Gateway, metering, security partnerships, NVIDIA model routing, and AI Gateway 2.0 extend Kong across the full AI data path."},
     {"label": "Financial quality", "score": 11, "max": 20, "state": "watch", "note": "Gross margin, net retention, growth rate, free cash flow, and concentration remain undisclosed."},
     {"label": "IPO readiness", "score": 9, "max": 20, "state": "watch", "note": "Kong hired Bruce Felt, who has taken three software companies public as CFO, but Kong has not confirmed a filing or timetable."}
@@ -81,6 +81,7 @@
     {"name": "Current ARR and growth", "state": "watch", "weight": "Very high", "why": "The $300M ARR figure is a user-supplied estimate; the IPO model is highly sensitive to confirmation and growth durability."},
     {"name": "Public-company financials", "state": "watch", "weight": "Very high", "why": "Retention, gross margin, free cash flow, customer concentration, and stock compensation will determine the quality of the multiple."},
     {"name": "IPO filing and timing", "state": "watch", "weight": "Very high", "why": "There is no confirmed public filing. An S-1 would replace estimates with audited evidence."},
+    {"name": "IPO market and rates", "state": "risk", "weight": "Very high", "why": "The U.S. 10-year Treasury yield crossed 5% on September 14, 2026. Persistently high long-term rates would reduce the multiple investors can justify for a private software issuer even if Kong executes operationally."},
     {"name": "Competitive pressure", "state": "risk", "weight": "High", "why": "Hyperscalers, Apigee, MuleSoft, Cloudflare, and open-source alternatives can pressure growth and pricing."}
   ],
   "milestones": [
@@ -134,9 +135,11 @@
     {"label": "Kong — NVIDIA NeMo Switchyard routing", "date": "2026-08-11", "url": "https://konghq.com/blog/engineering/llm-routing-kong-ai-gateway-nvidia-nemo-switchyard", "supports": "Native intelligent model routing with gateway governance"},
     {"label": "Kong — AI Gateway 2.0 GA", "date": "2026-09-01", "url": "https://konghq.com/blog/product-releases/kong-ai-gateway-2-0-ga", "supports": "Production readiness, MCP governance, identity, cost controls, provider support, and AgentCore IAM"},
     {"label": "Kong Docs — AI Gateway 2.0", "date": "Accessed 2026-09-03", "url": "https://developer.konghq.com/ai-gateway/get-started/", "supports": "AI Gateway 2.0 product model and minimum version"},
-    {"label": "Forge — Kong IPO profile", "date": "Accessed 2026-09-03", "url": "https://forgeglobal.com/kong_ipo/", "supports": "No company-confirmed IPO plan"}
+    {"label": "Forge — Kong IPO profile", "date": "Accessed 2026-09-03", "url": "https://forgeglobal.com/kong_ipo/", "supports": "No company-confirmed IPO plan"},
+    {"label": "Reuters — U.S. 10-year yield crosses 5%", "date": "2026-09-14", "url": "https://www.reuters.com/business/us-10-year-yields-reach-5-highest-since-2023-2026-09-14/", "supports": "Higher discount-rate and software-valuation risk"}
   ],
   "changeLog": [
+    {"date": "2026-09-14", "verdict": "DOWNGRADE", "score": 69, "headline": "Five-percent Treasury yield raises IPO valuation risk", "detail": "Reduced Market & AI tailwind by three points, the lowest score change in the recorded valuation-compression rule, after the U.S. 10-year Treasury yield crossed 5% for the first time since October 2023. Kong's operating evidence and the model's ARR, multiple, cash, dilution, and IPO-discount defaults remain unchanged because no Kong filing or new financial disclosure surfaced and one market session does not establish the multiple available at pricing."},
     {"date": "2026-09-03", "verdict": "UPGRADE", "score": 72, "headline": "Commercial traction and IPO readiness surface", "detail": "Raised Growth & scale by two points for 72% year-over-year EMEA customer growth and named wins, Product & position by one for the broader governed AI data path and ecosystem integrations, and IPO readiness by one for an experienced public-company CFO. Valuation inputs remain unchanged because company-wide ARR, margins, cash, dilution, and offering terms are still undisclosed."},
     {"date": "2026-09-03", "verdict": "UPGRADE", "score": 68, "headline": "AI Gateway 2.0 reaches GA", "detail": "Raised Product & position by one point because Kong moved its standalone AI Gateway from beta to production-supported GA. ARR, multiple, cash, dilution, and IPO-discount assumptions are unchanged because the release disclosed no adoption, bookings, revenue, or margin evidence."},
     {"date": "2026-09-03", "verdict": "MAINTAIN", "score": 67, "headline": "Initial thesis baseline", "detail": "Constructive on scale, AI/API demand, and platform breadth; confidence capped by private-company disclosure and no confirmed filing."}
