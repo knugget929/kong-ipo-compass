@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 13,
-  "lastCheckedAt": "2026-09-14T21:00:00+03:00",
-  "status": "MATERIAL_CHANGE",
-  "thesisDecision": "DOWNGRADE",
-  "summary": "No new Kong-specific filing, financing, verified secondary transaction, operating disclosure, or product announcement surfaced. The material change is macro: the U.S. 10-year Treasury yield crossed 5%, increasing discount-rate and software-IPO multiple risk. The thesis score falls from 72 to 69 under the recorded valuation-compression rule; model defaults remain unchanged because Kong's timing and financials are still unknown.",
+  "revision": 14,
+  "lastCheckedAt": "2026-09-15T21:00:00+03:00",
+  "status": "NO_MATERIAL_CHANGE",
+  "thesisDecision": "MAINTAIN",
+  "summary": "No new Kong-specific IPO filing, financing, verified secondary transaction, acquisition, executive change, product release, customer disclosure, or financial metric surfaced after the September 14 review. The U.S. 10-year Treasury yield remained near 5% and rate-hike expectations intensified, confirming—but not expanding—the valuation risk already reflected in yesterday's three-point downgrade; the thesis remains 69 and model defaults are unchanged.",
   "items": [
     {
       "id": "2026-09-14-us-treasury-yield-5-percent",
