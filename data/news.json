@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "revision": 15,
-  "lastCheckedAt": "2026-09-16T21:00:00+03:00",
+  "revision": 16,
+  "lastCheckedAt": "2026-09-17T21:00:00+03:00",
   "status": "NO_MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "No new Kong-specific IPO filing, financing, verified secondary transaction, acquisition, executive change, product release, customer disclosure, or financial metric surfaced after the September 15 review. Kong's latest press release remains the September 9 Forrester recognition and its latest blog remains the September 10 Straiker partnership. The U.S. 10-year Treasury yield eased from Tuesday's 5.041% peak but remained near 5% ahead of the Federal Reserve decision, confirming rather than expanding the valuation risk already reflected in the September 14 downgrade; the thesis remains 69 and model defaults are unchanged.",
+  "summary": "No new Kong-specific IPO filing, financing, verified secondary transaction, acquisition, executive change, product release, customer disclosure, or financial metric surfaced after the September 16 review. Kong's latest press release remains the September 9 Forrester recognition and its latest blog remains the September 10 Straiker partnership. The Federal Reserve raised its policy rate 25 basis points to 3.75%-4.00% and signaled possible further tightening, but the U.S. 10-year Treasury yield eased below 5%; this confirms rather than expands the valuation risk already reflected in the September 14 downgrade. The thesis remains 69 and model defaults are unchanged.",
   "items": [
     {
       "id": "2026-09-14-us-treasury-yield-5-percent",
