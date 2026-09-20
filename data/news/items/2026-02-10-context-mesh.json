@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-02-10-context-mesh",
+  "publishedAt": "2026-02-10",
+  "title": "Context Mesh turns enterprise APIs into governed agent tools",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Context Mesh and MCP Registry broaden Kong's addressable workflow from managing traffic to discovering, generating, deploying, and governing tools for AI agents. The product case improves, but monetization is not yet quantified.",
+  "confirmed": [
+    "Kong launched Context Mesh to discover enterprise APIs, transform them into agent-consumable tools, and deploy them with runtime governance.",
+    "Kong positioned Context Mesh alongside MCP Registry, AI Gateway, and Event Gateway across the AI data path."
+  ],
+  "uncertain": [
+    "Customer adoption, pricing, incremental ARR, and competitive differentiation at scale were not disclosed."
+  ],
+  "sources": [
+    {
+      "label": "Kong — Context Mesh",
+      "url": "https://konghq.com/company/press-room/press-release/kong-launches-context-mesh-to-connect-enterprise-data-to-ai-agents"
+    },
+    {
+      "label": "Kong — MCP Registry",
+      "url": "https://konghq.com/company/press-room/press-release/kong-introduces-mcp-registry"
+    }
+  ]
+}

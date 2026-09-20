@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-02-18-solace-partnership",
+  "publishedAt": "2026-02-18",
+  "title": "Kong and Solace connect APIs, events, and AI traffic",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "The technology partnership expands Kong's governed data-path story into real-time event streams. It is strategically relevant, while its adoption and economics remain unknown.",
+  "confirmed": [
+    "Solace joined Kong's Premium Technology Partner Program.",
+    "The companies described a combined control plane for APIs, events, LLMs, and MCP servers with shared governance and observability."
+  ],
+  "uncertain": [
+    "The announcement did not disclose customer deployments, commercial terms, bookings, or revenue contribution."
+  ],
+  "sources": [
+    {
+      "label": "Kong and Solace partnership",
+      "url": "https://www.prnewswire.com/news-releases/kong-and-solace-announce-partnership-to-unify-api-and-real-time-data-and-event-streaming-302691193.html"
+    }
+  ]
+}

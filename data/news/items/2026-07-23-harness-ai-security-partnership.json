@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-07-23-harness-ai-security-partnership",
+  "publishedAt": "2026-07-23",
+  "title": "Harness partnership expands from API Gateway to AI Gateway",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "The generally available integration adds AI asset discovery and behavioral protection around Kong-routed LLM, MCP, and agent traffic. It supports ecosystem breadth but does not establish material revenue.",
+  "confirmed": [
+    "Harness and Kong expanded their existing API security integration to Kong AI Gateway.",
+    "Harness says AI Discovery and AI Protection are generally available to joint customers."
+  ],
+  "uncertain": [
+    "Joint-customer count, attach rate, pricing, bookings, and revenue contribution were not disclosed."
+  ],
+  "sources": [
+    {
+      "label": "Harness — expanded Kong partnership",
+      "url": "https://www.harness.io/press-and-news/harness-kong-expand-strategic-partnership"
+    }
+  ]
+}

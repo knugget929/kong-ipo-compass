@@ -79,3 +79,16 @@ tasks:
     owns: [data/thesis.json, data/news.json, docs/BUILD_PLAN.md]
     parallel_safe: false
     definition_of_done: [late-2025 through September-2026 evidence is searched, material facts are cited from primary sources, thesis scoring reconciles with news impacts, valuation inputs remain unchanged absent company-wide financial evidence, deployed fallback snapshots remain untouched, direct validation passes, independent reviewer verifies the result, no Site build or deployment occurs]
+  - id: KIPO-007
+    title: Split canonical news and run-state storage
+    work_type: ARCHITECTURE
+    priority: P1
+    risk: MEDIUM
+    review_gate: G2
+    status: IN_REVIEW
+    target_release: V0.2
+    source_feedback: owner direction 2026-09-20
+    depends_on: [KIPO-004]
+    owns: [data/checks/latest.json, data/news/index.json, data/news/items, data/news.json, dist/app.js, scripts/news-data.mjs, scripts/test-news-data.mjs, scripts/validate-data.mjs, docs/DATA_ARCHITECTURE.md, docs/AUTOMATION_RUNBOOK.md, docs/NEWS_STORAGE_MIGRATION.md]
+    parallel_safe: false
+    definition_of_done: [all historical news is preserved with stable IDs and source evidence, split records validate independently, no-news runs can update only latest check state after cutover, material-news runs can add one item plus a bounded index update, thesis changes only when warranted, the Site reader prefers split records with legacy fallback, production reader cutover is explicitly gated, direct validation passes, independent reviewer verifies the exact head, exact preview or release candidate verifies Site behavior]

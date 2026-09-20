@@ -75,10 +75,47 @@
     return value.changeLog.every((entry) => entry && isValidDate(entry.date) && ["UPGRADE", "MAINTAIN", "DOWNGRADE"].includes(entry.verdict));
   }
 
+  const NEWS_DECISIONS = ["UPGRADE", "MAINTAIN", "DOWNGRADE"];
+  const NEWS_IMPACTS = ["positive", "neutral", "negative"];
+  const NEWS_SIGNIFICANCE = ["high", "meaningful", "noted"];
+  const NEWS_INDEX_FIELDS = ["id", "publishedAt", "title", "impact", "significance", "thesisDecision", "scoreDelta"];
+
+  function hasValidNewsItemFields(item) {
+    return item && typeof item.id === "string" && isValidDate(item.publishedAt) && typeof item.title === "string" && typeof item.summary === "string"
+      && NEWS_IMPACTS.includes(item.impact) && NEWS_SIGNIFICANCE.includes(item.significance) && NEWS_DECISIONS.includes(item.thesisDecision)
+      && isFiniteNumber(item.scoreDelta) && Array.isArray(item.confirmed) && Array.isArray(item.uncertain) && Array.isArray(item.sources)
+      && item.sources.length > 0 && item.sources.every((source) => source && typeof source.label === "string" && isHttpsUrl(source.url));
+  }
+
   function isValidNews(value) {
-    const decisions = ["UPGRADE", "MAINTAIN", "DOWNGRADE"];
-    if (!value || typeof value !== "object" || value.schemaVersion !== 1 || !isValidDate(value.lastCheckedAt) || !decisions.includes(value.thesisDecision) || !Array.isArray(value.items)) return false;
-    return value.items.every((item) => item && typeof item.id === "string" && isValidDate(item.publishedAt) && typeof item.title === "string" && typeof item.summary === "string" && ["positive", "neutral", "negative"].includes(item.impact) && decisions.includes(item.thesisDecision) && isFiniteNumber(item.scoreDelta) && Array.isArray(item.confirmed) && Array.isArray(item.uncertain) && Array.isArray(item.sources) && item.sources.length > 0 && item.sources.every((source) => source && typeof source.label === "string" && isHttpsUrl(source.url)));
+    return Boolean(value && typeof value === "object" && value.schemaVersion === 1 && isValidDate(value.lastCheckedAt)
+      && NEWS_DECISIONS.includes(value.thesisDecision) && Array.isArray(value.items) && value.items.every(hasValidNewsItemFields));
+  }
+
+  function isValidSplitNewsItem(value) {
+    return Boolean(value && value.schemaVersion === 1 && Number.isInteger(value.revision) && value.revision > 0 && hasValidNewsItemFields(value));
+  }
+
+  function isValidNewsIndex(value) {
+    if (!value || value.schemaVersion !== 1 || !Number.isInteger(value.revision) || value.revision < 1 || !Number.isInteger(value.historyLimit)
+      || value.historyLimit < 1 || value.historyLimit > 30 || !Array.isArray(value.items) || value.items.length > value.historyLimit) return false;
+    const ids = new Set();
+    return value.items.every((item) => {
+      if (!item || typeof item.id !== "string" || ids.has(item.id) || !isValidDate(item.publishedAt) || typeof item.title !== "string"
+        || !NEWS_IMPACTS.includes(item.impact) || !NEWS_SIGNIFICANCE.includes(item.significance) || !NEWS_DECISIONS.includes(item.thesisDecision)
+        || !isFiniteNumber(item.scoreDelta)) return false;
+      ids.add(item.id);
+      return true;
+    });
+  }
+
+  function isValidCheckState(value) {
+    return Boolean(value && value.schemaVersion === 1 && Number.isInteger(value.revision) && value.revision > 0 && isValidDate(value.lastCheckedAt)
+      && typeof value.status === "string" && NEWS_DECISIONS.includes(value.thesisDecision) && typeof value.summary === "string");
+  }
+
+  function indexMatchesItem(entry, item) {
+    return NEWS_INDEX_FIELDS.every((field) => Object.is(entry[field], item[field]));
   }
 
   async function fetchJson(url) {
@@ -107,6 +144,28 @@
       } catch (_) {
         return { value: fallback, source: "embedded" };
       }
+    }
+  }
+
+  async function loadSplitNewsData() {
+    const [index, check] = await Promise.all([
+      fetchJson(`${DATA_ROOT}/news/index.json`),
+      fetchJson(`${DATA_ROOT}/checks/latest.json`)
+    ]);
+    if (!isValidNewsIndex(index) || !isValidCheckState(check)) throw new Error("Invalid split news metadata");
+    const items = await Promise.all(index.items.map(async (entry) => {
+      const item = await fetchJson(`${DATA_ROOT}/news/items/${encodeURIComponent(entry.id)}.json`);
+      if (!isValidSplitNewsItem(item) || item.id !== entry.id || !indexMatchesItem(entry, item)) throw new Error(`Invalid split news item ${entry.id}`);
+      return item;
+    }));
+    return { value: { ...check, schemaVersion: 1, revision: index.revision, items }, source: "live" };
+  }
+
+  async function loadNewsData() {
+    try {
+      return await loadSplitNewsData();
+    } catch (_) {
+      return loadDataFile("news.json", isValidNews, FALLBACK_NEWS);
     }
   }
 
@@ -393,7 +452,7 @@
   async function init() {
     const [thesisResult, newsResult] = await Promise.all([
       loadDataFile("thesis.json", isValidThesis, FALLBACK),
-      loadDataFile("news.json", isValidNews, FALLBACK_NEWS)
+      loadNewsData()
     ]);
     data = thesisResult.value;
     news = newsResult.value;

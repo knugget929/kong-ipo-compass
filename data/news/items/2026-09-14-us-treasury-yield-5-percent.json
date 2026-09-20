@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-09-14-us-treasury-yield-5-percent",
+  "publishedAt": "2026-09-14",
+  "title": "U.S. 10-year Treasury yield crosses 5%, raising software-IPO valuation risk",
+  "impact": "negative",
+  "significance": "meaningful",
+  "thesisDecision": "DOWNGRADE",
+  "scoreDelta": -3,
+  "summary": "The benchmark long-term yield crossed a valuation-sensitive threshold, increasing the discount rate for long-duration software cash flows and making premium private-company multiples harder to sustain. The downgrade applies the lowest end of the repository's valuation-compression rule without changing Kong's operating assessment or model defaults.",
+  "confirmed": [
+    "Reuters reported that the benchmark U.S. 10-year Treasury yield rose above 5% on September 14, 2026, its highest level since October 2023, and was last at 5.01% in the cited report.",
+    "Reuters attributed the move to higher-for-longer rate expectations, renewed inflation concerns after an oil-price jump, heavy debt issuance, and fiscal-risk premiums.",
+    "Kong's press room still lists the September 9 Forrester announcement as its latest release, and its blog still lists the September 10 Straiker integration as its latest post."
+  ],
+  "uncertain": [
+    "A one-day yield threshold may reverse; it does not prove that Kong's eventual IPO window will be closed or establish the revenue multiple available when Kong prices an offering.",
+    "No new Kong ARR, revenue growth, gross margin, free-cash-flow margin, retention, customer concentration, fully diluted share count, IPO filing, or timetable was disclosed.",
+    "Private-market pages displayed algorithmic Kong price estimates but did not establish a verified arm's-length transaction or executable market price."
+  ],
+  "sources": [
+    {
+      "label": "Reuters — U.S. 10-year yield crosses 5%",
+      "url": "https://www.reuters.com/business/us-10-year-yields-reach-5-highest-since-2023-2026-09-14/"
+    },
+    {
+      "label": "Kong press room",
+      "url": "https://konghq.com/company/press-room"
+    },
+    {
+      "label": "Kong blog",
+      "url": "https://konghq.com/blog"
+    }
+  ]
+}

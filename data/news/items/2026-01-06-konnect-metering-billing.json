@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-01-06-konnect-metering-billing",
+  "publishedAt": "2026-01-06",
+  "title": "OpenMeter technology reaches Kong Konnect",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Kong moved the OpenMeter acquisition into a Konnect product for AI cost control, chargeback, and monetization. This reduces integration risk, but uptake and financial impact remain undisclosed.",
+  "confirmed": [
+    "Kong launched Konnect Metering & Billing following the OpenMeter acquisition.",
+    "The product targets AI cost controls, showback, chargeback, and usage-based monetization."
+  ],
+  "uncertain": [
+    "Kong did not disclose product adoption, attach rates, pricing, bookings, revenue, or margin contribution."
+  ],
+  "sources": [
+    {
+      "label": "Kong — Konnect Metering & Billing",
+      "url": "https://konghq.com/blog/product-releases/ai-cost-control"
+    }
+  ]
+}

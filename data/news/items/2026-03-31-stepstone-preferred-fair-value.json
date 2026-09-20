@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-03-31-stepstone-preferred-fair-value",
+  "publishedAt": "2026-03-31",
+  "title": "StepStone fund marks Kong preferred shares near $10.24",
+  "impact": "neutral",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "An audited fund filing provides an external private-market reference close to the user's later roughly $10 secondary marker. Because it is a Level 3 preferred-share valuation rather than a liquid common-share trade, it does not change the model.",
+  "confirmed": [
+    "StepStone Private Venture and Growth Fund reported 1,211,663 Kong preferred shares at a $12,412,033 fair value as of March 31, 2026, implying approximately $10.24 per preferred share.",
+    "The same position had a reported cost of $12,123,382, or approximately $10.01 per preferred share."
+  ],
+  "uncertain": [
+    "The share series, liquidation preference, conversion terms, fully diluted capitalization, and valuation methodology for the specific Kong position were not disclosed in the schedule.",
+    "The fund mark is not evidence of a current liquid secondary price or an IPO price."
+  ],
+  "sources": [
+    {
+      "label": "SEC — StepStone March 2026 holdings",
+      "url": "https://www.sec.gov/Archives/edgar/data/1918642/000121390026066820/ea0293641-01_ncsr.htm"
+    }
+  ]
+}

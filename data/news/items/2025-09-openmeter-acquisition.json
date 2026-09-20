@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2025-09-openmeter-acquisition",
+  "publishedAt": "2025-09-03",
+  "title": "OpenMeter adds usage metering and billing to Kong's platform",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "The acquisition broadens Kong's monetization layer for API and AI workloads. It improves strategic breadth, while integration quality and financial contribution remain unproven.",
+  "confirmed": [
+    "Kong acquired OpenMeter and described native usage metering and billing as part of the expanded platform."
+  ],
+  "uncertain": [
+    "Purchase terms, integration economics, customer uptake, and incremental ARR were not disclosed."
+  ],
+  "sources": [
+    {
+      "label": "Kong — OpenMeter acquisition",
+      "url": "https://konghq.com/blog/news/kong-acquires-openmeter"
+    }
+  ]
+}

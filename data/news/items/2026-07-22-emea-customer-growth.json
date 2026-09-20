@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-07-22-emea-customer-growth",
+  "publishedAt": "2026-07-22",
+  "title": "Kong reports 72% year-over-year EMEA customer growth",
+  "impact": "positive",
+  "significance": "high",
+  "thesisDecision": "UPGRADE",
+  "scoreDelta": 2,
+  "summary": "This is the strongest new commercial signal in the review window. Rapid regional customer growth and named enterprise and AI-native wins improve confidence in demand, although the regional figure cannot be treated as company-wide ARR growth.",
+  "confirmed": [
+    "Kong reported a 72% year-over-year increase in EMEA customers and 71% headcount growth in the region over two years.",
+    "Kong named ING Bank, First Abu Dhabi Bank, Mistral, and PolyAI as notable new customers and opened offices in Paris and Milan."
+  ],
+  "uncertain": [
+    "Kong did not disclose the starting customer count, regional revenue, company-wide growth, ARR, churn, retention, or sales efficiency.",
+    "The 71% headcount expansion may support growth but also increases operating expense."
+  ],
+  "sources": [
+    {
+      "label": "Kong — EMEA customer growth",
+      "url": "https://www.prnewswire.com/news-releases/kong-opens-new-offices-in-paris-and-milan-driven-by-emea-customer-growth-302831577.html"
+    }
+  ]
+}

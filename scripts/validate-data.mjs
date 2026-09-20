@@ -1,16 +1,13 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { DECISIONS, IMPACTS, SIGNIFICANCE, isValidDate, readNewsDataset, validateNewsDataset } from './news-data.mjs';
 
 const readJson = async (path) => JSON.parse(await readFile(path, 'utf8'));
 const thesis = await readJson('data/thesis.json');
-const news = await readJson('data/news.json');
+const legacyNews = await readJson('data/news.json');
 const thesisSnapshot = await readJson('dist/data/thesis.json');
 const newsSnapshot = await readJson('dist/data/news.json');
-
-const decisions = ['UPGRADE', 'MAINTAIN', 'DOWNGRADE'];
-const isValidDate = (value) => typeof value === 'string'
-  && /^\d{4}-\d{2}-\d{2}(?:T.*)?$/.test(value)
-  && !Number.isNaN(new Date(value.length === 10 ? `${value}T12:00:00Z` : value).getTime());
+const newsDataset = await readNewsDataset('data');
 
 const validateThesis = (record, label) => {
   assert.equal(record.schemaVersion, 1, `${label} schema version must be supported`);
@@ -31,17 +28,19 @@ const validateThesis = (record, label) => {
   for (const source of record.sources) assert.equal(new URL(source.url).protocol, 'https:', `${label} sources must use HTTPS`);
 };
 
-const validateNews = (record, label) => {
+const validateLegacyNews = (record, label) => {
   assert.equal(record.schemaVersion, 1, `${label} schema version must be supported`);
   assert.ok(Number.isInteger(record.revision) && record.revision > 0, `${label} revision must be positive`);
   assert.ok(Array.isArray(record.items), `${label} items must be an array`);
-  assert.ok(decisions.includes(record.thesisDecision), `${label} thesis decision is invalid`);
+  assert.ok(DECISIONS.includes(record.thesisDecision), `${label} thesis decision is invalid`);
   assert.ok(isValidDate(record.lastCheckedAt), `${label} check time must be a parseable ISO date`);
+  assert.ok(typeof record.summary === 'string' && record.summary.trim(), `${label} summary is required`);
   for (const item of record.items) {
     assert.ok(item.id && item.publishedAt && item.title && item.summary, `${label} item is incomplete`);
     assert.ok(isValidDate(item.publishedAt), `${label} item publication dates must be parseable ISO dates`);
-    assert.ok(decisions.includes(item.thesisDecision), `${label} item decision is invalid`);
-    assert.ok(['positive', 'neutral', 'negative'].includes(item.impact), `${label} item impact is invalid`);
+    assert.ok(DECISIONS.includes(item.thesisDecision), `${label} item decision is invalid`);
+    assert.ok(IMPACTS.includes(item.impact), `${label} item impact is invalid`);
+    assert.ok(SIGNIFICANCE.includes(item.significance), `${label} item significance is invalid`);
     assert.ok(Number.isFinite(item.scoreDelta), `${label} item score delta must be finite`);
     assert.ok(Array.isArray(item.confirmed) && Array.isArray(item.uncertain), `${label} fact boundaries are required`);
     assert.ok(Array.isArray(item.sources) && item.sources.length > 0, `${label} item must have a source`);
@@ -50,11 +49,23 @@ const validateNews = (record, label) => {
 };
 
 validateThesis(thesis, 'canonical thesis');
-validateNews(news, 'canonical news');
+const { orphanIds } = validateNewsDataset(newsDataset, 'canonical split news');
+validateLegacyNews(legacyNews, 'legacy canonical news compatibility snapshot');
 validateThesis(thesisSnapshot, 'deployed thesis snapshot');
-validateNews(newsSnapshot, 'deployed news snapshot');
+validateLegacyNews(newsSnapshot, 'deployed news snapshot');
+
 assert.equal(thesisSnapshot.schemaVersion, thesis.schemaVersion, 'snapshot and canonical thesis schemas must match');
-assert.equal(newsSnapshot.schemaVersion, news.schemaVersion, 'snapshot and canonical news schemas must match');
+assert.equal(newsSnapshot.schemaVersion, legacyNews.schemaVersion, 'snapshot and legacy canonical news schemas must match');
+assert.equal(newsDataset.index.schemaVersion, legacyNews.schemaVersion, 'split and legacy canonical news schemas must match');
 assert.ok(thesisSnapshot.revision <= thesis.revision, 'deployed thesis snapshot cannot be newer than canonical data');
-assert.ok(newsSnapshot.revision <= news.revision, 'deployed news snapshot cannot be newer than canonical data');
-console.log('Canonical records and deploy-time fallback snapshots are valid.');
+assert.ok(newsSnapshot.revision <= legacyNews.revision, 'deployed news snapshot cannot be newer than legacy canonical data');
+assert.ok(newsDataset.index.revision >= legacyNews.revision, 'split news index cannot predate the migration compatibility snapshot');
+
+for (const legacyItem of legacyNews.items) {
+  const migrated=newsDataset.itemsById.get(legacyItem.id);
+  assert.ok(migrated, `migration lost legacy item ${legacyItem.id}`);
+  const { schemaVersion, revision, ...payload } = migrated;
+  assert.deepEqual(payload, legacyItem, `migration changed historical item ${legacyItem.id}`);
+}
+if (orphanIds.length) console.log(`Validated ${orphanIds.length} unindexed archived/staged news item(s): ${orphanIds.join(', ')}`);
+console.log('Canonical split records, legacy compatibility data, and deploy-time fallback snapshots are valid.');
