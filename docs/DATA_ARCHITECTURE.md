@@ -2,9 +2,11 @@
 
 ## Outcome
 
-The ChatGPT Site remains a stable presentation shell. Canonical research state is split into small GitHub records so scheduled runs can validate and write only the files that actually changed. Ordinary research updates still require no Site rebuild or redeploy.
+The target architecture splits research state into small GitHub records so scheduled runs can validate and write only the files that actually changed. The migration is backward-safe: the legacy monolith remains available until the split reader has been deployed and verified in production.
 
-## Canonical records
+**Cutover status:** `READY_FOR_READER_DEPLOY`. See `docs/NEWS_STORAGE_MIGRATION.md`. Until that activation gate is satisfied, production automation must continue updating `data/news.json` for the currently deployed old reader.
+
+## Target canonical records after cutover
 
 | File | Owns | Updated when |
 | --- | --- | --- |
@@ -12,16 +14,16 @@ The ChatGPT Site remains a stable presentation shell. Canonical research state i
 | `data/checks/latest.json` | Latest run timestamp, status, thesis decision, concise summary, optional execution/error metadata | Every scheduled check |
 | `data/news/index.json` | Ordered material-news IDs plus minimal listing metadata, schema version, revision, and history limit | The visible material-news history changes |
 | `data/news/items/<stable-id>.json` | One material development: sources, confirmed facts, uncertainty, significance, score delta, thesis decision, timestamps | A new material item is added or an existing item is explicitly corrected |
-| `data/news.json` | Frozen migration-era compatibility snapshot | Do not update during normal runs; retain until split-reader retirement is verified |
+| `data/news.json` | Legacy compatibility record during migration; frozen compatibility snapshot only after cutover | Continue updating pre-cutover; do not update during normal post-cutover runs |
 | `dist/data/*.json` | Deploy-time fallback snapshots | Only when the Site shell itself is released |
 
-The browser first loads the split live records from raw GitHub. It fetches `checks/latest.json` and `news/index.json`, then loads only the indexed item files. If the split path is unavailable or incomplete, it falls back to the legacy live `data/news.json`, then the deployed snapshot, then the embedded baseline. This makes the migration backward-safe.
+The new browser reader first loads the split live records from raw GitHub. It fetches `checks/latest.json` and `news/index.json`, then loads only the indexed item files. If the split path is unavailable or incomplete, it falls back to the legacy live `data/news.json`, then the deployed snapshot, then the embedded baseline.
 
 ## News history and orphan items
 
 `data/news/index.json` caps the visible history at `historyLimit` (currently 30). Item files are intentionally durable. A valid item file that is not listed in the index is treated as archived or staged data, not as a rendering error. This supports two safety properties:
 
-- older history can be removed from the visible window without deleting evidence;
+- older history can leave the visible window without deleting evidence;
 - a new item file can be written before the index references it, so an interrupted sequential write does not break the live reader.
 
 An index entry that references a missing item is invalid and must never be committed.
@@ -41,13 +43,15 @@ An index entry that references a missing item is invalid and must never be commi
 
 The validator checks duplicate IDs, missing indexed items, valid staged/archived orphans, index/item metadata agreement, source/significance rules, history limits, legacy migration fidelity, thesis/snapshot validity, and privacy constraints.
 
-## Safe automation write patterns
+## Post-cutover automation write patterns
+
+These narrow-write patterns become authoritative only after the activation gate in `docs/NEWS_STORAGE_MIGRATION.md` is satisfied.
 
 **No-news run**
 
 1. Build and validate the candidate `data/checks/latest.json`.
 2. Update only `data/checks/latest.json`.
-3. Leave the news index, all news item files, legacy `data/news.json`, and thesis untouched.
+3. Leave the news index, all news item files, frozen legacy `data/news.json`, and thesis untouched.
 
 **Material news with no thesis change**
 
@@ -67,4 +71,4 @@ Canonical files must never contain personal holdings, cost basis, credentials, p
 
 ## Failure behavior
 
-A failed research run does not rewrite history. If candidate validation fails, commit nothing. If a sequential run stops after writing only a new unindexed item, the Site ignores that staged orphan and remains valid. A temporary GitHub read failure does not break the dashboard because legacy and deployed fallback paths remain available.
+A failed research run does not rewrite history. If candidate validation fails, commit nothing. If a sequential post-cutover run stops after writing only a new unindexed item, the Site ignores that staged orphan and remains valid. A temporary GitHub read failure does not break the dashboard because legacy and deployed fallback paths remain available.
