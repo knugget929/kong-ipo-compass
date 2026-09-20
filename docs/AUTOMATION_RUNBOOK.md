@@ -7,15 +7,51 @@ The scheduled task researches major Kong developments and writes the public data
 1. Check Kong primary sources, SEC filing sources, credible financing/market sources, and material competitive developments.
 2. Separate confirmed facts from inference and unresolved questions.
 3. Decide `UPGRADE`, `MAINTAIN`, or `DOWNGRADE` using the recorded decision rules.
-4. Update `data/news.json` with the check time, run status, concise summary, and any material items.
-5. Update `data/thesis.json` only when evidence changes the score, verdict, model defaults/references, catalyst balance, milestones, unknowns, or sources.
-6. Increment the revision of each changed file, validate both files, and commit directly to `main`.
+4. Build the intended small-file changes in a validation workspace and run:
+   - `node scripts/validate-data.mjs`
+   - `node --test scripts/test-news-data.mjs`
+5. Commit only the files the run actually changes.
+
+## Exact write pattern
+
+### No material news
+
+Update only `data/checks/latest.json`:
+
+- increment its revision;
+- set `lastCheckedAt`;
+- set run `status`;
+- set `thesisDecision`;
+- write the concise run summary and optional execution metadata.
+
+Do not touch `data/news/index.json`, any news item file, `data/news.json`, or `data/thesis.json`.
+
+### New material news, thesis unchanged
+
+- create `data/news/items/<stable-id>.json`;
+- increment/update `data/news/index.json`, keeping newest first and no more than 30 indexed items;
+- increment/update `data/checks/latest.json`;
+- leave `data/thesis.json` unchanged.
+
+Prefer one multi-file Git tree commit after validation. If the connected GitHub path only permits sequential writes, create the item file first, then update the index, then the latest-check file. Valid unindexed item files are intentionally safe staged/orphan records.
+
+### New material news that changes the thesis
+
+Use the material-news pattern above and update `data/thesis.json` only when the evidence changes the score, verdict, model defaults/references, catalyst balance, milestones, unknowns, or thesis sources.
+
+Prefer one multi-file Git tree commit. If sequential writes are unavoidable: item file → thesis (if warranted) → index → latest check.
+
+## Compatibility rule
+
+`data/news.json` is a frozen migration compatibility snapshot. Normal scheduled runs must not rewrite it. The Site prefers the split reader and uses the monolith only as a fallback while the migration is being verified.
 
 ## Guardrails
 
-- Do not modify UI files or redeploy the Site for a data-only update.
+- Do not modify UI/design files or redeploy the Site for a data-only run.
 - Do not add GitHub Actions.
 - Do not add personal holdings or private source material.
 - Do not add routine marketing announcements unless they plausibly affect revenue quality, competitive position, IPO readiness, dilution, or valuation.
-- If the repository is missing, permissions fail, sources conflict materially, or JSON validation fails, report the blocker and leave canonical data unchanged.
-- Keep at most 30 material news items, newest first; do not silently remove the latest thesis-changing event.
+- Preserve stable IDs and all historical item files.
+- Never let the index reference a missing item.
+- If permissions fail, sources conflict materially, or candidate JSON validation fails, report the blocker and leave the current indexed/check/thesis state unchanged.
+- Keep at most 30 material items in the visible index, newest first. Older valid item files may remain as archived evidence.
