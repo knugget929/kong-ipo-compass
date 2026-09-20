@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-09-02-nasdaq-private-market-price",
+  "publishedAt": "2026-09-02",
+  "title": "Nasdaq Private Market estimates Kong shares at $10",
+  "impact": "neutral",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Nasdaq Private Market's independent $10-per-share estimate corroborates the model's existing roughly $10 secondary reference and replaces a user-reported label with a dated institutional benchmark. The modeled price and thesis score are unchanged because the estimate does not identify a specific executed trade, share class, volume, or fully diluted capitalization.",
+  "confirmed": [
+    "Nasdaq Private Market reports an NPM Price estimate of $10 per Kong share as of September 2, 2026.",
+    "NPM says its proprietary benchmark incorporates primary financings, executed secondary trades, bid and ask activity, 409A valuations, mutual-fund marks, and macro and cross-asset indicators."
+  ],
+  "uncertain": [
+    "NPM does not disclose the Kong-specific input mix, transaction volume, share class, liquidation preferences, or fully diluted share count behind the estimate.",
+    "The NPM Price is an estimate rather than evidence that Kong common shares traded at $10 in a specific arm's-length transaction, and it is not an IPO price."
+  ],
+  "sources": [
+    {
+      "label": "Nasdaq Private Market — Kong company profile",
+      "url": "https://www.nasdaqprivatemarket.com/company/kong/"
+    },
+    {
+      "label": "Nasdaq Private Market — NPM Price methodology",
+      "url": "https://www.nasdaqprivatemarket.com/data-intelligence/"
+    }
+  ]
+}

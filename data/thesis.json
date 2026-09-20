@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "revision": 4,
-  "updatedAt": "2026-09-14T21:00:00+03:00",
-  "asOf": "2026-09-14",
+  "revision": 5,
+  "updatedAt": "2026-09-20T20:58:48+03:00",
+  "asOf": "2026-09-20",
   "company": "Kong Inc.",
   "productName": "Kong IPO Compass",
   "verdict": {
     "direction": "Constructive",
     "confidence": "Low–medium",
     "score": 69,
-    "change": -3,
-    "summary": "Kong's reported EMEA customer growth, named enterprise and AI-native wins, expanding agentic-AI platform, and IPO-experienced CFO still support a constructive operating thesis. The U.S. 10-year Treasury yield crossing 5% raises the discount rate and multiple-compression risk for a future software IPO, while company-wide ARR, financial quality, dilution, and filing timing remain unconfirmed.",
+    "change": 0,
+    "summary": "Kong's reported EMEA customer growth, named enterprise and AI-native wins, expanding agentic-AI platform, and IPO-experienced CFO still support a constructive operating thesis. Nasdaq Private Market's $10-per-share estimate corroborates the existing secondary reference without establishing a specific trade or IPO value. The U.S. 10-year Treasury yield above the recorded 5% threshold raises discount-rate and multiple-compression risk, while company-wide ARR, financial quality, dilution, and filing timing remain unconfirmed.",
     "ipoStatus": "No confirmed filing",
-    "updatedBy": "September 14, 2026 rates review"
+    "updatedBy": "September 20, 2026 secondary-market review"
   },
   "model": {
     "formulaVersion": "1.0",
@@ -27,7 +27,7 @@
     },
     "references": {
       "latestSecondaryPrice": 10,
-      "latestSecondaryLabel": "user-reported secondary"
+      "latestSecondaryLabel": "Nasdaq Private Market estimate (2026-09-02)"
     },
     "ranges": {
       "arr": [100, 500, 5],
@@ -94,11 +94,11 @@
     {"date": "2026-02", "title": "IPO-experienced CFO appointed", "kind": "confirmed", "detail": "Bruce Felt joined as CFO after taking FullTime Software, SuccessFactors, and Domo public in prior CFO roles."},
     {"date": "2026-03", "title": "Preferred shares marked near $10.24", "kind": "estimate", "detail": "A StepStone fund reported a $12.412M fair value for 1,211,663 Kong preferred shares as of March 31, implying about $10.24 per preferred share; this is a Level 3 fund mark, not a liquid common-share price."},
     {"date": "2026-04", "title": "Agent Gateway reaches GA", "kind": "confirmed", "detail": "Kong added production-ready governance for agent-to-agent traffic alongside LLM and MCP traffic."},
-    {"date": "2026-06", "title": "~$10 secondary reference", "kind": "estimate", "detail": "User-reported insider secondary pricing, used only as a comparison marker rather than verified market value."},
     {"date": "2026-07", "title": "EMEA customer base grows 72%", "kind": "confirmed", "detail": "Kong reported 72% year-over-year regional customer growth, 71% headcount growth over two years, new Paris and Milan offices, and named customer additions."},
     {"date": "2026-07", "title": "Harness expands into Kong AI Gateway", "kind": "confirmed", "detail": "The companies made AI asset discovery and behavioral protection generally available to joint customers."},
     {"date": "2026-08", "title": "NVIDIA intelligent routing integration", "kind": "confirmed", "detail": "Kong AI Gateway added native routing with NVIDIA NeMo Switchyard while retaining gateway governance, credentials, metering, and audit controls."},
     {"date": "2026-09", "title": "AI Gateway 2.0 reaches GA", "kind": "confirmed", "detail": "Kong made its standalone AI Gateway production-supported, adding MCP server bundling, identity-aware controls, modality-aware cost governance, expanded model support, and AWS IAM authentication."},
+    {"date": "2026-09", "title": "$10 NPM Price estimate", "kind": "estimate", "detail": "Nasdaq Private Market estimated Kong shares at $10 as of September 2 using its proprietary multi-input pricing methodology; this is a benchmark, not a disclosed executed trade or IPO price."},
     {"date": "2026-09", "title": "IPO still unconfirmed", "kind": "watch", "detail": "No public IPO filing or company-endorsed timetable was found in the current evidence set."}
   ],
   "upgradeRules": [
@@ -134,11 +134,14 @@
     {"label": "Harness — expanded Kong partnership", "date": "2026-07-23", "url": "https://www.harness.io/press-and-news/harness-kong-expand-strategic-partnership", "supports": "Generally available AI discovery and protection integration"},
     {"label": "Kong — NVIDIA NeMo Switchyard routing", "date": "2026-08-11", "url": "https://konghq.com/blog/engineering/llm-routing-kong-ai-gateway-nvidia-nemo-switchyard", "supports": "Native intelligent model routing with gateway governance"},
     {"label": "Kong — AI Gateway 2.0 GA", "date": "2026-09-01", "url": "https://konghq.com/blog/product-releases/kong-ai-gateway-2-0-ga", "supports": "Production readiness, MCP governance, identity, cost controls, provider support, and AgentCore IAM"},
+    {"label": "Nasdaq Private Market — Kong company profile", "date": "2026-09-02", "url": "https://www.nasdaqprivatemarket.com/company/kong/", "supports": "$10 NPM Price estimate for Kong shares"},
+    {"label": "Nasdaq Private Market — NPM Price methodology", "date": "Accessed 2026-09-20", "url": "https://www.nasdaqprivatemarket.com/data-intelligence/", "supports": "Pricing methodology and distinction between an estimate and a disclosed executed trade"},
     {"label": "Kong Docs — AI Gateway 2.0", "date": "Accessed 2026-09-03", "url": "https://developer.konghq.com/ai-gateway/get-started/", "supports": "AI Gateway 2.0 product model and minimum version"},
     {"label": "Forge — Kong IPO profile", "date": "Accessed 2026-09-03", "url": "https://forgeglobal.com/kong_ipo/", "supports": "No company-confirmed IPO plan"},
     {"label": "Reuters — U.S. 10-year yield crosses 5%", "date": "2026-09-14", "url": "https://www.reuters.com/business/us-10-year-yields-reach-5-highest-since-2023-2026-09-14/", "supports": "Higher discount-rate and software-valuation risk"}
   ],
   "changeLog": [
+    {"date": "2026-09-20", "verdict": "MAINTAIN", "score": 69, "headline": "Independent $10 benchmark corroborates existing secondary reference", "detail": "Replaced the model's user-reported secondary label with Nasdaq Private Market's dated $10 NPM Price estimate. The price input, thesis score, and valuation outputs are unchanged because the estimate corroborates rather than raises the existing reference and does not disclose a Kong-specific executed trade, share class, volume, liquidation terms, or fully diluted capitalization."},
     {"date": "2026-09-14", "verdict": "DOWNGRADE", "score": 69, "headline": "Five-percent Treasury yield raises IPO valuation risk", "detail": "Reduced Market & AI tailwind by three points, the lowest score change in the recorded valuation-compression rule, after the U.S. 10-year Treasury yield crossed 5% for the first time since October 2023. Kong's operating evidence and the model's ARR, multiple, cash, dilution, and IPO-discount defaults remain unchanged because no Kong filing or new financial disclosure surfaced and one market session does not establish the multiple available at pricing."},
     {"date": "2026-09-03", "verdict": "UPGRADE", "score": 72, "headline": "Commercial traction and IPO readiness surface", "detail": "Raised Growth & scale by two points for 72% year-over-year EMEA customer growth and named wins, Product & position by one for the broader governed AI data path and ecosystem integrations, and IPO readiness by one for an experienced public-company CFO. Valuation inputs remain unchanged because company-wide ARR, margins, cash, dilution, and offering terms are still undisclosed."},
     {"date": "2026-09-03", "verdict": "UPGRADE", "score": 68, "headline": "AI Gateway 2.0 reaches GA", "detail": "Raised Product & position by one point because Kong moved its standalone AI Gateway from beta to production-supported GA. ARR, multiple, cash, dilution, and IPO-discount assumptions are unchanged because the release disclosed no adoption, bookings, revenue, or margin evidence."},

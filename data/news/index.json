@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 19,
+  "revision": 20,
   "historyLimit": 30,
   "items": [
     {
@@ -26,6 +26,15 @@
       "publishedAt": "2026-09-09",
       "title": "Forrester names Kong a Leader in API management software",
       "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0
+    },
+    {
+      "id": "2026-09-02-nasdaq-private-market-price",
+      "publishedAt": "2026-09-02",
+      "title": "Nasdaq Private Market estimates Kong shares at $10",
+      "impact": "neutral",
       "significance": "meaningful",
       "thesisDecision": "MAINTAIN",
       "scoreDelta": 0

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 19,
-  "lastCheckedAt": "2026-09-19T21:02:41+03:00",
-  "status": "NO_MATERIAL_CHANGE",
+  "revision": 20,
+  "lastCheckedAt": "2026-09-20T20:58:48+03:00",
+  "status": "MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "No new Kong-specific IPO filing, financing, verified secondary transaction, acquisition, executive change, product release, customer disclosure, or financial metric surfaced after the September 18 review. Kong's latest press release remains the September 9 Forrester recognition and its latest blog remains the September 10 Straiker partnership; fresh SEC and credible-market searches found no new Kong filing or financing report. The thesis remains 69 and model defaults are unchanged."
+  "summary": "Nasdaq Private Market reports a $10 Kong NPM Price estimate as of September 2, independently corroborating the model's existing roughly $10 secondary reference. The reference label and supporting source were upgraded, but the 69 thesis score and valuation inputs are unchanged because NPM does not disclose a Kong-specific executed trade, share class, volume, or fully diluted capitalization. No new IPO filing, financing, operating metric, or company announcement surfaced in the September 20 review."
 }
