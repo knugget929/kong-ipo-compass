@@ -13,14 +13,14 @@ An interactive, evidence-labeled Kong Inc. IPO thesis and valuation scenario mod
 
 ## Live data architecture
 
-The stable Site shell fetches small canonical records from `knugget929/kong-ipo-compass` whenever it opens:
+The new Site reader is designed to fetch these small canonical records from `knugget929/kong-ipo-compass` whenever it opens:
 
 - `data/thesis.json` — verdict, score, valuation defaults/presets, catalysts, milestones, unknowns, and sources
 - `data/checks/latest.json` — latest scheduled-run status and summary
 - `data/news/index.json` — ordered visible material-news IDs and minimal listing metadata
 - `data/news/items/<stable-id>.json` — one material development per file
 
-The nightly Kong task updates only the small files a run actually changes. `data/news.json` is retained temporarily as a frozen compatibility fallback; `dist/data/*` remain deploy-time fallback snapshots. The Site therefore reflects new research without rebuilding or redeploying.
+Migration is currently **pre-cutover**: `data/news.json` must continue to be updated until the new `dist/app.js` reader is deployed to the production Site and verified. After that one-time reader deployment, normal nightly runs update only the small files they actually change and `data/news.json` becomes a frozen compatibility fallback. See `docs/NEWS_STORAGE_MIGRATION.md`. `dist/data/*` remain deploy-time fallback snapshots.
 
 Personal share count, cost basis, and custom scenario values are never written to GitHub; they remain in browser storage on the user's device.
 
