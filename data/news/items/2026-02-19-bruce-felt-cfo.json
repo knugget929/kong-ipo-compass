@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-02-19-bruce-felt-cfo",
+  "publishedAt": "2026-02-19",
+  "title": "Kong appoints IPO-experienced CFO Bruce Felt",
+  "impact": "positive",
+  "significance": "high",
+  "thesisDecision": "UPGRADE",
+  "scoreDelta": 1,
+  "summary": "Hiring a CFO who has led three software companies through public offerings improves Kong's organizational readiness. It is a preparation signal, not confirmation of an IPO filing or timetable.",
+  "confirmed": [
+    "Kong appointed Bruce Felt as CFO to help scale the business through its next growth stage.",
+    "Kong says Felt took FullTime Software, SuccessFactors, and Domo public as CFO and has experience with acquisitions and global expansion."
+  ],
+  "uncertain": [
+    "Kong did not say that Felt was hired specifically to execute an IPO and did not announce a filing, exchange, underwriters, or timetable."
+  ],
+  "sources": [
+    {
+      "label": "Kong — Bruce Felt appointed CFO",
+      "url": "https://konghq.com/company/press-room/press-release/kong-names-bruce-felt-as-chief-financial-officer"
+    }
+  ]
+}
