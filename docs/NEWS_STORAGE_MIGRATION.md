@@ -1,42 +1,57 @@
 # News Storage Migration
 
-Status: **CUT OVER / ACTIVE**
+Status: **READER DEPLOYED — AWAITING G2 REVIEW / MERGE**
 
-Kong's material-news ledger and scheduled-run state now use independently writable records. The production Site serves the split reader, while the legacy `data/news.json` remains intact as a frozen compatibility fallback.
+This migration splits Kong's material-news ledger and scheduled-run state into independently writable records without deleting or rewriting the legacy `data/news.json`.
 
-## Production cutover evidence
+## Production reader deployment
 
 - Production Site: https://vita-learning-atlas.viet591697.chatgpt.site
 - Split-reader source: `d7ff9a2dc3327f3af7aad839bcb8dae828fb3a81`
 - Deployed Site source commit: `0d7ae54b7c156aa95d70d18e2f2cc2c777eb42d4`
-- Reader paths: `data/checks/latest.json`, `data/news/index.json`, and `data/news/items/<stable-id>.json`
-- Verified visible state: current thesis, 15 material-news items, and the latest check timestamp/summary
-- Fallback retained: live `data/news.json`, then `dist/data/news.json`, then the embedded baseline
+- Deployed reader paths: `data/checks/latest.json`, `data/news/index.json`, and `data/news/items/<stable-id>.json`
 
-## Cutover result
+The Site shell is deployed, but PR #1 is not yet merged. The live reader therefore cannot complete the split-path cutover because those records are not yet available on `main`. Until the PR passes its G2 review and is merged, scheduled automation must continue updating the legacy `data/news.json`.
 
-The activation gate is satisfied:
+## Phase A — compatibility / pre-cutover
 
-1. the reviewed split-reader commit is deployed to the production Site shell;
-2. production uses `data/checks/latest.json`, `data/news/index.json`, and the indexed item files;
-3. the current latest-check state and all 15 visible material items render correctly;
-4. the documented legacy and snapshot fallback behavior remains in the deployed reader;
-5. the deployed source commits are recorded above.
+Current state:
 
-## Active write contract
+- all historical news is mirrored into `data/news/items/<stable-id>.json` on the migration branch;
+- `data/news/index.json` contains the visible ordered history;
+- `data/checks/latest.json` contains the latest run state;
+- the production `dist/app.js` prefers the split format and falls back to `data/news.json`;
+- `data/news.json` remains intact and authoritative until the branch is merged and split reads are verified.
 
-- `data/checks/latest.json` is the only required per-run state write.
-- `data/news/index.json` changes only when visible material history changes.
-- One `data/news/items/<stable-id>.json` is created per material development.
-- `data/thesis.json` changes only when evidence warrants a thesis or model change.
-- `data/news.json` is frozen as a compatibility snapshot and is no longer rewritten by normal scheduled runs.
+During Phase A, scheduled automation **must keep its existing legacy write behavior**. It may also write/validate the split records to prove the path, but it must not freeze the monolith yet.
 
-Item files remain durable even when they leave the visible index. A new item may be written before the index references it, so an interrupted sequential write leaves only a safe staged orphan rather than a broken reader.
+## Activation gate
+
+Switch to split-only normal writes only after all of the following are true:
+
+1. [x] the reviewed split-reader commit is deployed to the production Site shell;
+2. [ ] PR #1 is merged so the split records are available on `main`;
+3. [ ] production is verified to load `data/checks/latest.json`, `data/news/index.json`, and the indexed item files;
+4. [ ] the current latest-check timestamp and all 15 visible material items render from the split records;
+5. [x] the deployed reader retains the documented legacy/snapshot fallback behavior;
+6. [x] the deployed source commits are recorded above.
+
+## Phase B — post-cutover
+
+After the activation gate is satisfied:
+
+- `data/checks/latest.json` becomes the only per-run state write;
+- `data/news/index.json` changes only when visible material history changes;
+- one new `data/news/items/<stable-id>.json` is created per material development;
+- `data/thesis.json` changes only when evidence warrants a thesis/model change;
+- `data/news.json` becomes a frozen compatibility snapshot and is no longer rewritten by normal scheduled runs.
+
+Physical deletion remains a separate cleanup after a production soak period and explicit verification that no deployed reader still depends on the legacy file.
 
 ## Rollback
 
-Rollback remains non-destructive:
+Rollback is non-destructive:
 
-- the deployed reader falls back to live `data/news.json`, then `dist/data/news.json`, then the embedded baseline;
-- the migration does not delete historical item data;
-- physical deletion of `data/news.json` remains a separate cleanup after a production soak period and explicit verification that no deployed reader depends on it.
+- before cutover, the deployed reader falls back to live `data/news.json`;
+- after cutover, the reader still falls back to `data/news.json`, then `dist/data/news.json`, then the embedded baseline;
+- the migration never deletes historical item data.
