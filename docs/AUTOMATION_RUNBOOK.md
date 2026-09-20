@@ -2,13 +2,15 @@
 
 The scheduled task researches major Kong developments and writes the public data layer in `knugget929/kong-ipo-compass`.
 
-## Authoritative storage contract
+## Migration gate — read this first
 
-The split reader is **CUT OVER / ACTIVE**. Normal scheduled runs must use the narrow-write pattern below.
+Check `docs/NEWS_STORAGE_MIGRATION.md`.
 
-`data/news.json` is now a frozen compatibility fallback. Do not rewrite it during normal scheduled runs. Do not delete it; retirement remains a separate cleanup after a production soak period.
+The split reader is deployed, but the migration remains pre-cutover until PR #1 passes G2 review, is merged, and production split reads are verified. **Continue the existing validated `data/news.json` write behavior during this phase. Do not freeze the monolith merely because the split reader is deployed.**
 
-## Every run
+The narrow-write pattern below becomes authoritative only after `docs/NEWS_STORAGE_MIGRATION.md` is marked `CUT OVER / ACTIVE`.
+
+## Every run after cutover
 
 1. Check Kong primary sources, SEC filing sources, credible financing/market sources, and material competitive developments.
 2. Separate confirmed facts from inference and unresolved questions.
@@ -18,7 +20,7 @@ The split reader is **CUT OVER / ACTIVE**. Normal scheduled runs must use the na
    - `node --test scripts/test-news-data.mjs`
 5. Commit only the files the run actually changes.
 
-## Exact narrow-write pattern
+## Exact post-cutover write pattern
 
 ### No material news
 
@@ -37,8 +39,7 @@ Do not touch `data/news/index.json`, any news item file, frozen `data/news.json`
 - create `data/news/items/<stable-id>.json`;
 - increment/update `data/news/index.json`, keeping newest first and no more than 30 indexed items;
 - increment/update `data/checks/latest.json`;
-- leave `data/thesis.json` unchanged;
-- leave frozen `data/news.json` unchanged.
+- leave `data/thesis.json` unchanged.
 
 Prefer one multi-file Git tree commit after validation. If the connected GitHub path only permits sequential writes, create the item file first, then update the index, then the latest-check file. Valid unindexed item files are intentionally safe staged/orphan records.
 
@@ -46,7 +47,7 @@ Prefer one multi-file Git tree commit after validation. If the connected GitHub 
 
 Use the material-news pattern above and update `data/thesis.json` only when the evidence changes the score, verdict, model defaults/references, catalyst balance, milestones, unknowns, or thesis sources.
 
-Prefer one multi-file Git tree commit. If sequential writes are unavoidable: item file → thesis (if warranted) → index → latest check. Leave frozen `data/news.json` unchanged.
+Prefer one multi-file Git tree commit. If sequential writes are unavoidable: item file → thesis (if warranted) → index → latest check.
 
 ## Guardrails
 
