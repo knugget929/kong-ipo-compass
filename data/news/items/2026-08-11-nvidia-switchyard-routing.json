@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-08-11-nvidia-switchyard-routing",
+  "publishedAt": "2026-08-11",
+  "title": "Kong adds native NVIDIA NeMo Switchyard routing",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "The integration lets Kong preserve credentials, policy, metering, and audit controls while an external decision service selects models. It strengthens ecosystem relevance and AI cost optimization, but commercial contribution was not disclosed.",
+  "confirmed": [
+    "Kong described a native pattern in which NVIDIA NeMo Switchyard selects a model and Kong AI Gateway retains connectivity, governance, and traffic management.",
+    "NVIDIA separately listed Kong as delivering NeMo Switchyard routing natively through Kong AI Gateway."
+  ],
+  "uncertain": [
+    "Kong and NVIDIA did not disclose joint customers, contractual economics, usage, or incremental revenue."
+  ],
+  "sources": [
+    {
+      "label": "Kong — NVIDIA NeMo Switchyard routing",
+      "url": "https://konghq.com/blog/engineering/llm-routing-kong-ai-gateway-nvidia-nemo-switchyard"
+    },
+    {
+      "label": "NVIDIA — NeMo Switchyard ecosystem",
+      "url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/"
+    }
+  ]
+}
