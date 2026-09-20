@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-04-14-agent-gateway-ga",
+  "publishedAt": "2026-04-14",
+  "title": "Kong Agent Gateway reaches production-ready GA",
+  "impact": "positive",
+  "significance": "high",
+  "thesisDecision": "UPGRADE",
+  "scoreDelta": 1,
+  "summary": "Agent Gateway extended Kong from LLM and MCP traffic into governed agent-to-agent communication. Together with Context Mesh and later AI Gateway 2.0, it supports a broader platform-position score.",
+  "confirmed": [
+    "Kong made Agent Gateway generally available and production-ready in AI Gateway 3.14.",
+    "Kong says the product governs LLM, MCP, and A2A traffic and is available to all Kong Konnect customers as part of AI Gateway."
+  ],
+  "uncertain": [
+    "The A2A market remains early, and Kong did not disclose Agent Gateway adoption, pricing, bookings, or revenue."
+  ],
+  "sources": [
+    {
+      "label": "Kong — Agent Gateway",
+      "url": "https://konghq.com/blog/product-releases/kong-agent-gateway"
+    }
+  ]
+}
