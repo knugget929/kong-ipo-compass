@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-09-10-straiker-agent-security-partnership",
+  "publishedAt": "2026-09-10",
+  "title": "Kong and Straiker add runtime protection and containment for AI agents",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "The integration extends Kong AI Gateway from traffic governance into a complementary security loop spanning agent discovery, adversarial testing, runtime verdicts, inline enforcement, and agent-level containment. It strengthens Kong's regulated-enterprise positioning, but does not change the thesis score because no adoption, bookings, pricing, or revenue contribution was disclosed.",
+  "confirmed": [
+    "Kong and Straiker announced an integration in which Straiker evaluates configured LLM, MCP/tool, and agent-to-agent traffic and returns security decisions for Kong AI Gateway to enforce.",
+    "The companies describe escalation beyond blocking one request to agent-level containment, including revoking tools, suspending sessions, freezing memory, or taking an agent or agent fleet offline.",
+    "Both companies say the integration is designed for existing Kong-routed production workflows and cite customer deployments or active proofs of value in regulated industries."
+  ],
+  "uncertain": [
+    "No joint-customer count, named deployment, product availability tier, pricing, attach rate, contractual economics, bookings, ARR, or revenue contribution was disclosed.",
+    "Straiker's detection-performance figures are vendor-reported and were not independently validated in the announcement."
+  ],
+  "sources": [
+    {
+      "label": "Kong — Straiker AI-agent security integration",
+      "url": "https://konghq.com/blog/engineering/kong-and-straiker-ai-agent-security"
+    },
+    {
+      "label": "Straiker — Kong integration guide",
+      "url": "https://www.straiker.ai/blog/kong-straiker-agentic-ai-security"
+    }
+  ]
+}
