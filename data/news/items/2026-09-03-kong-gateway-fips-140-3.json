@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-09-03-kong-gateway-fips-140-3",
+  "publishedAt": "2026-09-03",
+  "title": "Kong Gateway adds FIPS 140-3 support for regulated deployments",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Kong Gateway now ships separate FIPS 140-3 artifacts alongside its existing FIPS 140-2 builds, reducing compliance and migration friction for federal, financial-services, healthcare, and other regulated deployments. This expands commercial eligibility and protects regulated-customer retention, but does not change the thesis score because Kong disclosed no related customer wins, contracts, bookings, ARR, or revenue contribution.",
+  "confirmed": [
+    "Kong announced that Gateway supports FIPS 140-3 through separately named packages and container images published alongside existing FIPS 140-2 artifacts.",
+    "Kong says the FIPS 140-3 build uses OpenSSL FIPS provider 3.1.2, adds TLS 1.3 in FIPS mode, narrows the default TLS 1.2 cipher suite, and centralizes cryptographic policy across runtime and signing paths.",
+    "Existing FIPS 140-2 deployments can remain on their current artifacts, while customers can opt into the FIPS 140-3 build without re-architecting their Kong Gateway deployment."
+  ],
+  "uncertain": [
+    "Kong did not disclose the number or value of customers requiring FIPS 140-3, any related federal or regulated-industry contract, pricing, bookings, ARR, retention effect, or revenue contribution.",
+    "The announcement describes Kong's use of a validated OpenSSL FIPS provider; it does not establish that every Kong deployment, surrounding system, or customer compliance program is independently certified merely by installing the artifact."
+  ],
+  "sources": [
+    {
+      "label": "Kong — Gateway support for FIPS 140-3",
+      "url": "https://konghq.com/blog/product-releases/kong-gateway-supports-fips-140-3"
+    }
+  ]
+}

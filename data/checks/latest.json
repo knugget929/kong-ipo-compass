@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 20,
-  "lastCheckedAt": "2026-09-20T20:58:48+03:00",
+  "revision": 21,
+  "lastCheckedAt": "2026-09-21T21:02:14+03:00",
   "status": "MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "Nasdaq Private Market reports a $10 Kong NPM Price estimate as of September 2, independently corroborating the model's existing roughly $10 secondary reference. The reference label and supporting source were upgraded, but the 69 thesis score and valuation inputs are unchanged because NPM does not disclose a Kong-specific executed trade, share class, volume, or fully diluted capitalization. No new IPO filing, financing, operating metric, or company announcement surfaced in the September 20 review."
+  "summary": "A previously unrecorded September 3 Kong release adds FIPS 140-3 artifacts for Gateway, improving procurement eligibility and upgrade continuity for federal and other regulated customers. The thesis remains 69/100 because Kong disclosed no related customers, contracts, bookings, ARR, or revenue contribution. Kong's September 21 rebrand does not clear the valuation-materiality threshold, and no new IPO filing, financing, or financial disclosure surfaced."
 }
