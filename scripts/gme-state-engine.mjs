@@ -96,6 +96,15 @@ export function deriveEvidenceInputs(snapshot) {
   const sourceById = new Map((snapshot.sources ?? []).map((source) => [source.id, source]));
   const observedAt = snapshot.observedAt;
   const shortAge = ageDays(observedAt, short.effectiveDate);
+  const feedCurrent = (kind, observation) => {
+    const sources = (snapshot.sources ?? []).filter((source) => source.kind === kind);
+    return observation.status === "OBSERVED" && sources.length > 0 && sources.every((source) => {
+      const age = ageDays(observedAt, source.effectiveAt);
+      return age !== null && age <= 4;
+    }) && (!observation.observedAt || (ageDays(observedAt, observation.observedAt) !== null && ageDays(observedAt, observation.observedAt) <= 4));
+  };
+  const marketCurrent = feedCurrent("market", market);
+  const optionsCurrent = feedCurrent("options", options);
   const catalystDates = (catalyst.items ?? [])
     .filter((item) => (item.sourceIds ?? []).some((id) => (sourceById.get(id)?.tier ?? 99) <= 2))
     .map((item) => item.date)
@@ -117,10 +126,10 @@ export function deriveEvidenceInputs(snapshot) {
     : null;
 
   const marketMetrics = deriveMarketMetrics(market);
-  const abnormalVolume = Number.isFinite(marketMetrics.volumePercentile20)
+  const abnormalVolume = marketCurrent && Number.isFinite(marketMetrics.volumePercentile20)
     ? marketMetrics.volumePercentile20 >= DERIVATION_RULES.marketVolumePercentile
     : null;
-  const priceAcceleration = Number.isFinite(marketMetrics.absoluteReturnPercentile20)
+  const priceAcceleration = marketCurrent && Number.isFinite(marketMetrics.absoluteReturnPercentile20)
     ? marketMetrics.absoluteReturnPercentile20 >= DERIVATION_RULES.marketAbsoluteReturnPercentile
     : null;
   const materialDemandCatalyst = newestCatalystAge === null
@@ -152,18 +161,18 @@ export function deriveEvidenceInputs(snapshot) {
       fresh: borrow.status === "OBSERVED" ? (borrow.fresh ?? null) : null,
     },
     options: {
-      callActivityElevated: Number.isFinite(options.activityHistoryPercentile)
+      callActivityElevated: optionsCurrent && Number.isFinite(options.activityHistoryPercentile)
         ? options.activityHistoryPercentile >= DERIVATION_RULES.optionsActivityPercentile
         : null,
-      nearMoneyConcentration: Number.isFinite(options.nearMoneyCallVolumeShare)
+      nearMoneyConcentration: optionsCurrent && Number.isFinite(options.nearMoneyCallVolumeShare)
         ? options.nearMoneyCallVolumeShare >= DERIVATION_RULES.optionsNearMoneyCallVolumeShare
         : null,
-      feedbackDemandObserved: options.feedbackDemandObserved ?? null,
+      feedbackDemandObserved: optionsCurrent ? (options.feedbackDemandObserved ?? null) : null,
     },
     market: {
       abnormalVolume,
       priceAcceleration,
-      severeDislocation: market.severeDislocationEvidence ?? null,
+      severeDislocation: marketCurrent ? (market.severeDislocationEvidence ?? null) : null,
     },
     catalyst: { materialDemandCatalyst },
     supply: {
@@ -262,6 +271,10 @@ export function deriveState(input) {
       "an abnormal or thesis-relevant observation",
       "insufficient independent confirmation for pressure",
     ]);
+  }
+
+  if (![input.attention?.abnormal, market.abnormalVolume, market.priceAcceleration, short.positioningElevated, borrow.stressed, options.callActivityElevated, catalyst.materialDemandCatalyst].some(known)) {
+    throw new Error("Insufficient evidence: state is unknown, not dormant");
   }
 
   return stateResult("DORMANT", [

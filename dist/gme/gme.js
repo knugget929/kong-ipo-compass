@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const REMOTE_ROOT = "https://raw.githubusercontent.com/knugget929/kong-ipo-compass/main/data/gme";
+  const REMOTE_ROOT = "https://raw.githubusercontent.com/knugget929/kong-ipo-compass/feature/gme-squeeze-watch/data/gme";
   const LOCAL_ROOT = "/data/gme";
   const REQUEST_TIMEOUT_MS = 6500;
   const LEVELS = ["DORMANT", "ATTENTION", "PRESSURE", "REFLEXIVE", "SQUEEZE", "DISLOCATION"];
@@ -137,15 +137,19 @@
   }
 
   function renderHeader(data, health, source) {
-    const realtimeAge = Math.min(
-      ...data.sources.filter((item) => ["market", "options"].includes(item.kind)).map((item) => ageHours(item.observedAt)).filter(Number.isFinite),
-    );
+    const realtimeAges = ["market", "options"].map((kind) => {
+      const sources = data.sources.filter((item) => item.kind === kind);
+      return sources.length ? sources.map((item) => ageHours(item.effectiveAt)) : [null];
+    }).flat();
+    const undated = realtimeAges.some((age) => !Number.isFinite(age));
     const failed = health?.status === "FAILED";
-    const stale = Number.isFinite(realtimeAge) && realtimeAge > 96;
+    const stale = realtimeAges.some((age) => Number.isFinite(age) && age > 96);
     const degraded = health?.status === "DEGRADED";
     byId("dataCondition").textContent = failed
       ? "Update failed · last snapshot"
-      : stale
+      : undated
+        ? "Evidence freshness unknown"
+        : stale
         ? "Evidence aged · inspect timestamps"
         : source !== "canonical"
           ? "Site snapshot fallback"
@@ -155,7 +159,7 @@
     byId("observedAt").textContent = `Observed ${formatDateTime(data.observedAt)}`;
     const pip = document.querySelector(".live-pip");
     if (failed) pip.style.background = "var(--red)";
-    else if (stale || degraded) pip.style.background = "var(--amber)";
+    else if (stale || undated || degraded) pip.style.background = "var(--amber)";
     else if (source !== "canonical") pip.style.background = "var(--electric)";
   }
 
@@ -165,7 +169,15 @@
     byId("stateLabel").textContent = data.state.label;
     byId("stateSummary").textContent = data.state.summary;
     byId("fieldState").textContent = data.state.label;
-    byId("confidenceChip").textContent = `${data.state.confidence.label} confidence`;
+    const aged = ["market", "options"].some((kind) => {
+      const sources = data.sources.filter((item) => item.kind === kind);
+      return !sources.length || sources.some((item) => { const hours = ageHours(item.effectiveAt); return !Number.isFinite(hours) || hours > 96; });
+    });
+    byId("confidenceChip").textContent = aged ? "Current confidence unavailable" : `${data.state.confidence.label} confidence`;
+    if (aged) {
+      byId("stateLevel").textContent = `LAST SNAPSHOT · ${data.state.key}`;
+      byId("stateSummary").textContent = "Market or options evidence is stale or undated. This is the last recorded classification, not a current assessment.";
+    }
     byId("notProof").textContent = data.state.key === "SQUEEZE" || data.state.key === "DISLOCATION"
       ? "Direct covering evidence is part of this classification; inspect its provenance below."
       : "Forced covering and dealer hedging are not established.";
@@ -313,7 +325,7 @@
 
   function computedFreshness(source) {
     if (source.freshness === "HISTORICAL") return { label: "Historical", className: "historical" };
-    const basis = source.kind === "short_interest" ? source.effectiveAt : source.observedAt;
+    const basis = ["short_interest", "market", "options"].includes(source.kind) ? source.effectiveAt : source.observedAt;
     const hours = ageHours(basis);
     if (!Number.isFinite(hours)) return { label: "Unknown", className: "stale" };
     if (["market", "options"].includes(source.kind)) {

@@ -222,3 +222,28 @@ for (const fresh of [false, null, undefined]) {
     }
   });
 }
+
+// Regressions found during recovery review: stale inputs cannot unlock gates.
+import { readFileSync } from "node:fs";
+import { deriveEvidenceInputs } from "./gme-state-engine.mjs";
+const recovered = JSON.parse(readFileSync(new URL("../data/gme/current.json", import.meta.url)));
+for (const kind of ["market", "options"]) {
+  for (const failure of ["stale-status", "old-effective-date", "missing-effective-date"]) {
+    test(`${kind} ${failure} cannot contribute pressure confirmations`, () => {
+      const snapshot = structuredClone(recovered);
+      const observation = kind === "market" ? snapshot.market : snapshot.optionsPressure;
+      snapshot.optionsPressure.activityHistoryPercentile = 0.99;
+      snapshot.optionsPressure.feedbackDemandObserved = true;
+      if (failure === "stale-status") observation.status = "STALE";
+      else for (const source of snapshot.sources.filter((item) => item.kind === kind)) {
+        source.effectiveAt = failure === "old-effective-date" ? "2020-01-01T00:00:00Z" : null;
+      }
+      const derived = deriveEvidenceInputs(snapshot);
+      assert.equal(kind === "market" ? derived.market.abnormalVolume : derived.options.callActivityElevated, null);
+      assert.ok(classifySnapshot(derived).level < 2);
+    });
+  }
+}
+test("missing observations cannot be classified as ordinary dormant trading", () => {
+  assert.throws(() => classifySnapshot(deriveEvidenceInputs({})), /state is unknown/);
+});
