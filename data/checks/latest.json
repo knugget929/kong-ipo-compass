@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 21,
-  "lastCheckedAt": "2026-09-21T21:02:14+03:00",
-  "status": "MATERIAL_CHANGE",
+  "revision": 22,
+  "lastCheckedAt": "2026-09-22T20:58:26+03:00",
+  "status": "NO_MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "A previously unrecorded September 3 Kong release adds FIPS 140-3 artifacts for Gateway, improving procurement eligibility and upgrade continuity for federal and other regulated customers. The thesis remains 69/100 because Kong disclosed no related customers, contracts, bookings, ARR, or revenue contribution. Kong's September 21 rebrand does not clear the valuation-materiality threshold, and no new IPO filing, financing, or financial disclosure surfaced."
+  "summary": "No valuation-material Kong development surfaced after the September 21 review. Kong's September 22 Great Place to Work certification is a positive culture signal but disclosed no retention economics, hiring efficiency, customer demand, financial metrics, or IPO-readiness evidence. No new IPO filing, financing, secondary transaction, acquisition, executive change, or financial disclosure surfaced; the thesis remains 69/100 and model inputs are unchanged. The U.S. 10-year yield eased to roughly 4.93% but remains near the recorded valuation-risk threshold, so one session does not justify reversing the existing macro penalty."
 }
