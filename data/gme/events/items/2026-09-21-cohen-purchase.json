@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-21-cohen-purchase",
+  "occurredAt": "2026-09-21T00:00:00Z",
+  "type": "MATERIAL_THESIS_EVENT",
+  "category": "INSIDER",
+  "title": "Ryan Cohen disclosed a 1.15M-share purchase",
+  "mechanism": "A primary-source insider purchase provides a credible incremental-demand catalyst and strengthens the corporate thesis.",
+  "stateBefore": "UNRECORDED",
+  "stateAfter": "ATTENTION",
+  "stateEffect": "Raises attention in combination with abnormal market activity; structural squeeze pressure remains unconfirmed.",
+  "observations": [
+    "1,150,680 shares purchased at a $22.9375 weighted average price.",
+    "44,233,306 shares reported as beneficially owned, including warrant shares."
+  ],
+  "sourceIds": ["sec-cohen-13da-2026-09-21"]
+}

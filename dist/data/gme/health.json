@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "lastAttemptAt": "2026-09-22T21:24:43Z",
+  "lastSuccessfulSnapshotAt": "2026-09-22T21:24:43Z",
+  "runKind": "INITIAL_BASELINE",
+  "status": "DEGRADED",
+  "summary": "All baseline sources succeeded except borrow, which is an explicit known coverage gap.",
+  "providers": [
+    { "key": "market", "status": "OK", "lastSuccessAt": "2026-09-22T21:23:19Z" },
+    { "key": "options", "status": "OK", "lastSuccessAt": "2026-09-22T21:24:43Z" },
+    { "key": "sec", "status": "OK", "lastSuccessAt": "2026-09-22T18:55:00Z" },
+    { "key": "company", "status": "OK", "lastSuccessAt": "2026-09-22T18:45:00Z" },
+    { "key": "short_interest", "status": "STALE", "lastSuccessAt": "2026-09-10T00:00:00Z" },
+    { "key": "borrow", "status": "UNAVAILABLE_EXPECTED", "lastSuccessAt": null }
+  ]
+}

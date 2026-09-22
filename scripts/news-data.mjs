@@ -7,7 +7,7 @@ export const IMPACTS = ['positive', 'neutral', 'negative'];
 export const SIGNIFICANCE = ['high', 'meaningful', 'noted'];
 
 export const isValidDate = (value) => typeof value === 'string'
-  && /^\\d{4}-\\d{2}-\\d{2}(?:T.*)?$/.test(value)
+  && /^\d{4}-\d{2}-\d{2}(?:T.*)?$/.test(value)
   && !Number.isNaN(new Date(value.length === 10 ? `${value}T12:00:00Z` : value).getTime());
 
 const requireString = (value, message) => assert.ok(typeof value === 'string' && value.trim(), message);

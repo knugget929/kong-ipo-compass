@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-03-note-exchange",
+  "occurredAt": "2026-09-03T00:00:00Z",
+  "type": "MATERIAL_THESIS_EVENT",
+  "category": "CAPITAL_STRUCTURE",
+  "title": "Note exchange added 55.5M shares and reduced debt",
+  "mechanism": "Immediate share issuance expands supply while debt retirement changes future conversion risk.",
+  "stateBefore": "UNRECORDED",
+  "stateAfter": "UNRECORDED",
+  "stateEffect": "Weakens the constrained-supply component; no historical transition is inferred without a contemporaneous full evidence set.",
+  "observations": [
+    "$1.4B principal amount of notes retired.",
+    "55.5M common shares and $358.4M cash delivered.",
+    "$2.8B principal amount of convertible notes remained."
+  ],
+  "sourceIds": [
+    "gme-note-exchange-2026-09-03",
+    "gme-q2-results-2026-09-08",
+    "gme-10q-2026-09-09"
+  ]
+}

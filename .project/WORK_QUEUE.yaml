@@ -1,5 +1,5 @@
 schema_version: 2
-project: Kong IPO Compass
+project: Thesis Watches · Kong + GME
 tasks:
   - id: KIPO-001
     title: Ship interactive IPO cockpit
@@ -85,10 +85,23 @@ tasks:
     priority: P1
     risk: MEDIUM
     review_gate: G2
-    status: IN_REVIEW
+    status: VERIFIED
     target_release: V0.2
     source_feedback: owner direction 2026-09-20
     depends_on: [KIPO-004]
     owns: [data/checks/latest.json, data/news/index.json, data/news/items, data/news.json, dist/app.js, scripts/news-data.mjs, scripts/test-news-data.mjs, scripts/validate-data.mjs, docs/DATA_ARCHITECTURE.md, docs/AUTOMATION_RUNBOOK.md, docs/NEWS_STORAGE_MIGRATION.md]
     parallel_safe: false
     definition_of_done: [all historical news is preserved with stable IDs and source evidence, split records validate independently, no-news runs can update only latest check state after cutover, material-news runs can add one item plus a bounded index update, thesis changes only when warranted, the Site reader prefers split records with legacy fallback, production reader cutover is explicitly gated, direct validation passes, independent reviewer verifies the exact head, exact preview or release candidate verifies Site behavior]
+  - id: GME-001
+    title: Ship evidence-driven GME Short Squeeze Watch
+    work_type: FEATURE
+    priority: P1
+    risk: HIGH
+    review_gate: G3
+    status: IN_PROGRESS
+    target_release: V0.3
+    source_feedback: owner direction 2026-09-22
+    depends_on: [KIPO-007]
+    owns: [data/gme, dist/gme, dist/kong, scripts/gme-state-engine.mjs, scripts/fetch-gme-observations.mjs, scripts/validate-gme-data.mjs, scripts/validate-site.mjs, docs/GME_WATCH_METHODOLOGY.md, docs/GME_EVIDENCE_SOURCES.md, docs/GME_OPERATIONS.md, docs/GME_DESIGN_DECISION.md, docs/THESIS_WATCH_ENGINE.md]
+    parallel_safe: false
+    definition_of_done: [same Site serves Kong and GME, Kong data and UI regressions pass, GME state is evidence-gated and falsifiable, missing and stale data remain visible, daily and material-event history is reconstructable, negative controls pass, desktop and iPad layouts are verified, autonomous update task is active, exact production routes are smoke-tested, independent reviewer verifies the exact deployed head]

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-22T21:24:43Z",
+  "items": [
+    {
+      "id": "2026-09-21-cohen-purchase",
+      "occurredAt": "2026-09-21T00:00:00Z",
+      "type": "MATERIAL_THESIS_EVENT",
+      "category": "INSIDER",
+      "title": "Ryan Cohen disclosed a 1.15M-share purchase",
+      "path": "items/2026-09-21-cohen-purchase.json"
+    },
+    {
+      "id": "2026-09-08-q2-results",
+      "occurredAt": "2026-09-08T20:05:00Z",
+      "type": "MATERIAL_THESIS_EVENT",
+      "category": "EARNINGS",
+      "title": "Q2 results raised the corporate-thesis baseline",
+      "path": "items/2026-09-08-q2-results.json"
+    },
+    {
+      "id": "2026-09-03-note-exchange",
+      "occurredAt": "2026-09-03T00:00:00Z",
+      "type": "MATERIAL_THESIS_EVENT",
+      "category": "CAPITAL_STRUCTURE",
+      "title": "Note exchange added 55.5M shares and reduced debt",
+      "path": "items/2026-09-03-note-exchange.json"
+    }
+  ]
+}

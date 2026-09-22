@@ -1,0 +1,13 @@
+{
+  "name": "kong-ipo-compass",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "private": true,
+  "scripts": {
+    "dev": "vite dist --config vite.config.mjs",
+    "test": "node --test scripts/test-*.mjs"
+  },
+  "devDependencies": {
+    "vite": "8.3.0"
+  }
+}

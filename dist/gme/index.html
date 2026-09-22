@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07090e">
+  <meta name="description" content="An evidence-driven monitor of the mechanisms required for a nonlinear GME short squeeze.">
+  <title>GME Short Squeeze Watch</title>
+  <link rel="stylesheet" href="/gme/gme.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to analysis</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="aurora aurora-a" aria-hidden="true"></div>
+  <div class="aurora aurora-b" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <a class="identity" href="/gme/" aria-label="GME Short Squeeze Watch home">
+      <span class="identity-mark" aria-hidden="true">G</span>
+      <span><strong>GME</strong><small>Short Squeeze Watch</small></span>
+    </a>
+    <nav class="watch-switch" aria-label="Watch selector">
+      <a href="/kong/">Kong</a>
+      <a class="is-active" href="/gme/" aria-current="page">GME</a>
+    </nav>
+    <nav class="section-nav" aria-label="GME sections">
+      <a href="#state">State</a>
+      <a href="#mechanism">Mechanism</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#history">History</a>
+      <a href="#method">Method</a>
+    </nav>
+    <div class="live-meta">
+      <span class="live-pip" aria-hidden="true"></span>
+      <span><b id="dataCondition">Loading evidence</b><small id="observedAt">Checking snapshot…</small></span>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="state" aria-labelledby="stateHeading">
+      <div class="hero-intro">
+        <div>
+          <span class="kicker">Live thesis monitor · evidence before narrative</span>
+          <h1 id="stateHeading">Are squeeze conditions beginning to align?</h1>
+        </div>
+        <p class="hero-answer" id="heroAnswer">Loading the latest canonical thesis snapshot…</p>
+      </div>
+
+      <div class="hero-grid">
+        <article class="state-core" aria-live="polite">
+          <div class="state-topline">
+            <span>Current state</span>
+            <span class="confidence-chip" id="confidenceChip">Confidence —</span>
+          </div>
+          <div class="state-lockup">
+            <span class="state-level" id="stateLevel">LEVEL —</span>
+            <strong id="stateLabel">Loading</strong>
+          </div>
+          <p id="stateSummary">The state engine is validating the evidence set.</p>
+          <div class="not-proof"><span aria-hidden="true">≠</span><p><b>Not established</b><small id="notProof">Forced covering and dealer hedging are not inferred from price alone.</small></p></div>
+          <div class="state-metrics" id="stateMetrics"></div>
+        </article>
+
+        <article class="pressure-field" aria-labelledby="pressureFieldHeading">
+          <div class="panel-title">
+            <div><span class="kicker">Causal field</span><h2 id="pressureFieldHeading">The mechanism, connected</h2></div>
+            <span class="legend"><i></i> observed <i></i> inferred <i></i> opposing</span>
+          </div>
+          <div class="field-canvas" id="fieldCanvas">
+            <svg class="field-lines" viewBox="0 0 760 440" role="img" aria-labelledby="fieldTitle fieldDesc">
+              <title id="fieldTitle">Current GME squeeze mechanism</title>
+              <desc id="fieldDesc">Catalyst and market pressure connect to options and short pressure. Supply opposes the feedback mechanism. Borrow pressure is unknown.</desc>
+              <defs>
+                <marker id="arrowObserved" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker>
+                <marker id="arrowInferred" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker>
+                <marker id="arrowOpposing" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z"></path></marker>
+              </defs>
+              <path class="line unknown" data-edge="catalyst-market" d="M164 337 C236 323 260 275 304 238"></path>
+              <path class="line unknown" data-edge="market-options" d="M423 220 C500 180 544 140 604 113"></path>
+              <path class="line unknown" data-edge="options-market" d="M610 139 C593 219 514 267 441 271"></path>
+              <path class="line unknown" data-edge="market-short" d="M415 286 C354 334 273 351 206 329"></path>
+              <path class="line unknown" data-edge="short-market" d="M157 118 C228 130 262 173 309 213"></path>
+              <path class="line unknown" data-edge="supply-market" d="M603 348 C528 340 483 302 437 274"></path>
+            </svg>
+            <button class="engine-node short" data-engine-target="short"><span>01</span><b>Short</b><small id="node-short">—</small></button>
+            <button class="engine-node borrow" data-engine-target="borrow"><span>02</span><b>Borrow</b><small id="node-borrow">—</small></button>
+            <button class="engine-node options" data-engine-target="options"><span>03</span><b>Options</b><small id="node-options">—</small></button>
+            <button class="engine-node market" data-engine-target="market"><span>04</span><b>Market</b><small id="node-market">—</small></button>
+            <button class="engine-node catalyst" data-engine-target="catalyst"><span>05</span><b>Catalyst</b><small id="node-catalyst">—</small></button>
+            <button class="engine-node supply" data-engine-target="supply"><span>06</span><b>Supply</b><small id="node-supply">—</small></button>
+            <div class="field-center"><span>STATE</span><b id="fieldState">—</b><small>independent confirmations required</small></div>
+          </div>
+          <p class="field-caption">Solid paths are observed relationships. Dashed paths are plausible but unconfirmed. Supply is an opposing force—not a cosmetic seventh metric.</p>
+        </article>
+
+        <article class="change-panel" aria-labelledby="changeHeading">
+          <div class="change-heading">
+            <div><span class="kicker">Since the prior observation</span><h2 id="changeHeading">What changed?</h2></div>
+            <span class="direction-chip" id="directionChip">Baseline</span>
+          </div>
+          <div class="change-groups" id="changeGroups"></div>
+          <div class="change-reading"><span>Interpretation</span><p id="changeInterpretation">Loading…</p></div>
+        </article>
+      </div>
+
+      <article class="ladder" aria-labelledby="ladderHeading">
+        <div class="ladder-heading"><div><span class="kicker">Squeeze ladder</span><h2 id="ladderHeading">Progression requires new kinds of evidence</h2></div><p>Price cannot skip the gates.</p></div>
+        <ol id="stateLadder">
+          <li data-state="DORMANT"><span>0</span><b>Dormant</b><small>ordinary trade</small></li>
+          <li data-state="ATTENTION"><span>1</span><b>Attention</b><small>anomaly begins</small></li>
+          <li data-state="PRESSURE"><span>2</span><b>Pressure</b><small>independent confirms</small></li>
+          <li data-state="REFLEXIVE"><span>3</span><b>Reflexive</b><small>feedback observed</small></li>
+          <li data-state="SQUEEZE"><span>4</span><b>Squeeze</b><small>covering evidence</small></li>
+          <li data-state="DISLOCATION"><span>5</span><b>Dislocation</b><small>anchors fail</small></li>
+        </ol>
+        <div class="ladder-next">
+          <div><span>To move forward</span><p id="ladderForward">—</p></div>
+          <div><span>To move backward</span><p id="ladderBackward">—</p></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="mechanism" aria-labelledby="mechanismHeading">
+      <div class="section-heading">
+        <div><span class="kicker">Six engines · one mechanism</span><h2 id="mechanismHeading">Pressure is interaction, not a card score</h2></div>
+        <p>Open any engine to trace the conclusion back to its observation, timestamp, and limitation.</p>
+      </div>
+      <div class="engine-grid" id="engineGrid"></div>
+    </section>
+
+    <section class="section thesis-section" aria-labelledby="thesesHeading">
+      <div class="section-heading">
+        <div><span class="kicker">Competing explanations</span><h2 id="thesesHeading">No thesis wins by default</h2></div>
+        <p>The same observation may support more than one explanation. Contradictions remain visible.</p>
+      </div>
+      <div class="thesis-grid" id="thesisGrid"></div>
+    </section>
+
+    <section class="section next-section" aria-labelledby="nextHeading">
+      <div class="section-heading">
+        <div><span class="kicker">Falsifiable monitoring</span><h2 id="nextHeading">What must happen next?</h2></div>
+        <p>Observable gates replace prediction theater.</p>
+      </div>
+      <div class="next-grid">
+        <article><span class="next-icon forward" aria-hidden="true">↑</span><h3 id="forwardHeading">Toward reflexive</h3><ol id="forwardList"></ol></article>
+        <article><span class="next-icon backward" aria-hidden="true">↓</span><h3 id="backwardHeading">Back toward attention</h3><ol id="backwardList"></ol></article>
+        <article class="falsifier-card"><span class="next-icon falsify" aria-hidden="true">×</span><h3>What would falsify it?</h3><ul id="falsifierList"></ul></article>
+      </div>
+    </section>
+
+    <section class="section evidence-section" id="evidence" aria-labelledby="evidenceHeading">
+      <div class="section-heading">
+        <div><span class="kicker">Evidence room</span><h2 id="evidenceHeading">Observed, derived, inferred, unknown</h2></div>
+        <div class="evidence-key"><span class="observed">Observed</span><span class="derived">Derived</span><span class="inferred">Inferred</span><span class="unknown">Unknown</span></div>
+      </div>
+
+      <div class="evidence-grid">
+        <article class="options-map">
+          <div class="module-heading"><div><span class="kicker">Options map</span><h3>Where activity is concentrated</h3></div><span class="module-status">Observed · delayed</span></div>
+          <p class="module-note" id="optionsNote">—</p>
+          <div class="strike-map" id="strikeMap"></div>
+          <div class="inference-boundary"><b>Inference boundary</b><p>Large call volume may create hedging demand. The Watch does not observe dealer inventory, so it does not claim that a gamma loop exists.</p></div>
+        </article>
+
+        <article class="capital-map">
+          <div class="module-heading"><div><span class="kicker">Capital structure</span><h3>How scarce can equity become?</h3></div><span class="module-status">Authoritative filings</span></div>
+          <div class="capital-stack" id="capitalStack"></div>
+          <p class="module-note" id="capitalNote">—</p>
+        </article>
+      </div>
+
+      <article class="event-horizon">
+        <div class="module-heading"><div><span class="kicker">Catalyst map</span><h3>What can update the thesis next?</h3></div><span class="module-status">Known events only</span></div>
+        <div class="event-grid" id="eventGrid"></div>
+      </article>
+
+      <article class="freshness-ledger">
+        <div class="module-heading"><div><span class="kicker">Freshness is evidence</span><h3>Source ledger</h3></div><button class="text-button" id="toggleSources" type="button" aria-expanded="false">Show every source</button></div>
+        <div class="ledger-head"><span>Signal</span><span>Observation</span><span>Effective</span><span>Condition</span><span>Provenance</span></div>
+        <div id="sourceLedger"></div>
+      </article>
+    </section>
+
+    <section class="section history-section" id="history" aria-labelledby="historyHeading">
+      <div class="section-heading">
+        <div><span class="kicker">Thesis history</span><h2 id="historyHeading">Which mechanism moved first?</h2></div>
+        <p>Live snapshots are immutable. Historical regimes are visibly marked as retrospective context.</p>
+      </div>
+      <div class="history-layout">
+        <div class="history-rail" id="historyRail" role="list"></div>
+        <article class="history-detail" id="historyDetail" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <section class="section method-section" id="method" aria-labelledby="methodHeading">
+      <div class="section-heading">
+        <div><span class="kicker">Transparent state engine</span><h2 id="methodHeading">What the Watch knows—and does not</h2></div>
+        <p>No calibrated score. Higher states require qualitatively different evidence.</p>
+      </div>
+      <div class="method-grid">
+        <article>
+          <span class="method-number">01</span><h3>Observations stay separate</h3>
+          <p>Quotes, filings, options, and delayed short interest retain provider, observation time, effective date, and limitations.</p>
+        </article>
+        <article>
+          <span class="method-number">02</span><h3>Derived is labeled</h3>
+          <p>Relative volume and shares-short as a percent of shares outstanding are deterministic calculations—not provider facts.</p>
+        </article>
+        <article>
+          <span class="method-number">03</span><h3>Inference has gates</h3>
+          <p>Reflexive requires observed feedback demand. Squeeze requires direct covering evidence plus stressed positioning and abnormal market activity.</p>
+        </article>
+        <article>
+          <span class="method-number">04</span><h3>Unknown lowers confidence</h3>
+          <p>Unavailable borrow data is not converted into zero, neutral, or normal. The system becomes less certain.</p>
+        </article>
+      </div>
+      <details class="method-details">
+        <summary>State definitions and transition logic</summary>
+        <div class="definition-grid">
+          <p><b>Dormant</b> No material anomaly or positioning stress.</p>
+          <p><b>Attention</b> A market, catalyst, or attention anomaly without independent confirmation.</p>
+          <p><b>Pressure</b> Abnormal market activity plus multiple independent structural and demand confirmations.</p>
+          <p><b>Reflexive</b> Observed options concentration and observed feedback demand reinforce abnormal market activity.</p>
+          <p><b>Squeeze</b> Direct evidence of covering or forced buying alongside stressed positioning and abnormal activity.</p>
+          <p><b>Dislocation</b> A squeeze with exceptional liquidity or price-formation breakdown.</p>
+        </div>
+      </details>
+      <p class="disclaimer">Evidence monitor, not investment advice. A strong price move is not proof of short covering. Historical comparisons describe mechanisms, not forecasts.</p>
+    </section>
+  </main>
+
+  <footer><span>GME Short Squeeze Watch</span><p>Demand shock × short positioning × options reflexivity × constrained supply</p><a href="#state">Back to state ↑</a></footer>
+  <script src="/gme/gme.js" defer></script>
+</body>
+</html>

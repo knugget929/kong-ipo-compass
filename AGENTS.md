@@ -1,4 +1,4 @@
-# Kong IPO Compass Agent Operating Contract
+# Thesis Watches Agent Operating Contract
 
 Act on recorded priorities and continue the next safe task. The product owner supplies direction, not routine scheduling or PR approval.
 
@@ -15,15 +15,17 @@ Do not let a builder be the only reviewer of its PR.
 
 ## Product boundaries
 
-- This is a personal decision-support model for a private company, not an offer, solicitation, or investment recommendation.
+- `/kong` is a personal decision-support model for a private company; `/gme` is an evidence monitor for squeeze mechanisms. Neither is an offer, solicitation, or investment recommendation.
 - Keep reported facts, user-supplied estimates, and model assumptions visibly distinct.
 - Never present an IPO date, filing, ARR, share count, valuation, or secondary-market price as confirmed without a dated source.
 - The calculator is client-side and device-local. Do not transmit the user's share count or cost basis.
 - Keep the model formula transparent: implied enterprise value = ARR × selected multiple; equity value = enterprise value + net cash; modeled IPO equity value = equity value × (1 − IPO discount); price = modeled IPO equity value ÷ fully diluted shares.
-- Target post-cutover live records are `data/thesis.json`, `data/checks/latest.json`, `data/news/index.json`, and `data/news/items/*.json`. During the migration gate in `docs/NEWS_STORAGE_MIGRATION.md`, `data/news.json` must remain actively maintained for the currently deployed old reader; freeze it only after the split-reader Site shell is deployed and verified. `dist/data/*` are deploy-time fallbacks only.
+- Kong live records are `data/thesis.json`, `data/checks/latest.json`, `data/news/index.json`, and `data/news/items/*.json`. The split-reader cutover is complete and `data/news.json` is a frozen compatibility fallback. GME live records are under `data/gme/`. `dist/data/*` are deploy-time fallbacks only.
 - Never put personal holdings, credentials, or private research in canonical GitHub data. Share count and cost basis remain browser-local.
 - Material thesis changes require cited evidence, a dated change note, and an explicit upgrade, maintain, or downgrade verdict.
 - Data-only thesis/news updates must preserve schema version 1 and pass `node scripts/validate-data.mjs` plus `node --test scripts/test-news-data.mjs`; they do not require a Site rebuild.
+- Never classify a GME squeeze from price alone. Observed facts, derived metrics, inference, and narrative must remain separable. Delayed short interest is never real-time, options activity is not dealer positioning, and missing borrow data is not normal.
+- GME updates must pass `node scripts/validate-gme-data.mjs`, `node scripts/validate-site.mjs`, and the GME state/observation tests. Preserve dated snapshots and provider health; never overwrite failed observations with zero or neutral values.
 
 ## Delivery constraints
 
