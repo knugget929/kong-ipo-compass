@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
+  "revision": 2,
   "id": "2026-09-22-kong-api-gateway-3-16",
   "publishedAt": "2026-09-22",
   "title": "Kong API Gateway 3.16 adds entitlement enforcement and live operations controls",
@@ -8,23 +8,31 @@
   "significance": "meaningful",
   "thesisDecision": "MAINTAIN",
   "scoreDelta": 0,
-  "summary": "Kong API Gateway 3.16 adds an OpenMeter-powered Entitlement Enforcement plugin that turns usage records into real-time request controls when credits, limits, or plan entitlements are exhausted. Runtime log-level changes and per-principal plugin configuration also reduce production-operations friction. The release strengthens Kong's monetization and enterprise-governance platform, but largely productizes previously recorded OpenMeter capabilities and provides no evidence yet of adoption or financial contribution, so the score and valuation model are unchanged.",
+  "summary": "Kong API Gateway 3.16 adds OpenMeter-powered request-time entitlement enforcement for usage limits and plan-based feature access, plus runtime log-level changes and per-principal plugin configuration. Kong's release blog also describes prepaid-credit enforcement, but the current 3.16 documentation explicitly says credit-balance enforcement is not implemented yet. The release strengthens Kong's monetization and enterprise-governance platform, but no adoption or financial contribution is disclosed, so the score and valuation model are unchanged.",
   "confirmed": [
     "Kong released API Gateway 3.16 on September 22, 2026.",
-    "The new Entitlement Enforcement plugin, powered by OpenMeter, can block requests in the gateway when a customer's prepaid credits, usage limit, or plan-based entitlement is exhausted.",
-    "Administrators can change log verbosity at runtime on Hybrid Data Planes in Konnect and on-premises deployments, with an optional time-to-live that automatically restores the prior level without a restart.",
-    "Selected ACL and rate-limiting plugin fields can now vary per request using Common Expression Language expressions based on principal, consumer, and token-claim data.",
+    "Kong's Entitlement Enforcement documentation says the plugin can block requests when a customer reaches a usage limit or lacks access to a boolean feature, and it works alongside the separately purchased Metering & Billing product.",
+    "Kong's current 3.16 documentation states that credit-balance enforcement is not implemented: config.credit_balance_required and the NO_CREDIT_AVAILABLE reason code are present in the schema but currently have no effect.",
+    "Administrators can change log verbosity at runtime on Hybrid Data Planes, and selected ACL and rate-limiting plugin fields can now vary per request using Common Expression Language expressions based on principal, consumer, and token-claim data.",
     "The release also includes a separately distributed FIPS 140-3-compliant package, overlapping Kong's previously recorded September 3 FIPS announcement."
   ],
   "uncertain": [
     "Kong did not disclose customer adoption, pricing, attach rates, bookings, ARR, retention, gross-margin, or free-cash-flow impact for Gateway 3.16 or the Entitlement Enforcement plugin.",
-    "The release does not establish that customers will replace external billing or entitlement systems, or that Kong will capture incremental revenue rather than bundle the capability into existing contracts.",
-    "Because OpenMeter's acquisition and Konnect Metering & Billing were already recorded, the commercial benefit should not be counted again until usage or revenue evidence appears."
+    "Kong has not stated when credit-balance enforcement will become functional.",
+    "Because OpenMeter acquisition and Konnect Metering & Billing evidence were already recorded, the commercial benefit should not be counted again until usage or revenue evidence appears."
   ],
   "sources": [
     {
       "label": "Kong — API Gateway 3.16",
       "url": "https://konghq.com/blog/product-releases/kong-api-gateway-3-16"
+    },
+    {
+      "label": "Kong Docs — Entitlement Enforcement",
+      "url": "https://developer.konghq.com/plugins/entitlement-enforcement/"
+    },
+    {
+      "label": "Kong Docs — Gateway 3.16 known issues",
+      "url": "https://developer.konghq.com/gateway/breaking-changes/"
     }
   ]
 }
