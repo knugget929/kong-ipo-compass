@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07120f">
+  <meta name="description" content="An interactive Kong Inc. IPO thesis, valuation scenario model, and personal holdings calculator.">
+  <title>Kong IPO Compass</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#model" aria-label="Kong IPO Compass home">
+        <span class="brand-mark" aria-hidden="true">K</span>
+        <span class="brand-copy"><strong>Kong</strong><small>IPO Compass</small></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <button class="nav-item is-active" type="button" data-tab="model">Model</button>
+        <button class="nav-item" type="button" data-tab="thesis">Thesis</button>
+        <button class="nav-item" type="button" data-tab="news">News</button>
+        <button class="nav-item" type="button" data-tab="signals">Signals</button>
+        <button class="nav-item" type="button" data-tab="method">Method</button>
+      </nav>
+
+      <div class="topbar-meta">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span><b id="headerVerdict">Constructive</b><small id="headerDate">Loading live thesis…</small></span>
+      </div>
+    </header>
+
+    <main id="mainContent">
+      <section class="view is-active" id="view-model" data-view="model" aria-labelledby="modelHeading">
+        <div class="signal-strip">
+          <div>
+            <span class="eyebrow">Working thesis · independently modeled</span>
+            <h1 id="modelHeading">What could Kong be worth at IPO?</h1>
+          </div>
+          <button class="quiet-button" id="resetButton" type="button" aria-label="Reset all assumptions to the base case">Reset base case</button>
+        </div>
+
+        <button class="news-pulse" id="latestNewsStrip" type="button" data-open-news>
+          <span class="news-pulse-icon" aria-hidden="true">↗</span>
+          <span><small id="latestNewsLabel">Latest thesis check</small><strong id="latestNewsSummary">Loading Kong developments…</strong></span>
+          <em id="dataSourceBadge">Checking live data</em>
+        </button>
+
+        <div class="cockpit-grid">
+          <article class="result-panel" aria-live="polite">
+            <div class="result-topline">
+              <span>Modeled IPO price</span>
+              <span class="model-tag" id="activeCaseLabel">Base case</span>
+            </div>
+            <div class="price-lockup">
+              <span class="currency">$</span><strong id="sharePrice">20.46</strong><small>/ share</small>
+            </div>
+            <div class="range-track" aria-hidden="true">
+              <span class="range-zone bear-zone"></span>
+              <span class="range-zone base-zone"></span>
+              <span class="range-zone bull-zone"></span>
+              <i id="rangeNeedle"></i>
+            </div>
+            <div class="range-labels"><span id="bearPrice">$7.14 bear</span><span id="bullPrice">$35.50 bull</span></div>
+
+            <div class="holding-card">
+              <div>
+                <span>Your modeled value</span>
+                <strong id="holdingValue">$491,077</strong>
+              </div>
+              <div class="gain-pill positive" id="gainPill">
+                <small>vs. cost</small>
+                <b id="gainMultiple">13.6×</b>
+              </div>
+            </div>
+
+            <div class="result-stats">
+              <div><span>Modeled IPO equity</span><b id="equityValue">$3.99B</b></div>
+              <div><span>Modeled gain</span><b id="modeledGain">+$455,077</b></div>
+              <div><span>Total cost</span><b id="totalCost">$36,000</b></div>
+              <div><span id="secondaryLabel">Vs. user-reported ~$10</span><b id="secondaryDelta">+104.6%</b></div>
+            </div>
+
+            <details class="inline-explainer">
+              <summary>How this price is calculated</summary>
+              <p><span id="formulaArr">$300M</span> ARR × <span id="formulaMultiple">15×</span> = enterprise value. Add net cash, apply the IPO discount, then divide by fully diluted shares.</p>
+            </details>
+          </article>
+
+          <article class="control-panel">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Scenario lab</span><h2>Move the assumptions</h2></div>
+              <div class="preset-group" role="group" aria-label="Scenario presets">
+                <button type="button" data-preset="bear">Bear</button>
+                <button class="is-active" type="button" data-preset="base">Base</button>
+                <button type="button" data-preset="bull">Bull</button>
+              </div>
+            </div>
+
+            <div class="control-list">
+              <div class="control-row">
+                <div class="control-label"><label for="arrNumber">ARR at IPO</label><span class="source-type estimate">Your estimate</span></div>
+                <div class="control-input"><span>$</span><input id="arrNumber" data-field="arr" type="number" inputmode="decimal" min="100" max="500" step="5" aria-describedby="arrHelp"><em>M</em></div>
+                <input id="arrRange" data-range="arr" type="range" min="100" max="500" step="5" aria-label="ARR at IPO">
+                <details id="arrHelp"><summary>Why it matters</summary><p>ARR is the recurring revenue base. It drives enterprise value directly, but the market will also judge how fast and efficiently it grows.</p></details>
+              </div>
+
+              <div class="control-row">
+                <div class="control-label"><label for="multipleNumber">ARR multiple</label><span class="source-type model">Model choice</span></div>
+                <div class="control-input"><input id="multipleNumber" data-field="multiple" type="number" inputmode="decimal" min="4" max="30" step="0.5"><em>×</em></div>
+                <input id="multipleRange" data-range="multiple" type="range" min="4" max="30" step="0.5" aria-label="ARR valuation multiple">
+                <details><summary>What should influence it?</summary><p>Growth, retention, gross margin, free cash flow, competitive position, and the market mood for software IPOs. Use a lower multiple when evidence is thin.</p></details>
+              </div>
+
+              <div class="control-row">
+                <div class="control-label"><label for="netCashNumber">Net cash at IPO</label><span class="source-type unknown">Unknown</span></div>
+                <div class="control-input"><span>$</span><input id="netCashNumber" data-field="netCash" type="number" inputmode="decimal" min="-250" max="500" step="10"><em>M</em></div>
+                <input id="netCashRange" data-range="netCash" type="range" min="-250" max="500" step="10" aria-label="Net cash at IPO">
+                <details><summary>Why it matters</summary><p>Cash adds to equity value; debt subtracts. IPO proceeds can raise cash, but new primary shares can also increase dilution.</p></details>
+              </div>
+
+              <div class="control-row">
+                <div class="control-label"><label for="dilutedSharesNumber">Fully diluted shares</label><span class="source-type estimate">Prior model</span></div>
+                <div class="control-input"><input id="dilutedSharesNumber" data-field="dilutedShares" type="number" inputmode="decimal" min="120" max="300" step="1"><em>M</em></div>
+                <input id="dilutedSharesRange" data-range="dilutedShares" type="range" min="120" max="300" step="1" aria-label="Fully diluted shares">
+                <details><summary>What is included?</summary><p>Common shares, preferred conversion, options, warrants, and expected offering dilution. More shares divide the same equity value into smaller pieces.</p></details>
+              </div>
+
+              <div class="control-row">
+                <div class="control-label"><label for="ipoDiscountNumber">IPO pricing discount</label><span class="source-type model">Model choice</span></div>
+                <div class="control-input"><input id="ipoDiscountNumber" data-field="ipoDiscount" type="number" inputmode="decimal" min="-10" max="35" step="0.5"><em>%</em></div>
+                <input id="ipoDiscountRange" data-range="ipoDiscount" type="range" min="-10" max="35" step="0.5" aria-label="IPO pricing discount">
+                <details><summary>What does this represent?</summary><p>The gap between modeled fair value and the offer price needed to attract buyers. A negative discount represents premium pricing.</p></details>
+              </div>
+            </div>
+
+            <div class="ownership-block">
+              <div class="ownership-heading"><div><span class="eyebrow">Personal outcome</span><h3>Your shares</h3></div><span class="private-chip">Saved only on this device</span></div>
+              <div class="ownership-inputs">
+                <label><span>Shares owned</span><input id="ownedSharesNumber" data-field="ownedShares" type="number" inputmode="numeric" min="0" max="10000000" step="1"></label>
+                <label><span>Cost per share</span><span class="money-input"><i>$</i><input id="costBasisNumber" data-field="costBasis" type="number" inputmode="decimal" min="0" max="1000" step="0.01"></span></label>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <article class="sensitivity-card">
+          <div class="panel-heading compact"><div><span class="eyebrow">Two-variable view</span><h2>Price sensitivity</h2></div><span class="muted">ARR × multiple</span></div>
+          <div class="table-wrap"><table id="sensitivityTable"><caption class="sr-only">Modeled price per share at different ARR and valuation multiples</caption></table></div>
+          <p class="table-note">Each cell keeps your current cash, diluted shares, and IPO discount. Tap a cell to use that ARR and multiple.</p>
+        </article>
+      </section>
+
+      <section class="view" id="view-thesis" data-view="thesis" aria-labelledby="thesisHeading" hidden>
+        <div class="section-head">
+          <div><span class="eyebrow">Evidence-weighted view</span><h1 id="thesisHeading">The Kong IPO thesis</h1><p id="thesisSummary"></p></div>
+          <div class="score-orbit"><span>Thesis score</span><strong id="thesisScore">67</strong><small>/ 100</small></div>
+        </div>
+
+        <div class="thesis-grid">
+          <article class="thesis-verdict-card">
+            <span class="eyebrow">Current verdict</span>
+            <h2><span class="status-dot"></span><span id="verdictText">Constructive</span></h2>
+            <p>Attractive asymmetry if the scale estimate is right. The next major re-rating should come from audited evidence—not another narrative signal.</p>
+            <div class="verdict-meta"><span><small>Confidence</small><b id="confidenceText">Low–medium</b></span><span><small>IPO status</small><b id="ipoStatusText">No confirmed filing</b></span></div>
+          </article>
+          <article class="scorecard-panel"><div class="panel-heading compact"><div><span class="eyebrow">Five-part score</span><h2>What supports the score</h2></div></div><div id="scorecardList" class="scorecard-list"></div></article>
+        </div>
+
+        <div class="section-label"><span>Thesis drivers</span><small>Tap any row for the reasoning</small></div>
+        <div id="catalystList" class="catalyst-list"></div>
+
+        <article class="change-card">
+          <div class="panel-heading compact"><div><span class="eyebrow">Thesis steward</span><h2>Latest decision</h2></div><span class="maintain-badge" id="latestVerdict">Maintain</span></div>
+          <div id="changeLog"></div>
+        </article>
+      </section>
+
+      <section class="view" id="view-news" data-view="news" aria-labelledby="newsHeading" hidden>
+        <div class="section-head news-head">
+          <div><span class="eyebrow">Continuously monitored</span><h1 id="newsHeading">Major Kong developments</h1><p id="newsSummary">Material company, market, financing, and IPO signals—linked to their effect on the thesis.</p></div>
+          <div class="news-status-card"><span id="newsStatus">Checking</span><strong id="newsDecision">MAINTAIN</strong><small id="newsCheckedAt">Loading…</small></div>
+        </div>
+
+        <div class="news-explainer">
+          <p>Only items that can affect the investment case belong here. Product announcements without a plausible valuation impact stay out.</p>
+          <details><summary>How updates reach this page</summary><p>The nightly Kong task checks primary sources, then updates versioned JSON in GitHub. This Site reads that data when you open it, so a thesis or news change does not require a Site rebuild.</p></details>
+        </div>
+        <div id="newsList" class="news-list" aria-live="polite"></div>
+      </section>
+
+      <section class="view" id="view-signals" data-view="signals" aria-labelledby="signalsHeading" hidden>
+        <div class="section-head slim">
+          <div><span class="eyebrow">From story to evidence</span><h1 id="signalsHeading">What changes the price?</h1><p>The signals that should upgrade, maintain, or downgrade the thesis—and the milestones already on record.</p></div>
+        </div>
+
+        <div class="signals-layout">
+          <article class="signal-rules-card">
+            <div class="panel-heading compact"><div><span class="eyebrow">Decision rules</span><h2>Upgrade / downgrade map</h2></div></div>
+            <div id="upgradeRules" class="rules-list"></div>
+          </article>
+
+          <article class="unknowns-card">
+            <div class="panel-heading compact"><div><span class="eyebrow">Disclosure gap</span><h2>What we still need</h2></div><span class="count-badge" id="unknownCount">8</span></div>
+            <ol id="unknownList"></ol>
+          </article>
+        </div>
+
+        <article class="timeline-card">
+          <div class="panel-heading compact"><div><span class="eyebrow">Evidence ledger</span><h2>Path toward an IPO</h2></div></div>
+          <div id="timeline" class="timeline"></div>
+        </article>
+      </section>
+
+      <section class="view" id="view-method" data-view="method" aria-labelledby="methodHeading" hidden>
+        <div class="section-head slim">
+          <div><span class="eyebrow">Transparent by design</span><h1 id="methodHeading">Method & sources</h1><p>The model is intentionally simple. It is useful for exploring assumptions, not for manufacturing certainty.</p></div>
+        </div>
+
+        <div class="method-grid">
+          <article class="formula-card">
+            <span class="eyebrow">Core equation</span>
+            <div class="formula-stack">
+              <p><b>ARR</b><i>×</i><b>ARR multiple</b><i>=</i><strong>Enterprise value</strong></p>
+              <p><b>Enterprise value</b><i>+</i><b>Net cash</b><i>=</i><strong>Equity value</strong></p>
+              <p><b>Equity value</b><i>×</i><b>(1 − IPO discount)</b><i>÷</i><b>FD shares</b><i>=</i><strong>Price / share</strong></p>
+            </div>
+            <details open><summary>Important limitation</summary><p>ARR multiples are shorthand. Public investors will ultimately price growth, retention, margins, cash flow, competitive durability, governance, dilution, and the market regime—not ARR alone.</p></details>
+          </article>
+
+          <article class="assumption-card">
+            <span class="eyebrow">Evidence labels</span>
+            <h2>Facts do not blend with guesses</h2>
+            <div class="label-key"><span class="source-type confirmed">Confirmed</span><p>Published by Kong or a directly relevant source.</p></div>
+            <div class="label-key"><span class="source-type estimate">Your estimate</span><p>A working figure from your Kong investment discussions.</p></div>
+            <div class="label-key"><span class="source-type model">Model choice</span><p>A transparent valuation assumption you can change.</p></div>
+            <div class="label-key"><span class="source-type unknown">Unknown</span><p>Not yet supported by current public evidence.</p></div>
+          </article>
+        </div>
+
+        <article class="sources-card">
+          <div class="panel-heading compact"><div><span class="eyebrow">Source shelf</span><h2>Primary evidence</h2></div><span class="muted" id="sourceDate">Accessed Sep 3, 2026</span></div>
+          <div id="sourceList" class="source-list"></div>
+        </article>
+
+        <div class="disclaimer">For personal scenario planning only. Kong is private; inputs may be incomplete, stale, or wrong. Nothing here is an offer, solicitation, tax opinion, or investment recommendation.</div>
+      </section>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Primary navigation">
+      <button class="nav-item is-active" type="button" data-tab="model"><span aria-hidden="true">◆</span>Model</button>
+      <button class="nav-item" type="button" data-tab="thesis"><span aria-hidden="true">◉</span>Thesis</button>
+      <button class="nav-item" type="button" data-tab="news"><span aria-hidden="true">●</span>News</button>
+      <button class="nav-item" type="button" data-tab="signals"><span aria-hidden="true">↗</span>Signals</button>
+      <button class="nav-item" type="button" data-tab="method"><span aria-hidden="true">≡</span>Method</button>
+    </nav>
+  </div>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>

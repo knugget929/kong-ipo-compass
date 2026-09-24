@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-08-q2-results",
+  "occurredAt": "2026-09-08T20:05:00Z",
+  "type": "MATERIAL_THESIS_EVENT",
+  "category": "EARNINGS",
+  "title": "Q2 results raised the corporate-thesis baseline",
+  "mechanism": "Improved profitability and large liquid assets support a fundamental/corporate repricing independent of a squeeze.",
+  "stateBefore": "UNRECORDED",
+  "stateAfter": "UNRECORDED",
+  "stateEffect": "Strengthens a competing explanation; not reconstructed as a historical state transition.",
+  "observations": [
+    "$174.0M adjusted EBITDA and full-year outlook above $650M.",
+    "$790.2M net sales, lower year over year.",
+    "$5.4B in cash, marketable securities, and digital assets plus a $4.9B eBay stake."
+  ],
+  "sourceIds": ["gme-q2-results-2026-09-08", "gme-10q-2026-09-09"]
+}

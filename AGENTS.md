@@ -1,4 +1,4 @@
-# Kong IPO Compass Agent Operating Contract
+# Thesis Watches Agent Operating Contract
 
 Act on recorded priorities and continue the next safe task. The product owner supplies direction, not routine scheduling or PR approval.
 
@@ -15,7 +15,7 @@ Do not let a builder be the only reviewer of its PR.
 
 ## Product boundaries
 
-- This is a personal decision-support model for a private company, not an offer, solicitation, or investment recommendation.
+- `/kong` is a personal decision-support model for a private company; `/gme` is an evidence monitor for squeeze mechanisms. Neither is an offer, solicitation, or investment recommendation.
 - Keep reported facts, user-supplied estimates, and model assumptions visibly distinct.
 - Never present an IPO date, filing, ARR, share count, valuation, or secondary-market price as confirmed without a dated source.
 - The calculator is client-side and device-local. Do not transmit the user's share count or cost basis.
@@ -24,6 +24,11 @@ Do not let a builder be the only reviewer of its PR.
 - Never put personal holdings, credentials, private messages, or private research in canonical GitHub data. Share count and cost basis remain browser-local.
 - Material thesis changes require cited evidence, a dated change note, and an explicit upgrade, maintain, or downgrade verdict.
 - Validation has two tiers. Code/schema/migration/validator/test/release/deployment/structural changes require full Tier A validation with `node scripts/validate-data.mjs` plus `node --test scripts/test-news-data.mjs`. Ordinary post-cutover scheduled data writes may instead use the exact Tier B connector-safe transition contract in `docs/AUTOMATION_VALIDATION_CONTRACT.md` when no runnable checkout exists. Lack of Node alone is not a blocker for those exact routine patterns; incomplete validation is.
+
+
+- GME canonical live records are `main/data/gme/*`; `dist/data/gme/*` is a deployment-time fallback only. Routine runs never change fallback or Site files and require no deployment.
+- Preserve the six GME engines, three competing theses, and checked-in deterministic gates. Price alone cannot classify a squeeze; delayed short interest is not real-time, options activity is not dealer positioning, and missing borrow evidence is not normal.
+- GME development/release work requires Tier A in `docs/GME_AUTOMATION_VALIDATION_CONTRACT.md`, including GME data/Site/state/observation/client checks and Kong regressions. Routine Hub runs may use only its exact Tier B transitions against a recorded head/blob set. Preserve failed observations and immutable history. The Automation Hub Dispatcher is the sole scheduler.
 
 ## Delivery constraints
 
