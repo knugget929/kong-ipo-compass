@@ -2,9 +2,9 @@
 
 ## Outcome
 
-The target architecture splits research state into small GitHub records so scheduled runs can validate and write only the files that actually changed. The migration is backward-safe: the legacy monolith remains available until the split reader has been deployed and verified in production.
+The architecture splits research state into small GitHub records so scheduled runs can validate and write only the files that actually changed. The split reader is deployed and verified in production; the legacy monolith remains only as a frozen compatibility fallback.
 
-**Cutover status:** `READY_FOR_READER_DEPLOY`. See `docs/NEWS_STORAGE_MIGRATION.md`. Until that activation gate is satisfied, production automation must continue updating `data/news.json` for the currently deployed old reader.
+**Cutover status:** `CUT OVER / ACTIVE`. See `docs/NEWS_STORAGE_MIGRATION.md`. Normal scheduled automation must use the split records and must not rewrite frozen `data/news.json`.
 
 ## Target canonical records after cutover
 
@@ -45,7 +45,7 @@ The validator checks duplicate IDs, missing indexed items, valid staged/archived
 
 ## Post-cutover automation write patterns
 
-These narrow-write patterns become authoritative only after the activation gate in `docs/NEWS_STORAGE_MIGRATION.md` is satisfied.
+These narrow-write patterns are authoritative because the activation gate in `docs/NEWS_STORAGE_MIGRATION.md` is satisfied.
 
 **No-news run**
 
