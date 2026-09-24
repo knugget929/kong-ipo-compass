@@ -44,13 +44,20 @@ Tier B is limited to the three exact routine write patterns documented below. **
 
 ### No material news
 
-Update only `data/checks/latest.json`:
+Update only `data/checks/latest.json`.
+
+For routine no-news runs, keep this record deliberately minimal. It is machine state, not a research narrative.
 
 - increment its revision by exactly one;
 - set a valid `lastCheckedAt`;
 - set `status` to `NO_MATERIAL_CHANGE`;
 - set `thesisDecision`;
-- write the concise run summary and optional execution metadata.
+- set `summary` to exactly `Routine check completed; no material evidence change.`;
+- omit optional execution metadata unless recording a genuine execution failure.
+
+Detailed research context belongs in the user-facing report rather than the canonical no-news state record.
+
+Try one direct exact-SHA replacement first. If that connector path rejects an otherwise valid minimal Pattern 1 payload, retry once as an atomic Git tree commit against the same validated baseline head. If both fail, report the connector blocker and leave canonical data unchanged.
 
 Do not touch `data/news/index.json`, any news item file, frozen `data/news.json`, `data/thesis.json`, or `dist/data/*`.
 
