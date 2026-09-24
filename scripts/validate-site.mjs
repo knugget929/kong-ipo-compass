@@ -2,20 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 const read = (path) => readFile(path, "utf8");
-const [root, kong, gme, gmeScript, current, fallback, health, healthFallback, history, historyFallback, events, eventsFallback] = await Promise.all([
-  read("dist/index.html"),
-  read("dist/kong/index.html"),
-  read("dist/gme/index.html"),
-  read("dist/gme/gme.js"),
-  read("data/gme/current.json"),
-  read("dist/data/gme/current.json"),
-  read("data/gme/health.json"),
-  read("dist/data/gme/health.json"),
-  read("data/gme/history/2026-09-22.json"),
-  read("dist/data/gme/history/2026-09-22.json"),
-  read("data/gme/events/index.json"),
-  read("dist/data/gme/events/index.json"),
-]);
+const [root,kong,gme,gmeScript] = await Promise.all(['dist/index.html','dist/kong/index.html','dist/gme/index.html','dist/gme/gme.js'].map(read));
 
 assert.equal(kong, root, "/kong must preserve the deployed Kong shell byte-for-byte");
 assert.match(kong, /Kong IPO Compass/, "/kong must identify the Kong product");
@@ -27,9 +14,10 @@ assert.match(gmeScript, /Site snapshot fallback/, "GME client must label fallbac
 assert.match(gmeScript, /computedFreshness/, "GME client must age evidence at render time");
 assert.match(gmeScript, /eventItems/, "GME history must load preserved material events");
 assert.match(gme, /data-edge="catalyst-market"/, "causal field paths must be data-driven");
-assert.equal(fallback, current, "deploy-time GME fallback must match canonical current data");
-assert.equal(healthFallback, health, "deploy-time health fallback must match canonical update health");
-assert.equal(historyFallback, history, "deploy-time history fallback must match canonical immutable snapshot");
-assert.equal(eventsFallback, events, "deploy-time event fallback must match canonical event index");
-
-console.log("Static Site routes and canonical/fallback data are consistent.");
+assert.match(gmeScript, /https:\/\/raw\.githubusercontent\.com\/knugget929\/kong-ipo-compass\/main\/data\/gme/, 'canonical source must be main');
+// Fallback is independently valid, intentionally older after routine writes.
+const { validateBundle } = await import('./gme-validation.mjs');
+const fs = await import('node:fs');
+const fallbackFiles = Object.fromEntries(fs.readdirSync('dist/data/gme',{recursive:true}).filter(p=>p.endsWith('.json')).map(p=>['data/gme/'+p,JSON.parse(fs.readFileSync('dist/data/gme/'+p,'utf8'))]));
+validateBundle(fallbackFiles);
+console.log('Static Site routes and independent deployment fallback are valid.');

@@ -20,12 +20,15 @@ Do not let a builder be the only reviewer of its PR.
 - Never present an IPO date, filing, ARR, share count, valuation, or secondary-market price as confirmed without a dated source.
 - The calculator is client-side and device-local. Do not transmit the user's share count or cost basis.
 - Keep the model formula transparent: implied enterprise value = ARR × selected multiple; equity value = enterprise value + net cash; modeled IPO equity value = equity value × (1 − IPO discount); price = modeled IPO equity value ÷ fully diluted shares.
-- Kong live records are `data/thesis.json`, `data/checks/latest.json`, `data/news/index.json`, and `data/news/items/*.json`. The split-reader cutover is complete and `data/news.json` is a frozen compatibility fallback. GME live records are under `data/gme/`. `dist/data/*` are deploy-time fallbacks only.
-- Never put personal holdings, credentials, or private research in canonical GitHub data. Share count and cost basis remain browser-local.
+- The split reader is cut over and active. Canonical live records are `data/thesis.json`, `data/checks/latest.json`, `data/news/index.json`, and `data/news/items/*.json`. `data/news.json` is a frozen compatibility fallback and `dist/data/*` are deploy-time fallbacks only; ordinary scheduled runs must not rewrite either.
+- Never put personal holdings, credentials, private messages, or private research in canonical GitHub data. Share count and cost basis remain browser-local.
 - Material thesis changes require cited evidence, a dated change note, and an explicit upgrade, maintain, or downgrade verdict.
-- Data-only thesis/news updates must preserve schema version 1 and pass `node scripts/validate-data.mjs` plus `node --test scripts/test-news-data.mjs`; they do not require a Site rebuild.
-- Never classify a GME squeeze from price alone. Observed facts, derived metrics, inference, and narrative must remain separable. Delayed short interest is never real-time, options activity is not dealer positioning, and missing borrow data is not normal.
-- GME updates must pass `node scripts/validate-gme-data.mjs`, `node scripts/validate-site.mjs`, and the GME state/observation tests. Preserve dated snapshots and provider health; never overwrite failed observations with zero or neutral values.
+- Validation has two tiers. Code/schema/migration/validator/test/release/deployment/structural changes require full Tier A validation with `node scripts/validate-data.mjs` plus `node --test scripts/test-news-data.mjs`. Ordinary post-cutover scheduled data writes may instead use the exact Tier B connector-safe transition contract in `docs/AUTOMATION_VALIDATION_CONTRACT.md` when no runnable checkout exists. Lack of Node alone is not a blocker for those exact routine patterns; incomplete validation is.
+
+
+- GME canonical live records are `main/data/gme/*`; `dist/data/gme/*` is a deployment-time fallback only. Routine runs never change fallback or Site files and require no deployment.
+- Preserve the six GME engines, three competing theses, and checked-in deterministic gates. Price alone cannot classify a squeeze; delayed short interest is not real-time, options activity is not dealer positioning, and missing borrow evidence is not normal.
+- GME development/release work requires Tier A in `docs/GME_AUTOMATION_VALIDATION_CONTRACT.md`, including GME data/Site/state/observation/client checks and Kong regressions. Routine Hub runs may use only its exact Tier B transitions against a recorded head/blob set. Preserve failed observations and immutable history. The Automation Hub Dispatcher is the sole scheduler.
 
 ## Delivery constraints
 

@@ -226,11 +226,14 @@ for (const fresh of [false, null, undefined]) {
 // Regressions found during recovery review: stale inputs cannot unlock gates.
 import { readFileSync } from "node:fs";
 import { deriveEvidenceInputs } from "./gme-state-engine.mjs";
-const recovered = JSON.parse(readFileSync(new URL("../data/gme/current.json", import.meta.url)));
+const recovered = JSON.parse(readFileSync(new URL("../data/gme/history/2026-09-22.json", import.meta.url)));
 for (const kind of ["market", "options"]) {
   for (const failure of ["stale-status", "old-effective-date", "missing-effective-date"]) {
     test(`${kind} ${failure} cannot contribute pressure confirmations`, () => {
       const snapshot = structuredClone(recovered);
+      // Isolate this feed; unrelated covering or borrow must not satisfy higher gates.
+      snapshot.shortPressure.directCoveringEvidence = false;
+      snapshot.borrowPressure.status = "UNAVAILABLE";
       const observation = kind === "market" ? snapshot.market : snapshot.optionsPressure;
       snapshot.optionsPressure.activityHistoryPercentile = 0.99;
       snapshot.optionsPressure.feedbackDemandObserved = true;

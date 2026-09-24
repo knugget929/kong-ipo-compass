@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const REMOTE_ROOT = "https://raw.githubusercontent.com/knugget929/kong-ipo-compass/feature/gme-squeeze-watch/data/gme";
+  const REMOTE_ROOT = "https://raw.githubusercontent.com/knugget929/kong-ipo-compass/main/data/gme";
   const LOCAL_ROOT = "/data/gme";
   const REQUEST_TIMEOUT_MS = 6500;
   const LEVELS = ["DORMANT", "ATTENTION", "PRESSURE", "REFLEXIVE", "SQUEEZE", "DISLOCATION"];
@@ -156,7 +156,7 @@
           : degraded
             ? "Canonical · known gaps"
             : "Canonical evidence";
-    byId("observedAt").textContent = `Observed ${formatDateTime(data.observedAt)}`;
+    byId("observedAt").textContent = `Observed ${formatDateTime(data.observedAt)} · Checked ${formatDateTime(health.lastAttemptAt)}`;
     const pip = document.querySelector(".live-pip");
     if (failed) pip.style.background = "var(--red)";
     else if (stale || undated || degraded) pip.style.background = "var(--amber)";

@@ -10,7 +10,7 @@ export function readJson(relativePath) {
 }
 
 export function assertIso(value, label) {
-  if (typeof value !== "string" || Number.isNaN(Date.parse(value))) {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?(?:Z|[+-]\d{2}:\d{2})$/.test(value) || Number.isNaN(Date.parse(value)) || new Date(value.slice(0, 10)).toISOString().slice(0, 10) !== value.slice(0, 10)) {
     throw new Error(`${label} must be an ISO timestamp; received ${value}`);
   }
 }
@@ -30,6 +30,8 @@ export function assertSource(source, label) {
       throw new Error(`${label}.${key} is required`);
     }
   }
+  const url = new URL(source.url);
+  if (url.protocol !== "https:" || url.username || url.password) throw new Error(`${label}.url must be public HTTPS`);
   assertIso(source.observedAt, `${label}.observedAt`);
   assertIso(source.effectiveAt, `${label}.effectiveAt`);
   assertEnum(source.tier, [1, 2, 3, 4, 5, 6, 7], `${label}.tier`);

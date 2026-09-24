@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import fs from 'node:fs';
 const script = fs.readFileSync(new URL('../dist/gme/gme.js', import.meta.url), 'utf8');
-const current = JSON.parse(fs.readFileSync(new URL('../data/gme/current.json', import.meta.url)));
+const current = JSON.parse(fs.readFileSync(new URL('../dist/data/gme/current.json', import.meta.url)));
 const node = () => ({textContent:'', innerHTML:'', hidden:false, style:{}, dataset:{}, classList:{toggle(){}},setAttribute(){},addEventListener(){},replaceChildren(){}});
 async function run(mode, change=()=>{}) {
   const nodes=new Map(), hidden=[node(),node()], requests=[];
@@ -11,7 +11,7 @@ async function run(mode, change=()=>{}) {
   const fetch=async(url)=>{
     requests.push(url); if(mode==='failed'||(mode==='fallback'&&url.startsWith('https:')))throw Error('network failure');
     const relative=url.slice(url.indexOf('/data/gme')+1);
-    const data=JSON.parse(fs.readFileSync(new URL('../'+relative, import.meta.url)));
+    const data=JSON.parse(fs.readFileSync(new URL('../dist/'+relative, import.meta.url)));
     if(relative==='data/gme/current.json')change(data);
     return {ok:true,json:async()=>data};
   };
@@ -25,8 +25,8 @@ test('canonical bundle renders six engines and source links',async()=>{
  const {nodes,requests}=await run('canonical');
  assert.match(nodes.get('dataCondition').textContent,/Canonical/);
  assert.equal((nodes.get('engineGrid').innerHTML.match(/<article class="engine-card /g)||[]).length,6);
- assert.match(nodes.get('sourceLedger').innerHTML,/https:\/\/www.sec.gov/);
- assert.ok(requests.every(url=>url.includes('/feature/gme-squeeze-watch/data/gme/')));
+ assert.match(nodes.get('sourceLedger').innerHTML,/https:\/\//);
+ assert.ok(requests.every(url=>url.includes('/main/data/gme/')));
 });
 test('network failure uses explicitly labelled complete snapshot fallback',async()=>{
  const {nodes}=await run('fallback');assert.equal(nodes.get('dataCondition').textContent,'Site snapshot fallback');

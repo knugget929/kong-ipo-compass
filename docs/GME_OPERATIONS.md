@@ -1,48 +1,25 @@
 # GME Watch operations
 
-## Canonical records
+## Storage and production
 
-- `data/gme/current.json`: latest observation, derived metrics, inference, narrative, sources, next-state gates, and falsifiers.
-- `data/gme/history/YYYY-MM-DD.json`: immutable daily thesis snapshot.
-- `data/gme/history/index.json`: compact history navigation.
-- `data/gme/events/`: material thesis events; an item is written before the index references it.
-- `data/gme/health.json`: last attempt, last successful snapshot, and provider health.
-- `dist/data/gme/`: deployment fallback copied from the canonical records.
+Canonical live records are `data/gme/*` on `main`: current.json (latest valid evidence), health.json (latest attempt), history/YYYY-MM-DD.json (immutable daily snapshots), history/index.json, events/items/<stable-id>.json (immutable material events), and events/index.json. The Site reads `https://raw.githubusercontent.com/knugget929/kong-ipo-compass/main/data/gme` first. `dist/data/gme/*` is an independently valid deployment-time fallback only. Routine updates never copy canonical records into dist, rebuild or deploy. The existing `/kong` split reader and `/gme` visual design remain intact.
 
-The Site reads canonical GitHub data at run time and falls back to the deployed snapshot. `/kong` keeps the existing Kong split-data behavior.
+A single release deploys the main-source reader. After that, reload `/gme` to retrieve current GitHub records; the observed and checked timestamps distinguish evidence age from the most recent attempt. A failed provider preserves old evidence and ages naturally. Fallback use remains visibly labeled.
 
-The daily steward and event monitor are ChatGPT scheduled tasks attached to the existing GitHub repository. They use the same checked-in normalization, derivation, and validation commands; they do not add GitHub Actions or expose credentials in the Site.
+## Scheduler and validation
 
-## Update flow
+The **Automation Hub Dispatcher** is the sole scheduler: `knugget929/chatgpt-automation-hub/jobs/gme-squeeze-watch.md`, router key `gme_squeeze_watch`. Do not create separate ChatGPT tasks or GitHub Actions. Activate only after exact-head Tier A PASS, independent review, merge and production cutover verification.
 
-1. Run `node scripts/fetch-gme-observations.mjs` to obtain normalized Nasdaq and Cboe observations. The script emits observations and deterministic calculations only.
-2. Check SEC EDGAR, GameStop investor relations, the official short-interest calendar/publication, and reputable context sources.
-3. Classify each fact by provider, observation time, effective date, freshness, and limitation.
-4. Recompute state with `scripts/gme-state-engine.mjs`.
-5. Compare with the previous canonical snapshot and write only material changes to `whatChanged`.
-6. Write a dated history snapshot. For a material event, write its item before updating the event index.
-7. Copy canonical GME data to `dist/data/gme/`.
-8. Run every validator and test before committing.
+Follow `docs/GME_AUTOMATION_VALIDATION_CONTRACT.md`. Tier A is mandatory for development, schemas, gates, validators, tests, structural storage and releases. It lists all full commands and the immutable-history baseline requirement. Ordinary Hub research uses Tier B's recorded GitHub head/blob set and exact A–D patterns; Node availability is not a gate for those patterns.
 
-Required verification:
+## Run flow
 
-```sh
-node scripts/validate-data.mjs
-node scripts/validate-gme-data.mjs
-node scripts/validate-site.mjs
-node --test scripts/test-news-data.mjs scripts/test-gme-state-engine.mjs scripts/test-gme-observations.mjs
-```
+1. Pin main and read the contract, deterministic engine, records and immutable file manifests. Record head and blob SHAs.
+2. Retrieve public Nasdaq/Cboe observations, SEC EDGAR and GameStop investor relations, the official short-interest calendar/publication and appropriate context sources. `node scripts/fetch-gme-observations.mjs` is an optional Tier A collection helper, never mandatory in a connector-only run.
+3. Distinguish provider retrieval time, effective date, missing/conflicting evidence and limitations. Preserve failed observations; never replace them with zero, false, neutral or fabricated unchanged values.
+4. Build the smallest complete candidate: routine observation; health-only failure/degradation; material event; or reproducible state transition. No material news means no invented event. No complete valid observation means health-only, not a fabricated daily snapshot.
+5. Validate the exact Tier B pattern against the pinned baseline, including gate reproducibility for evidence updates, immutable history, public sources and prohibited fields. If an invariant cannot be checked, stop the write.
+6. Recheck concurrency, commit atomically if possible, and read back canonical records. With sequential writes, immutable items/snapshots precede their indexes and health is last. Never delete historical files or safely staged events on retry.
+7. Reload the existing Site and verify its checked/observed timestamps and canonical source. Do not deploy.
 
-## Routine, material, and transition events
-
-- `ROUTINE_UPDATE`: facts refreshed without a material thesis change.
-- `MATERIAL_THESIS_EVENT`: new evidence materially strengthens or weakens an engine or competing explanation.
-- `STATE_TRANSITION`: the deterministic gate result changes. This receives prominent history treatment and is alert-worthy.
-
-Ordinary price movement does not generate an alert. An event is material when it changes a causal mechanism, a state gate, confidence, a competing thesis, or a falsifier.
-
-## Failure behavior
-
-A failed provider does not overwrite its prior value. Update `health.json`, retain the last successful observation and effective date, and let the signal age. If the required source set cannot support the prior confidence, reduce confidence. Never write zero, neutral, or unchanged as a substitute for a failed observation.
-
-The client recomputes source age from timestamps on every page load. A failed canonical update therefore becomes visibly older even if the deployed bundle itself does not change.
+Ordinary price moves do not automatically warrant alerts. A material event changes a causal mechanism, gate, confidence, competing thesis or falsifier. Delayed short interest is never real-time positioning; short-volume ratios are not short interest; options activity does not reveal dealer inventory; unavailable borrow is unknown, never normal.
