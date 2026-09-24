@@ -44,7 +44,7 @@ As a structural backstop, recursively reject field names that normalize (case-in
 
 `password`, `passwd`, `secret`, `apikey`, `token`, `accesstoken`, `refreshtoken`, `credential`, `credentials`, `authorization`, `cookie`, `cookies`, `privatekey`, `message`, `messages`, `email`, `emails`, `holding`, `holdings`, `personalholdings`, `privateholdings`, `privateresearch`, `researchnotes`, `privatenotes`, `privatemessage`, `privatemessages`, `accountnumber`, `accountid`.
 
-`ownedShares` and `costBasis` are also prohibited outside the existing thesis model schema. Inside `data/thesis.json`, their defaults must remain exactly `0`; the existing calculator ranges may remain.
+`ownedShares` and `costBasis` are also prohibited except at the exact existing thesis paths `model.defaults.ownedShares`, `model.defaults.costBasis`, `model.ranges.ownedShares`, and `model.ranges.costBasis`. Their defaults must remain exactly `0`; the existing calculator ranges may remain. No other path or normalized spelling is exempt.
 
 ## Baseline reads and concurrency
 
@@ -115,6 +115,7 @@ Validate:
 - the new item appears exactly once;
 - the new index entry's `id`, `publishedAt`, `title`, `impact`, `significance`, `thesisDecision`, and `scoreDelta` exactly match the new item file;
 - removing the new ID from the candidate index yields the baseline ID sequence truncated only at the tail as required to make room within `historyLimit`; no other historical ID may disappear or reorder;
+- each retained historical index entry must remain deeply equal to its baseline entry, including all metadata; compare against the baseline index already read, without needing historical item bodies;
 - every candidate indexed ID exists in the baseline item-directory filename set plus the new item ID;
 - no historical item file is deleted or rewritten;
 - no prohibited/private fields.
@@ -161,6 +162,8 @@ If only sequential contents writes are available, validate the complete candidat
 - no material news: latest check;
 - material news, thesis unchanged: new item -> index -> latest check;
 - material news, thesis changed: new item -> thesis -> index -> latest check.
+
+For sequential writes, track the expected branch head returned by each successful write. Before the next write, require that head and the expected target blob SHA; only this run's own successful writes may advance the expected head. Any external branch movement requires stopping and rebuilding from fresh reads.
 
 Never delete historical item files in a routine run. If a sequential run stops after creating only the new item, that unindexed orphan is safe and the live reader ignores it.
 

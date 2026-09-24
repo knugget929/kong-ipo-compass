@@ -188,3 +188,29 @@ test('prohibited/private fields are rejected', () => {
   after.news.check = { ...after.news.check, revision: 2, lastCheckedAt: '2026-09-21T05:00:00+03:00', execution: { apiKey: 'should-never-be-stored' } };
   assert.throws(() => validateScheduledWriteTransition({ before, after, changedPaths: ['data/checks/latest.json'] }), /prohibited\/private field/);
 });
+
+test('thesis personal-input exception is limited to existing model paths', () => {
+  const thesis = makeThesis();
+  thesis.model.ranges = { ownedShares: [0, 100000, 500], costBasis: [0, 30, 0.25] };
+  assert.doesNotThrow(() => validateThesisRecord(thesis));
+  for (const extra of [
+    { ownedShares: 12345 },
+    { personal: { ownedShares: 12345, costBasis: 54321 } },
+    { notes: [{ costBasis: 54321 }] }
+  ]) assert.throws(() => validateThesisRecord({ ...thesis, ...extra }), /prohibited\/private field/);
+  const alias = structuredClone(thesis);
+  alias.model.defaults.owned_shares = 12345;
+  assert.throws(() => validateThesisRecord(alias), /prohibited\/private field/);
+  const nonzero = structuredClone(thesis);
+  nonzero.model.defaults.ownedShares = 12345;
+  assert.throws(() => validateThesisRecord(nonzero), /must not expose personal holdings/);
+});
+
+test('material-news transition preserves all retained historical index metadata', () => {
+  for (const change of [{ title: 'Rewritten historical title' }, { extra: 'Unexpected metadata' }]) {
+    const before = makeState();
+    const { after, changedPaths } = makeMaterialCandidate(before);
+    Object.assign(after.news.index.items[1], change);
+    assert.throws(() => validateScheduledWriteTransition({ before, after, changedPaths }), /index metadata does not match|retained historical index entries/);
+  }
+});

@@ -33,18 +33,22 @@ const PERSONAL_INPUT_KEYS = new Set(['ownedshares', 'costbasis']);
 const normalizeKey = (key) => key.toLowerCase().replace(/[^a-z0-9]/g, '');
 
 export function assertNoProhibitedPrivateFields(value, label = 'record', { allowPersonalModelInputs = false } = {}) {
-  const visit = (node, fieldPath) => {
+  const visit = (node, fieldPath, keyPath = []) => {
     if (!node || typeof node !== 'object') return;
     if (Array.isArray(node)) {
-      node.forEach((entry, index) => visit(entry, `${fieldPath}[${index}]`));
+      node.forEach((entry, index) => visit(entry, `${fieldPath}[${index}]`, [...keyPath, index]));
       return;
     }
     for (const [key, child] of Object.entries(node)) {
       const normalized = normalizeKey(key);
+      const allowedModelInput = allowPersonalModelInputs
+        && keyPath.length === 2 && keyPath[0] === 'model'
+        && ['defaults', 'ranges'].includes(keyPath[1])
+        && ['ownedShares', 'costBasis'].includes(key);
       const prohibited = PROHIBITED_PRIVATE_KEYS.has(normalized)
-        || (!allowPersonalModelInputs && PERSONAL_INPUT_KEYS.has(normalized));
+        || (PERSONAL_INPUT_KEYS.has(normalized) && !allowedModelInput);
       assert.ok(!prohibited, `${label} contains prohibited/private field ${fieldPath}.${key}`);
-      visit(child, `${fieldPath}.${key}`);
+      visit(child, `${fieldPath}.${key}`, [...keyPath, key]);
     }
   };
   visit(value, label);
@@ -165,6 +169,7 @@ function validateMaterialIndexTransition(beforeIndex, afterIndex, newId) {
   const retainedOldIds = afterIds.filter((id) => id !== newId);
   const expectedRetainedOldIds = beforeIds.slice(0, Math.max(0, afterIndex.historyLimit - 1));
   assert.deepEqual(retainedOldIds, expectedRetainedOldIds, 'existing historical IDs must be preserved except tail aging required by historyLimit');
+  assert.deepEqual(afterIndex.items.filter((item) => item.id !== newId), beforeIndex.items.slice(0, expectedRetainedOldIds.length), 'retained historical index entries must remain unchanged');
 }
 
 function validateThesisTransition(beforeThesis, afterThesis, newItem, check) {
