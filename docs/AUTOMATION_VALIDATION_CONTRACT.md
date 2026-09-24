@@ -15,7 +15,7 @@ node scripts/validate-data.mjs
 node --test scripts/test-news-data.mjs
 ```
 
-Tier A is mandatory for code changes, schema changes, migrations, validator changes, test changes, release/deployment work, and structural changes to the news architecture. If Tier A is required and cannot run, do not commit the development/release change.
+Tier A is mandatory for code changes, schema changes, migrations, validator changes, test changes, release/deployment work, and structural changes to the news architecture. A connector-only development runtime may create a branch and PR when Tier A cannot be executed locally, but that limitation must be recorded and the change must not be merged or released until both Tier A commands pass from a runnable repository checkout.
 
 ### Tier B — connector-safe scheduled-write validation
 
