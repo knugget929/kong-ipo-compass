@@ -58,6 +58,7 @@ for(const [label,mutate] of [
  ['misleading state label',s=>s.state.label='Squeeze'],
  ['misleading confidence label',s=>s.state.confidence.label='High'],
  ['missing thesis supports',s=>delete s.theses[0].supports],
+ ['invalid forward list',s=>s.next.forward='text'],
 ]) test('renderer compatibility rejects '+label,()=>{const a=routine();mutate(a[ROOT+'current.json']);assert.throws(()=>check(a));});
 test('valid state transition from evidence aging is reproducible without a fabricated event',()=>{
  const a=routine(),s=a[ROOT+'current.json']; delete a[ROOT+'history/'+nextDate+'.json'];

@@ -41,7 +41,7 @@ export function validateSnapshot(s) {
   assert.deepEqual(s.engines.map(x=>x.key).sort(),Object.keys(engineFields).sort(),'exactly six distinct engines');
   assert.deepEqual(s.theses.map(x=>x.key).sort(),['fundamental','normal','squeeze'],'exactly three competing theses');
   for(const key of ['strengthening','weakening','unchanged','unknown']) assert.ok(Array.isArray(s.whatChanged[key]));
-  for(const xs of [s.next.forward,s.next.backward,s.falsifiers]) assert.ok(xs.length);
+  for(const xs of [s.next.forward,s.next.backward,s.falsifiers]) { assert.ok(Array.isArray(xs) && xs.length,'required evidence list'); xs.forEach(x=>nonempty(x,'evidence list entry')); }
   assert.ok(Array.isArray(s.upcomingCatalysts));
   assert.ok(s.sources.length); unique(s.sources.map(x=>x.id),'duplicate source id');
   for(const source of s.sources) { assertSource(source,'source'); for(const key of ['freshness','kind','limitations']) nonempty(source[key],`source ${key}`); assert.ok(Date.parse(source.observedAt)<=Date.parse(s.observedAt),'source retrieved after snapshot'); }
