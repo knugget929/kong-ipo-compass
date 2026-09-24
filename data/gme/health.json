@@ -1,16 +1,40 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-09-22T21:24:43Z",
+  "lastAttemptAt": "2026-09-24T04:25:48.530Z",
   "lastSuccessfulSnapshotAt": "2026-09-22T21:24:43Z",
-  "runKind": "INITIAL_BASELINE",
+  "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "All baseline sources succeeded except borrow, which is an explicit known coverage gap.",
+  "summary": "Manual Automation Hub run: Nasdaq and Cboe observations were retrieved, but the GameStop newsroom returned no readable release list, so a complete current company-event check could not be validated. The last validated observation is preserved; this is not a no-material-change finding. Borrow remains unavailable and reported short interest remains delayed. FINRA lists September 24 publication for the September 15 reporting date; no new GME short-interest value was verified.",
   "providers": [
-    { "key": "market", "status": "OK", "lastSuccessAt": "2026-09-22T21:23:19Z" },
-    { "key": "options", "status": "OK", "lastSuccessAt": "2026-09-22T21:24:43Z" },
-    { "key": "sec", "status": "OK", "lastSuccessAt": "2026-09-22T18:55:00Z" },
-    { "key": "company", "status": "OK", "lastSuccessAt": "2026-09-22T18:45:00Z" },
-    { "key": "short_interest", "status": "STALE", "lastSuccessAt": "2026-09-10T00:00:00Z" },
-    { "key": "borrow", "status": "UNAVAILABLE_EXPECTED", "lastSuccessAt": null }
+    {
+      "key": "market",
+      "status": "OK",
+      "lastSuccessAt": "2026-09-22T21:23:19Z"
+    },
+    {
+      "key": "options",
+      "status": "OK",
+      "lastSuccessAt": "2026-09-22T21:24:43Z"
+    },
+    {
+      "key": "sec",
+      "status": "OK",
+      "lastSuccessAt": "2026-09-22T18:55:00Z"
+    },
+    {
+      "key": "company",
+      "status": "UNAVAILABLE",
+      "lastSuccessAt": "2026-09-22T18:45:00Z"
+    },
+    {
+      "key": "short_interest",
+      "status": "STALE",
+      "lastSuccessAt": "2026-09-10T00:00:00Z"
+    },
+    {
+      "key": "borrow",
+      "status": "UNAVAILABLE_EXPECTED",
+      "lastSuccessAt": null
+    }
   ]
 }
