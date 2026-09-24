@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-09-24T04:43:03.081Z",
+  "lastAttemptAt": "2026-09-24T18:59:38Z",
   "lastSuccessfulSnapshotAt": "2026-09-22T21:24:43Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "Manual Automation Hub proof-of-life run. Tier B Pattern B was used: current evidence and state were preserved because a complete fresh observation could not be validated. Nasdaq's GME page returned data unavailable, the Cboe delayed-options JSON could not be retrieved in this runtime, and the GameStop newsroom page did not expose a readable release list. FINRA confirms September 24 as the publication date for the September 15 short-interest reporting date, but no new GME short-interest value was verified. This health-only update intentionally tests canonical GitHub-to-Site propagation without deployment.",
+  "summary": "Scheduled Automation Hub run used Tier B Pattern B. A complete fresh GME observation could not be validated: Nasdaq's GME page returned data unavailable, the Cboe delayed-options page could not be retrieved in a usable form, and the GameStop newsroom did not expose a readable current release list. FINRA confirms September 24 as the publication date for the September 15 short-interest reporting date, but no new official GME short-interest value was verified. Existing validated evidence and state were preserved.",
   "providers": [
     {
       "key": "market",
