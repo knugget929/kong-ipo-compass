@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-24-short-interest-drop",
+  "occurredAt": "2026-09-24T20:00:00Z",
+  "type": "MATERIAL_THESIS_EVENT",
+  "category": "SHORT_INTEREST",
+  "title": "September 15 short-interest report showed a 31.45% decline",
+  "mechanism": "Reported short positioning materially eased, weakening one of the structural mechanisms required for a nonlinear squeeze.",
+  "stateBefore": "ATTENTION",
+  "stateAfter": "ATTENTION",
+  "stateEffect": "Weakens the short-pressure engine without changing the ATTENTION state; delayed short interest does not establish current positioning or direct covering.",
+  "observations": [
+    "39,069,126 shares were reported short for the September 15 settlement date.",
+    "The prior August 31 report was 56,990,026 shares, a decline of 17,920,900 shares or 31.45%.",
+    "Using 504,500,990 shares outstanding from the September 3 filing baseline, reported short interest is about 7.74% of shares outstanding, below the Watch's 20% structural gate."
+  ],
+  "sourceIds": [
+    "short-chartexchange-2026-09-15",
+    "nyse-short-interest-release-2026-09-24"
+  ]
+}

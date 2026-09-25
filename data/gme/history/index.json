@@ -1,7 +1,19 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-22T21:24:43Z",
+  "updatedAt": "2026-09-25T19:18:00Z",
   "entries": [
+    {
+      "date": "2026-09-25",
+      "state": "ATTENTION",
+      "previousState": "ATTENTION",
+      "transitionKind": "MATERIAL_THESIS_EVENT",
+      "thesisDirection": "WEAKENED",
+      "title": "Fresh short-interest report materially weakens short pressure",
+      "snapshot": "2026-09-25.json",
+      "importantEventIds": [
+        "2026-09-24-short-interest-drop"
+      ]
+    },
     {
       "date": "2026-09-22",
       "state": "ATTENTION",
@@ -10,7 +22,9 @@
       "thesisDirection": "INITIAL_BASELINE",
       "title": "Canonical live baseline established",
       "snapshot": "2026-09-22.json",
-      "importantEventIds": ["2026-09-21-cohen-purchase"]
+      "importantEventIds": [
+        "2026-09-21-cohen-purchase"
+      ]
     }
   ],
   "retrospectiveRegimes": [

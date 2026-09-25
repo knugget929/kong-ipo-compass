@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-09-24T18:59:38Z",
-  "lastSuccessfulSnapshotAt": "2026-09-22T21:24:43Z",
-  "runKind": "ROUTINE_UPDATE",
+  "lastAttemptAt": "2026-09-25T19:18:00Z",
+  "lastSuccessfulSnapshotAt": "2026-09-25T19:18:00Z",
+  "runKind": "MATERIAL_THESIS_EVENT",
   "status": "DEGRADED",
-  "summary": "Scheduled Automation Hub run used Tier B Pattern B. A complete fresh GME observation could not be validated: Nasdaq's GME page returned data unavailable, the Cboe delayed-options page could not be retrieved in a usable form, and the GameStop newsroom did not expose a readable current release list. FINRA confirms September 24 as the publication date for the September 15 short-interest reporting date, but no new official GME short-interest value was verified. Existing validated evidence and state were preserved.",
+  "summary": "Tier B Pattern C refreshed the September 15 GME short-interest report and recorded a material weakening of the short-pressure engine. Market and options observations were not refreshed in this corrective run and remain preserved from their last validated snapshot; reliable borrow data remains unavailable.",
   "providers": [
     {
       "key": "market",
@@ -28,8 +28,8 @@
     },
     {
       "key": "short_interest",
-      "status": "STALE",
-      "lastSuccessAt": "2026-09-10T00:00:00Z"
+      "status": "OK",
+      "lastSuccessAt": "2026-09-25T19:18:00Z"
     },
     {
       "key": "borrow",

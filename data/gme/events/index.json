@@ -1,7 +1,15 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-22T21:24:43Z",
+  "updatedAt": "2026-09-25T19:18:00Z",
   "items": [
+    {
+      "id": "2026-09-24-short-interest-drop",
+      "occurredAt": "2026-09-24T20:00:00Z",
+      "type": "MATERIAL_THESIS_EVENT",
+      "category": "SHORT_INTEREST",
+      "title": "September 15 short-interest report showed a 31.45% decline",
+      "path": "items/2026-09-24-short-interest-drop.json"
+    },
     {
       "id": "2026-09-21-cohen-purchase",
       "occurredAt": "2026-09-21T00:00:00Z",
