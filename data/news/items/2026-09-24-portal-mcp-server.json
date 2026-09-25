@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-09-24-portal-mcp-server",
+  "publishedAt": "2026-09-24",
+  "title": "Kong adds a governed Portal MCP Server for developer portals",
+  "impact": "positive",
+  "significance": "noted",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Kong introduced a dedicated MCP server for each Developer Portal, with OAuth 2.0 connections, so AI agents can discover and read portal pages and API specifications while inheriting the portal's existing authentication, authorization, and role-based access controls. The release extends Kong's agentic-AI governance surface but discloses no adoption, bookings, revenue, or margin impact, so the thesis score and valuation model remain unchanged.",
+  "confirmed": [
+    "Kong introduced the Portal MCP Server on September 24, 2026.",
+    "The capability gives each Developer Portal a dedicated MCP server that agents can use to discover and read portal pages and API specifications instead of scraping HTML.",
+    "Kong says agent access inherits existing portal authentication, authorization, and role-based permissions, including restrictions on draft pages and protected API documentation.",
+    "Kong also added OAuth 2.0 connections using Authorization Code with PKCE so supported agents and developer tools can connect through the portal's existing access model."
+  ],
+  "uncertain": [
+    "Kong did not disclose customer adoption, attach rates, bookings, ARR, retention, pricing, gross-margin, or free-cash-flow impact for the Portal MCP Server.",
+    "The release strengthens the product-positioning case for agentic development but does not by itself establish incremental revenue or a change in IPO readiness."
+  ],
+  "sources": [
+    {
+      "label": "Kong — Portal MCP Server for Developer Portal",
+      "url": "https://konghq.com/blog/product-releases/portal-mcp-server"
+    }
+  ]
+}
