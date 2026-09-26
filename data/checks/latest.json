@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 27,
-  "lastCheckedAt": "2026-09-24T22:22:43+03:00",
-  "status": "NO_MATERIAL_CHANGE",
+  "revision": 28,
+  "lastCheckedAt": "2026-09-26T21:02:51+03:00",
+  "status": "MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "Routine check completed; no material evidence change."
+  "summary": "Kong Operator 2.3 adds Kubernetes-native GitOps management for AI Gateway; product-position evidence improved, but no financial or adoption evidence changes the thesis score."
 }

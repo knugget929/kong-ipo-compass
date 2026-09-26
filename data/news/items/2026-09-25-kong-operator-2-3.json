@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-09-25-kong-operator-2-3",
+  "publishedAt": "2026-09-25",
+  "title": "Kong Operator 2.3 brings AI Gateway into Kubernetes-native GitOps",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Kong Operator 2.3 adds full Kubernetes CRD support for Kong AI Gateway, letting teams declaratively manage the AI Gateway control plane, providers, models, policies, authentication, and consumers through Kubernetes and GitOps workflows. The release broadens enterprise deployment flexibility and strengthens Kong's AI-platform positioning, but Kong disclosed no adoption, pricing, bookings, ARR, margin, or retention impact, so the thesis score and valuation model remain unchanged.",
+  "confirmed": [
+    "Kong announced Operator 2.3 on September 25, 2026.",
+    "Kong says Operator 2.3 provides full Kubernetes CRD support for Kong AI Gateway, including declarative management of the control plane, providers, models, policies, authentication, and consumers.",
+    "The release also expands Gateway API coverage with TCPRoute, UDPRoute, and GRPCRoute.",
+    "Kong positions the release as a way for customers to manage AI Gateway with the same Kubernetes-native GitOps workflows used for the rest of their Kong estate."
+  ],
+  "uncertain": [
+    "Kong did not disclose customer adoption, pricing, attach rates, bookings, ARR, gross-margin, retention, or free-cash-flow contribution from Operator 2.3.",
+    "The commercial impact may overlap with AI Gateway 2.0 and the broader Konnect/agentic-AI platform evidence already reflected in the thesis, so no additional score is warranted without usage or financial evidence."
+  ],
+  "sources": [
+    {
+      "label": "Kong — Operator 2.3",
+      "url": "https://konghq.com/blog/product-releases/kong-operator-2-3"
+    }
+  ]
+}

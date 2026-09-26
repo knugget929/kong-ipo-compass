@@ -1,8 +1,17 @@
 {
   "schemaVersion": 1,
-  "revision": 22,
+  "revision": 23,
   "historyLimit": 30,
   "items": [
+    {
+      "id": "2026-09-25-kong-operator-2-3",
+      "publishedAt": "2026-09-25",
+      "title": "Kong Operator 2.3 brings AI Gateway into Kubernetes-native GitOps",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0
+    },
     {
       "id": "2026-09-22-kong-api-gateway-3-16",
       "publishedAt": "2026-09-22",
