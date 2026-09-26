@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-09-25T19:18:00Z",
+  "lastAttemptAt": "2026-09-26T18:59:51Z",
   "lastSuccessfulSnapshotAt": "2026-09-25T19:18:00Z",
-  "runKind": "MATERIAL_THESIS_EVENT",
+  "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "Tier B Pattern C refreshed the September 15 GME short-interest report and recorded a material weakening of the short-pressure engine. Market and options observations were not refreshed in this corrective run and remain preserved from their last validated snapshot; reliable borrow data remains unavailable.",
+  "summary": "Tier B Pattern B health-only check. Nasdaq's GME quote and historical pages returned data unavailable, and the Cboe delayed-options page could not be retrieved in a usable form. GameStop investor-relations and SEC checks did not identify a new primary-source thesis event. The latest verified September 15 short-interest report is preserved, reliable borrow data remains unavailable, and no evidence/state record was changed.",
   "providers": [
     {
       "key": "market",
@@ -23,7 +23,7 @@
     },
     {
       "key": "company",
-      "status": "UNAVAILABLE",
+      "status": "OK",
       "lastSuccessAt": "2026-09-22T18:45:00Z"
     },
     {
