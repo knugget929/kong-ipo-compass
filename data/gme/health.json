@@ -1,40 +1,16 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-09-28T20:32:00Z",
+  "lastAttemptAt": "2026-09-29T18:57:39Z",
   "lastSuccessfulSnapshotAt": "2026-09-25T19:18:00Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "Tier B Pattern B health-only check. Current Nasdaq and Cboe GME observations could not be verified in a usable authoritative form through the available retrieval path. Public SEC/company checks did not establish a new primary-source thesis event. The validated September 15 short-interest report is preserved, reliable borrow data remains unavailable, and no evidence/state record was changed.",
+  "summary": "Tier B Pattern B health-only check. Current Nasdaq GME quote and history returned no usable market data, and the Cboe delayed options table could not be retrieved through the available path. Public SEC checks did not surface a new filing, while GameStop investor-relations retrieval could not be verified. The validated September 15 short-interest report remains the latest published cycle, reliable borrow data remains unavailable, and no evidence/state record was changed.",
   "providers": [
-    {
-      "key": "market",
-      "status": "FAILED",
-      "lastSuccessAt": "2026-09-22T21:23:19Z"
-    },
-    {
-      "key": "options",
-      "status": "FAILED",
-      "lastSuccessAt": "2026-09-22T21:24:43Z"
-    },
-    {
-      "key": "sec",
-      "status": "OK",
-      "lastSuccessAt": "2026-09-22T18:55:00Z"
-    },
-    {
-      "key": "company",
-      "status": "OK",
-      "lastSuccessAt": "2026-09-22T18:45:00Z"
-    },
-    {
-      "key": "short_interest",
-      "status": "OK",
-      "lastSuccessAt": "2026-09-25T19:18:00Z"
-    },
-    {
-      "key": "borrow",
-      "status": "UNAVAILABLE_EXPECTED",
-      "lastSuccessAt": null
-    }
+    {"key":"market","status":"FAILED","lastSuccessAt":"2026-09-22T21:23:19Z"},
+    {"key":"options","status":"FAILED","lastSuccessAt":"2026-09-22T21:24:43Z"},
+    {"key":"sec","status":"OK","lastSuccessAt":"2026-09-22T18:55:00Z"},
+    {"key":"company","status":"FAILED","lastSuccessAt":"2026-09-22T18:45:00Z"},
+    {"key":"short_interest","status":"OK","lastSuccessAt":"2026-09-25T19:18:00Z"},
+    {"key":"borrow","status":"UNAVAILABLE_EXPECTED","lastSuccessAt":null}
   ]
 }
