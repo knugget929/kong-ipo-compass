@@ -1,5 +1,7 @@
 {
   "schemaVersion": 1,
+  "recordKind": "DAILY_THESIS_SNAPSHOT",
+  "capturedAt": "2026-09-30T22:25:00Z",
   "revision": 5,
   "symbol": "GME",
   "observedAt": "2026-09-30T22:25:00Z",
