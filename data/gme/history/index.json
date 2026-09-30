@@ -1,7 +1,19 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-25T19:18:00Z",
+  "updatedAt": "2026-09-30T22:25:00Z",
   "entries": [
+    {
+      "date": "2026-09-30",
+      "state": "ATTENTION",
+      "previousState": "ATTENTION",
+      "transitionKind": "MATERIAL_THESIS_EVENT",
+      "thesisDirection": "STRENGTHENED",
+      "title": "Fresh Cohen purchase strengthens the catalyst engine",
+      "snapshot": "2026-09-30.json",
+      "importantEventIds": [
+        "2026-09-29-cohen-purchase"
+      ]
+    },
     {
       "date": "2026-09-25",
       "state": "ATTENTION",

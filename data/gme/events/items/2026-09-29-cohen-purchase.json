@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-09-29-cohen-purchase",
+  "occurredAt": "2026-09-29T20:59:00Z",
+  "type": "MATERIAL_THESIS_EVENT",
+  "category": "INSIDER",
+  "title": "Ryan Cohen disclosed another 450,000-share purchase",
+  "mechanism": "A fresh primary-source insider purchase adds incremental demand and strengthens the corporate catalyst.",
+  "stateBefore": "ATTENTION",
+  "stateAfter": "ATTENTION",
+  "stateEffect": "Strengthens the catalyst engine without establishing a higher squeeze state.",
+  "observations": [
+    "446,500 shares were purchased at $23.4753 per share.",
+    "3,500 shares were purchased at $23.4499 per share.",
+    "The Form 4 reports 40,948,522 shares directly owned after the transactions."
+  ],
+  "sourceIds": [
+    "sec-cohen-form4-2026-09-29"
+  ]
+}

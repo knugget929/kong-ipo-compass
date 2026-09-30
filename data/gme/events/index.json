@@ -1,7 +1,15 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-25T19:18:00Z",
+  "updatedAt": "2026-09-30T22:25:00Z",
   "items": [
+    {
+      "id": "2026-09-29-cohen-purchase",
+      "occurredAt": "2026-09-29T20:59:00Z",
+      "type": "MATERIAL_THESIS_EVENT",
+      "category": "INSIDER",
+      "title": "Ryan Cohen disclosed another 450,000-share purchase",
+      "path": "items/2026-09-29-cohen-purchase.json"
+    },
     {
       "id": "2026-09-24-short-interest-drop",
       "occurredAt": "2026-09-24T20:00:00Z",
