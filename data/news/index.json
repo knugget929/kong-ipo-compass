@@ -1,8 +1,17 @@
 {
   "schemaVersion": 1,
-  "revision": 23,
+  "revision": 24,
   "historyLimit": 30,
   "items": [
+    {
+      "id": "2026-09-30-gartner-api-management-leader",
+      "publishedAt": "2026-09-30",
+      "title": "Kong earns seventh consecutive Gartner Leader placement as AI traffic share rises sevenfold",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0
+    },
     {
       "id": "2026-09-25-kong-operator-2-3",
       "publishedAt": "2026-09-25",

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-09-30-gartner-api-management-leader",
+  "publishedAt": "2026-09-30",
+  "title": "Kong earns seventh consecutive Gartner Leader placement as AI traffic share rises sevenfold",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Kong says Gartner positioned it as a Leader in the 2026 Magic Quadrant for API Management for a seventh consecutive year and furthest right on Completeness of Vision for a third straight year. Kong also disclosed that enterprise AI traffic as a share of total platform traffic increased sevenfold over the past nine months, while fewer than 1% of organizations running AI through its platform have AI-specific governance controls. The data strengthens the AI-connectivity demand narrative, but without absolute usage, bookings, ARR, margins, retention, or monetization evidence it does not justify changing the thesis score or valuation model.",
+  "confirmed": [
+    "Kong announced on September 30, 2026 that Gartner positioned it as a Leader in the 2026 Magic Quadrant for API Management for the seventh consecutive year.",
+    "Kong said it was positioned furthest right on Completeness of Vision for the third consecutive year.",
+    "Kong reported that enterprise AI traffic, as a share of total Kong platform traffic, grew sevenfold over the prior nine months.",
+    "Kong reported that fewer than 1% of organizations running AI through its platform have AI-specific governance controls in place."
+  ],
+  "uncertain": [
+    "The AI-traffic and governance figures are company-reported and do not disclose absolute traffic volume, customer counts, methodology, or independent verification.",
+    "Kong disclosed no associated bookings, ARR, pricing, gross-margin, retention, free-cash-flow, or customer-concentration impact.",
+    "The Gartner placement is useful competitive-position evidence but does not establish IPO timing, dilution, audited financial quality, or a supportable change to the valuation multiple."
+  ],
+  "sources": [
+    {
+      "label": "Kong / PR Newswire — 2026 Gartner API Management Leader announcement",
+      "url": "https://www.prnewswire.com/news-releases/kong-named-a-leader-in-the-gartner-magic-quadrant-for-api-management-for-the-seventh-consecutive-year-302893947.html"
+    }
+  ]
+}
