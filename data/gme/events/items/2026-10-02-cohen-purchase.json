@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-10-02-cohen-purchase",
+  "occurredAt": "2026-10-02T20:56:41Z",
+  "type": "MATERIAL_THESIS_EVENT",
+  "category": "INSIDER",
+  "title": "Ryan Cohen disclosed another 700,000-share purchase",
+  "mechanism": "A repeated primary-source CEO open-market purchase adds incremental demand and strengthens the corporate catalyst, but does not itself establish a squeeze.",
+  "stateBefore": "ATTENTION",
+  "stateAfter": "DORMANT",
+  "stateEffect": "Strengthens the corporate catalyst while the deterministic squeeze state falls to DORMANT because the purchase is outside the three-day current-catalyst gate at the October 6 observation and other mechanisms are stale or unavailable.",
+  "observations": [
+    "Cohen purchased an aggregate 700,000 shares on October 2, 2026 at a weighted average price of $24.4061 in open-market transactions.",
+    "The filing reports 41,648,522 shares directly owned after the purchase.",
+    "Including 3,734,784 warrant shares, Cohen reported beneficial ownership of 45,383,306 shares, approximately 8.9%."
+  ],
+  "sourceIds": [
+    "sec-cohen-13da-2026-10-02"
+  ]
+}

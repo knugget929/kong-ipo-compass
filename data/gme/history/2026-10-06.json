@@ -757,5 +757,7 @@
       "freshness": "STALE",
       "limitations": "Confirms Cohen's reported open-market purchase and beneficial ownership; it does not identify other buyers, short covering, borrow stress, or broader market demand."
     }
-  ]
+  ],
+  "recordKind": "DAILY_THESIS_SNAPSHOT",
+  "capturedAt": "2026-10-06T18:04:58Z"
 }

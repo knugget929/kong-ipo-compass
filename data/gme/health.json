@@ -1,16 +1,40 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-02T18:04:50Z",
-  "lastSuccessfulSnapshotAt": "2026-09-30T22:25:00Z",
-  "runKind": "ROUTINE_UPDATE",
+  "lastAttemptAt": "2026-10-06T18:04:58Z",
+  "lastSuccessfulSnapshotAt": "2026-10-06T18:04:58Z",
+  "runKind": "STATE_TRANSITION",
   "status": "DEGRADED",
-  "summary": "SEC and company checks completed; no new material squeeze-mechanism event was identified. Preferred market and options observations could not be refreshed from authoritative public sources, the September 15 short-interest report remains stale pending the October 9 publication, and reliable borrow data remains unavailable.",
+  "summary": "SEC and company checks captured Ryan Cohen's October 2 purchase, but preferred market and options observations could not be refreshed, the September 15 short-interest report remains stale pending the next publication, and reliable borrow data remains unavailable.",
   "providers": [
-    {"key":"market","status":"FAILED","lastSuccessAt":"2026-09-22T21:23:19Z"},
-    {"key":"options","status":"FAILED","lastSuccessAt":"2026-09-22T21:24:43Z"},
-    {"key":"sec","status":"OK","lastSuccessAt":"2026-09-30T22:25:00Z"},
-    {"key":"company","status":"OK","lastSuccessAt":"2026-09-30T22:25:00Z"},
-    {"key":"short_interest","status":"STALE","lastSuccessAt":"2026-09-25T19:18:00Z"},
-    {"key":"borrow","status":"UNAVAILABLE_EXPECTED","lastSuccessAt":null}
+    {
+      "key": "market",
+      "status": "FAILED",
+      "lastSuccessAt": "2026-09-22T21:23:19Z"
+    },
+    {
+      "key": "options",
+      "status": "FAILED",
+      "lastSuccessAt": "2026-09-22T21:24:43Z"
+    },
+    {
+      "key": "sec",
+      "status": "OK",
+      "lastSuccessAt": "2026-10-06T18:04:58Z"
+    },
+    {
+      "key": "company",
+      "status": "OK",
+      "lastSuccessAt": "2026-10-06T18:04:58Z"
+    },
+    {
+      "key": "short_interest",
+      "status": "STALE",
+      "lastSuccessAt": "2026-09-25T19:18:00Z"
+    },
+    {
+      "key": "borrow",
+      "status": "UNAVAILABLE_EXPECTED",
+      "lastSuccessAt": null
+    }
   ]
 }
