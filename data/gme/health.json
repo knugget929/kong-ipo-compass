@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-06T18:04:58Z",
+  "lastAttemptAt": "2026-10-08T18:01:05Z",
   "lastSuccessfulSnapshotAt": "2026-10-06T18:04:58Z",
-  "runKind": "STATE_TRANSITION",
+  "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "SEC and company checks captured Ryan Cohen's October 2 purchase, but preferred market and options observations could not be refreshed, the September 15 short-interest report remains stale pending the next publication, and reliable borrow data remains unavailable.",
+  "summary": "Nasdaq historical quotes and Cboe options did not yield usable dated observations. SEC and GameStop investor-relations listing views did not establish a new verified disclosure. September 15 short interest remains delayed and borrow data unavailable; all prior evidence preserved.",
   "providers": [
     {
       "key": "market",
