@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-09T18:02:09Z",
+  "lastAttemptAt": "2026-10-10T18:02:46Z",
   "lastSuccessfulSnapshotAt": "2026-10-06T18:04:58Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "Nasdaq historical quotes did not provide a usable dated current-session observation; the Cboe options view was stale or unavailable. SEC EDGAR and GameStop investor-relations listings did not establish a new verified material disclosure. The September 15 short-interest report remains delayed and reliable timestamped borrow data unavailable. All prior evidence is preserved.",
+  "summary": "Nasdaq historical prices and Cboe options did not provide verifiable dated current-session observations. A September 30 short-interest report was published October 9 and is visible in secondary symbol-level feeds, but no valid comprehensive observation bundle was established; prior market, options, short-interest, and state evidence were preserved. Borrow data remain unavailable.",
   "providers": [
     {
       "key": "market",
