@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-10T19:06:28.815Z",
+  "lastAttemptAt": "2026-10-11T18:17:19.082Z",
   "lastSuccessfulSnapshotAt": "2026-10-06T18:04:58Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "September 30 GME short interest was published October 9: 42,673,721 shares (+9.23%) in a secondary official-data transcription; the NYSE aggregate release confirms the reporting cycle. The complete material-data candidate could not be published through the GitHub connector. Preferred dated Nasdaq/Cboe market and options feeds and reliable borrow data remain unavailable. The last validated GME observation and its timestamp are preserved.",
+  "summary": "October 11 check: Nasdaq and Cboe did not provide usable current dated GME market/options observations; reliable timestamped borrow data remain unavailable. SEC and GameStop IR pages yielded no newly verifiable material disclosure. The September 30 short-interest report published October 9 remains delayed secondary evidence, not a live squeeze signal. The October 6 validated snapshot and all source timestamps are preserved.",
   "providers": [
     {
       "key": "market",
