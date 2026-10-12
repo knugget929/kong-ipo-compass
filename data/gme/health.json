@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-11T19:03:15.221Z",
+  "lastAttemptAt": "2026-10-12T18:03:43.000Z",
   "lastSuccessfulSnapshotAt": "2026-10-06T18:04:58Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "October 11 check: current dated Nasdaq market and Cboe options feeds were not verifiable; borrow remains unavailable. No new material GameStop filing or corporate release was verified. The September 30 short-interest publication remains delayed and is not direct evidence of covering. The last valid observation is preserved.",
+  "summary": "October 12 check: current market and options feeds could not be independently verified; borrow data remains unavailable. A newer short-interest report could not be confirmed directly from a primary provider. Preserve the October 6 observation and provider success timestamps.",
   "providers": [
     {
       "key": "market",
