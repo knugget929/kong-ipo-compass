@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-12T18:03:43.000Z",
+  "lastAttemptAt": "2026-10-13T18:58:44.000Z",
   "lastSuccessfulSnapshotAt": "2026-10-06T18:04:58Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "October 12 check: current market and options feeds could not be independently verified; borrow data remains unavailable. A newer short-interest report could not be confirmed directly from a primary provider. Preserve the October 6 observation and provider success timestamps.",
+  "summary": "October 13 check: the Nasdaq table displayed no current data, Cboe quotes could not be fetched, and SEC filings and GameStop news feeds could not be fully enumerated. New official short interest and borrow observations were not verified. Preserve the October 6 snapshot and all provider success times.",
   "providers": [
     {
       "key": "market",
@@ -18,12 +18,12 @@
     },
     {
       "key": "sec",
-      "status": "OK",
+      "status": "FAILED",
       "lastSuccessAt": "2026-10-06T18:04:58Z"
     },
     {
       "key": "company",
-      "status": "OK",
+      "status": "FAILED",
       "lastSuccessAt": "2026-10-06T18:04:58Z"
     },
     {
