@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-12T18:03:43.000Z",
+  "lastAttemptAt": "2026-10-14T18:50:50Z",
   "lastSuccessfulSnapshotAt": "2026-10-06T18:04:58Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "October 12 check: current market and options feeds could not be independently verified; borrow data remains unavailable. A newer short-interest report could not be confirmed directly from a primary provider. Preserve the October 6 observation and provider success timestamps.",
+  "summary": "October 14 retrieval: Nasdaq market and short-interest pages returned no data; Cboe options retrieval failed. SEC landing and company pages did not expose sufficient dated records to verify current filings/events. Reuters reports an October 13 Cohen purchase, but the primary filing was not verified. Borrow remains unavailable without a suitable provider. Preserve the October 6 snapshot and every provider success timestamp; research is incomplete.",
   "providers": [
     {
       "key": "market",
@@ -18,12 +18,12 @@
     },
     {
       "key": "sec",
-      "status": "OK",
+      "status": "FAILED",
       "lastSuccessAt": "2026-10-06T18:04:58Z"
     },
     {
       "key": "company",
-      "status": "OK",
+      "status": "FAILED",
       "lastSuccessAt": "2026-10-06T18:04:58Z"
     },
     {
