@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "revision": 6,
+  "revision": 7,
   "symbol": "GME",
-  "observedAt": "2026-10-06T18:04:58Z",
-  "snapshotDate": "2026-10-06",
+  "observedAt": "2026-10-16T18:49:21Z",
+  "snapshotDate": "2026-10-16",
   "state": {
     "key": "DORMANT",
     "level": 0,
@@ -13,19 +13,19 @@
       "label": "Low",
       "reason": "Important mechanisms are unavailable or lack direct evidence."
     },
-    "previous": "ATTENTION",
-    "transitionKind": "STATE_TRANSITION",
-    "summary": "No current demand or positioning gate is confirmed; the October 2 Cohen purchase is outside the Watch's three-day catalyst window, while market, options, short-interest, and borrow evidence are stale or unavailable."
+    "previous": "DORMANT",
+    "transitionKind": "MATERIAL_THESIS_EVENT",
+    "summary": "Partial refresh: delayed September30 reported shorts rose9.23%, but remain below the20% outstanding-share gate and outside the15-day freshness limit. Market/options/borrow and broad filing coverage are not current; no direct covering evidence."
   },
   "thesisDirection": "STRENGTHENED",
-  "interpretation": "GME moves to a dormant squeeze-mechanism state because no current demand or positioning gate is confirmed at this observation time. Ryan Cohen's October 2 open-market purchase of 700,000 shares is a material primary-source corporate catalyst and strengthens the fundamental/corporate thesis, but it is now outside the Watch's three-day current-catalyst gate. Market and options observations remain stale, the September 15 short-interest report is delayed, borrow conditions remain unknown, and there is still no direct evidence of forced covering.",
+  "interpretation": "Only the delayed short-interest channel was successfully refreshed. September30 shares short rose to42,673,721, +9.23% fromSeptember15, modestly strengthening reported positioning relative to the last record. That is about8.46% of displayed outstanding shares, not10.43% (the float-based figure), and the effective report is over15days old. The unchanged deterministic gates reproduce Dormant/Low, not a live all-provider assessment. Market, options, supply and corporate observations retain their original evidence dates because those retrievals were incomplete; borrow remains unknown. Existing warrant supply opposes a constrained-supply squeeze, and neither a reported increase nor price movement proves forced covering.",
   "engineInputs": {
     "attention": {
       "abnormal": null
     },
     "short": {
       "positioningElevated": false,
-      "positioningRising": false,
+      "positioningRising": true,
       "directCoveringEvidence": false,
       "fresh": false
     },
@@ -170,21 +170,21 @@
     "note": "Price and volume are abnormal relative to recent sessions; neither identifies the buyer or proves covering."
   },
   "shortPressure": {
-    "status": "OBSERVED",
-    "condition": "EASING_FRESH",
-    "reportedShares": 39069126,
-    "effectiveDate": "2026-09-15",
-    "publishedDate": "2026-09-24",
-    "changeFromPriorPct": -31.45,
-    "pctSharesOutstanding": 7.74,
+    "status": "STALE",
+    "condition": "RISING_DELAYED",
+    "reportedShares": 42673721,
+    "effectiveDate": "2026-09-30",
+    "publishedDate": "2026-10-09",
+    "changeFromPriorPct": 9.23,
+    "pctSharesOutstanding": 8.46,
     "providerFloatPctRange": [
-      9.55
+      10.43
     ],
     "providerDaysToCoverRange": [
-      4.29
+      3.98
     ],
     "directCoveringEvidence": false,
-    "note": "The September 15 exchange-reported short position fell materially from the August 31 report. The report is delayed and does not establish current positioning or prove forced covering."
+    "note": "ChartExchange's FINRA-sourced September30 report shows 42,673,721 shares short, up9.23% from39,069,126. At the displayed504,500,990 shares outstanding this is about8.46%;10.43% uses displayed float409,140,234 instead. FINRA confirms October9 publication for this settlement cycle. The effective date is over15days old at retrieval; current positioning and covering remain unverified."
   },
   "borrowPressure": {
     "status": "UNAVAILABLE",
@@ -367,14 +367,14 @@
     {
       "key": "short",
       "label": "Short pressure",
-      "condition": "Reported decline · fresh",
-      "direction": "WEAKENING",
-      "status": "OBSERVED",
-      "headline": "39.07M shares reported short; -31.45% from prior report",
-      "interpretation": "The September 15 report materially reduced reported short positioning to about 7.74% of shares outstanding, below the 20% structural gate. Because the report is delayed, it does not establish current exposure or prove covering.",
+      "condition": "Reported increase · delayed",
+      "direction": "STRENGTHENING",
+      "status": "STALE",
+      "headline": "42.67M shares short at September30; +9.23% from prior report",
+      "interpretation": "Reported positioning rose relative to September15, but about8.46% of outstanding shares is below the20% gate and this report exceeds the15-day freshness limit. The10.43% provider figure uses float, not outstanding shares. No covering or current stress is established.",
       "sourceIds": [
-        "short-chartexchange-2026-09-15",
-        "nyse-short-interest-release-2026-09-24"
+        "short-chartexchange-2026-09-30-retrieved-2026-10-16",
+        "finra-short-calendar-2026-10-16"
       ]
     },
     {
@@ -481,18 +481,17 @@
   ],
   "whatChanged": {
     "strengthening": [
-      "Ryan Cohen disclosed an additional 700,000-share open-market purchase on October 2 at a weighted average price of $24.4061."
+      "September30 reported short shares increased9.23% to42,673,721 versus39,069,126 atSeptember15; this is delayed positioning, not live stress."
     ],
     "weakening": [
-      "The October 2 catalyst has aged beyond the Watch's three-day current-catalyst gate, while market, options, and short-interest evidence are also stale."
+      "The report is already outside the15-day freshness gate; market/options retrievals still do not provide usable fresh observations."
     ],
     "unchanged": [
-      "There is still no direct evidence of forced short covering.",
-      "Current and contingent share supply continues to oppose the constrained-supply mechanism."
+      "The computed state remains Dormant/Low; direct covering, borrow stress and dealer-feedback mechanisms are not established.",
+      "Failed-provider observations, original effective dates and immutable history are preserved; contingent warrant supply remains opposing evidence."
     ],
     "unknown": [
-      "Current borrow fee, utilization, and shares available remain unavailable from a reliable free source.",
-      "Current short positioning after the September 15 settlement date remains unknown until the next official report."
+      "Current positioning afterSeptember30, current borrow fee/availability/utilization, option feedback and a complete latest filing review remain unverified."
     ]
   },
   "theses": [
@@ -501,7 +500,7 @@
       "label": "Squeeze thesis",
       "assessment": "POSSIBLE_NOT_PROVEN",
       "fit": "Weak",
-      "summary": "The squeeze thesis is not currently supported by a live gate: the latest CEO purchase is now outside the three-day catalyst window, reported short interest is stale and below the structural threshold, borrow is unknown, and direct covering remains unobserved.",
+      "summary": "The squeeze thesis is not currently supported by a live gate: the latest CEO purchase is now outside the three-day catalyst window, reported short interest is stale and below the structural threshold, borrow is unknown, and direct covering remains unobserved. This partial refresh adds delayed short positioning only; legacy market/options and corporate statements retain their original source dates.",
       "supports": [
         "Abnormal market activity remains present in the preserved September 22 observation",
         "Observed calls remain concentrated near the preserved September 22 spot level"
@@ -518,7 +517,7 @@
       "label": "Fundamental / corporate",
       "assessment": "BEST_CURRENT_FIT",
       "fit": "Strong",
-      "summary": "Repeated open-market purchases by Ryan Cohen, including another 700,000 shares on October 2, plus improved profitability guidance and strategic activity strengthen the corporate explanation for demand.",
+      "summary": "Repeated open-market purchases by Ryan Cohen, including another 700,000 shares on October 2, plus improved profitability guidance and strategic activity strengthen the corporate explanation for demand. This partial refresh adds delayed short positioning only; legacy market/options and corporate statements retain their original source dates.",
       "supports": [
         "Ryan Cohen bought another 700,000 shares on October 2",
         "Fresh primary-source insider purchase",
@@ -535,11 +534,11 @@
       "label": "Normal-market / no-squeeze",
       "assessment": "PLAUSIBLE",
       "fit": "Strong",
-      "summary": "A corporate/catalyst-led repricing without forced buying remains plausible and currently fits better than a squeeze mechanism because live positioning stress is not confirmed.",
+      "summary": "A corporate/catalyst-led repricing without forced buying remains plausible and currently fits better than a squeeze mechanism because live positioning stress is not confirmed. This partial refresh adds delayed short positioning only; legacy market/options and corporate statements retain their original source dates.",
       "supports": [
         "Clear public catalyst",
         "Ample current and contingent supply",
-        "Fresh short interest is below the Watch's structural positioning gate"
+        "Delayed September30 short interest is below the20% outstanding-share gate"
       ],
       "contradictions": [
         "Volume is elevated and calls dominate selected expirations",
@@ -593,16 +592,16 @@
       "certainty": "AUTHORITATIVE_FILING"
     },
     {
-      "date": null,
+      "date": "2026-10-26",
       "kind": "SHORT_INTEREST",
       "title": "Next exchange short-interest publication",
-      "whyItMatters": "A fresh reporting period can confirm or contradict the delayed positioning signal. The automation verifies the official calendar rather than hard-coding a date.",
-      "certainty": "DATE_PENDING_VERIFICATION"
+      "whyItMatters": "FINRA schedules publication of October15 settlement short interest forOctober26. That report remains delayed, not real-time positioning.",
+      "certainty": "OFFICIAL_CALENDAR"
     }
   ],
   "historicalComparison": {
     "benchmark": "January 2021",
-    "currentShortPctOutstanding": 7.74,
+    "currentShortPctOutstanding": 8.46,
     "benchmarkShortPctOutstanding": 109.26,
     "benchmarkBorrowFeeApproxPct": 25,
     "currentBorrowFeePct": null,
@@ -756,6 +755,29 @@
       "publishedAt": "2026-10-02T20:56:41Z",
       "freshness": "STALE",
       "limitations": "Confirms Cohen's reported open-market purchase and beneficial ownership; it does not identify other buyers, short covering, borrow stress, or broader market demand."
+    },
+    {
+      "id": "short-chartexchange-2026-09-30-retrieved-2026-10-16",
+      "name": "ChartExchange GME official short-interest table, FINRA-sourced",
+      "url": "https://chartexchange.com/symbol/nyse-gme/short-interest/",
+      "tier": 6,
+      "kind": "short_interest",
+      "observedAt": "2026-10-16T18:49:21Z",
+      "effectiveAt": "2026-09-30T00:00:00Z",
+      "publishedAt": "2026-10-09T20:00:00Z",
+      "freshness": "STALE",
+      "limitations": "Secondary transcription of delayed exchange/FINRA reporting, not real-time or direct covering. Float and outstanding-share denominators differ; reported shares-outstanding value was not independently refreshed from SEC."
+    },
+    {
+      "id": "finra-short-calendar-2026-10-16",
+      "name": "FINRA 2026 short-interest reporting calendar",
+      "url": "https://www.finra.org/filing-reporting/regulatory-filing-systems/short-interest",
+      "tier": 2,
+      "kind": "short_interest",
+      "observedAt": "2026-10-16T18:49:21Z",
+      "effectiveAt": "2026-09-30T00:00:00Z",
+      "freshness": "STALE",
+      "limitations": "Confirms September30 settlement/October9 publication and October15 settlement/October26 publication dates; does not provide the GME-specific shares row or live positioning."
     }
   ]
 }

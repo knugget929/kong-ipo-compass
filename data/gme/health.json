@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-15T19:04:25Z",
-  "lastSuccessfulSnapshotAt": "2026-10-06T18:04:58Z",
-  "runKind": "ROUTINE_UPDATE",
+  "lastAttemptAt": "2026-10-16T18:49:21Z",
+  "lastSuccessfulSnapshotAt": "2026-10-16T18:49:21Z",
+  "runKind": "MATERIAL_THESIS_EVENT",
   "status": "DEGRADED",
-  "summary": "October 15 retrieval: Nasdaq market and short-interest pages expose no current data; Cboe options retrieval failed. The October 13 SEC Form 4 was directly verified: Cohen reported 67,130 plus 777,000 shares purchased, ending at 42,492,652 direct shares. This confirms a specific insider-demand event, not covering. Broader SEC landing and company pages do not expose sufficient dated filings/events for a complete current refresh; borrow remains unavailable without a suitable provider. Use health-only Pattern B: preserve the October 6 snapshot, all classifications, evidence timestamps and provider success times. Research remains incomplete; no fresh squeeze-state conclusion.",
+  "summary": "October16 partial refresh: ChartExchange's FINRA-sourced September30 short-interest row and official FINRA publication calendar were retrieved successfully. The row is delayed beyond15days; provider OK below means retrieval succeeded, not fresh positioning. Nasdaq market/short-interest pages expose no data; Cboe retrieval exceeded the response-size limit. SEC landing/company newsroom do not expose sufficient dated filings/events for a complete refresh. Those channels' observations and success times stay unchanged; borrow remains unavailable. Only the short-interest observation and its derived interpretation advance; Dormant/Low does not establish normal live conditions.",
   "providers": [
     {
       "key": "market",
@@ -28,8 +28,8 @@
     },
     {
       "key": "short_interest",
-      "status": "STALE",
-      "lastSuccessAt": "2026-09-25T19:18:00Z"
+      "status": "OK",
+      "lastSuccessAt": "2026-10-16T18:49:21Z"
     },
     {
       "key": "borrow",
