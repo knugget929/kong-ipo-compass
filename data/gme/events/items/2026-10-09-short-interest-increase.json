@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-10-09-short-interest-increase",
+  "occurredAt": "2026-10-09T20:00:00Z",
+  "type": "MATERIAL_THESIS_EVENT",
+  "category": "SHORT_INTEREST",
+  "title": "September30 reported short shares rose9.23%, but remain below fresh-pressure gates",
+  "mechanism": "Reported short exposure increased relative to the previous delayed report; this modestly strengthens positioning evidence without establishing current short pressure, covering or constrained supply.",
+  "observations": [
+    "42,673,721 shares short atSeptember30 versus39,069,126 atSeptember15 (+9.23%).",
+    "About8.46% of displayed504,500,990 outstanding shares; provider10.43% uses409,140,234 float.",
+    "Effective age exceeds15days atOctober16 retrieval; nextOctober15 settlement report is scheduled forOctober26."
+  ],
+  "sourceIds": [
+    "short-chartexchange-2026-09-30-retrieved-2026-10-16",
+    "finra-short-calendar-2026-10-16"
+  ],
+  "stateBefore": "DORMANT",
+  "stateAfter": "DORMANT",
+  "stateEffect": "Dormant/Low is unchanged under the exact checked-in engine. Below20% outstanding-share positioning and stale effective age prevent fresh structural confirmation; missing market/options/borrow and contingent supply remain opposing limits."
+}
