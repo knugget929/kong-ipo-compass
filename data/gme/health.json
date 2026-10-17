@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-16T18:49:21Z",
+  "lastAttemptAt": "2026-10-17T18:17:12Z",
   "lastSuccessfulSnapshotAt": "2026-10-16T18:49:21Z",
-  "runKind": "MATERIAL_THESIS_EVENT",
+  "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "October16 partial refresh: ChartExchange's FINRA-sourced September30 short-interest row and official FINRA publication calendar were retrieved successfully. The row is delayed beyond15days; provider OK below means retrieval succeeded, not fresh positioning. Nasdaq market/short-interest pages expose no data; Cboe retrieval exceeded the response-size limit. SEC landing/company newsroom do not expose sufficient dated filings/events for a complete refresh. Those channels' observations and success times stay unchanged; borrow remains unavailable. Only the short-interest observation and its derived interpretation advance; Dormant/Low does not establish normal live conditions.",
+  "summary": "October17 attempted Nasdaq quote/history, Cboe options, SEC landing and GameStop newsroom retrieval did not provide a sufficient current evidence set. Nasdaq says data unavailable; Cboe retrieval failed; SEC and company pages expose no usable dated rows. ChartExchange and FINRA were accessible, but the latest short-interest row is still September30 (17days old), not fresh positioning. Borrow remains unavailable. Health-only update: preserve all current observations, source/effective dates, classification, immutable history/events, lastSuccessfulSnapshotAt and every provider lastSuccessAt. This is not a refreshed market snapshot or a finding of no new filings/events.",
   "providers": [
     {
       "key": "market",
@@ -28,7 +28,7 @@
     },
     {
       "key": "short_interest",
-      "status": "OK",
+      "status": "STALE",
       "lastSuccessAt": "2026-10-16T18:49:21Z"
     },
     {
