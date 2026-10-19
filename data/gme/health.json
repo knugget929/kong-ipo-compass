@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-18T18:30:51Z",
+  "lastAttemptAt": "2026-10-19T18:49:20Z",
   "lastSuccessfulSnapshotAt": "2026-10-16T18:49:21Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "October18 Nasdaq quote/history, Cboe options, SEC landing and GameStop newsroom attempts did not yield a sufficient current evidence set: quote data unavailable, options retrieval failed, and filing/company pages exposed no usable dated rows. ChartExchange and FINRA remain accessible; latest reported short interest is September30, now18days old and outside the15-day gate. Borrow remains unavailable. Health-only refresh preserves current evidence, dates, classification, immutable history/events and all last-success timestamps. This is not a current market snapshot or a finding of no new filings/events.",
+  "summary": "October19 Nasdaq quote/history and short-interest pages supplied no adequate current primary data; Cboe options failed with an oversized-content error. SEC landing and GameStop newsroom exposed no usable dated filing/release rows. ChartExchange and FINRA remain accessible: latest reported short interest is September30, now19days old, not real-time. No reliable borrow feed is available. Health-only refresh preserves the last valid October16 snapshot, all observation/effective/source times, provider last-success times, classification and immutable history/events. Research is incomplete; this is not a no-new-events conclusion.",
   "providers": [
     {
       "key": "market",
