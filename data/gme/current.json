@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "revision": 7,
+  "revision": 8,
   "symbol": "GME",
-  "observedAt": "2026-10-16T18:49:21Z",
-  "snapshotDate": "2026-10-16",
+  "observedAt": "2026-10-21T18:04:38Z",
+  "snapshotDate": "2026-10-21",
   "state": {
     "key": "DORMANT",
     "level": 0,
@@ -14,11 +14,11 @@
       "reason": "Important mechanisms are unavailable or lack direct evidence."
     },
     "previous": "DORMANT",
-    "transitionKind": "MATERIAL_THESIS_EVENT",
-    "summary": "Partial refresh: delayed September30 reported shorts rose9.23%, but remain below the20% outstanding-share gate and outside the15-day freshness limit. Market/options/borrow and broad filing coverage are not current; no direct covering evidence."
+    "transitionKind": "ROUTINE_UPDATE",
+    "summary": "Partial refresh: GameStop’s October 19 reminder confirms the existing $32 warrants expire October 30. This rechecks contingent supply but does not establish exercise, covering, borrow stress, options feedback, or abnormal market demand; the deterministic state remains Dormant/Low."
   },
-  "thesisDirection": "STRENGTHENED",
-  "interpretation": "Only the delayed short-interest channel was successfully refreshed. September30 shares short rose to42,673,721, +9.23% fromSeptember15, modestly strengthening reported positioning relative to the last record. That is about8.46% of displayed outstanding shares, not10.43% (the float-based figure), and the effective report is over15days old. The unchanged deterministic gates reproduce Dormant/Low, not a live all-provider assessment. Market, options, supply and corporate observations retain their original evidence dates because those retrievals were incomplete; borrow remains unknown. Existing warrant supply opposes a constrained-supply squeeze, and neither a reported increase nor price movement proves forced covering.",
+  "thesisDirection": "MATERIALLY_UNCHANGED",
+  "interpretation": "GameStop’s primary-source reminder reconfirms the already-modeled October 30 warrant expiry and $32 cash exercise price. It does not show whether holders will exercise, so contingent supply remains opposing evidence rather than realized issuance. Market, options, SEC filing coverage, and borrow observations were not refreshed; September 30 short interest remains delayed and stale. The unchanged deterministic gates reproduce Dormant/Low, not a live all-provider assessment.",
   "engineInputs": {
     "attention": {
       "abnormal": null
@@ -434,10 +434,11 @@
       "direction": "WEAKENING",
       "status": "OBSERVED",
       "headline": "504.5M shares outstanding after 55.5M-share note exchange",
-      "interpretation": "Current and contingent supply is materially less constrained than the historical 2021 setup.",
+      "interpretation": "Recent issuance and contingent future supply remain materially less constrained than the historical 2021 setup. The October 19 company reminder reconfirms the existing $32 warrant terms and October 30 expiry but does not establish exercise or realized issuance.",
       "sourceIds": [
         "gme-10q-2026-09-09",
-        "gme-note-exchange-2026-09-03"
+        "gme-note-exchange-2026-09-03",
+        "gme-warrant-expiry-reminder-2026-10-19"
       ]
     }
   ],
@@ -480,18 +481,15 @@
     }
   ],
   "whatChanged": {
-    "strengthening": [
-      "September30 reported short shares increased9.23% to42,673,721 versus39,069,126 atSeptember15; this is delayed positioning, not live stress."
-    ],
-    "weakening": [
-      "The report is already outside the15-day freshness gate; market/options retrievals still do not provide usable fresh observations."
-    ],
+    "strengthening": [],
+    "weakening": [],
     "unchanged": [
-      "The computed state remains Dormant/Low; direct covering, borrow stress and dealer-feedback mechanisms are not established.",
-      "Failed-provider observations, original effective dates and immutable history are preserved; contingent warrant supply remains opposing evidence."
+      "GameStop’s October 19 reminder reconfirms the existing $32 warrant exercise price and October 30 expiration; the supply mechanism is not newly changed.",
+      "The computed state remains Dormant/Low; direct covering, borrow stress, abnormal market demand, and dealer-feedback mechanisms are not established."
     ],
     "unknown": [
-      "Current positioning afterSeptember30, current borrow fee/availability/utilization, option feedback and a complete latest filing review remain unverified."
+      "Warrant-holder exercise decisions and any resulting issuance remain unknown.",
+      "Current market and options conditions, positioning after September 30, borrow fee/availability/utilization, and complete latest SEC filing coverage remain unverified."
     ]
   },
   "theses": [
@@ -778,6 +776,18 @@
       "effectiveAt": "2026-09-30T00:00:00Z",
       "freshness": "STALE",
       "limitations": "Confirms September30 settlement/October9 publication and October15 settlement/October26 publication dates; does not provide the GME-specific shares row or live positioning."
+    },
+    {
+      "id": "gme-warrant-expiry-reminder-2026-10-19",
+      "name": "GameStop warrant expiration reminder",
+      "url": "https://investor.gamestop.com/news-releases/news-details/2026/GameStop-Reminds-Holders-of-October-30-2026-Warrant-Expiration-Date/default.aspx",
+      "tier": 2,
+      "kind": "company",
+      "observedAt": "2026-10-21T18:04:38Z",
+      "effectiveAt": "2026-10-19T00:00:00Z",
+      "publishedAt": "2026-10-19T00:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Company reminder confirms the existing $32 cash exercise price and October 30 expiration; it does not show exercise decisions, resulting issuance, short covering, borrow stress, or market demand."
     }
   ]
 }

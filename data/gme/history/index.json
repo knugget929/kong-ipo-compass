@@ -1,7 +1,17 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-16T18:49:21Z",
+  "updatedAt": "2026-10-21T18:04:38Z",
   "entries": [
+    {
+      "date": "2026-10-21",
+      "state": "DORMANT",
+      "previousState": "DORMANT",
+      "transitionKind": "ROUTINE_UPDATE",
+      "thesisDirection": "MATERIALLY_UNCHANGED",
+      "title": "Warrant reminder reconfirms existing contingent supply; state remains Dormant/Low",
+      "snapshot": "2026-10-21.json",
+      "importantEventIds": []
+    },
     {
       "date": "2026-10-16",
       "state": "DORMANT",

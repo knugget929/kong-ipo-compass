@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-20T18:24:49Z",
-  "lastSuccessfulSnapshotAt": "2026-10-16T18:49:21Z",
+  "lastAttemptAt": "2026-10-21T18:04:38Z",
+  "lastSuccessfulSnapshotAt": "2026-10-21T18:04:38Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "October20 Nasdaq quote and short-interest pages returned no adequate current primary data; Cboe options retrieval failed with an oversized-content error. SEC landing and GameStop newsroom exposed no usable dated filing/release rows; the SEC archive directory was accessible but broad filing verification remains incomplete. ChartExchange still shows September30 reported short interest, now20days old; FINRA's calendar lists October26 publication for the October15 cycle. Reliable current borrow evidence remains unavailable. This health-only attempt preserves the valid October16 snapshot, all source/observation/effective timestamps, every provider last-success time, state and immutable evidence. Research incomplete; no no-new-events conclusion or fresh snapshot claimed.",
+  "summary": "GameStop’s October 19 primary-source reminder verified the already-modeled $32 warrant exercise price and October 30 expiration. Nasdaq market and Cboe options retrieval still did not yield adequate current primary observations; broad SEC filing coverage remains incomplete. September 30 reported short interest is stale and FINRA’s calendar schedules the October 15 cycle for October 26 publication. Reliable current borrow evidence remains unavailable. This partial refresh preserves all failed-provider evidence and dates, adds no material event, and keeps the deterministic state at Dormant/Low.",
   "providers": [
     {
       "key": "market",
@@ -23,8 +23,8 @@
     },
     {
       "key": "company",
-      "status": "FAILED",
-      "lastSuccessAt": "2026-10-06T18:04:58Z"
+      "status": "OK",
+      "lastSuccessAt": "2026-10-21T18:04:38Z"
     },
     {
       "key": "short_interest",
