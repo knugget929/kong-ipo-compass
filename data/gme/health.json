@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-21T18:04:38Z",
+  "lastAttemptAt": "2026-10-22T18:12:16Z",
   "lastSuccessfulSnapshotAt": "2026-10-21T18:04:38Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "GameStop’s October 19 primary-source reminder verified the already-modeled $32 warrant exercise price and October 30 expiration. Nasdaq market and Cboe options retrieval still did not yield adequate current primary observations; broad SEC filing coverage remains incomplete. September 30 reported short interest is stale and FINRA’s calendar schedules the October 15 cycle for October 26 publication. Reliable current borrow evidence remains unavailable. This partial refresh preserves all failed-provider evidence and dates, adds no material event, and keeps the deterministic state at Dormant/Low.",
+  "summary": "Current public-source checks found no new GameStop company release or material SEC filing. Nasdaq market and Cboe options retrieval did not yield adequate current primary observations; the October 15 short-interest cycle remains unpublished until FINRA’s October 26 release. Reliable current borrow evidence remains unavailable. This degraded health-only attempt preserves all canonical observations, classifications, provider success times, and immutable history; no successful snapshot or state change is claimed.",
   "providers": [
     {
       "key": "market",
