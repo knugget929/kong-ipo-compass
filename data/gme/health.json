@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-23T18:44:38Z",
+  "lastAttemptAt": "2026-10-24T18:55:56Z",
   "lastSuccessfulSnapshotAt": "2026-10-21T18:04:38Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "Current public-source checks found no new GameStop company release or material SEC filing. Nasdaq market and Cboe options retrieval again did not yield adequate current primary observations; the October 15 short-interest cycle remains unpublished until FINRA’s October 26 release. Reliable current borrow evidence remains unavailable. This degraded health-only attempt preserves all canonical observations, classifications, provider success times, and immutable history; no successful snapshot or state change is claimed.",
+  "summary": "Current public-source checks found no new GameStop company release or material SEC filing. Weekend Nasdaq market and Cboe options checks did not provide a new completed-session primary observation; the October 15 short-interest cycle remains unpublished until FINRA’s October 26 release. Reliable current borrow evidence remains unavailable. This degraded health-only attempt preserves all canonical observations, classifications, provider success times, and immutable history; no successful snapshot or state change is claimed.",
   "providers": [
     {
       "key": "market",
