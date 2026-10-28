@@ -1,7 +1,19 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21T18:04:38Z",
+  "updatedAt": "2026-10-28T19:04:00Z",
   "entries": [
+    {
+      "date": "2026-10-28",
+      "state": "DORMANT",
+      "previousState": "DORMANT",
+      "transitionKind": "MATERIAL_THESIS_EVENT",
+      "thesisDirection": "STRENGTHENED",
+      "title": "Fresh delayed short interest rises12.56%; state remains Dormant/Low",
+      "snapshot": "2026-10-28.json",
+      "importantEventIds": [
+        "2026-10-26-short-interest-increase"
+      ]
+    },
     {
       "date": "2026-10-21",
       "state": "DORMANT",
