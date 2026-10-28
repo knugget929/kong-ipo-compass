@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-10-26-short-interest-increase",
+  "occurredAt": "2026-10-26T20:00:00Z",
+  "type": "MATERIAL_THESIS_EVENT",
+  "category": "SHORT_INTEREST",
+  "title": "October15 reported short shares rose12.56%, but remain below the structural gate",
+  "mechanism": "Reported short exposure increased for a second consecutive biweekly report. This strengthens delayed positioning evidence and restores freshness under the Watch’s15-day rule without establishing elevated structural positioning, covering, borrow stress or constrained supply.",
+  "observations": [
+    "48,031,618 shares short atOctober15 versus42,673,721 atSeptember30 (+12.56%).",
+    "About9.52% of displayed504,500,990 outstanding shares; ChartExchange’s11.38% uses its float denominator.",
+    "TheOctober15 report was publishedOctober26 and is fresh atOctober28 retrieval, but remains delayed and is not direct covering evidence."
+  ],
+  "sourceIds": [
+    "short-equibles-2026-10-15-retrieved-2026-10-28",
+    "short-chartexchange-2026-10-15-retrieved-2026-10-28",
+    "finra-short-calendar-2026-10-28"
+  ],
+  "stateBefore": "DORMANT",
+  "stateAfter": "DORMANT",
+  "stateEffect": "Dormant/Low is unchanged under the exact checked-in engine. Rising and fresh short positioning remains below the20% outstanding-share gate; unavailable live borrow/options/market mechanisms and contingent supply remain decisive limits."
+}

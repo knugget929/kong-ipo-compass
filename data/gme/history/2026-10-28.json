@@ -1,0 +1,832 @@
+{
+  "schemaVersion": 1,
+  "revision": 9,
+  "symbol": "GME",
+  "observedAt": "2026-10-28T19:04:00Z",
+  "snapshotDate": "2026-10-28",
+  "state": {
+    "key": "DORMANT",
+    "level": 0,
+    "label": "Dormant",
+    "confidence": {
+      "key": "LOW",
+      "label": "Low",
+      "reason": "Important mechanisms are unavailable or lack direct evidence."
+    },
+    "previous": "DORMANT",
+    "transitionKind": "MATERIAL_THESIS_EVENT",
+    "summary": "Delayed October 15 short interest rose to 48.03M shares (+12.56% from September 30). The report is fresh under the 15-day gate but remains only about 9.52% of outstanding shares, below the 20% structural threshold; with market/options/borrow not freshly verified, the deterministic state remains Dormant/Low."
+  },
+  "thesisDirection": "STRENGTHENED",
+  "interpretation": "Two consistent secondary transcriptions of exchange/FINRA reporting show 48,031,618 GME shares short at October 15, up 12.56% from September 30, with the official publication cycle dated October 26. The delayed report is fresh at this retrieval but remains below the Watch’s 20% outstanding-share gate and is not real-time positioning or covering evidence. Company and SEC checks found no newer primary event after the October 19 warrant reminder; canonical Nasdaq/Cboe market and options observations and current borrow evidence were not refreshed. The exact deterministic gates therefore remain Dormant/Low.",
+  "engineInputs": {
+    "attention": {
+      "abnormal": null
+    },
+    "short": {
+      "positioningElevated": false,
+      "positioningRising": true,
+      "directCoveringEvidence": false,
+      "fresh": true
+    },
+    "borrow": {
+      "stressed": null,
+      "fresh": null
+    },
+    "options": {
+      "callActivityElevated": null,
+      "nearMoneyConcentration": null,
+      "feedbackDemandObserved": null
+    },
+    "market": {
+      "abnormalVolume": null,
+      "priceAcceleration": null,
+      "severeDislocation": null
+    },
+    "catalyst": {
+      "materialDemandCatalyst": false
+    },
+    "supply": {
+      "expanding": true
+    }
+  },
+  "market": {
+    "status": "OBSERVED",
+    "condition": "ELEVATED",
+    "last": 24.04,
+    "dayChangePct": 5.62,
+    "dayVolume": 14888929,
+    "referenceAverageVolume": 8163718.3,
+    "relativeVolume": 1.8237925970571522,
+    "monthToDateChangePct": 27.8,
+    "sessionHigh": 24.32,
+    "sessionLow": 23.29,
+    "volumePercentile20": 0.95,
+    "absoluteReturnPercentile20": 1,
+    "referenceWindowSessions": 20,
+    "referenceSessions": [
+      {
+        "date": "09/21/2026",
+        "close": 22.76,
+        "volume": 9783712
+      },
+      {
+        "date": "09/18/2026",
+        "close": 22.64,
+        "volume": 9601326
+      },
+      {
+        "date": "09/17/2026",
+        "close": 22.77,
+        "volume": 9002481
+      },
+      {
+        "date": "09/16/2026",
+        "close": 21.98,
+        "volume": 5858838
+      },
+      {
+        "date": "09/15/2026",
+        "close": 21.44,
+        "volume": 4904351
+      },
+      {
+        "date": "09/14/2026",
+        "close": 21.62,
+        "volume": 7797137
+      },
+      {
+        "date": "09/11/2026",
+        "close": 21.15,
+        "volume": 9888837
+      },
+      {
+        "date": "09/10/2026",
+        "close": 20.39,
+        "volume": 11576040
+      },
+      {
+        "date": "09/09/2026",
+        "close": 19.89,
+        "volume": 15594760
+      },
+      {
+        "date": "09/08/2026",
+        "close": 18.89,
+        "volume": 10418060
+      },
+      {
+        "date": "09/04/2026",
+        "close": 19.16,
+        "volume": 7146363
+      },
+      {
+        "date": "09/03/2026",
+        "close": 19.23,
+        "volume": 7226764
+      },
+      {
+        "date": "09/02/2026",
+        "close": 18.97,
+        "volume": 4756035
+      },
+      {
+        "date": "09/01/2026",
+        "close": 18.81,
+        "volume": 11751340
+      },
+      {
+        "date": "08/31/2026",
+        "close": 18.38,
+        "volume": 10945640
+      },
+      {
+        "date": "08/28/2026",
+        "close": 17.87,
+        "volume": 4532435
+      },
+      {
+        "date": "08/27/2026",
+        "close": 18.25,
+        "volume": 7303055
+      },
+      {
+        "date": "08/26/2026",
+        "close": 17.97,
+        "volume": 4589262
+      },
+      {
+        "date": "08/25/2026",
+        "close": 18.09,
+        "volume": 5582512
+      },
+      {
+        "date": "08/24/2026",
+        "close": 18.04,
+        "volume": 5015418
+      }
+    ],
+    "severeDislocationEvidence": false,
+    "note": "Price and volume are abnormal relative to recent sessions; neither identifies the buyer or proves covering."
+  },
+  "shortPressure": {
+    "status": "OBSERVED",
+    "condition": "RISING_CURRENT",
+    "reportedShares": 48031618,
+    "effectiveDate": "2026-10-15",
+    "publishedDate": "2026-10-26",
+    "changeFromPriorPct": 12.56,
+    "pctSharesOutstanding": 9.52,
+    "providerFloatPctRange": [
+      11.38
+    ],
+    "providerDaysToCoverRange": [
+      4
+    ],
+    "directCoveringEvidence": false,
+    "note": "Equibles and ChartExchange consistently transcribe 48,031,618 shares short at October15, up12.56% from42,673,721 atSeptember30. At the displayed504,500,990 shares outstanding this is about9.52%; ChartExchange’s11.38% uses its float denominator. FINRA’s calendar confirms the October26 publication cycle. The report is delayed, not live positioning or direct covering evidence."
+  },
+  "borrowPressure": {
+    "status": "UNAVAILABLE",
+    "condition": "UNKNOWN",
+    "fee": null,
+    "sharesAvailable": null,
+    "utilization": null,
+    "stressed": null,
+    "fresh": null,
+    "note": "No reliable, freely accessible provider with durable timestamps was available. Missing borrow evidence lowers confidence; it is not treated as normal conditions."
+  },
+  "optionsPressure": {
+    "status": "OBSERVED",
+    "condition": "CALL_HEAVY_BASELINE_MISSING",
+    "observedAt": "2026-09-22T21:24:43Z",
+    "underlying": 24.16,
+    "selectedExpirationsThrough": "2026-10-30",
+    "selectedCallVolume": 306814,
+    "selectedPutVolume": 24611,
+    "selectedCallPutVolumeRatio": 12.47,
+    "selectedCallOpenInterest": 524035,
+    "selectedPutOpenInterest": 74606,
+    "selectedCallPutOpenInterestRatio": 7.02,
+    "activityHistoryPercentile": null,
+    "historicalBaselineAvailable": false,
+    "nearMoneyCallVolume": 174769,
+    "nearMoneyCallVolumeShare": 0.569625245262602,
+    "missingVolumeContracts": 0,
+    "missingOpenInterestContracts": 0,
+    "feedbackDemandObserved": false,
+    "note": "Call-heavy activity and near-price strike concentration are observed. Without a historical options baseline, the system does not label total activity abnormal. Dealer positioning and hedging demand are not directly observed and are not asserted.",
+    "expirations": [
+      {
+        "date": "2026-09-25",
+        "callVolume": 141975,
+        "putVolume": 13945,
+        "callOpenInterest": 134567,
+        "putOpenInterest": 16727
+      },
+      {
+        "date": "2026-10-02",
+        "callVolume": 48517,
+        "putVolume": 3583,
+        "callOpenInterest": 44725,
+        "putOpenInterest": 6280
+      },
+      {
+        "date": "2026-10-09",
+        "callVolume": 15979,
+        "putVolume": 893,
+        "callOpenInterest": 32741,
+        "putOpenInterest": 3326
+      },
+      {
+        "date": "2026-10-16",
+        "callVolume": 66104,
+        "putVolume": 4543,
+        "callOpenInterest": 255415,
+        "putOpenInterest": 42956
+      },
+      {
+        "date": "2026-10-23",
+        "callVolume": 8955,
+        "putVolume": 727,
+        "callOpenInterest": 14279,
+        "putOpenInterest": 2233
+      },
+      {
+        "date": "2026-10-30",
+        "callVolume": 25284,
+        "putVolume": 920,
+        "callOpenInterest": 42308,
+        "putOpenInterest": 3084
+      }
+    ],
+    "concentrations": [
+      {
+        "expiration": "2026-09-25",
+        "strike": 24,
+        "type": "CALL",
+        "volume": 28287,
+        "openInterest": 8588,
+        "impliedVolatility": 0.6722
+      },
+      {
+        "expiration": "2026-09-25",
+        "strike": 25,
+        "type": "CALL",
+        "volume": 26331,
+        "openInterest": 16890,
+        "impliedVolatility": 0.7875
+      },
+      {
+        "expiration": "2026-09-25",
+        "strike": 23,
+        "type": "CALL",
+        "volume": 16588,
+        "openInterest": 19214,
+        "impliedVolatility": 0.5802
+      },
+      {
+        "expiration": "2026-10-16",
+        "strike": 25,
+        "type": "CALL",
+        "volume": 17085,
+        "openInterest": 37083,
+        "impliedVolatility": 0.5894
+      },
+      {
+        "expiration": "2026-10-02",
+        "strike": 25,
+        "type": "CALL",
+        "volume": 11848,
+        "openInterest": 7299,
+        "impliedVolatility": 0.6451
+      }
+    ]
+  },
+  "catalystPressure": {
+    "status": "OBSERVED",
+    "condition": "AGED_PRIMARY_CATALYST",
+    "note": "Ryan Cohen's October 2 open-market purchase is material corporate-demand evidence, but by this October 6 observation it is outside the Watch's three-day current-catalyst gate.",
+    "items": [
+      {
+        "date": "2026-10-02",
+        "title": "Ryan Cohen reported buying another 700,000 GME shares",
+        "detail": "SEC Schedule 13D/A reports 700,000 open-market shares purchased at a weighted average price of $24.4061, bringing direct holdings to 41,648,522 shares.",
+        "eventId": "2026-10-02-cohen-purchase",
+        "sourceIds": [
+          "sec-cohen-13da-2026-10-02"
+        ]
+      },
+      {
+        "date": "2026-09-29",
+        "title": "Ryan Cohen reported buying another 450,000 GME shares",
+        "detail": "SEC Form 4 reports purchases of 446,500 shares at $23.4753 and 3,500 shares at $23.4499, bringing direct holdings to 40,948,522 shares.",
+        "eventId": "2026-09-29-cohen-purchase",
+        "sourceIds": [
+          "sec-cohen-form4-2026-09-29"
+        ]
+      },
+      {
+        "date": "2026-09-21",
+        "title": "Ryan Cohen reported buying 1,150,680 GME shares",
+        "detail": "The Schedule 13D/A reports a weighted-average purchase price of $22.9375 and 44,233,306 shares of beneficial ownership including warrant shares.",
+        "eventId": "2026-09-21-cohen-purchase",
+        "sourceIds": [
+          "sec-cohen-13da-2026-09-21"
+        ]
+      },
+      {
+        "date": "2026-09-08",
+        "title": "GameStop raised full-year adjusted EBITDA guidance",
+        "detail": "Second-quarter results showed $174.0 million adjusted EBITDA and guidance above $650 million, alongside lower revenue.",
+        "eventId": "2026-09-08-q2-results",
+        "sourceIds": [
+          "gme-q2-results-2026-09-08"
+        ]
+      }
+    ]
+  },
+  "supplyPressure": {
+    "status": "OBSERVED",
+    "condition": "OPPOSING",
+    "sharesOutstanding": 504500990,
+    "sharesEffectiveAt": "2026-09-03T00:00:00Z",
+    "recentNoteExchangeShares": 55500000,
+    "recentNoteExchangeDate": "2026-09-03T00:00:00Z",
+    "warrantSharesPotential": 59153963,
+    "warrantStrike": 32,
+    "warrantExpiry": "2026-10-30",
+    "remainingConvertiblePrincipal": 2800000000,
+    "authorizedShares": 2500000000,
+    "atmSharesSoldLastSixMonths": 0,
+    "repurchaseAuthorization": 2000000000,
+    "repurchasesUsed": 0,
+    "note": "Recent issuance and contingent future supply oppose the constrained-supply mechanism. Potential dilution depends on warrant exercise, conversion, financing, and transaction conditions; those are modeled as conditions, not one synthetic diluted-share number."
+  },
+  "engines": [
+    {
+      "key": "short",
+      "label": "Short pressure",
+      "condition": "Reported increase · current delayed report",
+      "direction": "STRENGTHENING",
+      "status": "OBSERVED",
+      "headline": "48.03M shares short at October 15; +12.56% from prior report",
+      "interpretation": "The delayed report is fresh under the 15-day gate and rising, but about9.52% of outstanding shares remains below the20% structural threshold. It does not establish current positioning, covering, borrow stress, or a squeeze.",
+      "sourceIds": [
+        "short-equibles-2026-10-15-retrieved-2026-10-28",
+        "short-chartexchange-2026-10-15-retrieved-2026-10-28",
+        "finra-short-calendar-2026-10-28"
+      ]
+    },
+    {
+      "key": "borrow",
+      "label": "Borrow pressure",
+      "condition": "Unknown",
+      "direction": "UNKNOWN",
+      "status": "UNAVAILABLE",
+      "headline": "Fee, availability, and utilization unavailable",
+      "interpretation": "A crucial stress channel is missing, so confidence is capped.",
+      "sourceIds": []
+    },
+    {
+      "key": "options",
+      "label": "Options pressure",
+      "condition": "Call-heavy · baseline missing",
+      "direction": "STRENGTHENING",
+      "status": "OBSERVED",
+      "headline": "Near-term selected expiries show 12.47× call/put volume",
+      "interpretation": "Calls dominate the selected expiries and 57% of observed call volume sits within $1.25 of spot, but there is no historical activity baseline and no observed dealer-hedging loop.",
+      "sourceIds": [
+        "cboe-options-2026-09-22"
+      ]
+    },
+    {
+      "key": "market",
+      "label": "Market pressure",
+      "condition": "Elevated",
+      "direction": "STRENGTHENING",
+      "status": "OBSERVED",
+      "headline": "+5.62% on 1.82× 20-session average volume",
+      "interpretation": "The tape confirms attention and incremental demand, not the identity or motive of buyers.",
+      "sourceIds": [
+        "nasdaq-quote-2026-09-22",
+        "nasdaq-history-2026-09-22"
+      ]
+    },
+    {
+      "key": "catalyst",
+      "label": "Catalyst engine",
+      "condition": "Aged primary catalyst",
+      "direction": "STRENGTHENING",
+      "status": "OBSERVED",
+      "headline": "Ryan Cohen bought another 700,000 shares on October 2",
+      "interpretation": "The primary-source insider purchase strengthens the corporate-demand thesis, but it is outside the three-day current-catalyst gate at this observation and does not establish short covering.",
+      "sourceIds": [
+        "sec-cohen-13da-2026-10-02",
+        "sec-cohen-form4-2026-09-29",
+        "sec-cohen-13da-2026-09-21",
+        "gme-q2-results-2026-09-08"
+      ]
+    },
+    {
+      "key": "supply",
+      "label": "Supply / dilution",
+      "condition": "Opposing",
+      "direction": "WEAKENING",
+      "status": "OBSERVED",
+      "headline": "504.5M shares outstanding after 55.5M-share note exchange",
+      "interpretation": "Recent issuance and contingent future supply remain materially less constrained than the historical 2021 setup. The October 19 company reminder reconfirms the existing $32 warrant terms and October 30 expiry but does not establish exercise or realized issuance.",
+      "sourceIds": [
+        "gme-10q-2026-09-09",
+        "gme-note-exchange-2026-09-03",
+        "gme-warrant-expiry-reminder-2026-10-19"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "catalyst",
+      "to": "market",
+      "status": "SUPPORTED",
+      "label": "credible demand catalyst"
+    },
+    {
+      "from": "market",
+      "to": "options",
+      "status": "SUPPORTED",
+      "label": "call response observed"
+    },
+    {
+      "from": "options",
+      "to": "market",
+      "status": "INFERRED",
+      "label": "hedging feedback unobserved"
+    },
+    {
+      "from": "market",
+      "to": "short",
+      "status": "INFERRED",
+      "label": "loss pressure plausible"
+    },
+    {
+      "from": "short",
+      "to": "market",
+      "status": "UNCONFIRMED",
+      "label": "covering not established"
+    },
+    {
+      "from": "supply",
+      "to": "market",
+      "status": "OPPOSING",
+      "label": "liquidity / dilution outlet"
+    }
+  ],
+  "whatChanged": {
+    "strengthening": [
+      "Reported October15 short interest rose to48,031,618 shares, up12.56% fromSeptember30, and is fresh under the Watch’s15-day delayed-report gate."
+    ],
+    "weakening": [],
+    "unchanged": [
+      "The computed state remains Dormant/Low because reported short exposure is about9.52% of outstanding shares, below the20% structural gate.",
+      "Direct covering, borrow stress, current abnormal market demand, and dealer-feedback mechanisms remain unestablished; contingent warrant supply remains opposing evidence."
+    ],
+    "unknown": [
+      "Current positioning afterOctober15, warrant exercise decisions and issuance, live Nasdaq/Cboe market and options conditions, and borrow fee/availability/utilization remain unknown."
+    ]
+  },
+  "theses": [
+    {
+      "key": "squeeze",
+      "label": "Squeeze thesis",
+      "assessment": "POSSIBLE_NOT_PROVEN",
+      "fit": "Weak",
+      "summary": "Fresh delayed October15 short-interest reporting strengthens the positioning trend, but 48.03M shares are only about9.52% of outstanding shares, below the20% structural gate. Borrow, direct covering, current market demand and dealer-feedback evidence remain unavailable, so the squeeze thesis is possible but not proven and Dormant/Low remains exact.",
+      "supports": [
+        "Reported short shares rose12.56% fromSeptember30 and the delayed report is fresh under the15-day gate",
+        "Preserved September22 observations showed abnormal market activity and near-price call concentration, but they are not current"
+      ],
+      "contradictions": [
+        "Reported short interest remains below the20% outstanding-share structural gate",
+        "No direct covering evidence",
+        "Borrow channel unknown",
+        "Current supply is not tightly constrained"
+      ]
+    },
+    {
+      "key": "fundamental",
+      "label": "Fundamental / corporate",
+      "assessment": "BEST_CURRENT_FIT",
+      "fit": "Strong",
+      "summary": "Repeated open-market purchases by Ryan Cohen, including another 700,000 shares on October 2, plus improved profitability guidance and strategic activity strengthen the corporate explanation for demand. This partial refresh adds delayed short positioning only; legacy market/options and corporate statements retain their original source dates.",
+      "supports": [
+        "Ryan Cohen bought another 700,000 shares on October 2",
+        "Fresh primary-source insider purchase",
+        "Raised adjusted EBITDA outlook",
+        "Large cash, securities, and eBay position"
+      ],
+      "contradictions": [
+        "Revenue remains lower year over year",
+        "Options activity may be amplifying the move"
+      ]
+    },
+    {
+      "key": "normal",
+      "label": "Normal-market / no-squeeze",
+      "assessment": "PLAUSIBLE",
+      "fit": "Strong",
+      "summary": "A corporate/catalyst-led repricing without forced buying remains plausible and fits better than a squeeze mechanism. The fresh delayed report shows rising short exposure, but it remains below the structural gate and does not identify live covering.",
+      "supports": [
+        "Clear public corporate catalyst history",
+        "Ample current and contingent supply",
+        "October15 short interest is below the20% outstanding-share gate"
+      ],
+      "contradictions": [
+        "Volume is elevated and calls dominate selected expirations",
+        "Reported short positioning rose"
+      ]
+    }
+  ],
+  "next": {
+    "forwardState": "PRESSURE",
+    "forward": [
+      "Sustained abnormal price and volume, not a one-session reaction.",
+      "Repeated options observations establishing that call activity is abnormal versus its own recent history.",
+      "A current borrow observation showing materially rising cost, falling availability, or high utilization.",
+      "Independent evidence that short exposure remains trapped while price pressure persists."
+    ],
+    "backwardState": "DORMANT",
+    "backward": [
+      "Volume normalizes and price acceleration fades after the catalyst.",
+      "Call concentration dissipates without follow-through.",
+      "Fresh short-interest or borrow evidence shows easing rather than stress.",
+      "New share supply expands faster than incremental demand."
+    ]
+  },
+  "falsifiers": [
+    "Fresh short interest falls materially without evidence of disorderly covering.",
+    "Borrow remains readily available at ordinary fees during continued price strength.",
+    "The move persists only as a corporate repricing with normal liquidity and no positioning stress.",
+    "Warrant exercise, conversion, ATM issuance, or transaction financing materially expands tradeable supply.",
+    "Options activity normalizes and no feedback-demand evidence emerges."
+  ],
+  "upcomingCatalysts": [
+    {
+      "date": "2026-09-25",
+      "kind": "OPTIONS_EXPIRY",
+      "title": "Near-term weekly options expiry",
+      "whyItMatters": "The largest same-week observed call volume expires; follow-through or dissipation will update the options-pressure thesis.",
+      "certainty": "OBSERVED_CHAIN"
+    },
+    {
+      "date": "2026-10-16",
+      "kind": "OPTIONS_EXPIRY",
+      "title": "Monthly options expiry",
+      "whyItMatters": "This expiration contains the largest selected call open-interest concentration in the current evidence set.",
+      "certainty": "OBSERVED_CHAIN"
+    },
+    {
+      "date": "2026-10-30",
+      "kind": "CAPITAL_STRUCTURE",
+      "title": "$32 warrant expiration",
+      "whyItMatters": "Up to 59.15M warrant shares are contingent supply; price and exercise behavior determine whether that outlet becomes relevant.",
+      "certainty": "AUTHORITATIVE_FILING"
+    },
+    {
+      "date": "2026-11-10",
+      "kind": "SHORT_INTEREST",
+      "title": "Next exchange short-interest publication",
+      "whyItMatters": "FINRA schedules publication of October30 settlement short interest forNovember10. That report will still be delayed, not real-time positioning.",
+      "certainty": "OFFICIAL_CALENDAR"
+    }
+  ],
+  "historicalComparison": {
+    "benchmark": "January 2021",
+    "currentShortPctOutstanding": 9.52,
+    "benchmarkShortPctOutstanding": 109.26,
+    "benchmarkBorrowFeeApproxPct": 25,
+    "currentBorrowFeePct": null,
+    "warning": "The 2021 episode is a mechanism benchmark, not a prediction template. The SEC found short covering contributed to price increases but was a small fraction of aggregate buy volume, and did not find evidence of a gamma squeeze."
+  },
+  "sources": [
+    {
+      "id": "nasdaq-quote-2026-09-22",
+      "name": "Nasdaq GME quote",
+      "url": "https://www.nasdaq.com/market-activity/stocks/gme",
+      "tier": 3,
+      "kind": "market",
+      "observedAt": "2026-09-22T21:23:19Z",
+      "effectiveAt": "2026-09-22T20:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Consolidated delayed/closing market observation; not buyer-identity evidence."
+    },
+    {
+      "id": "nasdaq-history-2026-09-22",
+      "name": "Nasdaq GME historical prices",
+      "url": "https://www.nasdaq.com/market-activity/stocks/gme/historical",
+      "tier": 3,
+      "kind": "market",
+      "observedAt": "2026-09-22T21:23:19Z",
+      "effectiveAt": "2026-09-21T20:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Used for a recent-session volume reference, not long-run calibration."
+    },
+    {
+      "id": "cboe-options-2026-09-22",
+      "name": "Cboe delayed GME options quotes",
+      "url": "https://www.cboe.com/delayed_quotes/gme/quote_table",
+      "tier": 3,
+      "kind": "options",
+      "observedAt": "2026-09-22T21:24:43Z",
+      "effectiveAt": "2026-09-22T21:24:43Z",
+      "freshness": "RECENT",
+      "limitations": "Observed volume, open interest, and IV only; dealer inventory and hedging are not observed."
+    },
+    {
+      "id": "short-fintel-2026-08-31",
+      "name": "Fintel GME short-interest summary sourced from NYSE reporting",
+      "url": "https://fintel.io/ss/us/gme",
+      "tier": 6,
+      "kind": "short_interest",
+      "observedAt": "2026-09-22T19:50:00Z",
+      "effectiveAt": "2026-08-31T00:00:00Z",
+      "publishedAt": "2026-09-10T00:00:00Z",
+      "freshness": "STALE",
+      "limitations": "Delayed exchange-reported shares. Float and days-to-cover calculations vary by provider methodology."
+    },
+    {
+      "id": "sec-cohen-13da-2026-09-21",
+      "name": "SEC Schedule 13D/A — RC Ventures",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326380/000092189526002607/xslSCHEDULE_13D_X02/primary_doc.xml",
+      "tier": 1,
+      "kind": "catalyst",
+      "observedAt": "2026-09-22T18:30:00Z",
+      "effectiveAt": "2026-09-21T00:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Reports the disclosed transaction and beneficial ownership; does not identify other market buyers."
+    },
+    {
+      "id": "gme-q2-results-2026-09-08",
+      "name": "SEC Exhibit 99.1 — GameStop Q2 2026 results",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326380/000132638026000050/a991-fy26q2earningsrelease.htm",
+      "tier": 1,
+      "kind": "company",
+      "observedAt": "2026-09-22T18:45:00Z",
+      "effectiveAt": "2026-09-08T20:05:00Z",
+      "freshness": "CURRENT_REPORTING_PERIOD",
+      "limitations": "Company release; non-GAAP measures require the included reconciliation."
+    },
+    {
+      "id": "gme-10q-2026-09-09",
+      "name": "GameStop Form 10-Q for quarter ended August 1, 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326380/000132638026000055/gme-20260801.htm",
+      "tier": 1,
+      "kind": "capital_structure",
+      "observedAt": "2026-09-22T18:55:00Z",
+      "effectiveAt": "2026-09-03T00:00:00Z",
+      "freshness": "CURRENT_REPORTING_PERIOD",
+      "limitations": "Shares-outstanding effective date differs from the quarter-end balance-sheet date."
+    },
+    {
+      "id": "gme-note-exchange-2026-09-03",
+      "name": "GameStop Form 8-K — convertible note exchange terms",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326380/000132638026000046/gme-20260831.htm",
+      "tier": 1,
+      "kind": "capital_structure",
+      "observedAt": "2026-09-22T19:05:00Z",
+      "effectiveAt": "2026-08-31T00:00:00Z",
+      "freshness": "CURRENT",
+      "limitations": "Announces terms and expected completion; completed issuance is confirmed in the Q2 results and 10-Q."
+    },
+    {
+      "id": "sec-gme-2021-report",
+      "name": "SEC Staff Report on Equity and Options Market Structure Conditions in Early 2021",
+      "url": "https://www.sec.gov/files/staff-report-equity-options-market-struction-conditions-early-2021.pdf",
+      "tier": 1,
+      "kind": "historical_context",
+      "observedAt": "2026-09-22T19:15:00Z",
+      "effectiveAt": "2021-10-14T00:00:00Z",
+      "freshness": "HISTORICAL",
+      "limitations": "Historical mechanism analysis, not evidence about current conditions."
+    },
+    {
+      "id": "short-chartexchange-2026-09-15",
+      "name": "ChartExchange GME short interest — FINRA-sourced official data",
+      "url": "https://chartexchange.com/symbol/nyse-gme/short-interest/",
+      "tier": 6,
+      "kind": "short_interest",
+      "observedAt": "2026-09-25T19:18:00Z",
+      "effectiveAt": "2026-09-15T00:00:00Z",
+      "publishedAt": "2026-09-24T20:00:00Z",
+      "freshness": "CURRENT_REPORTING_PERIOD",
+      "limitations": "Secondary presentation of FINRA/NYSE consolidated short-interest data. Biweekly and delayed; not real-time and not direct evidence of covering."
+    },
+    {
+      "id": "nyse-short-interest-release-2026-09-24",
+      "name": "NYSE Group Consolidated Short Interest Report",
+      "url": "https://www.businesswire.com/news/home/20260924602197/en/",
+      "tier": 2,
+      "kind": "short_interest",
+      "observedAt": "2026-09-25T19:18:00Z",
+      "effectiveAt": "2026-09-15T00:00:00Z",
+      "publishedAt": "2026-09-24T20:00:00Z",
+      "freshness": "CURRENT_REPORTING_PERIOD",
+      "limitations": "Official NYSE Group release confirms the September 15 settlement reporting cycle and September 24 publication; the article reports exchange aggregates rather than the GME row."
+    },
+    {
+      "id": "sec-cohen-form4-2026-09-29",
+      "name": "SEC Form 4 — Ryan Cohen",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326380/000092189526002670/xslF345X06/form413177gme_09292026.xml",
+      "tier": 1,
+      "kind": "catalyst",
+      "observedAt": "2026-09-30T22:25:00Z",
+      "effectiveAt": "2026-09-29T00:00:00Z",
+      "publishedAt": "2026-09-29T20:59:00Z",
+      "freshness": "RECENT",
+      "limitations": "Confirms Cohen's reported purchases and direct post-transaction holdings; does not identify other buyers, short covering, or broader market demand."
+    },
+    {
+      "id": "sec-cohen-13da-2026-10-02",
+      "name": "SEC Schedule 13D/A — Ryan Cohen",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326380/000092189526002718/xslSCHEDULE_13D_X02/primary_doc.xml",
+      "tier": 1,
+      "kind": "catalyst",
+      "observedAt": "2026-10-06T18:04:58Z",
+      "effectiveAt": "2026-10-02T00:00:00Z",
+      "publishedAt": "2026-10-02T20:56:41Z",
+      "freshness": "STALE",
+      "limitations": "Confirms Cohen's reported open-market purchase and beneficial ownership; it does not identify other buyers, short covering, borrow stress, or broader market demand."
+    },
+    {
+      "id": "short-chartexchange-2026-09-30-retrieved-2026-10-16",
+      "name": "ChartExchange GME official short-interest table, FINRA-sourced",
+      "url": "https://chartexchange.com/symbol/nyse-gme/short-interest/",
+      "tier": 6,
+      "kind": "short_interest",
+      "observedAt": "2026-10-16T18:49:21Z",
+      "effectiveAt": "2026-09-30T00:00:00Z",
+      "publishedAt": "2026-10-09T20:00:00Z",
+      "freshness": "STALE",
+      "limitations": "Secondary transcription of delayed exchange/FINRA reporting, not real-time or direct covering. Float and outstanding-share denominators differ; reported shares-outstanding value was not independently refreshed from SEC."
+    },
+    {
+      "id": "finra-short-calendar-2026-10-16",
+      "name": "FINRA 2026 short-interest reporting calendar",
+      "url": "https://www.finra.org/filing-reporting/regulatory-filing-systems/short-interest",
+      "tier": 2,
+      "kind": "short_interest",
+      "observedAt": "2026-10-16T18:49:21Z",
+      "effectiveAt": "2026-09-30T00:00:00Z",
+      "freshness": "STALE",
+      "limitations": "Confirms September30 settlement/October9 publication and October15 settlement/October26 publication dates; does not provide the GME-specific shares row or live positioning."
+    },
+    {
+      "id": "gme-warrant-expiry-reminder-2026-10-19",
+      "name": "GameStop warrant expiration reminder",
+      "url": "https://investor.gamestop.com/news-releases/news-details/2026/GameStop-Reminds-Holders-of-October-30-2026-Warrant-Expiration-Date/default.aspx",
+      "tier": 2,
+      "kind": "company",
+      "observedAt": "2026-10-21T18:04:38Z",
+      "effectiveAt": "2026-10-19T00:00:00Z",
+      "publishedAt": "2026-10-19T00:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Company reminder confirms the existing $32 cash exercise price and October 30 expiration; it does not show exercise decisions, resulting issuance, short covering, borrow stress, or market demand."
+    },
+    {
+      "id": "short-equibles-2026-10-15-retrieved-2026-10-28",
+      "name": "Equibles GME short-interest history sourced from FINRA",
+      "url": "https://equibles.com/stocks/gme/short-interest",
+      "tier": 6,
+      "kind": "short_interest",
+      "observedAt": "2026-10-28T19:04:00Z",
+      "effectiveAt": "2026-10-15T00:00:00Z",
+      "publishedAt": "2026-10-26T20:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Secondary transcription of delayed official FINRA reporting; not real-time positioning or direct covering evidence."
+    },
+    {
+      "id": "short-chartexchange-2026-10-15-retrieved-2026-10-28",
+      "name": "ChartExchange GME short-interest table, FINRA-sourced",
+      "url": "https://chartexchange.com/symbol/nyse-gme/short-interest/",
+      "tier": 6,
+      "kind": "short_interest",
+      "observedAt": "2026-10-28T19:04:00Z",
+      "effectiveAt": "2026-10-15T00:00:00Z",
+      "publishedAt": "2026-10-26T20:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Secondary presentation of delayed exchange/FINRA reporting. Float and outstanding-share denominators differ; not real-time or direct covering evidence."
+    },
+    {
+      "id": "finra-short-calendar-2026-10-28",
+      "name": "FINRA 2026 short-interest reporting calendar",
+      "url": "https://www.finra.org/filing-reporting/regulatory-filing-systems/short-interest",
+      "tier": 2,
+      "kind": "short_interest",
+      "observedAt": "2026-10-28T19:04:00Z",
+      "effectiveAt": "2026-10-15T00:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Confirms the October15 settlement and October26 publication cycle; does not provide the GME-specific shares row or live positioning."
+    }
+  ],
+  "recordKind": "DAILY_THESIS_SNAPSHOT",
+  "capturedAt": "2026-10-28T19:04:00Z"
+}
