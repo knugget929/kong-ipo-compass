@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-10-28-servicenow-control-tower-alliance",
+  "publishedAt": "2026-10-28",
+  "title": "Kong joins ServiceNow Control Tower Alliance as a founding runtime-governance partner",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Kong became a founding member of ServiceNow's Control Tower Alliance, positioning Kong's AI connectivity layer as a runtime enforcement component in a broader enterprise AI-governance ecosystem. ServiceNow says select partners may build, integrate, certify, and sell joint offerings through its global channel. The strategic distribution and integration potential is positive, but the thesis score remains 69 because no product availability, customer adoption, bookings, pricing, or revenue contribution was disclosed.",
+  "confirmed": [
+    "ServiceNow announced Kong as one of the founding members of the Control Tower Alliance on October 28, 2026.",
+    "ServiceNow says alliance members will collaborate on differentiated solutions, qualification and certification, and—in selected cases—integrated offerings sold and supported globally by ServiceNow.",
+    "Kong describes its role as extending organizational AI governance into real-time enforcement across APIs, models, tools, agents, and event traffic."
+  ],
+  "uncertain": [
+    "The announcements do not disclose a binding commercial agreement, product release date, named joint customer, pricing, pipeline, bookings, ARR, margin, or revenue contribution for Kong.",
+    "ServiceNow states that future integrations and customer demand are forward-looking and may face development, certification, deployment, and adoption risks."
+  ],
+  "sources": [
+    {
+      "label": "Kong — ServiceNow Control Tower Alliance partnership",
+      "url": "https://konghq.com/blog/news/servicenow-control-tower-alliance"
+    },
+    {
+      "label": "ServiceNow — Control Tower Alliance launch",
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-launches-Control-Tower-Alliance-to-help-enterprises-adopt-AI-safely-at-scale/default.aspx"
+    }
+  ]
+}
