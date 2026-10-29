@@ -1,8 +1,17 @@
 {
   "schemaVersion": 1,
-  "revision": 24,
+  "revision": 25,
   "historyLimit": 30,
   "items": [
+    {
+      "id": "2026-10-28-servicenow-control-tower-alliance",
+      "publishedAt": "2026-10-28",
+      "title": "Kong joins ServiceNow Control Tower Alliance as a founding runtime-governance partner",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0
+    },
     {
       "id": "2026-09-30-gartner-api-management-leader",
       "publishedAt": "2026-09-30",
