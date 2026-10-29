@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-28T19:04:00Z",
+  "lastAttemptAt": "2026-10-29T20:05:00Z",
   "lastSuccessfulSnapshotAt": "2026-10-28T19:04:00Z",
-  "runKind": "MATERIAL_THESIS_EVENT",
+  "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "October15 delayed short interest was verified through two consistent FINRA-sourced secondary transcriptions and the official publication calendar; company and SEC checks found no newer primary event after October19. Canonical Nasdaq/Cboe market and options observations and current borrow evidence could not be refreshed, so the successful short-interest snapshot remains degraded rather than a live all-provider assessment.",
+  "summary": "SEC and GameStop newsroom checks found no filing or company release newer than October 19. The October 15 delayed short-interest report remains the latest published position, while the next settlement is October 30 and is not yet public. The canonical Nasdaq market feed and a current Cboe options chain could not be refreshed, and no authoritative live borrow source was available; current evidence, state, history and events were therefore preserved.",
   "providers": [
     {
       "key": "market",
