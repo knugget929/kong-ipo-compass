@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-29T20:06:50Z",
+  "lastAttemptAt": "2026-10-30T19:33:14Z",
   "lastSuccessfulSnapshotAt": "2026-10-28T19:04:00Z",
   "runKind": "ROUTINE_UPDATE",
-  "status": "DEGRADED",
-  "summary": "A fresh provider retry again found no GameStop filing or company release newer than October 19 and confirmed October 15 as the latest published short-interest position. The canonical Nasdaq market feed and current GME Cboe options chain still could not be refreshed, and no authoritative live borrow source was available; current evidence, state, history and events remain preserved.",
+  "status": "FAILED",
+  "summary": "The public-source research connector failed across the current market, options, SEC, company and short-interest checks, so no fresh provider observation could be verified. Canonical evidence, state, history and events remain preserved; live borrow evidence remains unavailable as expected.",
   "providers": [
     {
       "key": "market",
@@ -18,17 +18,17 @@
     },
     {
       "key": "sec",
-      "status": "OK",
+      "status": "FAILED",
       "lastSuccessAt": "2026-10-28T19:04:00Z"
     },
     {
       "key": "company",
-      "status": "OK",
+      "status": "FAILED",
       "lastSuccessAt": "2026-10-28T19:04:00Z"
     },
     {
       "key": "short_interest",
-      "status": "OK",
+      "status": "FAILED",
       "lastSuccessAt": "2026-10-28T19:04:00Z"
     },
     {
