@@ -1,7 +1,19 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-28T19:04:00Z",
+  "updatedAt": "2026-10-31T19:12:15Z",
   "entries": [
+    {
+      "date": "2026-10-31",
+      "state": "DORMANT",
+      "previousState": "DORMANT",
+      "transitionKind": "MATERIAL_THESIS_EVENT",
+      "thesisDirection": "STRENGTHENED",
+      "title": "Warrant expiration removes prospective supply; state remains Dormant/Low",
+      "snapshot": "2026-10-31.json",
+      "importantEventIds": [
+        "2026-10-30-warrant-expiration"
+      ]
+    },
     {
       "date": "2026-10-28",
       "state": "DORMANT",

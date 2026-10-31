@@ -1,7 +1,15 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-28T19:04:00Z",
+  "updatedAt": "2026-10-31T19:12:15Z",
   "items": [
+    {
+      "id": "2026-10-30-warrant-expiration",
+      "occurredAt": "2026-10-30T21:00:00Z",
+      "type": "MATERIAL_THESIS_EVENT",
+      "category": "CAPITAL_STRUCTURE",
+      "title": "$32 warrant exercise window closed",
+      "path": "items/2026-10-30-warrant-expiration.json"
+    },
     {
       "id": "2026-10-26-short-interest-increase",
       "occurredAt": "2026-10-26T20:00:00Z",
