@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-30T19:33:14Z",
-  "lastSuccessfulSnapshotAt": "2026-10-28T19:04:00Z",
-  "runKind": "ROUTINE_UPDATE",
-  "status": "FAILED",
-  "summary": "The public-source research connector failed across the current market, options, SEC, company and short-interest checks, so no fresh provider observation could be verified. Canonical evidence, state, history and events remain preserved; live borrow evidence remains unavailable as expected.",
+  "lastAttemptAt": "2026-10-31T19:12:15Z",
+  "lastSuccessfulSnapshotAt": "2026-10-31T19:12:15Z",
+  "runKind": "MATERIAL_THESIS_EVENT",
+  "status": "DEGRADED",
+  "summary": "Company and SEC sources verified the October 30 warrant expiration, and delayed short-interest reporting was rechecked. Current canonical market and options observations were not refreshed consistently, and live borrow data remains unavailable, so the snapshot is valid but confidence remains Low.",
   "providers": [
     {
       "key": "market",
@@ -13,23 +13,23 @@
     },
     {
       "key": "options",
-      "status": "FAILED",
+      "status": "CONFLICTING",
       "lastSuccessAt": "2026-09-22T21:24:43Z"
     },
     {
       "key": "sec",
-      "status": "FAILED",
-      "lastSuccessAt": "2026-10-28T19:04:00Z"
+      "status": "OK",
+      "lastSuccessAt": "2026-10-31T19:12:15Z"
     },
     {
       "key": "company",
-      "status": "FAILED",
-      "lastSuccessAt": "2026-10-28T19:04:00Z"
+      "status": "OK",
+      "lastSuccessAt": "2026-10-31T19:12:15Z"
     },
     {
       "key": "short_interest",
-      "status": "FAILED",
-      "lastSuccessAt": "2026-10-28T19:04:00Z"
+      "status": "OK",
+      "lastSuccessAt": "2026-10-31T19:12:15Z"
     },
     {
       "key": "borrow",

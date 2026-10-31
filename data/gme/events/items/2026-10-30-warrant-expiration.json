@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-10-30-warrant-expiration",
+  "occurredAt": "2026-10-30T21:00:00Z",
+  "type": "MATERIAL_THESIS_EVENT",
+  "category": "CAPITAL_STRUCTURE",
+  "title": "$32 warrant exercise window closed",
+  "mechanism": "Expiration removes unexercised warrants as a future contingent supply outlet, strengthening the constrained-supply side of the squeeze thesis. It does not establish realized supply because aggregate exercises and resulting issuance have not been disclosed.",
+  "observations": [
+    "GameStop’s $32 warrants expired at 5:00 p.m. New York time on October 30; unexercised warrants became worthless.",
+    "GME WS ceased trading before the October 30 market open.",
+    "Guaranteed-delivery users had to submit notice and cash by the expiration deadline and may deliver warrants through November 2; aggregate exercises and issuance remain unknown."
+  ],
+  "sourceIds": [
+    "gme-warrant-expiration-company-retrieved-2026-10-31",
+    "gme-warrant-expiration-sec-retrieved-2026-10-31"
+  ],
+  "stateBefore": "DORMANT",
+  "stateAfter": "DORMANT",
+  "stateEffect": "The prospective warrant-supply gate falls away, but stale short positioning and unavailable current market, options, borrow, and covering evidence keep the exact state at Dormant/Low."
+}
