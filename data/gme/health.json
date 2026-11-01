@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-10-31T19:12:15Z",
+  "lastAttemptAt": "2026-11-01T19:45:00Z",
   "lastSuccessfulSnapshotAt": "2026-10-31T19:12:15Z",
-  "runKind": "MATERIAL_THESIS_EVENT",
+  "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "Company and SEC sources verified the October 30 warrant expiration, and delayed short-interest reporting was rechecked. Current canonical market and options observations were not refreshed consistently, and live borrow data remains unavailable, so the snapshot is valid but confidence remains Low.",
+  "summary": "GameStop investor relations and SEC filings were checked with no newer issuer disclosure after the October 19 warrant notice; FINRA confirms October 30 short interest is scheduled for publication on November 10. Sunday market data and current options evidence were unavailable, and live borrow remains unavailable, so no new snapshot was created.",
   "providers": [
     {
       "key": "market",
@@ -13,7 +13,7 @@
     },
     {
       "key": "options",
-      "status": "CONFLICTING",
+      "status": "FAILED",
       "lastSuccessAt": "2026-09-22T21:24:43Z"
     },
     {
