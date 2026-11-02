@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-01T19:45:00Z",
+  "lastAttemptAt": "2026-11-02T19:31:00.000Z",
   "lastSuccessfulSnapshotAt": "2026-10-31T19:12:15Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "GameStop investor relations and SEC filings were checked with no newer issuer disclosure after the October 19 warrant notice; FINRA confirms October 30 short interest is scheduled for publication on November 10. Sunday market data and current options evidence were unavailable, and live borrow remains unavailable, so no new snapshot was created.",
+  "summary": "Nasdaq intraday market data was available before the November 2 close, but a completed session, current options, and live borrow evidence were unavailable; GameStop investor relations and SEC sources showed no newer issuer disclosure after October 19, and FINRA's October 30 short-interest publication remains due November 10. No new snapshot was created.",
   "providers": [
     {
       "key": "market",
-      "status": "FAILED",
+      "status": "STALE",
       "lastSuccessAt": "2026-09-22T21:23:19Z"
     },
     {
