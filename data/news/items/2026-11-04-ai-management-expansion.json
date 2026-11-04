@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-11-04-ai-management-expansion",
+  "publishedAt": "2026-11-04",
+  "title": "Kong expands AI management with cost controls and Token Vault",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Kong expanded AI Management in Kong Konnect with general-availability AI cost management and Token Vault capabilities, adding spend attribution and runtime credential brokering alongside broader discovery, governance and observability. The release strengthens Kong's agentic-AI platform breadth and monetization surface, but the thesis score remains 69 because Kong disclosed no customer adoption, pricing, bookings, ARR, margin or revenue contribution.",
+  "confirmed": [
+    "Kong announced an expanded AI Management offering in Kong Konnect on November 4, 2026, spanning AI discovery, traffic management, identity, credentials, cost management and observability.",
+    "Kong announced general availability of AI cost management for Kong AI Gateway, including attribution of AI consumption to teams, applications and agents across models and providers.",
+    "Kong announced general availability of Token Vault for Kong Identity, which brokers downstream credentials at runtime so agents do not need direct access to those credentials."
+  ],
+  "uncertain": [
+    "The announcements do not disclose named new customers, adoption metrics, pricing, bookings, ARR, growth, gross margin, retention, cash flow or revenue contribution.",
+    "The commercial impact and competitive durability of the new capabilities remain unproven until customer usage and financial evidence are disclosed."
+  ],
+  "sources": [
+    {
+      "label": "Kong — expanded AI Management for agentic AI",
+      "url": "https://konghq.com/company/press-room/press-release/kong-expands-ai-management-to-help-enterprises-govern-and-operate-agentic-ai"
+    },
+    {
+      "label": "Kong — AI cost management general availability",
+      "url": "https://konghq.com/company/press-room/press-release/kong-introduces-ai-cost-management-to-help-enterprises-attribute-and-control-ai-spend"
+    },
+    {
+      "label": "Kong — Token Vault for Kong Identity",
+      "url": "https://konghq.com/company/press-room/press-release/kong-introduces-token-vault-to-secure-enterprise-access-for-ai-agents"
+    }
+  ]
+}

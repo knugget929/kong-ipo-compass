@@ -1,8 +1,17 @@
 {
   "schemaVersion": 1,
-  "revision": 25,
+  "revision": 26,
   "historyLimit": 30,
   "items": [
+    {
+      "id": "2026-11-04-ai-management-expansion",
+      "publishedAt": "2026-11-04",
+      "title": "Kong expands AI management with cost controls and Token Vault",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0
+    },
     {
       "id": "2026-10-28-servicenow-control-tower-alliance",
       "publishedAt": "2026-10-28",
