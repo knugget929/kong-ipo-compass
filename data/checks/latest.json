@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 61,
-  "lastCheckedAt": "2026-11-04T19:14:37.000Z",
-  "status": "MATERIAL_CHANGE",
+  "revision": 62,
+  "lastCheckedAt": "2026-11-05T19:54:18.000Z",
+  "status": "NO_MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "Kong's November 4 AI Management expansion was recorded; the thesis remains MAINTAIN at 69."
+  "summary": "Routine check completed; no material evidence change."
 }
