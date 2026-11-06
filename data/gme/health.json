@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-05T19:58:39.000Z",
+  "lastAttemptAt": "2026-11-06T19:44:32.000Z",
   "lastSuccessfulSnapshotAt": "2026-10-31T19:12:15Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "The November 5 research ran before the U.S. close. A current intraday quote was available, but a completed Nasdaq session and contract-complete Cboe options evidence were unavailable; live borrow evidence remained unavailable. GameStop investor relations and SEC EDGAR showed no issuer disclosure after October 19, and FINRA's October 30 short-interest report remains scheduled for November 10. No snapshot was created.",
+  "summary": "The November 6 research ran before the U.S. close. A current intraday quote was available, but a completed Nasdaq session and contract-complete Cboe options evidence were unavailable; live borrow evidence remained unavailable. GameStop investor relations and SEC EDGAR showed no issuer disclosure after October 19, and FINRA's October 30 short-interest report remains scheduled for November 10. No snapshot was created.",
   "providers": [
     {
       "key": "market",
