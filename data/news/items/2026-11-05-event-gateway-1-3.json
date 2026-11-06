@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-11-05-event-gateway-1-3",
+  "publishedAt": "2026-11-05",
+  "title": "Kong Event Gateway 1.3 adds self-service Kafka governance",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Kong Event Gateway 1.3 adds policy enforcement for Kafka requests, JSON/Avro record transcoding, field masking and AWS IAM connectivity for Amazon MSK. The release broadens Kong's governed event-streaming platform and strengthens its cross-sell surface, but the thesis remains at 69 because Kong disclosed no customer adoption, pricing, bookings, ARR, margin or revenue contribution.",
+  "confirmed": [
+    "Kong published Event Gateway 1.3 on November 5, 2026 with a request-rule validator that can reject or record Kafka policy violations.",
+    "The release adds JSON-to-Avro and Avro-to-JSON transcoding, string-field masking, and AWS IAM authentication for Amazon MSK backends.",
+    "Kong positions the release as extending Konnect governance from APIs, LLM traffic and MCP servers to Kafka event streams."
+  ],
+  "uncertain": [
+    "Kong did not disclose named customer adoption, pricing, bookings, ARR, growth, gross margin, retention, cash flow or revenue contribution for Event Gateway 1.3.",
+    "The release's commercial uptake and competitive durability remain unproven."
+  ],
+  "sources": [
+    {
+      "label": "Kong — Event Gateway 1.3 product release",
+      "url": "https://www.konghq.com/blog/product-releases/kong-event-gateway-1-3"
+    },
+    {
+      "label": "Kong — Event Gateway product updates",
+      "url": "https://www.konghq.com/product-updates"
+    }
+  ]
+}
