@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 63,
-  "lastCheckedAt": "2026-11-06T19:44:32.000Z",
-  "status": "MATERIAL_CHANGE",
+  "revision": 64,
+  "lastCheckedAt": "2026-11-07T19:18:39.000Z",
+  "status": "NO_MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "Kong Event Gateway 1.3 expanded Kafka governance capabilities; thesis maintained."
+  "summary": "Routine check completed; no material evidence change."
 }
