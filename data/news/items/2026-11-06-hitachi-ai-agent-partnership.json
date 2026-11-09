@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-11-06-hitachi-ai-agent-partnership",
+  "publishedAt": "2026-11-06",
+  "title": "Kong and Hitachi launch governed AI-agent integration offering in Japan",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Hitachi expanded and launched an AI-agent integration solution and Kong support offering that combines Hitachi identity and systems-integration capabilities with Kong API and AI gateway products for governed enterprise deployment in Japan.",
+  "confirmed": [
+    "Hitachi and Kong announced a partnership supporting enterprise AI and API infrastructure in Japan.",
+    "Hitachi began offering an expanded AI-agent integration solution that combines Kong API and AI gateway products with identity, governance, observability and cost-control capabilities.",
+    "The companies said they will focus joint proposals and deployment support on manufacturing and financial-sector use cases."
+  ],
+  "uncertain": [
+    "Neither company disclosed contract value, bookings, revenue contribution, customer count or adoption.",
+    "The announcement does not confirm company-wide ARR, margins, cash flow, dilution or an IPO filing or timetable."
+  ],
+  "sources": [
+    {
+      "label": "Kong Japan — Hitachi partnership",
+      "url": "https://jp.konghq.com/news/kong-hitachi-partnership"
+    },
+    {
+      "label": "Hitachi — AI-agent integration solution with Kong",
+      "url": "https://www.hitachi.co.jp/products/it/harmonious/cloud/news/2026/info_2611.html"
+    }
+  ]
+}
