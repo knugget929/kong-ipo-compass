@@ -1,8 +1,17 @@
 {
   "schemaVersion": 1,
-  "revision": 27,
+  "revision": 28,
   "historyLimit": 30,
   "items": [
+    {
+      "id": "2026-11-06-hitachi-ai-agent-partnership",
+      "publishedAt": "2026-11-06",
+      "title": "Kong and Hitachi launch governed AI-agent integration offering in Japan",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0
+    },
     {
       "id": "2026-11-05-event-gateway-1-3",
       "publishedAt": "2026-11-05",
