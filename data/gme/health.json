@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-09T20:12:27.018Z",
+  "lastAttemptAt": "2026-11-10T19:30:00.000Z",
   "lastSuccessfulSnapshotAt": "2026-10-31T19:12:15Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "The November 9 research ran after the U.S. close. A current public market quote was available, but contract-complete Nasdaq and Cboe evidence and live borrow evidence remained unavailable. GameStop investor relations and SEC EDGAR showed no issuer disclosure after October 19, and no newer official short-interest report was verified. No snapshot was created.",
+  "summary": "The November 10 research ran after the U.S. close. A current public market quote was available, but contract-complete Nasdaq and Cboe evidence and defensible live borrow evidence remained unavailable. GameStop investor relations and SEC EDGAR showed no issuer disclosure after October 19. The October 30 short-interest cycle was due for publication today, but no GME-specific official value was verified by the check time; no estimate was substituted and no snapshot was created.",
   "providers": [
     {
       "key": "market",
