@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-11-10-short-interest-decrease",
+  "occurredAt": "2026-11-10T20:00:00Z",
+  "type": "MATERIAL_THESIS_EVENT",
+  "category": "SHORT_INTEREST",
+  "title": "October 30 reported short shares fell 11.74% and remain below the structural gate",
+  "mechanism": "Reported short exposure declined after the prior increase, weakening one structural mechanism required for a nonlinear squeeze. The fresh delayed report remains below the Watch’s 20% outstanding-share gate and does not establish live covering.",
+  "observations": [
+    "42,393,750 shares were reported short at October 30 versus 48,031,618 at October 15, a decline of 5,637,868 shares or 11.74%.",
+    "Using 504,500,990 displayed shares outstanding, reported short exposure is about 8.40%; provider float estimates produce roughly 9.11% to 10.06%.",
+    "The November 10 publication is fresh under the 15-day rule at this November 11 observation, but it remains delayed and is not direct covering evidence."
+  ],
+  "sourceIds": [
+    "short-chartexchange-2026-10-30-retrieved-2026-11-11",
+    "nyse-short-interest-file-2026-11-10-retrieved-2026-11-11",
+    "finra-short-calendar-2026-11-11"
+  ],
+  "stateBefore": "DORMANT",
+  "stateAfter": "DORMANT",
+  "stateEffect": "Weakens the short-pressure engine without changing Dormant/Low. Reported exposure is fresh but falling and below the 20% structural threshold; unavailable live borrow/options/market mechanisms remain decisive limits."
+}
