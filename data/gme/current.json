@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "revision": 10,
+  "revision": 11,
   "symbol": "GME",
-  "observedAt": "2026-10-31T19:12:15Z",
-  "snapshotDate": "2026-10-31",
+  "observedAt": "2026-11-11T19:56:00Z",
+  "snapshotDate": "2026-11-11",
   "state": {
     "key": "DORMANT",
     "level": 0,
@@ -15,19 +15,19 @@
     },
     "previous": "DORMANT",
     "transitionKind": "MATERIAL_THESIS_EVENT",
-    "summary": "The $32 warrant exercise window closed on October 30, removing up to 59.15M warrants as future contingent supply. The number exercised and resulting shares are not yet disclosed, October 15 short interest is now stale under the 15-day gate, and current market/options/borrow evidence remains incomplete; the deterministic state stays Dormant/Low."
+    "summary": "The October 30 delayed short-interest report fell 11.74% to 42.39M shares, about 8.40% of displayed shares outstanding. That weakens short pressure and remains below the 20% structural gate; current market/options/borrow evidence is incomplete, so the deterministic state stays Dormant/Low."
   },
-  "thesisDirection": "STRENGTHENED",
-  "interpretation": "GameStop and its SEC filing established that the $32 warrants expired at 5:00 p.m. New York time on October 30 and unexercised warrants became worthless. This removes the prospective warrant outlet from the supply gate, while preserving uncertainty about exercises submitted by the deadline and any shares delivered through November 2. The remaining convertible and authorized-share capacity still opposes a tightly constrained-supply thesis. October 15 short interest remains 48,031,618 shares but is now outside the Watch’s 15-day freshness gate. With no current verified market, options, or borrow mechanism, the exact state remains Dormant/Low.",
+  "thesisDirection": "WEAKENED",
+  "interpretation": "Fresh delayed short-interest data weakens the short-pressure engine: 42.39M shares were reported short at October 30, down 11.74% from October 15 and below the Watch’s 20% outstanding-share gate. With current market, options and borrow mechanisms incomplete, the state remains Dormant/Low.",
   "engineInputs": {
     "attention": {
       "abnormal": null
     },
     "short": {
       "positioningElevated": false,
-      "positioningRising": true,
+      "positioningRising": false,
       "directCoveringEvidence": false,
-      "fresh": false
+      "fresh": true
     },
     "borrow": {
       "stressed": null,
@@ -171,20 +171,21 @@
   },
   "shortPressure": {
     "status": "OBSERVED",
-    "condition": "RISING_STALE",
-    "reportedShares": 48031618,
-    "effectiveDate": "2026-10-15",
-    "publishedDate": "2026-10-26",
-    "changeFromPriorPct": 12.56,
-    "pctSharesOutstanding": 9.52,
+    "condition": "FALLING_FRESH",
+    "reportedShares": 42393750,
+    "effectiveDate": "2026-10-30",
+    "publishedDate": "2026-11-10",
+    "changeFromPriorPct": -11.74,
+    "pctSharesOutstanding": 8.4,
     "providerFloatPctRange": [
-      11.38
+      9.11,
+      10.06
     ],
     "providerDaysToCoverRange": [
-      4
+      5.25
     ],
     "directCoveringEvidence": false,
-    "note": "Equibles continues to transcribe 48,031,618 shares short at October 15, up 12.56% from 42,673,721 at September 30. At 504,500,990 shares outstanding this is about 9.52%, below the 20% gate. The delayed report is now older than the Watch’s 15-day freshness limit and is not live positioning or direct covering evidence."
+    "note": "FINRA/NYSE-cycle secondary transcriptions report 42,393,750 shares short at October 30, down 11.74% from 48,031,618 at October 15. At 504,500,990 shares outstanding this is about 8.40%, below the 20% structural gate. The report is fresh under the Watch’s 15-day rule but remains delayed and does not prove live positioning or direct covering."
   },
   "borrowPressure": {
     "status": "UNAVAILABLE",
@@ -367,16 +368,15 @@
     {
       "key": "short",
       "label": "Short pressure",
-      "condition": "Reported increase · delayed report now stale",
+      "condition": "Reported decline · delayed report fresh",
       "direction": "WEAKENING",
       "status": "OBSERVED",
-      "headline": "48.03M shares short at October 15; now outside the 15-day freshness gate",
-      "interpretation": "The delayed report remains up 12.56% from September 30 but is now stale under the exact 15-day gate and remains below the 20% structural threshold. It does not establish current positioning, covering, or borrow stress.",
+      "headline": "42.39M shares short at October 30, down 11.74%",
+      "interpretation": "The fresh delayed report fell 11.74% from October 15 and equals about 8.40% of displayed shares outstanding, below the 20% structural threshold. It weakens the squeeze mechanism but does not establish live positioning or direct covering.",
       "sourceIds": [
-        "short-equibles-2026-10-15-retrieved-2026-10-28",
-        "short-chartexchange-2026-10-15-retrieved-2026-10-28",
-        "finra-short-calendar-2026-10-28",
-        "short-equibles-2026-10-15-retrieved-2026-10-31"
+        "short-chartexchange-2026-10-30-retrieved-2026-11-11",
+        "nyse-short-interest-file-2026-11-10-retrieved-2026-11-11",
+        "finra-short-calendar-2026-11-11"
       ]
     },
     {
@@ -485,18 +485,17 @@
     }
   ],
   "whatChanged": {
-    "strengthening": [
-      "The $32 warrant exercise window closed on October 30, removing up to 59.15M unexercised warrants as future contingent supply."
-    ],
+    "strengthening": [],
     "weakening": [
-      "October 15 short interest is now outside the Watch’s 15-day freshness gate."
+      "October 30 reported short shares fell 11.74% to 42.39M, reversing the prior report’s increase.",
+      "Reported short exposure is about 8.40% of displayed shares outstanding, still well below the 20% structural gate."
     ],
     "unchanged": [
-      "The computed state remains Dormant/Low because reported short exposure is about 9.52% of outstanding shares, below the 20% structural gate.",
-      "Direct covering, current abnormal market demand, borrow stress, and dealer-feedback mechanisms remain unestablished; convertible and authorized-share capacity remain opposing evidence."
+      "The deterministic state remains Dormant/Low.",
+      "Direct covering, current abnormal market demand, borrow stress and dealer-feedback mechanisms remain unestablished; convertible and authorized-share capacity remain opposing evidence."
     ],
     "unknown": [
-      "The number of warrants exercised and resulting shares issued, current positioning after October 15, live market/options conditions, and borrow fee, availability, and utilization remain unknown."
+      "Live positioning after October 30, current contract-complete market/options conditions, warrant exercises and resulting shares, and borrow fee, availability and utilization remain unknown."
     ]
   },
   "theses": [
@@ -505,16 +504,15 @@
       "label": "Squeeze thesis",
       "assessment": "POSSIBLE_NOT_PROVEN",
       "fit": "Weak",
-      "summary": "The warrant expiration removes a material prospective supply outlet and therefore strengthens the constrained-supply side of the squeeze thesis. However, October 15 short interest is now stale and remains only about 9.52% of outstanding shares, below the 20% gate; borrow, direct covering, current market demand, and dealer feedback remain unavailable, so Dormant/Low remains exact.",
+      "summary": "The October 30 delayed report fell 11.74% to 42.39M shares, about 8.40% of displayed outstanding shares. This weakens short pressure and remains below the 20% structural gate; borrow, direct covering, current market demand and dealer feedback remain unavailable, so Dormant/Low remains exact.",
       "supports": [
-        "The $32 warrant exercise window closed, removing up to 59.15M unexercised warrants as future contingent supply",
-        "Reported short shares rose 12.56% from September 30, although the delayed report is now stale"
+        "The $32 warrant exercise window closed, removing up to 59.15M unexercised warrants as future contingent supply"
       ],
       "contradictions": [
-        "Reported short interest remains below the 20% outstanding-share structural gate and is now stale",
+        "Reported short interest fell 11.74% and remains below the 20% outstanding-share structural gate",
         "No direct covering evidence",
         "Borrow channel unknown",
-        "Convertible and authorized-share capacity still weakens supply constraint"
+        "Convertible and authorized-share capacity still weaken supply constraint"
       ]
     },
     {
@@ -522,7 +520,7 @@
       "label": "Fundamental / corporate",
       "assessment": "BEST_CURRENT_FIT",
       "fit": "Strong",
-      "summary": "Repeated open-market purchases by Ryan Cohen, including another 700,000 shares on October 2, plus improved profitability guidance and strategic activity strengthen the corporate explanation for demand. This partial refresh adds delayed short positioning only; legacy market/options and corporate statements retain their original source dates.",
+      "summary": "Repeated open-market purchases by Ryan Cohen, improved profitability guidance and strategic activity remain the best-fit corporate explanation for demand. The new October 30 delayed short report fell 11.74%, weakening the competing short-pressure mechanism.",
       "supports": [
         "Ryan Cohen bought another 700,000 shares on October 2",
         "Fresh primary-source insider purchase",
@@ -539,15 +537,14 @@
       "label": "Normal-market / no-squeeze",
       "assessment": "PLAUSIBLE",
       "fit": "Strong",
-      "summary": "A corporate/catalyst-led repricing without forced buying remains more consistent with the observed evidence. Warrant expiration removes one supply outlet, but current market, options, borrow, and covering mechanisms are not established and the delayed short report is below the structural gate.",
+      "summary": "A corporate/catalyst-led repricing without forced buying remains more consistent with the observed evidence. October 30 reported short shares fell 11.74% and remain below the structural gate; current market, options, borrow and covering mechanisms are not established.",
       "supports": [
         "Clear public corporate catalyst history",
         "Remaining convertible and authorized-share capacity",
-        "October 15 short interest is below the 20% outstanding-share gate and is now stale"
+        "October 30 reported short interest fell 11.74% and remains below the 20% outstanding-share gate"
       ],
       "contradictions": [
-        "Volume is elevated and calls dominate selected expirations",
-        "Reported short positioning rose"
+        "Legacy market and selected-options evidence showed elevated activity, but those feeds are not current"
       ]
     }
   ],
@@ -852,6 +849,41 @@
       "publishedAt": "2026-10-26T20:00:00Z",
       "freshness": "STALE",
       "limitations": "Secondary transcription of delayed official FINRA reporting; not real-time positioning or direct covering evidence. The October 30 estimate is modeled, not official, and is not used."
+    },
+    {
+      "id": "short-chartexchange-2026-10-30-retrieved-2026-11-11",
+      "name": "ChartExchange GME short-interest table, FINRA-sourced",
+      "url": "https://chartexchange.com/symbol/nyse-gme/short-interest/",
+      "tier": 6,
+      "kind": "short_interest",
+      "observedAt": "2026-11-11T19:56:00Z",
+      "effectiveAt": "2026-10-30T00:00:00Z",
+      "publishedAt": "2026-11-10T20:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Secondary transcription of delayed official FINRA/NYSE reporting; not real-time positioning or direct covering evidence. Float and outstanding-share denominators differ."
+    },
+    {
+      "id": "nyse-short-interest-file-2026-11-10-retrieved-2026-11-11",
+      "name": "NYSE Group Consolidated Short Interest file — November 10 publication",
+      "url": "https://ftp.nyse.com/NYSEGroupConsolidatedShortInterest/current/NYSE_Group_Consolidated_Short_Interest_20261110.xls",
+      "tier": 2,
+      "kind": "short_interest",
+      "observedAt": "2026-11-11T19:56:00Z",
+      "effectiveAt": "2026-10-30T00:00:00Z",
+      "publishedAt": "2026-11-10T20:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Official exchange file establishes the October 30 cycle; the connector could confirm the published file but could not parse its binary GME row, so exact issuer values are cross-checked from secondary transcriptions."
+    },
+    {
+      "id": "finra-short-calendar-2026-11-11",
+      "name": "FINRA 2026 short-interest reporting calendar",
+      "url": "https://www.finra.org/filing-reporting/regulatory-filing-systems/short-interest",
+      "tier": 2,
+      "kind": "short_interest",
+      "observedAt": "2026-11-11T19:56:00Z",
+      "effectiveAt": "2026-10-30T00:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Confirms the October 30 settlement and November 10 publication cycle; does not itself provide the GME-specific shares row or real-time positioning."
     }
   ]
 }

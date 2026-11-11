@@ -1,7 +1,19 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-31T19:12:15Z",
+  "updatedAt": "2026-11-11T19:56:00Z",
   "entries": [
+    {
+      "date": "2026-11-11",
+      "state": "DORMANT",
+      "previousState": "DORMANT",
+      "transitionKind": "MATERIAL_THESIS_EVENT",
+      "thesisDirection": "WEAKENED",
+      "title": "October 30 short interest falls 11.74%; state remains Dormant/Low",
+      "snapshot": "2026-11-11.json",
+      "importantEventIds": [
+        "2026-11-10-short-interest-decrease"
+      ]
+    },
     {
       "date": "2026-10-31",
       "state": "DORMANT",
