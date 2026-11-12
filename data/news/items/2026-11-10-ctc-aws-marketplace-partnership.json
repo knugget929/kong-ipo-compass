@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-11-10-ctc-aws-marketplace-partnership",
+  "publishedAt": "2026-11-10",
+  "title": "Kong and CTC expand Japan distribution through AWS Marketplace",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Kong Japan and Itochu Techno-Solutions (CTC) formed a channel partnership to resell Kong API and AI connectivity products through AWS Marketplace private offers, combining CTC's enterprise customer base and cloud integration capabilities with Kong's platform.",
+  "confirmed": [
+    "Kong Japan and CTC announced a partner agreement aimed at expanding sales of Kong API and AI products in Japan.",
+    "CTC will resell eligible Kong products through AWS Marketplace Channel Partner Private Offers, allowing customer-specific pricing and contract terms.",
+    "The companies plan joint proposals and implementation support using CTC's enterprise customer base and cloud expertise."
+  ],
+  "uncertain": [
+    "Neither company disclosed bookings, contract value, revenue contribution, customer count or adoption.",
+    "The announcement does not confirm company-wide ARR, margins, cash flow, dilution or an IPO filing or timetable."
+  ],
+  "sources": [
+    {
+      "label": "Kong Japan — CTC partnership and AWS Marketplace distribution",
+      "url": "https://jp.konghq.com/news/kong-ctc-partner-aws-marketplace"
+    }
+  ]
+}

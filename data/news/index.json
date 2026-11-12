@@ -1,8 +1,17 @@
 {
   "schemaVersion": 1,
-  "revision": 28,
+  "revision": 29,
   "historyLimit": 30,
   "items": [
+    {
+      "id": "2026-11-10-ctc-aws-marketplace-partnership",
+      "publishedAt": "2026-11-10",
+      "title": "Kong and CTC expand Japan distribution through AWS Marketplace",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0
+    },
     {
       "id": "2026-11-06-hitachi-ai-agent-partnership",
       "publishedAt": "2026-11-06",
