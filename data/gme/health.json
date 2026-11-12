@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-11T19:56:00Z",
+  "lastAttemptAt": "2026-11-12T19:18:00Z",
   "lastSuccessfulSnapshotAt": "2026-11-11T19:56:00Z",
-  "runKind": "MATERIAL_THESIS_EVENT",
+  "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "The November 11 research verified the October 30 short-interest cycle: secondary FINRA/NYSE transcriptions report 42,393,750 shares short, down 11.74%, while the official NYSE file and FINRA calendar confirm the reporting cycle. SEC EDGAR and GameStop investor relations showed no issuer disclosure after October 19. Contract-complete market/options evidence and defensible live borrow evidence remain unavailable, so confidence stays Low.",
+  "summary": "The November 12 attempt rechecked GameStop investor relations and SEC EDGAR and found no issuer disclosure after October 19. Contract-complete Nasdaq/Cboe market and options evidence and defensible live borrow evidence remained unavailable, so current evidence, immutable history and the Dormant/Low state were preserved; no successful snapshot was claimed.",
   "providers": [
     {
       "key": "market",
