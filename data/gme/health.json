@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-14T20:00:02.191Z",
+  "lastAttemptAt": "2026-11-15T19:17:11Z",
   "lastSuccessfulSnapshotAt": "2026-11-11T19:56:00Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "The November 14 attempt rechecked GameStop investor relations and SEC EDGAR and found no issuer disclosure after October 19. Contract-complete Nasdaq/Cboe market and options evidence and defensible live borrow evidence remained unavailable, so current evidence, immutable history and the Dormant/Low state were preserved; no successful snapshot was claimed.",
+  "summary": "The November 15 attempt rechecked GameStop investor relations and SEC EDGAR and found no issuer disclosure after October 19. Contract-complete Nasdaq/Cboe market and options evidence and defensible live borrow evidence remained unavailable, so current evidence, immutable history and the Dormant/Low state were preserved; no successful snapshot was claimed.",
   "providers": [
     {
       "key": "market",
