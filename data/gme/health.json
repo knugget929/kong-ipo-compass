@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-16T19:35:52Z",
+  "lastAttemptAt": "2026-11-17T19:14:03.477Z",
   "lastSuccessfulSnapshotAt": "2026-11-11T19:56:00Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "The November 16 attempt rechecked GameStop investor relations and SEC EDGAR and found no issuer disclosure after October 19. Contract-complete Nasdaq/Cboe market and options evidence and defensible live borrow evidence remained unavailable, so current evidence, immutable history and the Dormant/Low state were preserved; no successful snapshot was claimed.",
+  "summary": "November 17 retrieval returned incomplete Nasdaq/Cboe data and dynamic GameStop/SEC shells; the SEC submissions endpoint was inaccessible. The October 30 short report is now older than the 15-day freshness gate; no newer verified report or defensible timestamped borrow feed was obtained. Preserve all prior evidence and last-success times; no successful snapshot or no-news conclusion is claimed.",
   "providers": [
     {
       "key": "market",
@@ -18,17 +18,17 @@
     },
     {
       "key": "sec",
-      "status": "OK",
+      "status": "FAILED",
       "lastSuccessAt": "2026-11-11T19:56:00Z"
     },
     {
       "key": "company",
-      "status": "OK",
+      "status": "FAILED",
       "lastSuccessAt": "2026-11-11T19:56:00Z"
     },
     {
       "key": "short_interest",
-      "status": "OK",
+      "status": "STALE",
       "lastSuccessAt": "2026-11-11T19:56:00Z"
     },
     {
