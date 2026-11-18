@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 75,
-  "lastCheckedAt": "2026-11-17T19:11:53.793Z",
-  "status": "NO_MATERIAL_CHANGE",
+  "revision": 76,
+  "lastCheckedAt": "2026-11-18T19:16:06Z",
+  "status": "MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "Routine check completed; no material evidence change."
+  "summary": "UK subsidiary filing adds historical parent metrics; maintain 69 with unchanged valuation assumptions."
 }
