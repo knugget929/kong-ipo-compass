@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 29,
+  "revision": 30,
   "historyLimit": 30,
   "items": [
     {
@@ -36,6 +36,15 @@
       "title": "Kong expands AI management with cost controls and Token Vault",
       "impact": "positive",
       "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0
+    },
+    {
+      "id": "2026-11-01-uk-accounts-parent-metrics",
+      "publishedAt": "2026-11-01",
+      "title": "UK filing adds dated parent growth, retention and loss disclosures",
+      "impact": "neutral",
+      "significance": "high",
       "thesisDecision": "MAINTAIN",
       "scoreDelta": 0
     },

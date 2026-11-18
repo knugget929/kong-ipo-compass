@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-11-01-uk-accounts-parent-metrics",
+  "publishedAt": "2026-11-01",
+  "title": "UK filing adds dated parent growth, retention and loss disclosures",
+  "impact": "neutral",
+  "significance": "high",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Newly retrieved November 1 filing adds historical management-reported parent metrics, not current audited group financials. Constructive retention/growth and continued losses balance; maintain 69 and all valuation assumptions.",
+  "confirmed": [
+    "Companies House lists FY ended January 31, 2026 accounts filed November 1; the strategic report was signed October 28.",
+    "The report attributes approximately 38% ARR growth, 103% SaaS growth and 123% net dollar retention to Kong, and reports a $45.7M parent consolidated loss and $336.3M accumulated deficit.",
+    "The UK entity provides cost-plus services to its parent; its own results are not group SaaS profitability."
+  ],
+  "uncertain": [
+    "Group metrics are management statements in a subsidiary strategic report, not separately audited current consolidated group KPIs; measurement periods and definitions are not independently established.",
+    "Absolute current ARR, margins, cash flow, diluted shares and IPO terms remain unverified. The $300M ARR model input stays an assumption; no automatic valuation re-rating."
+  ],
+  "sources": [
+    {
+      "label": "Companies House: Kong UK FY ended January 2026; filed November 1; strategic report pp2-3",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/12132924/filing-history/MzU1Mzg3NDUxMGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "label": "Companies House filing history checked November 18",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/12132924/filing-history"
+    }
+  ]
+}

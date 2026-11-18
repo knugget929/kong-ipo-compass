@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 5,
-  "updatedAt": "2026-09-20T20:58:48+03:00",
-  "asOf": "2026-09-20",
+  "revision": 6,
+  "updatedAt": "2026-11-18T19:16:06Z",
+  "asOf": "2026-11-18",
   "company": "Kong Inc.",
   "productName": "Kong IPO Compass",
   "verdict": {
@@ -10,9 +10,9 @@
     "confidence": "Low–medium",
     "score": 69,
     "change": 0,
-    "summary": "Kong's reported EMEA customer growth, named enterprise and AI-native wins, expanding agentic-AI platform, and IPO-experienced CFO still support a constructive operating thesis. Nasdaq Private Market's $10-per-share estimate corroborates the existing secondary reference without establishing a specific trade or IPO value. The U.S. 10-year Treasury yield above the recorded 5% threshold raises discount-rate and multiple-compression risk, while company-wide ARR, financial quality, dilution, and filing timing remain unconfirmed.",
+    "summary": "Maintain 69. A November 1 UK subsidiary filing adds management-reported parent growth, retention and losses for the year ended January 2026. This improves dated disclosure but is not current audited group financials; absolute ARR, margins, cash flow, capitalization and IPO terms remain unverified. Valuation inputs are unchanged.",
     "ipoStatus": "No confirmed filing",
-    "updatedBy": "September 20, 2026 secondary-market review"
+    "updatedBy": "November 18, 2026 public subsidiary-filing review"
   },
   "model": {
     "formulaVersion": "1.0",
@@ -30,13 +30,41 @@
       "latestSecondaryLabel": "Nasdaq Private Market estimate (2026-09-02)"
     },
     "ranges": {
-      "arr": [100, 500, 5],
-      "multiple": [4, 30, 0.5],
-      "netCash": [-250, 500, 10],
-      "dilutedShares": [120, 300, 1],
-      "ipoDiscount": [-10, 35, 0.5],
-      "ownedShares": [0, 100000, 500],
-      "costBasis": [0, 30, 0.25]
+      "arr": [
+        100,
+        500,
+        5
+      ],
+      "multiple": [
+        4,
+        30,
+        0.5
+      ],
+      "netCash": [
+        -250,
+        500,
+        10
+      ],
+      "dilutedShares": [
+        120,
+        300,
+        1
+      ],
+      "ipoDiscount": [
+        -10,
+        35,
+        0.5
+      ],
+      "ownedShares": [
+        0,
+        100000,
+        500
+      ],
+      "costBasis": [
+        0,
+        30,
+        0.25
+      ]
     },
     "presets": {
       "bear": {
@@ -66,54 +94,237 @@
     }
   },
   "scorecard": [
-    {"label": "Growth & scale", "score": 18, "max": 20, "state": "positive", "note": "Kong reported 72% year-over-year EMEA customer growth and named ING, First Abu Dhabi Bank, Mistral, and PolyAI as new customers; company-wide ARR and growth remain unconfirmed."},
-    {"label": "Market & AI tailwind", "score": 14, "max": 20, "state": "watch", "note": "APIs remain control points for AI traffic, governance, security, and monetization, but the U.S. 10-year Treasury yield crossing 5% raises the discount rate and compresses the supportable multiple for a future software IPO if it persists."},
-    {"label": "Product & position", "score": 17, "max": 20, "state": "positive", "note": "Context Mesh, MCP Registry, Agent Gateway, metering, security partnerships, NVIDIA model routing, and AI Gateway 2.0 extend Kong across the full AI data path."},
-    {"label": "Financial quality", "score": 11, "max": 20, "state": "watch", "note": "Gross margin, net retention, growth rate, free cash flow, and concentration remain undisclosed."},
-    {"label": "IPO readiness", "score": 9, "max": 20, "state": "watch", "note": "Kong hired Bruce Felt, who has taken three software companies public as CFO, but Kong has not confirmed a filing or timetable."}
+    {
+      "label": "Growth & scale",
+      "score": 18,
+      "max": 20,
+      "state": "positive",
+      "note": "Kong reported 72% year-over-year EMEA customer growth and named ING, First Abu Dhabi Bank, Mistral, and PolyAI as new customers; company-wide ARR and growth remain unconfirmed."
+    },
+    {
+      "label": "Market & AI tailwind",
+      "score": 14,
+      "max": 20,
+      "state": "watch",
+      "note": "APIs remain control points for AI traffic, governance, security, and monetization, but the U.S. 10-year Treasury yield crossing 5% raises the discount rate and compresses the supportable multiple for a future software IPO if it persists."
+    },
+    {
+      "label": "Product & position",
+      "score": 17,
+      "max": 20,
+      "state": "positive",
+      "note": "Context Mesh, MCP Registry, Agent Gateway, metering, security partnerships, NVIDIA model routing, and AI Gateway 2.0 extend Kong across the full AI data path."
+    },
+    {
+      "label": "Financial quality",
+      "score": 11,
+      "max": 20,
+      "state": "watch",
+      "note": "The UK FY2026 strategic report adds parent-reported retention and loss metrics, but the subsidiary audit does not establish current audited group KPIs, margins or cash flow. Retain 11/20."
+    },
+    {
+      "label": "IPO readiness",
+      "score": 9,
+      "max": 20,
+      "state": "watch",
+      "note": "Kong hired Bruce Felt, who has taken three software companies public as CFO, but Kong has not confirmed a filing or timetable."
+    }
   ],
   "catalysts": [
-    {"name": "AI connectivity becomes a budget line", "state": "positive", "weight": "High", "why": "AI Gateway 2.0 gives Kong a production-supported control layer for model, agent, and MCP traffic; adoption and monetization remain to be proven."},
-    {"name": "Konnect platform expansion", "state": "positive", "weight": "High", "why": "The standalone AI Gateway adds dedicated runtime, control-plane, cost, identity, and analytics capabilities that can broaden wallet share."},
-    {"name": "OpenMeter integration", "state": "positive", "weight": "Medium", "why": "Native usage metering and billing could add a monetization layer for API and AI workloads."},
-    {"name": "Enterprise validation", "state": "positive", "weight": "High", "why": "Kong reported 72% year-over-year EMEA customer growth and named ING, First Abu Dhabi Bank, Mistral, and PolyAI as new customers."},
-    {"name": "IPO-experienced finance leadership", "state": "positive", "weight": "Medium", "why": "New CFO Bruce Felt has taken three software companies public, strengthening preparation capability without confirming that Kong will file."},
-    {"name": "Current ARR and growth", "state": "watch", "weight": "Very high", "why": "The $300M ARR figure is a user-supplied estimate; the IPO model is highly sensitive to confirmation and growth durability."},
-    {"name": "Public-company financials", "state": "watch", "weight": "Very high", "why": "Retention, gross margin, free cash flow, customer concentration, and stock compensation will determine the quality of the multiple."},
-    {"name": "IPO filing and timing", "state": "watch", "weight": "Very high", "why": "There is no confirmed public filing. An S-1 would replace estimates with audited evidence."},
-    {"name": "IPO market and rates", "state": "risk", "weight": "Very high", "why": "The U.S. 10-year Treasury yield crossed 5% on September 14, 2026. Persistently high long-term rates would reduce the multiple investors can justify for a private software issuer even if Kong executes operationally."},
-    {"name": "Competitive pressure", "state": "risk", "weight": "High", "why": "Hyperscalers, Apigee, MuleSoft, Cloudflare, and open-source alternatives can pressure growth and pricing."}
+    {
+      "name": "AI connectivity becomes a budget line",
+      "state": "positive",
+      "weight": "High",
+      "why": "AI Gateway 2.0 gives Kong a production-supported control layer for model, agent, and MCP traffic; adoption and monetization remain to be proven."
+    },
+    {
+      "name": "Konnect platform expansion",
+      "state": "positive",
+      "weight": "High",
+      "why": "The standalone AI Gateway adds dedicated runtime, control-plane, cost, identity, and analytics capabilities that can broaden wallet share."
+    },
+    {
+      "name": "OpenMeter integration",
+      "state": "positive",
+      "weight": "Medium",
+      "why": "Native usage metering and billing could add a monetization layer for API and AI workloads."
+    },
+    {
+      "name": "Enterprise validation",
+      "state": "positive",
+      "weight": "High",
+      "why": "Kong reported 72% year-over-year EMEA customer growth and named ING, First Abu Dhabi Bank, Mistral, and PolyAI as new customers."
+    },
+    {
+      "name": "IPO-experienced finance leadership",
+      "state": "positive",
+      "weight": "Medium",
+      "why": "New CFO Bruce Felt has taken three software companies public, strengthening preparation capability without confirming that Kong will file."
+    },
+    {
+      "name": "Current ARR and growth",
+      "state": "watch",
+      "weight": "Very high",
+      "why": "The $300M ARR figure is a user-supplied estimate; the IPO model is highly sensitive to confirmation and growth durability."
+    },
+    {
+      "name": "Public-company financials",
+      "state": "watch",
+      "weight": "Very high",
+      "why": "Retention, gross margin, free cash flow, customer concentration, and stock compensation will determine the quality of the multiple."
+    },
+    {
+      "name": "IPO filing and timing",
+      "state": "watch",
+      "weight": "Very high",
+      "why": "There is no confirmed public filing. An S-1 would replace estimates with audited evidence."
+    },
+    {
+      "name": "IPO market and rates",
+      "state": "risk",
+      "weight": "Very high",
+      "why": "The U.S. 10-year Treasury yield crossed 5% on September 14, 2026. Persistently high long-term rates would reduce the multiple investors can justify for a private software issuer even if Kong executes operationally."
+    },
+    {
+      "name": "Competitive pressure",
+      "state": "risk",
+      "weight": "High",
+      "why": "Hyperscalers, Apigee, MuleSoft, Cloudflare, and open-source alternatives can pressure growth and pricing."
+    }
   ],
   "milestones": [
-    {"date": "2023-12", "title": "ARR passes $100M", "kind": "confirmed", "detail": "Kong publicly announced that annual recurring revenue had exceeded $100 million."},
-    {"date": "2024-11", "title": "$175M Series E at $2B", "kind": "confirmed", "detail": "The up-round combined primary and secondary financing and increased the prior valuation by about 45%."},
-    {"date": "2025-09", "title": "OpenMeter acquired", "kind": "confirmed", "detail": "Kong added usage-based metering and billing for API and AI workloads."},
-    {"date": "2025-10", "title": "Sixth Gartner Leader year", "kind": "confirmed", "detail": "Kong said Gartner again named it a Leader in API Management and placed it furthest for vision."},
-    {"date": "2026-01", "title": "AI Connectivity strategy", "kind": "confirmed", "detail": "Kong emphasized agentic AI, large-enterprise adoption, organizational expansion, and deeper regional investment."},
-    {"date": "2026-02", "title": "Context Mesh and MCP Registry", "kind": "confirmed", "detail": "Kong added discovery and governed deployment of enterprise APIs as agent-ready tools, broadening the platform beyond traffic management."},
-    {"date": "2026-02", "title": "IPO-experienced CFO appointed", "kind": "confirmed", "detail": "Bruce Felt joined as CFO after taking FullTime Software, SuccessFactors, and Domo public in prior CFO roles."},
-    {"date": "2026-03", "title": "Preferred shares marked near $10.24", "kind": "estimate", "detail": "A StepStone fund reported a $12.412M fair value for 1,211,663 Kong preferred shares as of March 31, implying about $10.24 per preferred share; this is a Level 3 fund mark, not a liquid common-share price."},
-    {"date": "2026-04", "title": "Agent Gateway reaches GA", "kind": "confirmed", "detail": "Kong added production-ready governance for agent-to-agent traffic alongside LLM and MCP traffic."},
-    {"date": "2026-07", "title": "EMEA customer base grows 72%", "kind": "confirmed", "detail": "Kong reported 72% year-over-year regional customer growth, 71% headcount growth over two years, new Paris and Milan offices, and named customer additions."},
-    {"date": "2026-07", "title": "Harness expands into Kong AI Gateway", "kind": "confirmed", "detail": "The companies made AI asset discovery and behavioral protection generally available to joint customers."},
-    {"date": "2026-08", "title": "NVIDIA intelligent routing integration", "kind": "confirmed", "detail": "Kong AI Gateway added native routing with NVIDIA NeMo Switchyard while retaining gateway governance, credentials, metering, and audit controls."},
-    {"date": "2026-09", "title": "AI Gateway 2.0 reaches GA", "kind": "confirmed", "detail": "Kong made its standalone AI Gateway production-supported, adding MCP server bundling, identity-aware controls, modality-aware cost governance, expanded model support, and AWS IAM authentication."},
-    {"date": "2026-09", "title": "$10 NPM Price estimate", "kind": "estimate", "detail": "Nasdaq Private Market estimated Kong shares at $10 as of September 2 using its proprietary multi-input pricing methodology; this is a benchmark, not a disclosed executed trade or IPO price."},
-    {"date": "2026-09", "title": "IPO still unconfirmed", "kind": "watch", "detail": "No public IPO filing or company-endorsed timetable was found in the current evidence set."}
+    {
+      "date": "2023-12",
+      "title": "ARR passes $100M",
+      "kind": "confirmed",
+      "detail": "Kong publicly announced that annual recurring revenue had exceeded $100 million."
+    },
+    {
+      "date": "2024-11",
+      "title": "$175M Series E at $2B",
+      "kind": "confirmed",
+      "detail": "The up-round combined primary and secondary financing and increased the prior valuation by about 45%."
+    },
+    {
+      "date": "2025-09",
+      "title": "OpenMeter acquired",
+      "kind": "confirmed",
+      "detail": "Kong added usage-based metering and billing for API and AI workloads."
+    },
+    {
+      "date": "2025-10",
+      "title": "Sixth Gartner Leader year",
+      "kind": "confirmed",
+      "detail": "Kong said Gartner again named it a Leader in API Management and placed it furthest for vision."
+    },
+    {
+      "date": "2026-01",
+      "title": "AI Connectivity strategy",
+      "kind": "confirmed",
+      "detail": "Kong emphasized agentic AI, large-enterprise adoption, organizational expansion, and deeper regional investment."
+    },
+    {
+      "date": "2026-02",
+      "title": "Context Mesh and MCP Registry",
+      "kind": "confirmed",
+      "detail": "Kong added discovery and governed deployment of enterprise APIs as agent-ready tools, broadening the platform beyond traffic management."
+    },
+    {
+      "date": "2026-02",
+      "title": "IPO-experienced CFO appointed",
+      "kind": "confirmed",
+      "detail": "Bruce Felt joined as CFO after taking FullTime Software, SuccessFactors, and Domo public in prior CFO roles."
+    },
+    {
+      "date": "2026-03",
+      "title": "Preferred shares marked near $10.24",
+      "kind": "estimate",
+      "detail": "A StepStone fund reported a $12.412M fair value for 1,211,663 Kong preferred shares as of March 31, implying about $10.24 per preferred share; this is a Level 3 fund mark, not a liquid common-share price."
+    },
+    {
+      "date": "2026-04",
+      "title": "Agent Gateway reaches GA",
+      "kind": "confirmed",
+      "detail": "Kong added production-ready governance for agent-to-agent traffic alongside LLM and MCP traffic."
+    },
+    {
+      "date": "2026-07",
+      "title": "EMEA customer base grows 72%",
+      "kind": "confirmed",
+      "detail": "Kong reported 72% year-over-year regional customer growth, 71% headcount growth over two years, new Paris and Milan offices, and named customer additions."
+    },
+    {
+      "date": "2026-07",
+      "title": "Harness expands into Kong AI Gateway",
+      "kind": "confirmed",
+      "detail": "The companies made AI asset discovery and behavioral protection generally available to joint customers."
+    },
+    {
+      "date": "2026-08",
+      "title": "NVIDIA intelligent routing integration",
+      "kind": "confirmed",
+      "detail": "Kong AI Gateway added native routing with NVIDIA NeMo Switchyard while retaining gateway governance, credentials, metering, and audit controls."
+    },
+    {
+      "date": "2026-09",
+      "title": "AI Gateway 2.0 reaches GA",
+      "kind": "confirmed",
+      "detail": "Kong made its standalone AI Gateway production-supported, adding MCP server bundling, identity-aware controls, modality-aware cost governance, expanded model support, and AWS IAM authentication."
+    },
+    {
+      "date": "2026-09",
+      "title": "$10 NPM Price estimate",
+      "kind": "estimate",
+      "detail": "Nasdaq Private Market estimated Kong shares at $10 as of September 2 using its proprietary multi-input pricing methodology; this is a benchmark, not a disclosed executed trade or IPO price."
+    },
+    {
+      "date": "2026-09",
+      "title": "IPO still unconfirmed",
+      "kind": "watch",
+      "detail": "No public IPO filing or company-endorsed timetable was found in the current evidence set."
+    }
   ],
   "upgradeRules": [
-    {"signal": "Public filing", "effect": "+8 to +15 thesis points", "detail": "Audited growth, margins, retention, share count, and offering terms replace the largest unknowns."},
-    {"signal": "ARR ≥ $300M with ≥30% growth", "effect": "+4 to +8 points", "detail": "Confirms both scale and durability; multiple still depends on margins and retention."},
-    {"signal": "Rule of 40 ≥ 40", "effect": "+4 to +7 points", "detail": "Supports a premium software multiple when growth and free-cash-flow margin are both credible."},
-    {"signal": "Secondary price > $15 with real volume", "effect": "+2 to +5 points", "detail": "A useful demand signal, but less authoritative than an underwritten IPO or audited filing."},
-    {"signal": "Growth <20% or weak retention", "effect": "−6 to −12 points", "detail": "Would challenge the premium-growth valuation case."},
-    {"signal": "FD shares >225M", "effect": "Lower price per share", "detail": "The enterprise may still be valuable, but more shares divide that value more ways."},
-    {"signal": "IPO window closes / valuation compression", "effect": "−3 to −8 points", "detail": "Higher rates or weaker software demand can reduce the multiple even if Kong executes."}
+    {
+      "signal": "Public filing",
+      "effect": "+8 to +15 thesis points",
+      "detail": "Audited growth, margins, retention, share count, and offering terms replace the largest unknowns."
+    },
+    {
+      "signal": "ARR ≥ $300M with ≥30% growth",
+      "effect": "+4 to +8 points",
+      "detail": "Confirms both scale and durability; multiple still depends on margins and retention."
+    },
+    {
+      "signal": "Rule of 40 ≥ 40",
+      "effect": "+4 to +7 points",
+      "detail": "Supports a premium software multiple when growth and free-cash-flow margin are both credible."
+    },
+    {
+      "signal": "Secondary price > $15 with real volume",
+      "effect": "+2 to +5 points",
+      "detail": "A useful demand signal, but less authoritative than an underwritten IPO or audited filing."
+    },
+    {
+      "signal": "Growth <20% or weak retention",
+      "effect": "−6 to −12 points",
+      "detail": "Would challenge the premium-growth valuation case."
+    },
+    {
+      "signal": "FD shares >225M",
+      "effect": "Lower price per share",
+      "detail": "The enterprise may still be valuable, but more shares divide that value more ways."
+    },
+    {
+      "signal": "IPO window closes / valuation compression",
+      "effect": "−3 to −8 points",
+      "detail": "Higher rates or weaker software demand can reduce the multiple even if Kong executes."
+    }
   ],
   "knownUnknowns": [
-    "Confirmed current ARR and year-over-year growth",
+    "Absolute current ARR and current growth; historical growth is now management-reported in a UK subsidiary filing",
     "Gross margin and free-cash-flow margin",
-    "Net revenue retention and enterprise expansion rate",
+    "Current retention and expansion rate; historical NDR is now management-reported in a UK subsidiary filing",
     "Fully diluted share count and option overhang",
     "Net cash at pricing and primary capital raised",
     "Customer concentration and contract duration",
@@ -121,30 +332,163 @@
     "Comparable-company set and market multiple at pricing"
   ],
   "sources": [
-    {"label": "Kong — Series E financing", "date": "2024-11-19", "url": "https://konghq.com/blog/news/kongs-series-e-funding", "supports": "$175M financing; $2B valuation"},
-    {"label": "Kong — ARR announcement", "date": "2023-12-13", "url": "https://www.prnewswire.com/news-releases/kong-tops-100-million-in-annual-recurring-revenue-302013801.html", "supports": "ARR exceeded $100M"},
-    {"label": "Kong — OpenMeter acquisition", "date": "2025-09-03", "url": "https://konghq.com/blog/news/kong-acquires-openmeter", "supports": "Usage metering and billing expansion"},
-    {"label": "Kong — 2025 Gartner result", "date": "2025-10-10", "url": "https://konghq.com/blog/news/gartner-magic-quadrant-lifecycle-api-management-leader", "supports": "Sixth consecutive Leader placement"},
-    {"label": "Kong Japan — 2026 strategy", "date": "2026-01-05", "url": "https://jp.konghq.com/news/2026_greetings_and_strategy_ai_connectivity", "supports": "AI connectivity and enterprise strategy"},
-    {"label": "Kong — Context Mesh", "date": "2026-02-10", "url": "https://konghq.com/company/press-room/press-release/kong-launches-context-mesh-to-connect-enterprise-data-to-ai-agents", "supports": "Agent-ready API discovery, transformation, deployment, and governance"},
-    {"label": "Kong — Bruce Felt appointed CFO", "date": "2026-02-19", "url": "https://konghq.com/company/press-room/press-release/kong-names-bruce-felt-as-chief-financial-officer", "supports": "Finance leadership and prior public-company experience"},
-    {"label": "SEC — StepStone private holdings", "date": "2026-03-31", "url": "https://www.sec.gov/Archives/edgar/data/1918642/000121390026066820/ea0293641-01_ncsr.htm", "supports": "Institutional Level 3 fair-value mark for Kong preferred shares"},
-    {"label": "Kong — Agent Gateway", "date": "2026-04-14", "url": "https://konghq.com/blog/product-releases/kong-agent-gateway", "supports": "Production-ready A2A governance and full AI data-path positioning"},
-    {"label": "Kong — EMEA expansion", "date": "2026-07-22", "url": "https://www.prnewswire.com/news-releases/kong-opens-new-offices-in-paris-and-milan-driven-by-emea-customer-growth-302831577.html", "supports": "72% regional customer growth, named customer wins, and headcount expansion"},
-    {"label": "Harness — expanded Kong partnership", "date": "2026-07-23", "url": "https://www.harness.io/press-and-news/harness-kong-expand-strategic-partnership", "supports": "Generally available AI discovery and protection integration"},
-    {"label": "Kong — NVIDIA NeMo Switchyard routing", "date": "2026-08-11", "url": "https://konghq.com/blog/engineering/llm-routing-kong-ai-gateway-nvidia-nemo-switchyard", "supports": "Native intelligent model routing with gateway governance"},
-    {"label": "Kong — AI Gateway 2.0 GA", "date": "2026-09-01", "url": "https://konghq.com/blog/product-releases/kong-ai-gateway-2-0-ga", "supports": "Production readiness, MCP governance, identity, cost controls, provider support, and AgentCore IAM"},
-    {"label": "Nasdaq Private Market — Kong company profile", "date": "2026-09-02", "url": "https://www.nasdaqprivatemarket.com/company/kong/", "supports": "$10 NPM Price estimate for Kong shares"},
-    {"label": "Nasdaq Private Market — NPM Price methodology", "date": "Accessed 2026-09-20", "url": "https://www.nasdaqprivatemarket.com/data-intelligence/", "supports": "Pricing methodology and distinction between an estimate and a disclosed executed trade"},
-    {"label": "Kong Docs — AI Gateway 2.0", "date": "Accessed 2026-09-03", "url": "https://developer.konghq.com/ai-gateway/get-started/", "supports": "AI Gateway 2.0 product model and minimum version"},
-    {"label": "Forge — Kong IPO profile", "date": "Accessed 2026-09-03", "url": "https://forgeglobal.com/kong_ipo/", "supports": "No company-confirmed IPO plan"},
-    {"label": "Reuters — U.S. 10-year yield crosses 5%", "date": "2026-09-14", "url": "https://www.reuters.com/business/us-10-year-yields-reach-5-highest-since-2023-2026-09-14/", "supports": "Higher discount-rate and software-valuation risk"}
+    {
+      "label": "Kong — Series E financing",
+      "date": "2024-11-19",
+      "url": "https://konghq.com/blog/news/kongs-series-e-funding",
+      "supports": "$175M financing; $2B valuation"
+    },
+    {
+      "label": "Kong — ARR announcement",
+      "date": "2023-12-13",
+      "url": "https://www.prnewswire.com/news-releases/kong-tops-100-million-in-annual-recurring-revenue-302013801.html",
+      "supports": "ARR exceeded $100M"
+    },
+    {
+      "label": "Kong — OpenMeter acquisition",
+      "date": "2025-09-03",
+      "url": "https://konghq.com/blog/news/kong-acquires-openmeter",
+      "supports": "Usage metering and billing expansion"
+    },
+    {
+      "label": "Kong — 2025 Gartner result",
+      "date": "2025-10-10",
+      "url": "https://konghq.com/blog/news/gartner-magic-quadrant-lifecycle-api-management-leader",
+      "supports": "Sixth consecutive Leader placement"
+    },
+    {
+      "label": "Kong Japan — 2026 strategy",
+      "date": "2026-01-05",
+      "url": "https://jp.konghq.com/news/2026_greetings_and_strategy_ai_connectivity",
+      "supports": "AI connectivity and enterprise strategy"
+    },
+    {
+      "label": "Kong — Context Mesh",
+      "date": "2026-02-10",
+      "url": "https://konghq.com/company/press-room/press-release/kong-launches-context-mesh-to-connect-enterprise-data-to-ai-agents",
+      "supports": "Agent-ready API discovery, transformation, deployment, and governance"
+    },
+    {
+      "label": "Kong — Bruce Felt appointed CFO",
+      "date": "2026-02-19",
+      "url": "https://konghq.com/company/press-room/press-release/kong-names-bruce-felt-as-chief-financial-officer",
+      "supports": "Finance leadership and prior public-company experience"
+    },
+    {
+      "label": "SEC — StepStone private holdings",
+      "date": "2026-03-31",
+      "url": "https://www.sec.gov/Archives/edgar/data/1918642/000121390026066820/ea0293641-01_ncsr.htm",
+      "supports": "Institutional Level 3 fair-value mark for Kong preferred shares"
+    },
+    {
+      "label": "Kong — Agent Gateway",
+      "date": "2026-04-14",
+      "url": "https://konghq.com/blog/product-releases/kong-agent-gateway",
+      "supports": "Production-ready A2A governance and full AI data-path positioning"
+    },
+    {
+      "label": "Kong — EMEA expansion",
+      "date": "2026-07-22",
+      "url": "https://www.prnewswire.com/news-releases/kong-opens-new-offices-in-paris-and-milan-driven-by-emea-customer-growth-302831577.html",
+      "supports": "72% regional customer growth, named customer wins, and headcount expansion"
+    },
+    {
+      "label": "Harness — expanded Kong partnership",
+      "date": "2026-07-23",
+      "url": "https://www.harness.io/press-and-news/harness-kong-expand-strategic-partnership",
+      "supports": "Generally available AI discovery and protection integration"
+    },
+    {
+      "label": "Kong — NVIDIA NeMo Switchyard routing",
+      "date": "2026-08-11",
+      "url": "https://konghq.com/blog/engineering/llm-routing-kong-ai-gateway-nvidia-nemo-switchyard",
+      "supports": "Native intelligent model routing with gateway governance"
+    },
+    {
+      "label": "Kong — AI Gateway 2.0 GA",
+      "date": "2026-09-01",
+      "url": "https://konghq.com/blog/product-releases/kong-ai-gateway-2-0-ga",
+      "supports": "Production readiness, MCP governance, identity, cost controls, provider support, and AgentCore IAM"
+    },
+    {
+      "label": "Nasdaq Private Market — Kong company profile",
+      "date": "2026-09-02",
+      "url": "https://www.nasdaqprivatemarket.com/company/kong/",
+      "supports": "$10 NPM Price estimate for Kong shares"
+    },
+    {
+      "label": "Nasdaq Private Market — NPM Price methodology",
+      "date": "Accessed 2026-09-20",
+      "url": "https://www.nasdaqprivatemarket.com/data-intelligence/",
+      "supports": "Pricing methodology and distinction between an estimate and a disclosed executed trade"
+    },
+    {
+      "label": "Kong Docs — AI Gateway 2.0",
+      "date": "Accessed 2026-09-03",
+      "url": "https://developer.konghq.com/ai-gateway/get-started/",
+      "supports": "AI Gateway 2.0 product model and minimum version"
+    },
+    {
+      "label": "Forge — Kong IPO profile",
+      "date": "Accessed 2026-09-03",
+      "url": "https://forgeglobal.com/kong_ipo/",
+      "supports": "No company-confirmed IPO plan"
+    },
+    {
+      "label": "Reuters — U.S. 10-year yield crosses 5%",
+      "date": "2026-09-14",
+      "url": "https://www.reuters.com/business/us-10-year-yields-reach-5-highest-since-2023-2026-09-14/",
+      "supports": "Higher discount-rate and software-valuation risk"
+    },
+    {
+      "label": "Companies House: Kong UK FY ended January 2026; filed November 1; strategic report pp2-3",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/12132924/filing-history/MzU1Mzg3NDUxMGFkaXF6a2N4/document?format=pdf&download=0",
+      "date": "2026-11-01",
+      "supports": "Dated parent metrics; not audited current consolidated group KPIs"
+    }
   ],
   "changeLog": [
-    {"date": "2026-09-20", "verdict": "MAINTAIN", "score": 69, "headline": "Independent $10 benchmark corroborates existing secondary reference", "detail": "Replaced the model's user-reported secondary label with Nasdaq Private Market's dated $10 NPM Price estimate. The price input, thesis score, and valuation outputs are unchanged because the estimate corroborates rather than raises the existing reference and does not disclose a Kong-specific executed trade, share class, volume, liquidation terms, or fully diluted capitalization."},
-    {"date": "2026-09-14", "verdict": "DOWNGRADE", "score": 69, "headline": "Five-percent Treasury yield raises IPO valuation risk", "detail": "Reduced Market & AI tailwind by three points, the lowest score change in the recorded valuation-compression rule, after the U.S. 10-year Treasury yield crossed 5% for the first time since October 2023. Kong's operating evidence and the model's ARR, multiple, cash, dilution, and IPO-discount defaults remain unchanged because no Kong filing or new financial disclosure surfaced and one market session does not establish the multiple available at pricing."},
-    {"date": "2026-09-03", "verdict": "UPGRADE", "score": 72, "headline": "Commercial traction and IPO readiness surface", "detail": "Raised Growth & scale by two points for 72% year-over-year EMEA customer growth and named wins, Product & position by one for the broader governed AI data path and ecosystem integrations, and IPO readiness by one for an experienced public-company CFO. Valuation inputs remain unchanged because company-wide ARR, margins, cash, dilution, and offering terms are still undisclosed."},
-    {"date": "2026-09-03", "verdict": "UPGRADE", "score": 68, "headline": "AI Gateway 2.0 reaches GA", "detail": "Raised Product & position by one point because Kong moved its standalone AI Gateway from beta to production-supported GA. ARR, multiple, cash, dilution, and IPO-discount assumptions are unchanged because the release disclosed no adoption, bookings, revenue, or margin evidence."},
-    {"date": "2026-09-03", "verdict": "MAINTAIN", "score": 67, "headline": "Initial thesis baseline", "detail": "Constructive on scale, AI/API demand, and platform breadth; confidence capped by private-company disclosure and no confirmed filing."}
+    {
+      "date": "2026-11-18",
+      "verdict": "MAINTAIN",
+      "score": 69,
+      "headline": "Dated parent metrics improve disclosure without a valuation re-rating",
+      "detail": "Evidence item 2026-11-01-uk-accounts-parent-metrics records the November 1 UK filing. Historical growth/retention and losses balance; score, scorecard points and all model defaults stay unchanged. Recency, definitions and independent group assurance remain limitations."
+    },
+    {
+      "date": "2026-09-20",
+      "verdict": "MAINTAIN",
+      "score": 69,
+      "headline": "Independent $10 benchmark corroborates existing secondary reference",
+      "detail": "Replaced the model's user-reported secondary label with Nasdaq Private Market's dated $10 NPM Price estimate. The price input, thesis score, and valuation outputs are unchanged because the estimate corroborates rather than raises the existing reference and does not disclose a Kong-specific executed trade, share class, volume, liquidation terms, or fully diluted capitalization."
+    },
+    {
+      "date": "2026-09-14",
+      "verdict": "DOWNGRADE",
+      "score": 69,
+      "headline": "Five-percent Treasury yield raises IPO valuation risk",
+      "detail": "Reduced Market & AI tailwind by three points, the lowest score change in the recorded valuation-compression rule, after the U.S. 10-year Treasury yield crossed 5% for the first time since October 2023. Kong's operating evidence and the model's ARR, multiple, cash, dilution, and IPO-discount defaults remain unchanged because no Kong filing or new financial disclosure surfaced and one market session does not establish the multiple available at pricing."
+    },
+    {
+      "date": "2026-09-03",
+      "verdict": "UPGRADE",
+      "score": 72,
+      "headline": "Commercial traction and IPO readiness surface",
+      "detail": "Raised Growth & scale by two points for 72% year-over-year EMEA customer growth and named wins, Product & position by one for the broader governed AI data path and ecosystem integrations, and IPO readiness by one for an experienced public-company CFO. Valuation inputs remain unchanged because company-wide ARR, margins, cash, dilution, and offering terms are still undisclosed."
+    },
+    {
+      "date": "2026-09-03",
+      "verdict": "UPGRADE",
+      "score": 68,
+      "headline": "AI Gateway 2.0 reaches GA",
+      "detail": "Raised Product & position by one point because Kong moved its standalone AI Gateway from beta to production-supported GA. ARR, multiple, cash, dilution, and IPO-discount assumptions are unchanged because the release disclosed no adoption, bookings, revenue, or margin evidence."
+    },
+    {
+      "date": "2026-09-03",
+      "verdict": "MAINTAIN",
+      "score": 67,
+      "headline": "Initial thesis baseline",
+      "detail": "Constructive on scale, AI/API demand, and platform breadth; confidence capped by private-company disclosure and no confirmed filing."
+    }
   ]
 }
