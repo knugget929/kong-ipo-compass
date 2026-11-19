@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-11-19-volcano-agent-cloud-launch",
+  "publishedAt": "2026-11-19",
+  "title": "Kong launches Volcano, a cloud for AI agents and apps",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "summary": "Volcano lets Kong sell infrastructure for running AI agents and web apps. Self-service pricing creates a path to usage revenue, and Konnect compatibility gives Kong a way to sell enterprise governance alongside hosting. Thesis decision is MAINTAIN at 69/100 pending evidence of paid adoption, revenue contribution and margins.",
+  "confirmed": [
+    "Kong unveiled Volcano on September 30, 2026. The Volcano team introduced its sandbox on October 19, and Kong co-founder Marco Palladino published the cloud launch post on November 19. Volcano now offers self-service signup.",
+    "Volcano lists resumable workflows, isolated sandboxes, branchable PostgreSQL with vector support, Next.js hosting, authentication, storage and real-time services. Volcano describes LavaFlow as a tool that detects and fixes bugs in hosted apps and agents.",
+    "The published pricing includes a free Hobby plan, metered Superagent starting at $17 per month billed annually, and custom Enterprise pricing. Kong says Volcano can run on its own or alongside Konnect for enterprise governance."
+  ],
+  "uncertain": [
+    "Volcano Services, LLC is named in the service terms. The launch materials reviewed do not quantify paid customer adoption, revenue, margins or how Volcano contributes to Kong’s consolidated results.",
+    "LavaFlow’s real-world reliability and Volcano’s competitive traction need customer evidence. The sources reviewed provide no new basis for changing Kong’s ARR or valuation inputs or projecting an IPO date."
+  ],
+  "sources": [
+    {
+      "label": "Volcano product blog — November 19 launch and October 19 sandbox posts",
+      "url": "https://docs.volcano.dev/blog"
+    },
+    {
+      "label": "Kong — September 30 Volcano announcement",
+      "url": "https://konghq.com/company/press-room/press-release/kong-announces-volcano-agentic-infrastructure-for-the-ai-era"
+    },
+    {
+      "label": "Volcano — product capabilities and public signup",
+      "url": "https://volcano.dev/"
+    },
+    {
+      "label": "Volcano — pricing and usage",
+      "url": "https://volcano.dev/pricing"
+    },
+    {
+      "label": "Kong — Volcano and Konnect at the API + AI Summit",
+      "url": "https://www.konghq.com/blog/news/summit-2026-recap"
+    },
+    {
+      "label": "Volcano — service entity in the data processing addendum",
+      "url": "https://volcano.dev/legal/dpa"
+    }
+  ]
+}
