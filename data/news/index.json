@@ -1,8 +1,17 @@
 {
   "schemaVersion": 1,
-  "revision": 30,
+  "revision": 31,
   "historyLimit": 30,
   "items": [
+    {
+      "id": "2026-11-19-volcano-agent-cloud-launch",
+      "publishedAt": "2026-11-19",
+      "title": "Kong launches Volcano, a cloud for AI agents and apps",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0
+    },
     {
       "id": "2026-11-10-ctc-aws-marketplace-partnership",
       "publishedAt": "2026-11-10",
