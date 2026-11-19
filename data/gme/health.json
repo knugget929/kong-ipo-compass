@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-18T19:30:06Z",
+  "lastAttemptAt": "2026-11-19T19:27:59Z",
   "lastSuccessfulSnapshotAt": "2026-11-11T19:56:00Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "November18 evening recheck: Nasdaq lacks a complete timestamped quote/session window; Cboe options URL was inaccessible and no extraction workaround was used. GameStop IR returned a dynamic shell; SEC submissions was inaccessible. FINRA calendar and secondary transcriptions still expose only the October30 short report, stale under the15-day gate. No defensible current timestamped borrow feed was verified. Preserve prior observations and all success times; no completed snapshot or no-news conclusion is claimed.",
+  "summary": "November19 evening: Nasdaq reports data unavailable and no complete session window; Cboe returns a quote-dashboard shell without GME options observations. SEC submissions is inaccessible; GameStop IR exposes no readable release list. FINRA calendar and ChartExchange support only the October30 delayed short report, now stale. No defensible current timestamped borrow feed verified. Preserve all observations and provider success timestamps; incomplete research cannot support a no-news or new-snapshot claim.",
   "providers": [
     {
       "key": "market",
