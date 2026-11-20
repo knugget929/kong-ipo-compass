@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 6,
-  "updatedAt": "2026-11-18T19:16:06Z",
+  "revision": 7,
+  "updatedAt": "2026-11-20T21:45:53.458Z",
   "asOf": "2026-11-18",
   "company": "Kong Inc.",
   "productName": "Kong IPO Compass",
@@ -325,7 +325,7 @@
     "Absolute current ARR and current growth; historical growth is now management-reported in a UK subsidiary filing",
     "Gross margin and free-cash-flow margin",
     "Current retention and expansion rate; historical NDR is now management-reported in a UK subsidiary filing",
-    "Fully diluted share count and option overhang",
+    "Fully diluted share count and option overhang remain unverified in public sources. Shares reserved for future equity awards are not the same as shares already issued. The share counts in the calculator are scenario inputs.",
     "Net cash at pricing and primary capital raised",
     "Customer concentration and contract duration",
     "IPO timing, exchange, underwriters, float, and lock-up",
