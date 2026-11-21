@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-20T19:17:43Z",
+  "lastAttemptAt": "2026-11-21T19:10:11.513Z",
   "lastSuccessfulSnapshotAt": "2026-11-11T19:56:00Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "November20 evening: Nasdaq has no usable market data/session window; Cboe supplies no options observations and its quoted terms prohibit automated extraction. SEC submissions is inaccessible and GameStop IR has no readable releases. FINRA calendar is accessible but ChartExchange still shows only the stale October30 short-interest report; no defensible timestamped borrow feed verified. Preserve the last valid snapshot and all provider success timestamps. Incomplete research cannot establish no new evidence.",
+  "summary": "November 21 evening: Nasdaq historical page did not expose a usable session window; Cboe showed no usable dated options table. SEC submissions were inaccessible and the entity/IR shells did not verify a complete current filing or release set. The October 30 short-interest observation is stale; FINRA schedules November 13 settlement data for November 24 publication. A timestamped single-broker borrow display is indicative only and does not verify market-wide borrow stress or utilization. Preserve the last valid snapshot and provider success times; incomplete retrieval does not establish no new evidence.",
   "providers": [
     {
       "key": "market",
