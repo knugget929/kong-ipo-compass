@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-21T19:10:11.513Z",
-  "lastSuccessfulSnapshotAt": "2026-11-11T19:56:00Z",
-  "runKind": "ROUTINE_UPDATE",
+  "lastAttemptAt": "2026-11-22T19:48:01.935Z",
+  "lastSuccessfulSnapshotAt": "2026-11-22T19:48:01.935Z",
+  "runKind": "STATE_TRANSITION",
   "status": "DEGRADED",
-  "summary": "November 21 evening: Nasdaq historical page did not expose a usable session window; Cboe showed no usable dated options table. SEC submissions were inaccessible and the entity/IR shells did not verify a complete current filing or release set. The October 30 short-interest observation is stale; FINRA schedules November 13 settlement data for November 24 publication. A timestamped single-broker borrow display is indicative only and does not verify market-wide borrow stress or utilization. Preserve the last valid snapshot and provider success times; incomplete retrieval does not establish no new evidence.",
+  "summary": "November 22 evening: verified November 20 close and a labeled rounded secondary market window after Nasdaq historical quotes did not render. Cboe did not expose a usable timestamped chain; SEC submissions JSON was inaccessible though the issuer index rendered. IR newsroom rendered but did not add a newer verified effective company event; prior company evidence was preserved. October 30 short interest is stale; FINRA schedules November 13 settlement publication for November 24. No verifiable market-wide borrow feed. Only the market observation was refreshed.",
   "providers": [
     {
       "key": "market",
-      "status": "STALE",
-      "lastSuccessAt": "2026-09-22T21:23:19Z"
+      "status": "OK",
+      "lastSuccessAt": "2026-11-22T19:48:01.935Z"
     },
     {
       "key": "options",

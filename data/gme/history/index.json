@@ -1,7 +1,17 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-11T19:56:00Z",
+  "updatedAt": "2026-11-22T19:48:01.935Z",
   "entries": [
+    {
+      "date": "2026-11-22",
+      "state": "ATTENTION",
+      "previousState": "DORMANT",
+      "transitionKind": "STATE_TRANSITION",
+      "thesisDirection": "MATERIALLY_UNCHANGED",
+      "title": "November 20 close: above-normal volume, no squeeze confirmation",
+      "snapshot": "2026-11-22.json",
+      "importantEventIds": []
+    },
     {
       "date": "2026-11-11",
       "state": "DORMANT",
