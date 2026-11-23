@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-22T19:48:01.935Z",
+  "lastAttemptAt": "2026-11-23T19:21:24.294Z",
   "lastSuccessfulSnapshotAt": "2026-11-22T19:48:01.935Z",
-  "runKind": "STATE_TRANSITION",
+  "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "November 22 evening: verified November 20 close and a labeled rounded secondary market window after Nasdaq historical quotes did not render. Cboe did not expose a usable timestamped chain; SEC submissions JSON was inaccessible though the issuer index rendered. IR newsroom rendered but did not add a newer verified effective company event; prior company evidence was preserved. October 30 short interest is stale; FINRA schedules November 13 settlement publication for November 24. No verifiable market-wide borrow feed. Only the market observation was refreshed.",
+  "summary": "November 23 evening: Nasdaq did not yield a completed November 23 session; timestamped secondary quotes and volume were intraday, so the November 20 close and session window were not replaced. Cboe rendered no current chain suitable for the options metrics; an indexed excerpt was dated November 20. EDGAR submissions and a complete dated IR release list were not retrievable. October 30 short interest remains stale; November 13 settlement is scheduled for November 24 dissemination. A third-party borrow quote lacked verifiable availability and coverage. No new evidence snapshot was recorded.",
   "providers": [
     {
       "key": "market",
-      "status": "OK",
+      "status": "STALE",
       "lastSuccessAt": "2026-11-22T19:48:01.935Z"
     },
     {
