@@ -1,27 +1,31 @@
 {
   "schemaVersion": 1,
-  "revision": 12,
+  "revision": 13,
   "symbol": "GME",
-  "observedAt": "2026-11-22T19:48:01.935Z",
-  "snapshotDate": "2026-11-22",
+  "observedAt": "2026-11-24T20:04:09.019Z",
+  "snapshotDate": "2026-11-24",
   "state": {
-    "key": "ATTENTION",
-    "level": 1,
-    "label": "Attention",
+    "key": "DORMANT",
+    "level": 0,
+    "label": "Dormant",
+    "gates": [
+      "no material demand anomaly",
+      "no independently confirmed positioning stress"
+    ],
     "confidence": {
       "key": "MEDIUM",
       "label": "Medium",
       "reason": "Coverage is broad, but at least one structural signal is delayed or stale."
     },
-    "previous": "DORMANT",
+    "previous": "ATTENTION",
     "transitionKind": "STATE_TRANSITION",
-    "summary": "GME closed at $26.66 on November 20, down 1.00%, on roughly 9.67M shares. Volume outranked 95% of the prior 20 sessions; price acceleration, current borrow and dealer feedback did not confirm pressure. The checked-in gates produce Attention with medium confidence."
+    "summary": "The November 23 close was $27.30 (+2.40%) on 8.17M shares. Volume outranked 75% of the prior 20 sessions and absolute return outranked 74% of their return observations; neither crossed its abnormal-activity gate. The checked-in gates produce Dormant with medium confidence; no buying mechanism is established."
   },
   "thesisDirection": "MATERIALLY_UNCHANGED",
-  "interpretation": "The latest verified market session adds abnormal turnover but not price acceleration or direct covering. The October 30 short-interest observation is delayed and stale at this refresh; options, borrow and a completeness-checked SEC filing feed remain limited. The existing contingent/authorized supply countercase remains relevant; the update establishes no new issuance or squeeze.",
+  "interpretation": "Market activity cooled below the abnormal thresholds despite a higher completed close. The current evidence does not establish forced covering, borrow stress or dealer feedback.",
   "engineInputs": {
     "attention": {
-      "abnormal": true
+      "abnormal": false
     },
     "short": {
       "positioningElevated": false,
@@ -39,7 +43,7 @@
       "feedbackDemandObserved": null
     },
     "market": {
-      "abnormalVolume": true,
+      "abnormalVolume": false,
       "priceAcceleration": false,
       "severeDislocation": null
     },
@@ -52,123 +56,123 @@
   },
   "market": {
     "status": "OBSERVED",
-    "condition": "ELEVATED",
-    "last": 26.66,
-    "dayChangePct": -1,
-    "dayVolume": 9670000,
-    "referenceAverageVolume": 6837500,
-    "relativeVolume": 1.4142595978062158,
-    "monthToDateChangePct": 10.03,
-    "sessionHigh": 27.53,
+    "condition": "NORMAL",
+    "last": 27.3,
+    "dayChangePct": 2.401,
+    "dayVolume": 8167374,
+    "referenceAverageVolume": 6902633.35,
+    "relativeVolume": 1.1832258191723308,
+    "monthToDateChangePct": 12.67,
+    "sessionHigh": 27.36,
     "sessionLow": 26.3,
-    "volumePercentile20": 0.95,
-    "absoluteReturnPercentile20": 0.5263157894736842,
+    "volumePercentile20": 0.75,
+    "absoluteReturnPercentile20": 0.7368421052631579,
     "referenceWindowSessions": 20,
     "referenceSessions": [
       {
+        "date": "2026-11-20",
+        "close": 26.66,
+        "volume": 9674346
+      },
+      {
         "date": "2026-11-19",
         "close": 26.93,
-        "volume": 18270000
+        "volume": 18265160
       },
       {
         "date": "2026-11-18",
         "close": 26.53,
-        "volume": 7720000
+        "volume": 7717855
       },
       {
         "date": "2026-11-17",
         "close": 25.36,
-        "volume": 4730000
+        "volume": 4727002
       },
       {
         "date": "2026-11-16",
         "close": 25.6,
-        "volume": 4660000
+        "volume": 4663043
       },
       {
         "date": "2026-11-13",
         "close": 25.85,
-        "volume": 9120000
+        "volume": 9118957
       },
       {
         "date": "2026-11-12",
         "close": 25.62,
-        "volume": 4270000
+        "volume": 4274178
       },
       {
         "date": "2026-11-11",
         "close": 25.55,
-        "volume": 3970000
+        "volume": 3965146
       },
       {
         "date": "2026-11-10",
         "close": 25.43,
-        "volume": 4600000
+        "volume": 4599141
       },
       {
         "date": "2026-11-09",
         "close": 25.59,
-        "volume": 7840000
+        "volume": 7843916
       },
       {
         "date": "2026-11-06",
         "close": 25.12,
-        "volume": 5560000
+        "volume": 5563554
       },
       {
         "date": "2026-11-05",
         "close": 24.17,
-        "volume": 7170000
+        "volume": 7169024
       },
       {
         "date": "2026-11-04",
         "close": 25.14,
-        "volume": 6800000
+        "volume": 6804894
       },
       {
         "date": "2026-11-03",
         "close": 24.27,
-        "volume": 4840000
+        "volume": 4841624
       },
       {
         "date": "2026-11-02",
         "close": 24.19,
-        "volume": 5600000
+        "volume": 5597840
       },
       {
         "date": "2026-10-30",
         "close": 24.23,
-        "volume": 9260000
+        "volume": 9263289
       },
       {
         "date": "2026-10-29",
         "close": 24,
-        "volume": 4990000
+        "volume": 4988888
       },
       {
         "date": "2026-10-28",
         "close": 23.33,
-        "volume": 5050000
+        "volume": 5050331
       },
       {
         "date": "2026-10-27",
         "close": 23.36,
-        "volume": 5530000
+        "volume": 5533918
       },
       {
         "date": "2026-10-26",
         "close": 23.9,
-        "volume": 8390000
-      },
-      {
-        "date": "2026-10-23",
-        "close": 24.82,
-        "volume": 8380000
+        "volume": 8390561
       }
     ],
     "severeDislocationEvidence": null,
-    "note": "November 20 is the latest verified regular session. Investing.com's historical-display volumes are rounded to 0.01M shares. FT and Yahoo corroborate close and approximate volume. Abnormal volume does not identify buyers or prove covering.",
-    "observedAt": "2026-11-22T19:48:01.935Z"
+    "note": "November 23 is the latest completed session verified. November 24 was still open as the source was checked. Secondary vendors agree on the close and approximate volume; no covering inference.",
+    "observedAt": "2026-11-24T20:04:09.019Z"
   },
   "shortPressure": {
     "status": "OBSERVED",
@@ -405,15 +409,14 @@
     {
       "key": "market",
       "label": "Market pressure",
-      "condition": "Elevated volume",
-      "direction": "STRENGTHENING",
+      "condition": "Below abnormal thresholds",
+      "direction": "WEAKENING",
       "status": "OBSERVED",
-      "headline": "-1% on 1.41× 20-session average volume",
-      "interpretation": "Verified turnover was above the market-volume gate; the daily return did not cross the price-acceleration gate. It does not identify covering.",
+      "headline": "+2.40% on 1.18× 20-session average volume",
+      "interpretation": "The November 23 close was $27.30 (+2.40%) on 8.17M shares. Volume outranked 75% of the prior 20 sessions and absolute return outranked 74% of their return observations; neither crossed its abnormal-activity gate. This does not identify who bought.",
       "sourceIds": [
-        "market-investing-2026-11-20-retrieved-2026-11-22",
-        "market-ft-2026-11-20-retrieved-2026-11-22",
-        "market-yahoo-2026-11-20-retrieved-2026-11-22"
+        "market-chartexchange-2026-11-23-retrieved-2026-11-24",
+        "market-investing-2026-11-23-retrieved-2026-11-24"
       ]
     },
     {
@@ -487,16 +490,15 @@
     }
   ],
   "whatChanged": {
-    "strengthening": [
-      "An end-of-day November 20 market window is now verified. Turnover crossed the market activity gate."
+    "strengthening": [],
+    "weakening": [
+      "Verified turnover fell below the market-volume gate, and price acceleration remained below its gate."
     ],
-    "weakening": [],
     "unchanged": [
-      "No new observation establishes covering, dealer feedback or borrow stress.",
-      "Existing convertible and authorized-share capacity remain opposing context; no fresh issuance amount was verified."
+      "No direct covering or dealer feedback verified. Convertible and authorized-share capacity remain opposing context."
     ],
     "unknown": [
-      "Current borrow, dated contract-complete options, and post-October-30 reported short positions. November 13 short-interest publication is scheduled for November 24."
+      "No verified post-October-30 official short position, contract-complete recent options snapshot, or representative current borrow conditions."
     ]
   },
   "theses": [
@@ -505,7 +507,7 @@
       "label": "Squeeze thesis",
       "assessment": "POSSIBLE_NOT_PROVEN",
       "fit": "Weak",
-      "summary": "The October 30 delayed report fell 11.74% to 42.39M shares, about 8.40% of displayed outstanding shares. This weakens short pressure and remains below the 20% structural gate; borrow, direct covering, current market demand and dealer feedback remain unavailable, so Dormant/Low remains exact.",
+      "summary": "October 30 reported short interest remains stale at 42.39M shares (about 8.4% of displayed outstanding shares). The current completed market window did not cross the abnormal thresholds. Current borrow, dealer feedback and direct covering are unconfirmed.",
       "supports": [
         "The $32 warrant exercise window closed, removing up to 59.15M unexercised warrants as future contingent supply"
       ],
@@ -538,7 +540,7 @@
       "label": "Normal-market / no-squeeze",
       "assessment": "PLAUSIBLE",
       "fit": "Strong",
-      "summary": "A corporate/catalyst-led repricing without forced buying remains more consistent with the observed evidence. October 30 reported short shares fell 11.74% and remain below the structural gate; current market, options, borrow and covering mechanisms are not established.",
+      "summary": "The measured trading activity is compatible with ordinary repricing; no forced-buying mechanism is confirmed.",
       "supports": [
         "Clear public corporate catalyst history",
         "Remaining convertible and authorized-share capacity",
@@ -550,7 +552,7 @@
     }
   ],
   "next": {
-    "forwardState": "PRESSURE",
+    "forwardState": "ATTENTION",
     "forward": [
       "Sustained abnormal price and volume, not a one-session reaction.",
       "Repeated options observations establishing that call activity is abnormal versus its own recent history.",
@@ -865,37 +867,26 @@
       "limitations": "Confirms the October 30 settlement and November 10 publication cycle; does not itself provide the GME-specific shares row or real-time positioning."
     },
     {
-      "id": "market-investing-2026-11-20-retrieved-2026-11-22",
+      "id": "market-chartexchange-2026-11-23-retrieved-2026-11-24",
+      "name": "ChartExchange GME historical prices and volume",
+      "url": "https://chartexchange.com/symbol/nyse-gme/historical/",
+      "tier": 3,
+      "kind": "market",
+      "observedAt": "2026-11-24T20:04:09.019Z",
+      "effectiveAt": "2026-11-23T21:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "One consistent completed-session series; active November 24 row excluded. Volume cannot identify covering."
+    },
+    {
+      "id": "market-investing-2026-11-23-retrieved-2026-11-24",
       "name": "Investing.com GME historical prices",
       "url": "https://www.investing.com/equities/gamestop-corp-historical-data",
       "tier": 3,
       "kind": "market",
-      "observedAt": "2026-11-22T19:48:01.935Z",
-      "effectiveAt": "2026-11-20T21:00:00Z",
+      "observedAt": "2026-11-24T20:04:09.019Z",
+      "effectiveAt": "2026-11-23T21:00:00Z",
       "freshness": "RECENT",
-      "limitations": "Source of prior-20 window; volumes are rounded to nearest 0.01M shares. November 13 and 16 dates, close and rounded volumes were cross-checked."
-    },
-    {
-      "id": "market-ft-2026-11-20-retrieved-2026-11-22",
-      "name": "Financial Times GME historical prices",
-      "url": "https://markets.ft.markitdigital.com/data/equities/tearsheet/historical?s=GME%3ANYQ",
-      "tier": 3,
-      "kind": "market",
-      "observedAt": "2026-11-22T19:48:01.935Z",
-      "effectiveAt": "2026-11-20T21:00:00Z",
-      "freshness": "RECENT",
-      "limitations": "Published historical quote confirms November 20 close and comparable volume; cited for cross-check, not buyer-identity evidence."
-    },
-    {
-      "id": "market-yahoo-2026-11-20-retrieved-2026-11-22",
-      "name": "Yahoo Finance GME historical prices",
-      "url": "https://finance.yahoo.com/quote/GME/history/?d=1106",
-      "tier": 3,
-      "kind": "market",
-      "observedAt": "2026-11-22T19:48:01.935Z",
-      "effectiveAt": "2026-11-20T21:00:00Z",
-      "freshness": "RECENT",
-      "limitations": "Corroborates November 20 price and comparable volume, with a modest vendor volume discrepancy; no covering inference."
+      "limitations": "Independently corroborates the completed November 23 close and rounded volume, not buyer identity."
     }
   ]
 }
