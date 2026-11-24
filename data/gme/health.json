@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-23T19:21:24.294Z",
-  "lastSuccessfulSnapshotAt": "2026-11-22T19:48:01.935Z",
-  "runKind": "ROUTINE_UPDATE",
+  "lastAttemptAt": "2026-11-24T20:04:09.019Z",
+  "lastSuccessfulSnapshotAt": "2026-11-24T20:04:09.019Z",
+  "runKind": "STATE_TRANSITION",
   "status": "DEGRADED",
-  "summary": "November 23 evening: Nasdaq did not yield a completed November 23 session; timestamped secondary quotes and volume were intraday, so the November 20 close and session window were not replaced. Cboe rendered no current chain suitable for the options metrics; an indexed excerpt was dated November 20. EDGAR submissions and a complete dated IR release list were not retrievable. October 30 short interest remains stale; November 13 settlement is scheduled for November 24 dissemination. A third-party borrow quote lacked verifiable availability and coverage. No new evidence snapshot was recorded.",
+  "summary": "November 24: verified the completed November 23 market session and prior-20 window from secondary public providers; November 24 was still intraday at retrieval. No usable recent Cboe chain, official newer short-interest value, representative timestamped borrow coverage, or complete SEC/IR date feed was verified. Preserved those records and their timestamps.",
   "providers": [
     {
       "key": "market",
-      "status": "STALE",
-      "lastSuccessAt": "2026-11-22T19:48:01.935Z"
+      "status": "OK",
+      "lastSuccessAt": "2026-11-24T20:04:09.019Z"
     },
     {
       "key": "options",
