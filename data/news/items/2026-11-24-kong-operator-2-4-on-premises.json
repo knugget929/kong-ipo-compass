@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "2026-11-24-kong-operator-2-4-on-premises",
+  "publishedAt": "2026-11-24",
+  "title": "Kong Operator 2.4 adds self-managed AI and Event Gateway support",
+  "summary": "The Kubernetes operator now supports self-managed AI and Event Gateway deployments. That expands the addressable deployment options for organizations with data-residency or network-isolation requirements, but the release does not quantify paid adoption or revenue. Maintain the investment thesis and valuation assumptions.",
+  "impact": "positive",
+  "significance": "meaningful",
+  "thesisDecision": "MAINTAIN",
+  "scoreDelta": 0,
+  "confirmed": [
+    "Kong announced general availability of Operator 2.4 on November 24, 2026.",
+    "The operator can configure on-premises AI Gateway without a Konnect-hosted control plane and adds on-premises Event Gateway support.",
+    "Kong reported that Operator reached the conformant category in the upstream Kubernetes Gateway API implementation list."
+  ],
+  "uncertain": [
+    "No paid customer count, adoption, incremental revenue, margin, or IPO evidence was disclosed.",
+    "Whether self-managed deployments add net new sales or substitute for hosted usage is unverified."
+  ],
+  "sources": [
+    {
+      "label": "Kong: Operator 2.4 release announcement",
+      "url": "https://konghq.com/blog/product-releases/kong-operator-2-4"
+    }
+  ]
+}
