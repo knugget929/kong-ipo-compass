@@ -1,8 +1,17 @@
 {
   "schemaVersion": 1,
-  "revision": 31,
+  "revision": 32,
   "historyLimit": 30,
   "items": [
+    {
+      "id": "2026-11-24-kong-operator-2-4-on-premises",
+      "publishedAt": "2026-11-24",
+      "title": "Kong Operator 2.4 adds self-managed AI and Event Gateway support",
+      "impact": "positive",
+      "significance": "meaningful",
+      "thesisDecision": "MAINTAIN",
+      "scoreDelta": 0
+    },
     {
       "id": "2026-11-19-volcano-agent-cloud-launch",
       "publishedAt": "2026-11-19",
