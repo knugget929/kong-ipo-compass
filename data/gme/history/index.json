@@ -1,7 +1,17 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-24T20:04:09.019Z",
+  "updatedAt": "2026-11-25T19:44:58Z",
   "entries": [
+    {
+      "date": "2026-11-25",
+      "state": "DORMANT",
+      "previousState": "DORMANT",
+      "transitionKind": "ROUTINE_UPDATE",
+      "thesisDirection": "MATERIALLY_UNCHANGED",
+      "title": "November 24 close and November 13 reported short interest remain below gates",
+      "snapshot": "2026-11-25.json",
+      "importantEventIds": []
+    },
     {
       "date": "2026-11-24",
       "state": "DORMANT",

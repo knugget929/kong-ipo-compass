@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "revision": 13,
+  "revision": 14,
   "symbol": "GME",
-  "observedAt": "2026-11-24T20:04:09.019Z",
-  "snapshotDate": "2026-11-24",
+  "observedAt": "2026-11-25T19:44:58Z",
+  "snapshotDate": "2026-11-25",
   "state": {
     "key": "DORMANT",
     "level": 0,
@@ -15,14 +15,14 @@
     "confidence": {
       "key": "MEDIUM",
       "label": "Medium",
-      "reason": "Coverage is broad, but at least one structural signal is delayed or stale."
+      "reason": "One important mechanism remains unavailable."
     },
-    "previous": "ATTENTION",
-    "transitionKind": "STATE_TRANSITION",
-    "summary": "The November 23 close was $27.30 (+2.40%) on 8.17M shares. Volume outranked 75% of the prior 20 sessions and absolute return outranked 74% of their return observations; neither crossed its abnormal-activity gate. The checked-in gates produce Dormant with medium confidence; no buying mechanism is established."
+    "previous": "DORMANT",
+    "transitionKind": "ROUTINE_UPDATE",
+    "summary": "November 24 closed at $27.48 (+0.66%) on 5.76M shares; neither market gate crossed. The newly retrieved delayed short report remains below the positioning threshold. Dormant with medium confidence; no forced-buying mechanism is established."
   },
   "thesisDirection": "MATERIALLY_UNCHANGED",
-  "interpretation": "Market activity cooled below the abnormal thresholds despite a higher completed close. The current evidence does not establish forced covering, borrow stress or dealer feedback.",
+  "interpretation": "The completed session remains below abnormal-activity gates. The new delayed short report improves freshness but does not show live covering, borrow stress or dealer feedback.",
   "engineInputs": {
     "attention": {
       "abnormal": false
@@ -31,7 +31,7 @@
       "positioningElevated": false,
       "positioningRising": false,
       "directCoveringEvidence": false,
-      "fresh": false
+      "fresh": true
     },
     "borrow": {
       "stressed": null,
@@ -57,18 +57,23 @@
   "market": {
     "status": "OBSERVED",
     "condition": "NORMAL",
-    "last": 27.3,
-    "dayChangePct": 2.401,
-    "dayVolume": 8167374,
-    "referenceAverageVolume": 6902633.35,
-    "relativeVolume": 1.1832258191723308,
-    "monthToDateChangePct": 12.67,
-    "sessionHigh": 27.36,
-    "sessionLow": 26.3,
-    "volumePercentile20": 0.75,
-    "absoluteReturnPercentile20": 0.7368421052631579,
+    "last": 27.48,
+    "dayChangePct": 0.659,
+    "dayVolume": 5762397,
+    "referenceAverageVolume": 6891474,
+    "relativeVolume": 0.8361632068843328,
+    "monthToDateChangePct": 13.41,
+    "sessionHigh": 27.74,
+    "sessionLow": 27.14,
+    "volumePercentile20": 0.55,
+    "absoluteReturnPercentile20": 0.3157894736842105,
     "referenceWindowSessions": 20,
     "referenceSessions": [
+      {
+        "date": "2026-11-23",
+        "close": 27.3,
+        "volume": 8167374
+      },
       {
         "date": "2026-11-20",
         "close": 26.66,
@@ -163,34 +168,29 @@
         "date": "2026-10-27",
         "close": 23.36,
         "volume": 5533918
-      },
-      {
-        "date": "2026-10-26",
-        "close": 23.9,
-        "volume": 8390561
       }
     ],
     "severeDislocationEvidence": null,
-    "note": "November 23 is the latest completed session verified. November 24 was still open as the source was checked. Secondary vendors agree on the close and approximate volume; no covering inference.",
-    "observedAt": "2026-11-24T20:04:09.019Z"
+    "note": "Completed November 24 close and volume cross-checked. November 25 was still in progress. No conclusion about who bought or sold.",
+    "observedAt": "2026-11-25T19:44:58Z"
   },
   "shortPressure": {
     "status": "OBSERVED",
     "condition": "FALLING_FRESH",
-    "reportedShares": 42393750,
-    "effectiveDate": "2026-10-30",
-    "publishedDate": "2026-11-10",
-    "changeFromPriorPct": -11.74,
-    "pctSharesOutstanding": 8.4,
+    "reportedShares": 41054446,
+    "effectiveDate": "2026-11-13",
+    "publishedDate": "2026-11-24",
+    "changeFromPriorPct": -3.16,
+    "pctSharesOutstanding": 8.14,
     "providerFloatPctRange": [
-      9.11,
-      10.06
+      8.83,
+      9.74
     ],
     "providerDaysToCoverRange": [
-      5.25
+      6.87
     ],
     "directCoveringEvidence": false,
-    "note": "FINRA/NYSE-cycle secondary transcriptions report 42,393,750 shares short at October 30, down 11.74% from 48,031,618 at October 15. At 504,500,990 shares outstanding this is about 8.40%, below the 20% structural gate. The report is fresh under the Watch’s 15-day rule but remains delayed and does not prove live positioning or direct covering."
+    "note": "Two delayed-data providers agree on 41,054,446 shares short as of November 13, published November 24; down 3.16% from October 30. About 8.14% of the prior SEC-reported outstanding share count, below the 20% gate. Providers use different float denominators. Fresh under the 15-day rule, not live and not evidence of covering."
   },
   "borrowPressure": {
     "status": "UNAVAILABLE",
@@ -376,12 +376,12 @@
       "condition": "Reported decline · delayed report fresh",
       "direction": "WEAKENING",
       "status": "OBSERVED",
-      "headline": "42.39M shares short at October 30, down 11.74%",
-      "interpretation": "The fresh delayed report fell 11.74% from October 15 and equals about 8.40% of displayed shares outstanding, below the 20% structural threshold. It weakens the squeeze mechanism but does not establish live positioning or direct covering.",
+      "headline": "41.05M shares short at November 13, down 3.16%",
+      "interpretation": "Two delayed-data providers agree on 41,054,446 shares short as of November 13, published November 24; down 3.16% from October 30. About 8.14% of the prior SEC-reported outstanding share count, below the 20% gate. Providers use different float denominators. Fresh under the 15-day rule, not live and not evidence of covering.",
       "sourceIds": [
-        "short-chartexchange-2026-10-30-retrieved-2026-11-11",
-        "nyse-short-interest-file-2026-11-10-retrieved-2026-11-11",
-        "finra-short-calendar-2026-11-11"
+        "short-chartexchange-2026-11-13-retrieved-2026-11-25",
+        "short-benzinga-2026-11-13-retrieved-2026-11-25",
+        "finra-short-calendar-2026-11-25"
       ]
     },
     {
@@ -410,13 +410,13 @@
       "key": "market",
       "label": "Market pressure",
       "condition": "Below abnormal thresholds",
-      "direction": "WEAKENING",
+      "direction": "UNCHANGED",
       "status": "OBSERVED",
-      "headline": "+2.40% on 1.18× 20-session average volume",
-      "interpretation": "The November 23 close was $27.30 (+2.40%) on 8.17M shares. Volume outranked 75% of the prior 20 sessions and absolute return outranked 74% of their return observations; neither crossed its abnormal-activity gate. This does not identify who bought.",
+      "headline": "+0.66% on 0.84× 20-session average volume",
+      "interpretation": "November 24 finished at $27.48 on 5.76M shares. Volume and return were below abnormality thresholds. The current session was excluded while still open.",
       "sourceIds": [
-        "market-chartexchange-2026-11-23-retrieved-2026-11-24",
-        "market-investing-2026-11-23-retrieved-2026-11-24"
+        "market-chartexchange-2026-11-24-retrieved-2026-11-25",
+        "market-investing-2026-11-24-retrieved-2026-11-25"
       ]
     },
     {
@@ -492,13 +492,13 @@
   "whatChanged": {
     "strengthening": [],
     "weakening": [
-      "Verified turnover fell below the market-volume gate, and price acceleration remained below its gate."
+      "Delayed November 13 short positioning is down 3.16% and remains below the structural gate."
     ],
     "unchanged": [
-      "No direct covering or dealer feedback verified. Convertible and authorized-share capacity remain opposing context."
+      "Market activity was below its gates. Convertible and authorized-share capacity remain opposing context."
     ],
     "unknown": [
-      "No verified post-October-30 official short position, contract-complete recent options snapshot, or representative current borrow conditions."
+      "No verified current Cboe chain or representative borrow conditions; no direct covering or dealer feedback. No fresh filing that resolves warrant exercises or shares issued."
     ]
   },
   "theses": [
@@ -507,12 +507,12 @@
       "label": "Squeeze thesis",
       "assessment": "POSSIBLE_NOT_PROVEN",
       "fit": "Weak",
-      "summary": "October 30 reported short interest remains stale at 42.39M shares (about 8.4% of displayed outstanding shares). The current completed market window did not cross the abnormal thresholds. Current borrow, dealer feedback and direct covering are unconfirmed.",
+      "summary": "November 13 delayed short interest is 41.05M shares, about 8.14% of the prior outstanding-share count. Completed market activity was below the abnormality gates. Current funding, dealer feedback and direct covering remain unconfirmed.",
       "supports": [
         "The $32 warrant exercise window closed, removing up to 59.15M unexercised warrants as future contingent supply"
       ],
       "contradictions": [
-        "Reported short interest fell 11.74% and remains below the 20% outstanding-share structural gate",
+        "November 13 reported short interest fell 3.16% and remains below the 20% outstanding-share gate",
         "No direct covering evidence",
         "Borrow channel unknown",
         "Convertible and authorized-share capacity still weaken supply constraint"
@@ -523,7 +523,7 @@
       "label": "Fundamental / corporate",
       "assessment": "BEST_CURRENT_FIT",
       "fit": "Strong",
-      "summary": "Repeated open-market purchases by Ryan Cohen, improved profitability guidance and strategic activity remain the best-fit corporate explanation for demand. The new October 30 delayed short report fell 11.74%, weakening the competing short-pressure mechanism.",
+      "summary": "Historically reported insider purchases and corporate strategy are plausible competing explanations, but do not identify current buyers. The delayed November 13 report remains below the positioning threshold.",
       "supports": [
         "Ryan Cohen bought another 700,000 shares on October 2",
         "Fresh primary-source insider purchase",
@@ -544,7 +544,7 @@
       "supports": [
         "Clear public corporate catalyst history",
         "Remaining convertible and authorized-share capacity",
-        "October 30 reported short interest fell 11.74% and remains below the 20% outstanding-share gate"
+        "November 13 reported short interest remains below the 20% outstanding-share gate"
       ],
       "contradictions": [
         "Legacy market and selected-options evidence showed elevated activity, but those feeds are not current"
@@ -592,7 +592,7 @@
   ],
   "historicalComparison": {
     "benchmark": "January 2021",
-    "currentShortPctOutstanding": 9.52,
+    "currentShortPctOutstanding": 8.14,
     "benchmarkShortPctOutstanding": 109.26,
     "benchmarkBorrowFeeApproxPct": 25,
     "currentBorrowFeePct": null,
@@ -887,6 +887,61 @@
       "effectiveAt": "2026-11-23T21:00:00Z",
       "freshness": "RECENT",
       "limitations": "Independently corroborates the completed November 23 close and rounded volume, not buyer identity."
+    },
+    {
+      "id": "market-chartexchange-2026-11-24-retrieved-2026-11-25",
+      "name": "ChartExchange GME historical prices and volume",
+      "url": "https://chartexchange.com/symbol/nyse-gme/historical/",
+      "tier": 3,
+      "kind": "market",
+      "observedAt": "2026-11-25T19:44:58Z",
+      "effectiveAt": "2026-11-24T21:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Completed November 24 row; active November 25 row excluded. Volume does not identify covering."
+    },
+    {
+      "id": "market-investing-2026-11-24-retrieved-2026-11-25",
+      "name": "Investing.com GME historical prices",
+      "url": "https://www.investing.com/equities/gamestop-corp-historical-data",
+      "tier": 3,
+      "kind": "market",
+      "observedAt": "2026-11-25T19:44:58Z",
+      "effectiveAt": "2026-11-24T21:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Corroborates completed November 24 close and rounded volume."
+    },
+    {
+      "id": "short-chartexchange-2026-11-13-retrieved-2026-11-25",
+      "name": "ChartExchange GME short-interest table",
+      "url": "https://chartexchange.com/symbol/nyse-gme/short-interest/",
+      "tier": 6,
+      "kind": "short_interest",
+      "observedAt": "2026-11-25T19:44:58Z",
+      "effectiveAt": "2026-11-13T00:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Secondary transcription of delayed exchange reporting. Float denominators differ; not direct covering."
+    },
+    {
+      "id": "short-benzinga-2026-11-13-retrieved-2026-11-25",
+      "name": "Benzinga GME short-interest calendar",
+      "url": "https://www.benzinga.com/calendars/short-interest?tickers=GME",
+      "tier": 6,
+      "kind": "short_interest",
+      "observedAt": "2026-11-25T19:44:58Z",
+      "effectiveAt": "2026-11-13T00:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Independently presented secondary transcription agrees on share count and differs on float denominator."
+    },
+    {
+      "id": "finra-short-calendar-2026-11-25",
+      "name": "FINRA 2026 short-interest reporting calendar",
+      "url": "https://www.finra.org/filing-reporting/regulatory-filing-systems/short-interest",
+      "tier": 2,
+      "kind": "short_interest",
+      "observedAt": "2026-11-25T19:44:58Z",
+      "effectiveAt": "2026-11-13T00:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Confirms November 13 settlement and November 24 publication; does not supply issuer-specific shares."
     }
   ]
 }
