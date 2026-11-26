@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "revision": 85,
-  "lastCheckedAt": "2026-11-25T19:39:37Z",
-  "status": "MATERIAL_CHANGE",
+  "revision": 86,
+  "lastCheckedAt": "2026-11-26T19:19:44Z",
+  "status": "NO_MATERIAL_CHANGE",
   "thesisDecision": "MAINTAIN",
-  "summary": "Kong Operator 2.4 adds self-managed AI and Event Gateway support. No valuation-input changes."
+  "summary": "Routine check completed; no material evidence change."
 }
