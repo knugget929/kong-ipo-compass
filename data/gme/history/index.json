@@ -1,7 +1,17 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-25T19:44:58Z",
+  "updatedAt": "2026-11-26T19:23:53Z",
   "entries": [
+    {
+      "date": "2026-11-26",
+      "state": "DORMANT",
+      "previousState": "DORMANT",
+      "transitionKind": "ROUTINE_UPDATE",
+      "thesisDirection": "MATERIALLY_UNCHANGED",
+      "title": "November 25 completed session; market and short positioning below gates",
+      "snapshot": "2026-11-26.json",
+      "importantEventIds": []
+    },
     {
       "date": "2026-11-25",
       "state": "DORMANT",

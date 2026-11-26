@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-25T19:44:58Z",
-  "lastSuccessfulSnapshotAt": "2026-11-25T19:44:58Z",
+  "lastAttemptAt": "2026-11-26T19:23:53Z",
+  "lastSuccessfulSnapshotAt": "2026-11-26T19:23:53Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "Verified completed November 24 market data via two public providers and delayed November 13 short interest via two secondary transcriptions and the FINRA calendar. Nasdaq and Cboe did not provide a usable completed-session quote/option chain in this view. SEC/issuer public pages were checked, but full current filing and supply coverage was not verified. Representative timestamped borrow conditions remain unavailable; preserved unsupported channels and their timestamps.",
+  "summary": "Verified the latest completed market session and rechecked the unchanged November 13 delayed short-interest count. November 26 NYSE holiday. Read the November 25 SEC litigation disclosure; complete current share/warrant data and a current issuer stream were not verified. No current complete options chain or representative timestamped borrow; preserved unsupported observations and dates.",
   "providers": [
     {
       "key": "market",
       "status": "OK",
-      "lastSuccessAt": "2026-11-25T19:44:58Z"
+      "lastSuccessAt": "2026-11-26T19:23:53Z"
     },
     {
       "key": "options",
@@ -29,7 +29,7 @@
     {
       "key": "short_interest",
       "status": "OK",
-      "lastSuccessAt": "2026-11-25T19:44:58Z"
+      "lastSuccessAt": "2026-11-26T19:23:53Z"
     },
     {
       "key": "borrow",

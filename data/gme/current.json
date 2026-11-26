@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "revision": 14,
+  "revision": 15,
   "symbol": "GME",
-  "observedAt": "2026-11-25T19:44:58Z",
-  "snapshotDate": "2026-11-25",
+  "observedAt": "2026-11-26T19:23:53Z",
+  "snapshotDate": "2026-11-26",
   "state": {
     "key": "DORMANT",
     "level": 0,
@@ -19,10 +19,10 @@
     },
     "previous": "DORMANT",
     "transitionKind": "ROUTINE_UPDATE",
-    "summary": "November 24 closed at $27.48 (+0.66%) on 5.76M shares; neither market gate crossed. The newly retrieved delayed short report remains below the positioning threshold. Dormant with medium confidence; no forced-buying mechanism is established."
+    "summary": "November 25 closed at $26.97 (−1.86%). No market gate crossed. The delayed November 13 short report remains below its positioning gate; current options and borrow are not verified."
   },
   "thesisDirection": "MATERIALLY_UNCHANGED",
-  "interpretation": "The completed session remains below abnormal-activity gates. The new delayed short report improves freshness but does not show live covering, borrow stress or dealer feedback.",
+  "interpretation": "Below-gate market activity and below-gate delayed short interest do not show forced buying. The newly read court update does not change the observed supply mechanics.",
   "engineInputs": {
     "attention": {
       "abnormal": false
@@ -57,18 +57,23 @@
   "market": {
     "status": "OBSERVED",
     "condition": "NORMAL",
-    "last": 27.48,
-    "dayChangePct": 0.659,
-    "dayVolume": 5762397,
-    "referenceAverageVolume": 6891474,
-    "relativeVolume": 0.8361632068843328,
-    "monthToDateChangePct": 13.41,
-    "sessionHigh": 27.74,
-    "sessionLow": 27.14,
+    "last": 26.97,
+    "dayChangePct": -1.8558951965065518,
+    "dayVolume": 6647098,
+    "referenceAverageVolume": 6902897.95,
+    "relativeVolume": 0.9629431071047486,
+    "monthToDateChangePct": 11.308295501444476,
+    "sessionHigh": 27.48,
+    "sessionLow": 26.17,
     "volumePercentile20": 0.55,
-    "absoluteReturnPercentile20": 0.3157894736842105,
+    "absoluteReturnPercentile20": 0.631578947368421,
     "referenceWindowSessions": 20,
     "referenceSessions": [
+      {
+        "date": "2026-11-24",
+        "close": 27.48,
+        "volume": 5762397
+      },
       {
         "date": "2026-11-23",
         "close": 27.3,
@@ -163,16 +168,11 @@
         "date": "2026-10-28",
         "close": 23.33,
         "volume": 5050331
-      },
-      {
-        "date": "2026-10-27",
-        "close": 23.36,
-        "volume": 5533918
       }
     ],
     "severeDislocationEvidence": null,
-    "note": "Completed November 24 close and volume cross-checked. November 25 was still in progress. No conclusion about who bought or sold.",
-    "observedAt": "2026-11-25T19:44:58Z"
+    "note": "Completed November 25 market session. Both historical tables agree on the close and range; use the ChartExchange historical-table volume consistently with the reference window. Yahoo reports 6,623,900 shares. NYSE was closed November 26. This is not direct covering evidence.",
+    "observedAt": "2026-11-26T19:23:53Z"
   },
   "shortPressure": {
     "status": "OBSERVED",
@@ -412,11 +412,11 @@
       "condition": "Below abnormal thresholds",
       "direction": "UNCHANGED",
       "status": "OBSERVED",
-      "headline": "+0.66% on 0.84× 20-session average volume",
-      "interpretation": "November 24 finished at $27.48 on 5.76M shares. Volume and return were below abnormality thresholds. The current session was excluded while still open.",
+      "headline": "−1.86% on 0.96× 20-session average volume",
+      "interpretation": "November 25 finished at $26.97 on 6.65M shares per the historical series. Volume and absolute return were below abnormality thresholds. Thursday was a market holiday.",
       "sourceIds": [
-        "market-chartexchange-2026-11-24-retrieved-2026-11-25",
-        "market-investing-2026-11-24-retrieved-2026-11-25"
+        "market-chartexchange-2026-11-25-retrieved-2026-11-26",
+        "market-yahoo-2026-11-25-retrieved-2026-11-26"
       ]
     },
     {
@@ -491,14 +491,13 @@
   ],
   "whatChanged": {
     "strengthening": [],
-    "weakening": [
-      "Delayed November 13 short positioning is down 3.16% and remains below the structural gate."
-    ],
+    "weakening": [],
     "unchanged": [
-      "Market activity was below its gates. Convertible and authorized-share capacity remain opposing context."
+      "The completed November 25 session was below the market gates; the November 13 delayed short reading is still below the positioning gate.",
+      "The November 25 SEC filing describes dismissal of the plaintiff's claims and a $3.5M legal fee; it does not announce a new issuance, share repurchase, or change to the already approved authorized-share count. Convertible capacity and authorized shares remain opposing evidence."
     ],
     "unknown": [
-      "No verified current Cboe chain or representative borrow conditions; no direct covering or dealer feedback. No fresh filing that resolves warrant exercises or shares issued."
+      "Fresh representative options and borrow conditions, warrant exercise and issuance counts, and covering or dealer hedging flows are not established."
     ]
   },
   "theses": [
@@ -867,50 +866,6 @@
       "limitations": "Confirms the October 30 settlement and November 10 publication cycle; does not itself provide the GME-specific shares row or real-time positioning."
     },
     {
-      "id": "market-chartexchange-2026-11-23-retrieved-2026-11-24",
-      "name": "ChartExchange GME historical prices and volume",
-      "url": "https://chartexchange.com/symbol/nyse-gme/historical/",
-      "tier": 3,
-      "kind": "market",
-      "observedAt": "2026-11-24T20:04:09.019Z",
-      "effectiveAt": "2026-11-23T21:00:00Z",
-      "freshness": "RECENT",
-      "limitations": "One consistent completed-session series; active November 24 row excluded. Volume cannot identify covering."
-    },
-    {
-      "id": "market-investing-2026-11-23-retrieved-2026-11-24",
-      "name": "Investing.com GME historical prices",
-      "url": "https://www.investing.com/equities/gamestop-corp-historical-data",
-      "tier": 3,
-      "kind": "market",
-      "observedAt": "2026-11-24T20:04:09.019Z",
-      "effectiveAt": "2026-11-23T21:00:00Z",
-      "freshness": "RECENT",
-      "limitations": "Independently corroborates the completed November 23 close and rounded volume, not buyer identity."
-    },
-    {
-      "id": "market-chartexchange-2026-11-24-retrieved-2026-11-25",
-      "name": "ChartExchange GME historical prices and volume",
-      "url": "https://chartexchange.com/symbol/nyse-gme/historical/",
-      "tier": 3,
-      "kind": "market",
-      "observedAt": "2026-11-25T19:44:58Z",
-      "effectiveAt": "2026-11-24T21:00:00Z",
-      "freshness": "RECENT",
-      "limitations": "Completed November 24 row; active November 25 row excluded. Volume does not identify covering."
-    },
-    {
-      "id": "market-investing-2026-11-24-retrieved-2026-11-25",
-      "name": "Investing.com GME historical prices",
-      "url": "https://www.investing.com/equities/gamestop-corp-historical-data",
-      "tier": 3,
-      "kind": "market",
-      "observedAt": "2026-11-25T19:44:58Z",
-      "effectiveAt": "2026-11-24T21:00:00Z",
-      "freshness": "RECENT",
-      "limitations": "Corroborates completed November 24 close and rounded volume."
-    },
-    {
       "id": "short-chartexchange-2026-11-13-retrieved-2026-11-25",
       "name": "ChartExchange GME short-interest table",
       "url": "https://chartexchange.com/symbol/nyse-gme/short-interest/",
@@ -942,6 +897,39 @@
       "effectiveAt": "2026-11-13T00:00:00Z",
       "freshness": "RECENT",
       "limitations": "Confirms November 13 settlement and November 24 publication; does not supply issuer-specific shares."
+    },
+    {
+      "id": "market-chartexchange-2026-11-25-retrieved-2026-11-26",
+      "name": "ChartExchange GME historical session table",
+      "url": "https://chartexchange.com/symbol/nyse-gme/historical/",
+      "tier": 3,
+      "kind": "market",
+      "observedAt": "2026-11-26T19:23:53Z",
+      "effectiveAt": "2026-11-25T21:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Historical table is corroborated by Yahoo on the close/range and preferred to this provider's headline tile, which conflicts with its own completed row. Volume uses ChartExchange throughout; Yahoo reports a slightly different total."
+    },
+    {
+      "id": "market-yahoo-2026-11-25-retrieved-2026-11-26",
+      "name": "Yahoo Finance GME historical session table",
+      "url": "https://finance.yahoo.com/quote/GME/history/?guccounter=1",
+      "tier": 3,
+      "kind": "market",
+      "observedAt": "2026-11-26T19:23:53Z",
+      "effectiveAt": "2026-11-25T21:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Confirms completed historical close and range. Its volume prints differ slightly. No buyer identity."
+    },
+    {
+      "id": "sec-8k-2026-11-25-dismissal",
+      "name": "GameStop Form 8-K, signed November 25: Delaware litigation dismissal",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326380/000132638026000071/gme-20261124.htm",
+      "tier": 1,
+      "kind": "legal",
+      "observedAt": "2026-11-26T19:23:53Z",
+      "effectiveAt": "2026-11-24T00:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Confirms the order and fees; does not establish new issuance, share count, repurchase, or an exercise tally."
     }
   ]
 }
