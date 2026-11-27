@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "revision": 15,
+  "revision": 16,
   "symbol": "GME",
-  "observedAt": "2026-11-26T19:23:53Z",
-  "snapshotDate": "2026-11-26",
+  "observedAt": "2026-11-27T19:13:21.083Z",
+  "snapshotDate": "2026-11-27",
   "state": {
     "key": "DORMANT",
     "level": 0,
@@ -19,10 +19,10 @@
     },
     "previous": "DORMANT",
     "transitionKind": "ROUTINE_UPDATE",
-    "summary": "November 25 closed at $26.97 (−1.86%). No market gate crossed. The delayed November 13 short report remains below its positioning gate; current options and borrow are not verified."
+    "summary": "November 27 early close was $26.34 (−2.34%) in the S&P historical series. Delayed November 13 short interest remains below the positioning gate; current options and borrow stress remain unverified."
   },
   "thesisDirection": "MATERIALLY_UNCHANGED",
-  "interpretation": "Below-gate market activity and below-gate delayed short interest do not show forced buying. The newly read court update does not change the observed supply mechanics.",
+  "interpretation": "The shortened session cannot identify a forced buyer. Short-position reporting remains delayed; the options and borrow limitations still apply.",
   "engineInputs": {
     "attention": {
       "abnormal": false
@@ -57,18 +57,23 @@
   "market": {
     "status": "OBSERVED",
     "condition": "NORMAL",
-    "last": 26.97,
-    "dayChangePct": -1.8558951965065518,
-    "dayVolume": 6647098,
-    "referenceAverageVolume": 6902897.95,
-    "relativeVolume": 0.9629431071047486,
-    "monthToDateChangePct": 11.308295501444476,
-    "sessionHigh": 27.48,
-    "sessionLow": 26.17,
-    "volumePercentile20": 0.55,
-    "absoluteReturnPercentile20": 0.631578947368421,
+    "last": 26.34,
+    "dayChangePct": -2.3359288097886455,
+    "dayVolume": 3025658,
+    "referenceAverageVolume": 6982736.3,
+    "relativeVolume": 0.43330549372170907,
+    "monthToDateChangePct": 8.708212959141548,
+    "sessionHigh": 27.09,
+    "sessionLow": 26.16,
+    "volumePercentile20": 0,
+    "absoluteReturnPercentile20": 0.7368421052631579,
     "referenceWindowSessions": 20,
     "referenceSessions": [
+      {
+        "date": "2026-11-25",
+        "close": 26.97,
+        "volume": 6647098
+      },
       {
         "date": "2026-11-24",
         "close": 27.48,
@@ -163,16 +168,11 @@
         "date": "2026-10-29",
         "close": 24,
         "volume": 4988888
-      },
-      {
-        "date": "2026-10-28",
-        "close": 23.33,
-        "volume": 5050331
       }
     ],
     "severeDislocationEvidence": null,
-    "note": "Completed November 25 market session. Both historical tables agree on the close and range; use the ChartExchange historical-table volume consistently with the reference window. Yahoo reports 6,623,900 shares. NYSE was closed November 26. This is not direct covering evidence.",
-    "observedAt": "2026-11-26T19:23:53Z"
+    "note": "Use the S&P Global historical series via Stock Analysis at the official 1:00 p.m. ET early close. ChartExchange agrees on roughly 3.03M historical volume and the session low but reports a different close and high. No price or volume value shows buyer identity.",
+    "observedAt": "2026-11-27T19:13:21.083Z"
   },
   "shortPressure": {
     "status": "OBSERVED",
@@ -412,11 +412,11 @@
       "condition": "Below abnormal thresholds",
       "direction": "UNCHANGED",
       "status": "OBSERVED",
-      "headline": "−1.86% on 0.96× 20-session average volume",
-      "interpretation": "November 25 finished at $26.97 on 6.65M shares per the historical series. Volume and absolute return were below abnormality thresholds. Thursday was a market holiday.",
+      "headline": "−2.34% on 0.43× the 20-session average volume",
+      "interpretation": "November 27 was a shortened session. S&P Global’s historical data gives $26.34 on 3.03M shares. Volume comparison with full sessions is not normalized for trading hours; preserve the unchanged deterministic gates.",
       "sourceIds": [
-        "market-chartexchange-2026-11-25-retrieved-2026-11-26",
-        "market-yahoo-2026-11-25-retrieved-2026-11-26"
+        "market-spglobal-2026-11-27",
+        "market-chartexchange-2026-11-27"
       ]
     },
     {
@@ -493,11 +493,10 @@
     "strengthening": [],
     "weakening": [],
     "unchanged": [
-      "The completed November 25 session was below the market gates; the November 13 delayed short reading is still below the positioning gate.",
-      "The November 25 SEC filing describes dismissal of the plaintiff's claims and a $3.5M legal fee; it does not announce a new issuance, share repurchase, or change to the already approved authorized-share count. Convertible capacity and authorized shares remain opposing evidence."
+      "No new verified covering, borrow or dealer-feedback mechanism. November 13 reported short interest remains below threshold; convertible and authorized-share capacity remain opposing context."
     ],
     "unknown": [
-      "Fresh representative options and borrow conditions, warrant exercise and issuance counts, and covering or dealer hedging flows are not established."
+      "The final price and high differ between market providers; the explicitly timed NYSE close series is used here. The full fresh options chain, representative borrow and updated warrant exercise or issuance totals remain unverified."
     ]
   },
   "theses": [
@@ -899,28 +898,6 @@
       "limitations": "Confirms November 13 settlement and November 24 publication; does not supply issuer-specific shares."
     },
     {
-      "id": "market-chartexchange-2026-11-25-retrieved-2026-11-26",
-      "name": "ChartExchange GME historical session table",
-      "url": "https://chartexchange.com/symbol/nyse-gme/historical/",
-      "tier": 3,
-      "kind": "market",
-      "observedAt": "2026-11-26T19:23:53Z",
-      "effectiveAt": "2026-11-25T21:00:00Z",
-      "freshness": "RECENT",
-      "limitations": "Historical table is corroborated by Yahoo on the close/range and preferred to this provider's headline tile, which conflicts with its own completed row. Volume uses ChartExchange throughout; Yahoo reports a slightly different total."
-    },
-    {
-      "id": "market-yahoo-2026-11-25-retrieved-2026-11-26",
-      "name": "Yahoo Finance GME historical session table",
-      "url": "https://finance.yahoo.com/quote/GME/history/?guccounter=1",
-      "tier": 3,
-      "kind": "market",
-      "observedAt": "2026-11-26T19:23:53Z",
-      "effectiveAt": "2026-11-25T21:00:00Z",
-      "freshness": "RECENT",
-      "limitations": "Confirms completed historical close and range. Its volume prints differ slightly. No buyer identity."
-    },
-    {
       "id": "sec-8k-2026-11-25-dismissal",
       "name": "GameStop Form 8-K, signed November 25: Delaware litigation dismissal",
       "url": "https://www.sec.gov/Archives/edgar/data/1326380/000132638026000071/gme-20261124.htm",
@@ -930,6 +907,28 @@
       "effectiveAt": "2026-11-24T00:00:00Z",
       "freshness": "RECENT",
       "limitations": "Confirms the order and fees; does not establish new issuance, share count, repurchase, or an exercise tally."
+    },
+    {
+      "id": "market-spglobal-2026-11-27",
+      "name": "S&P Global Market Intelligence historical data via Stock Analysis",
+      "url": "https://stockanalysis.com/stocks/gme/history/",
+      "tier": 3,
+      "kind": "market",
+      "observedAt": "2026-11-27T19:13:21.083Z",
+      "effectiveAt": "2026-11-27T18:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Explicit timestamp at the NYSE 13:00 ET close and a matching completed history row. The most consistent observed official-session definition."
+    },
+    {
+      "id": "market-chartexchange-2026-11-27",
+      "name": "ChartExchange GME historical session table",
+      "url": "https://chartexchange.com/symbol/nyse-gme/historical/",
+      "tier": 3,
+      "kind": "market",
+      "observedAt": "2026-11-27T19:13:21.083Z",
+      "effectiveAt": "2026-11-27T18:00:00Z",
+      "freshness": "RECENT",
+      "limitations": "Volume roughly agrees at 3,027,771, but the provider’s closing tile is timestamped 13:18 ET and its history reports a different $26.29 close and high. Do not substitute it for the explicitly timed 13:00 ET series."
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "lastAttemptAt": "2026-11-26T19:23:53Z",
-  "lastSuccessfulSnapshotAt": "2026-11-26T19:23:53Z",
+  "lastAttemptAt": "2026-11-27T19:13:21.083Z",
+  "lastSuccessfulSnapshotAt": "2026-11-27T19:13:21.083Z",
   "runKind": "ROUTINE_UPDATE",
   "status": "DEGRADED",
-  "summary": "Verified the latest completed market session and rechecked the unchanged November 13 delayed short-interest count. November 26 NYSE holiday. Read the November 25 SEC litigation disclosure; complete current share/warrant data and a current issuer stream were not verified. No current complete options chain or representative timestamped borrow; preserved unsupported observations and dates.",
+  "summary": "Used the explicitly timed Stock Analysis/S&P completed session; documented price/high divergence from ChartExchange and verified the NYSE early close. Rechecked the November 13 delayed short count. The visible Cboe options subset, representative borrow and complete issuer/SEC supply coverage were not sufficient for fresh observations. Preserved their prior evidence/timestamps.",
   "providers": [
     {
       "key": "market",
       "status": "OK",
-      "lastSuccessAt": "2026-11-26T19:23:53Z"
+      "lastSuccessAt": "2026-11-27T19:13:21.083Z"
     },
     {
       "key": "options",
@@ -29,7 +29,7 @@
     {
       "key": "short_interest",
       "status": "OK",
-      "lastSuccessAt": "2026-11-26T19:23:53Z"
+      "lastSuccessAt": "2026-11-27T19:13:21.083Z"
     },
     {
       "key": "borrow",
